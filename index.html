@@ -8,20 +8,26 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            padding-top: 50px;
+            padding-top: 30px;
             background-color: #f7f9fa;
             color: #333;
         }
         .container {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
             background: white;
-            padding: 40px;
+            padding: 20px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
         h1 {
             color: #ff5722;
+        }
+        /* Style pour centrer ou dimensionner ton bloc de chat intégré */
+        #tawk_6a8da5b6c0e0d43447f68e02 {
+            width: 100%;
+            height: 500px; 
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -29,26 +35,23 @@
 
     <div class="container">
         <h1>HOP Courses - Support en direct</h1>
-        <p>Le module de discussion s'ouvre automatiquement.</p>
+        <p>Le chat est directement intégré dans la page :</p>
+
+        <!-- EMPLACEMENT OÙ LE CHAT VA S'INCRUSTER -->
+        <div id='tawk_6a8da5b6c0e0d43447f68e02'></div>
     </div>
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    
-    // COMMANDE POUR FORCER L'OUVERTURE DU CHAT
-    Tawk_API.onLoad = function(){
-        Tawk_API.maximize();
-    };
-
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date(); 
+    Tawk_API.embedded='tawk_6a8da5b6c0e0d43447f68e02';
     (function(){
     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
     s1.async=true;
-    s1.src='https://embed.tawk.to/6a8da5b6c0e0d43447f68e02/1k0skuk8c';
+    s1.src='https://embed.tawk.to/6a8da5b6c0e0d43447f68e02/1k0tcvbbn';
     s1.charset='UTF-8';
     s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
+    s0.parentNode.insertBefore(s1,s0);})();
     </script>
     <!--End of Tawk.to Script-->
 
