@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>HOP Courses - Centre d'aide</title>
+    <title>HOP Courses — Centre d'aide</title>
 
     <meta
         name="description"
-        content="Centre d'aide HOP Courses : trouvez rapidement une réponse ou contactez notre support."
+        content="Centre d'aide HOP Courses. Trouvez rapidement une réponse à vos questions."
     >
 
     <style>
@@ -16,119 +16,333 @@
             box-sizing: border-box;
         }
 
-        html,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             margin: 0;
             padding: 0;
-            width: 100%;
-            min-height: 100%;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f7f9fa;
-            color: #222;
-        }
-
-        .page {
-            width: 100%;
-            min-height: 100vh;
-            padding: 30px 20px 40px;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
+            font-family: Inter, Arial, Helvetica, sans-serif;
+            background: #f8f9fa;
+            color: #202124;
         }
 
         /* =========================
-           EN-TÊTE
-           ========================= */
+           PAGE
+        ========================= */
 
-        .header {
+        .page {
+            min-height: 100vh;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .hero {
+            background: #ffffff;
+            border-bottom: 1px solid #eeeeee;
+            padding: 42px 20px 48px;
             text-align: center;
-            margin-bottom: 25px;
         }
 
         .logo {
-            font-size: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 28px;
+
+            font-size: 24px;
             font-weight: 800;
             letter-spacing: -0.5px;
             color: #ff9100;
-            margin-bottom: 8px;
         }
 
-        .title {
+        .hero h1 {
             margin: 0;
-            font-size: 30px;
+            font-size: 38px;
+            line-height: 1.2;
             font-weight: 700;
-            color: #222;
+            letter-spacing: -1px;
+            color: #202124;
         }
 
-        .subtitle {
-            margin: 10px 0 0;
-            font-size: 16px;
-            line-height: 1.5;
-            color: #666;
+        .hero p {
+            max-width: 600px;
+            margin: 14px auto 0;
+
+            font-size: 17px;
+            line-height: 1.6;
+            color: #6b7280;
         }
 
         /* =========================
-           ZONE TAWK
-           ========================= */
+           SEARCH
+        ========================= */
 
-        .chat-container {
+        .search-wrapper {
             width: 100%;
+            max-width: 650px;
+            margin: 30px auto 0;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+
+            width: 100%;
+            height: 58px;
+
+            padding: 0 20px;
+
             background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.07);
-            overflow: hidden;
+            border: 1px solid #dddddd;
+            border-radius: 12px;
+
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
         }
 
-        #tawk_6a8da5b6c0e0d43447f68e02 {
-            width: 100%;
-            height: 700px;
+        .search-icon {
+            flex-shrink: 0;
+            margin-right: 13px;
+
+            font-size: 21px;
+            color: #8a8f98;
+        }
+
+        .search-placeholder {
+            font-size: 15px;
+            color: #8a8f98;
         }
 
         /* =========================
-           PIED DE PAGE
-           ========================= */
+           CONTENT
+        ========================= */
+
+        .content {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 48px 20px 60px;
+        }
+
+        .section-title {
+            margin: 0 0 24px;
+
+            font-size: 21px;
+            font-weight: 700;
+            color: #202124;
+        }
+
+        /* =========================
+           CATEGORIES
+        ========================= */
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .category {
+            display: flex;
+            align-items: center;
+
+            min-height: 105px;
+            padding: 22px;
+
+            background: #ffffff;
+            border: 1px solid #e8e8e8;
+            border-radius: 14px;
+
+            text-decoration: none;
+            color: inherit;
+
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.025);
+
+            transition:
+                transform 0.18s ease,
+                box-shadow 0.18s ease,
+                border-color 0.18s ease;
+        }
+
+        .category:hover {
+            transform: translateY(-2px);
+
+            border-color: #ffb866;
+
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .category-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 48px;
+            height: 48px;
+
+            flex-shrink: 0;
+            margin-right: 17px;
+
+            background: #fff4e6;
+            border-radius: 12px;
+
+            font-size: 23px;
+        }
+
+        .category-content {
+            flex: 1;
+        }
+
+        .category-title {
+            margin: 0;
+
+            font-size: 16px;
+            font-weight: 700;
+            color: #202124;
+        }
+
+        .category-description {
+            margin: 5px 0 0;
+
+            font-size: 13px;
+            line-height: 1.45;
+            color: #73777f;
+        }
+
+        .category-arrow {
+            margin-left: 12px;
+
+            font-size: 20px;
+            color: #a0a4aa;
+        }
+
+        /* =========================
+           SUPPORT
+        ========================= */
+
+        .support {
+            margin-top: 45px;
+            padding: 30px;
+
+            background: #ffffff;
+            border: 1px solid #e8e8e8;
+            border-radius: 14px;
+
+            text-align: center;
+        }
+
+        .support h2 {
+            margin: 0;
+
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .support p {
+            max-width: 550px;
+            margin: 9px auto 20px;
+
+            font-size: 14px;
+            line-height: 1.5;
+            color: #73777f;
+        }
+
+        .support-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 46px;
+            padding: 0 22px;
+
+            border: 0;
+            border-radius: 9px;
+
+            background: #ff9100;
+            color: #ffffff;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                background 0.18s ease,
+                transform 0.18s ease;
+        }
+
+        .support-button:hover {
+            background: #ed8400;
+            transform: translateY(-1px);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         .footer {
+            padding: 0 20px 30px;
+
             text-align: center;
-            margin-top: 20px;
-            font-size: 13px;
-            color: #888;
+
+            font-size: 12px;
+            color: #9a9da3;
         }
 
         /* =========================
            MOBILE
-           ========================= */
+        ========================= */
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
 
-            .page {
-                padding: 20px 10px 25px;
+            .hero {
+                padding: 32px 16px 38px;
             }
 
             .logo {
-                font-size: 26px;
+                margin-bottom: 22px;
+                font-size: 22px;
             }
 
-            .title {
-                font-size: 25px;
+            .hero h1 {
+                font-size: 30px;
+                letter-spacing: -0.7px;
             }
 
-            .subtitle {
-                font-size: 14px;
+            .hero p {
+                font-size: 15px;
             }
 
-            .chat-container {
-                border-radius: 12px;
+            .search-wrapper {
+                margin-top: 24px;
             }
 
-            #tawk_6a8da5b6c0e0d43447f68e02 {
-                height: 650px;
+            .search-box {
+                height: 54px;
+                padding: 0 16px;
+            }
+
+            .content {
+                padding: 35px 16px 45px;
+            }
+
+            .categories {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .category {
+                min-height: 92px;
+                padding: 18px;
+            }
+
+            .support {
+                margin-top: 35px;
+                padding: 25px 18px;
             }
         }
     </style>
@@ -136,84 +350,276 @@
 
 <body>
 
-    <main class="page">
+<div class="page">
 
-        <div class="container">
+    <!-- =========================
+         HEADER
+    ========================= -->
 
-            <!-- EN-TÊTE -->
-            <header class="header">
+    <header class="hero">
 
-                <div class="logo">
-                    ALLEZ HOP
-                </div>
+        <div class="logo">
+            HOP Courses
+        </div>
 
-                <h1 class="title">
-                    Centre d'aide
-                </h1>
+        <h1>
+            Centre d'aide
+        </h1>
 
-                <p class="subtitle">
-                    Bonjour 👋<br>
-                    Comment pouvons-nous vous aider ?
-                </p>
+        <p>
+            Trouvez rapidement une réponse à vos questions
+            et découvrez comment utiliser HOP Courses.
+        </p>
 
-            </header>
+        <!-- Barre de recherche - sera rendue fonctionnelle à l'étape 3 -->
+        <div class="search-wrapper">
 
+            <div class="search-box">
 
-            <!-- TAWK.TO -->
-            <section class="chat-container">
+                <span class="search-icon">⌕</span>
 
-                <div id="tawk_6a8da5b6c0e0d43447f68e02"></div>
+                <span class="search-placeholder">
+                    Rechercher une question...
+                </span>
 
-            </section>
-
-
-            <!-- PIED DE PAGE -->
-            <footer class="footer">
-                HOP Courses · Assistance
-            </footer>
+            </div>
 
         </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENU
+    ========================= -->
+
+    <main class="content">
+
+        <h2 class="section-title">
+            Comment pouvons-nous vous aider ?
+        </h2>
+
+
+        <div class="categories">
+
+            <!-- Cotransporteur -->
+            <a href="#" class="category">
+
+                <div class="category-icon">
+                    🤝
+                </div>
+
+                <div class="category-content">
+
+                    <h3 class="category-title">
+                        Cotransporteur
+                    </h3>
+
+                    <p class="category-description">
+                        Découvrez le fonctionnement de HOP Courses
+                        et les informations essentielles pour commencer.
+                    </p>
+
+                </div>
+
+                <div class="category-arrow">
+                    ›
+                </div>
+
+            </a>
+
+
+            <!-- Courses -->
+            <a href="#" class="category">
+
+                <div class="category-icon">
+                    🚚
+                </div>
+
+                <div class="category-content">
+
+                    <h3 class="category-title">
+                        Courses
+                    </h3>
+
+                    <p class="category-description">
+                        Trouver, accepter et effectuer une course.
+                    </p>
+
+                </div>
+
+                <div class="category-arrow">
+                    ›
+                </div>
+
+            </a>
+
+
+            <!-- Commandes -->
+            <a href="#" class="category">
+
+                <div class="category-icon">
+                    📦
+                </div>
+
+                <div class="category-content">
+
+                    <h3 class="category-title">
+                        Commandes
+                    </h3>
+
+                    <p class="category-description">
+                        Retrait, livraison et suivi des commandes.
+                    </p>
+
+                </div>
+
+                <div class="category-arrow">
+                    ›
+                </div>
+
+            </a>
+
+
+            <!-- Mon compte -->
+            <a href="#" class="category">
+
+                <div class="category-icon">
+                    👤
+                </div>
+
+                <div class="category-content">
+
+                    <h3 class="category-title">
+                        Mon compte
+                    </h3>
+
+                    <p class="category-description">
+                        Gérer vos informations et les paramètres de votre compte.
+                    </p>
+
+                </div>
+
+                <div class="category-arrow">
+                    ›
+                </div>
+
+            </a>
+
+
+            <!-- Mes trajets -->
+            <a href="#" class="category">
+
+                <div class="category-icon">
+                    📍
+                </div>
+
+                <div class="category-content">
+
+                    <h3 class="category-title">
+                        Mes trajets
+                    </h3>
+
+                    <p class="category-description">
+                        Gérer vos trajets réguliers et vos notifications.
+                    </p>
+
+                </div>
+
+                <div class="category-arrow">
+                    ›
+                </div>
+
+            </a>
+
+
+            <!-- Mes gains -->
+            <a href="#" class="category">
+
+                <div class="category-icon">
+                    💰
+                </div>
+
+                <div class="category-content">
+
+                    <h3 class="category-title">
+                        Mes gains
+                    </h3>
+
+                    <p class="category-description">
+                        Comprendre vos gains, paiements et informations associées.
+                    </p>
+
+                </div>
+
+                <div class="category-arrow">
+                    ›
+                </div>
+
+            </a>
+
+
+            <!-- Problèmes & Incidents -->
+            <a href="#" class="category">
+
+                <div class="category-icon">
+                    ⚠️
+                </div>
+
+                <div class="category-content">
+
+                    <h3 class="category-title">
+                        Problèmes &amp; Incidents
+                    </h3>
+
+                    <p class="category-description">
+                        Que faire en cas de problème pendant une course ?
+                    </p>
+
+                </div>
+
+                <div class="category-arrow">
+                    ›
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <!-- =========================
+             SUPPORT
+        ========================= -->
+
+        <section class="support">
+
+            <h2>
+                Vous ne trouvez pas votre réponse ?
+            </h2>
+
+            <p>
+                Notre équipe HOP Courses est là pour vous aider.
+                Contactez le support directement par chat.
+            </p>
+
+            <button class="support-button" type="button">
+                💬 Chatter avec le support
+            </button>
+
+        </section>
 
     </main>
 
 
     <!-- =========================
-         TAWK.TO
-         ========================= -->
+         FOOTER
+    ========================= -->
 
-    <script type="text/javascript">
+    <footer class="footer">
+        HOP Courses · Centre d'aide
+    </footer>
 
-        var Tawk_API = Tawk_API || {};
-        var Tawk_LoadStart = new Date();
-
-        /*
-         * Indique à Tawk.to que le widget
-         * doit être intégré dans cette div.
-         */
-        Tawk_API.embedded = 'tawk_6a8da5b6c0e0d43447f68e02';
-
-        (function() {
-
-            var s1 = document.createElement("script");
-            var s0 = document.getElementsByTagName("script")[0];
-
-            s1.async = true;
-
-            /*
-             * Widget HOP Intégration
-             */
-            s1.src =
-                'https://embed.tawk.to/6a8da5b6c0e0d43447f68e02/1k0tcvbbn';
-
-            s1.charset = 'UTF-8';
-
-            s1.setAttribute('crossorigin', '*');
-
-            s0.parentNode.insertBefore(s1, s0);
-
-        })();
-
-    </script>
+</div>
 
 </body>
 </html>
