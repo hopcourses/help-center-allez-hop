@@ -11,44 +11,29 @@
     >
 
     <title>
-        Allez HOP! — Centre d'aide
+        Centre d'aide — Allez HOP!
     </title>
 
     <meta
         name="description"
-        content="Centre d'aide Allez HOP! : retrouvez rapidement les réponses à vos questions sur les courses, les commandes, votre compte, vos trajets et votre activité de cotransporteur."
+        content="Centre d'aide Allez HOP! — Retrouvez rapidement les réponses à vos questions."
     >
 
 
     <!-- =========================
-         BREVO — CONFIGURATION
+         BREVO CONVERSATIONS
     ========================= -->
 
     <script>
 
         window.BrevoConversationsSetup = {
 
-            /*
-             * Cette classe indique à Brevo
-             * quel élément doit ouvrir le chat.
-             *
-             * Le bouton correspondant est
-             * plus bas dans la page.
-             */
-
-            customWidgetButton: '.brevo-chat-button',
-
-            /*
-             * Taille de la fenêtre du chat
-             */
+            customWidgetButton:
+                '.brevo-chat-button',
 
             chatWidth: 400,
 
             chatHeight: 550,
-
-            /*
-             * Position du widget sur l'écran
-             */
 
             buttonPosition: 'br'
 
@@ -56,10 +41,6 @@
 
     </script>
 
-
-    <!-- =========================
-         BREVO CONVERSATIONS
-    ========================= -->
 
     <script>
 
@@ -101,8 +82,11 @@
 
         html,
         body {
+
             margin: 0;
+
             padding: 0;
+
         }
 
 
@@ -114,9 +98,12 @@
                 Helvetica,
                 sans-serif;
 
-            background: #f8f9fa;
+            background:
+                #f8f9fa;
 
-            color: #202124;
+            color:
+                #202124;
+
         }
 
 
@@ -126,66 +113,83 @@
 
         .header {
 
-            background: #ffffff;
+            background:
+                #ffffff;
 
             border-bottom:
                 1px solid #eeeeee;
 
             padding:
-                28px 20px 40px;
+                45px 20px 50px;
+
         }
 
 
         .header-inner {
 
-            max-width: 1000px;
+            max-width:
+                1000px;
 
-            margin: 0 auto;
+            margin:
+                0 auto;
 
-            text-align: center;
         }
 
 
         .logo {
 
-            display: inline-block;
+            display:
+                inline-block;
 
-            margin-bottom: 25px;
+            margin-bottom:
+                25px;
 
-            font-size: 25px;
+            font-size:
+                23px;
 
-            font-weight: 800;
+            font-weight:
+                800;
 
-            color: #ff9100;
+            color:
+                #ff9100;
+
         }
 
 
         .header h1 {
 
-            max-width: 760px;
+            margin:
+                0;
 
-            margin: 0 auto;
+            font-size:
+                38px;
 
-            font-size: 38px;
+            line-height:
+                1.25;
 
-            line-height: 1.25;
+            letter-spacing:
+                -0.8px;
 
-            letter-spacing: -0.8px;
         }
 
 
         .header-subtitle {
 
-            max-width: 680px;
+            max-width:
+                700px;
 
             margin:
-                14px auto 0;
+                12px 0 0;
 
-            font-size: 17px;
+            font-size:
+                17px;
 
-            line-height: 1.6;
+            line-height:
+                1.6;
 
-            color: #73777f;
+            color:
+                #73777f;
+
         }
 
 
@@ -195,49 +199,73 @@
 
         .search-container {
 
-            max-width: 680px;
+            max-width:
+                700px;
 
             margin:
-                28px auto 0;
+                28px 0 0;
+
         }
 
 
         .search-box {
 
-            width: 100%;
+            width:
+                100%;
 
-            height: 56px;
+            height:
+                56px;
 
             padding:
                 0 20px;
 
-            background: #ffffff;
+            background:
+                #ffffff;
 
             border:
-                1px solid #dddddd;
+                1px solid #e1e3e6;
 
-            border-radius: 12px;
+            border-radius:
+                12px;
 
-            outline: none;
+            outline:
+                none;
 
-            font-family: inherit;
+            font-family:
+                inherit;
 
-            font-size: 15px;
+            font-size:
+                15px;
 
-            color: #202124;
+            color:
+                #202124;
 
             box-shadow:
                 0 3px 12px rgba(0,0,0,0.04);
+
+            transition:
+                border-color 0.15s ease,
+                box-shadow 0.15s ease;
+
+        }
+
+
+        .search-box::placeholder {
+
+            color:
+                #9a9da3;
+
         }
 
 
         .search-box:focus {
 
             border-color:
-                #ffb55c;
+                #ffb45c;
 
             box-shadow:
                 0 0 0 3px rgba(255,145,0,0.10);
+
         }
 
 
@@ -247,14 +275,15 @@
 
         .content {
 
-            width: 100%;
+            max-width:
+                1000px;
 
-            max-width: 1000px;
-
-            margin: 0 auto;
+            margin:
+                0 auto;
 
             padding:
-                45px 20px 70px;
+                45px 20px 60px;
+
         }
 
 
@@ -263,9 +292,12 @@
             margin:
                 0 0 20px;
 
-            font-size: 21px;
+            font-size:
+                22px;
 
-            font-weight: 700;
+            line-height:
+                1.4;
+
         }
 
 
@@ -275,35 +307,46 @@
 
         .categories {
 
-            display: grid;
+            display:
+                grid;
 
             grid-template-columns:
-                repeat(2, 1fr);
+                repeat(2, minmax(0, 1fr));
 
-            gap: 16px;
+            gap:
+                16px;
+
         }
 
 
         .category-card {
 
-            display: block;
+            display:
+                block;
 
             padding:
                 25px 26px;
 
-            background: #ffffff;
+            background:
+                #ffffff;
 
             border:
-                1px solid #e8e8e8;
+                1px solid #e7e8ea;
 
-            border-radius: 14px;
+            border-radius:
+                14px;
 
-            text-decoration: none;
+            text-decoration:
+                none;
+
+            color:
+                inherit;
 
             transition:
                 transform 0.15s ease,
-                box-shadow 0.15s ease,
-                border-color 0.15s ease;
+                border-color 0.15s ease,
+                box-shadow 0.15s ease;
+
         }
 
 
@@ -317,6 +360,7 @@
 
             box-shadow:
                 0 6px 20px rgba(0,0,0,0.06);
+
         }
 
 
@@ -325,23 +369,35 @@
             margin:
                 0 0 8px;
 
-            font-size: 18px;
+            font-size:
+                19px;
 
-            line-height: 1.4;
+            line-height:
+                1.4;
 
-            color: #202124;
+            font-weight:
+                750;
+
+            color:
+                #202124;
+
         }
 
 
         .category-description {
 
-            margin: 0;
+            margin:
+                0;
 
-            font-size: 14px;
+            font-size:
+                14px;
 
-            line-height: 1.6;
+            line-height:
+                1.6;
 
-            color: #73777f;
+            color:
+                #73777f;
+
         }
 
 
@@ -351,42 +407,55 @@
 
         .support {
 
-            margin-top: 35px;
+            margin-top:
+                30px;
 
             padding:
                 30px;
 
-            background: #ffffff;
+            background:
+                #ffffff;
 
             border:
                 1px solid #e8e8e8;
 
-            border-radius: 14px;
+            border-radius:
+                14px;
 
-            text-align: center;
+            text-align:
+                center;
+
         }
 
 
         .support h2 {
 
-            margin: 0;
+            margin:
+                0;
 
-            font-size: 20px;
+            font-size:
+                19px;
+
         }
 
 
         .support p {
 
-            max-width: 560px;
+            max-width:
+                520px;
 
             margin:
-                9px auto 18px;
+                8px auto 18px;
 
-            font-size: 14px;
+            font-size:
+                14px;
 
-            line-height: 1.6;
+            line-height:
+                1.55;
 
-            color: #73777f;
+            color:
+                #73777f;
+
         }
 
 
@@ -396,37 +465,49 @@
 
         .brevo-chat-button {
 
-            display: inline-flex;
+            display:
+                inline-flex;
 
-            align-items: center;
+            align-items:
+                center;
 
-            justify-content: center;
+            justify-content:
+                center;
 
-            min-height: 46px;
+            min-height:
+                46px;
 
             padding:
                 0 24px;
 
-            border: none;
+            border:
+                none;
 
-            border-radius: 9px;
+            border-radius:
+                9px;
 
             background:
                 #ff9100;
 
-            color: #ffffff;
+            color:
+                #ffffff;
 
-            font-family: inherit;
+            font-family:
+                inherit;
 
-            font-size: 14px;
+            font-size:
+                14px;
 
-            font-weight: 700;
+            font-weight:
+                700;
 
-            cursor: pointer;
+            cursor:
+                pointer;
 
             transition:
                 background 0.15s ease,
                 transform 0.15s ease;
+
         }
 
 
@@ -437,6 +518,7 @@
 
             transform:
                 translateY(-1px);
+
         }
 
 
@@ -447,13 +529,17 @@
         footer {
 
             padding:
-                0 20px 35px;
+                0 20px 30px;
 
-            text-align: center;
+            text-align:
+                center;
 
-            font-size: 12px;
+            font-size:
+                12px;
 
-            color: #9a9da3;
+            color:
+                #9a9da3;
+
         }
 
 
@@ -466,32 +552,32 @@
             .header {
 
                 padding:
-                    24px 16px 32px;
+                    30px 16px 35px;
+
             }
 
 
             .header h1 {
 
-                font-size: 29px;
+                font-size:
+                    30px;
+
             }
 
 
             .header-subtitle {
 
-                font-size: 15px;
-            }
+                font-size:
+                    15px;
 
-
-            .search-box {
-
-                height: 52px;
             }
 
 
             .content {
 
                 padding:
-                    30px 12px 55px;
+                    30px 12px 45px;
+
             }
 
 
@@ -499,26 +585,31 @@
 
                 grid-template-columns:
                     1fr;
+
             }
 
 
             .category-card {
 
                 padding:
-                    21px;
+                    22px;
+
             }
 
 
             .support {
 
                 padding:
-                    25px 20px;
+                    24px 18px;
+
             }
 
 
             .brevo-chat-button {
 
-                width: 100%;
+                width:
+                    100%;
+
             }
 
         }
@@ -556,19 +647,22 @@
             </p>
 
 
-            <!-- RECHERCHE -->
+            <!-- =========================
+                 RECHERCHE
+            ========================= -->
 
             <div class="search-container">
 
                 <input
                     type="search"
                     class="search-box"
+                    id="globalSearch"
                     placeholder="Rechercher une question..."
                     aria-label="Rechercher dans le centre d'aide"
+                    autocomplete="off"
                 >
 
             </div>
-
 
         </div>
 
@@ -590,7 +684,9 @@
         <section class="categories">
 
 
-            <!-- COTRANSPORTEUR -->
+            <!-- =========================
+                 COTRANSPORTEUR
+            ========================= -->
 
             <a
                 href="cotransporteur.html"
@@ -609,7 +705,9 @@
             </a>
 
 
-            <!-- COURSES -->
+            <!-- =========================
+                 COURSES
+            ========================= -->
 
             <a
                 href="courses.html"
@@ -628,7 +726,9 @@
             </a>
 
 
-            <!-- COMMANDES -->
+            <!-- =========================
+                 COMMANDES
+            ========================= -->
 
             <a
                 href="commandes.html"
@@ -647,7 +747,9 @@
             </a>
 
 
-            <!-- MON COMPTE -->
+            <!-- =========================
+                 MON COMPTE
+            ========================= -->
 
             <a
                 href="mon-compte.html"
@@ -666,7 +768,9 @@
             </a>
 
 
-            <!-- MES TRAJETS -->
+            <!-- =========================
+                 MES TRAJETS
+            ========================= -->
 
             <a
                 href="mes-trajets.html"
@@ -685,7 +789,9 @@
             </a>
 
 
-            <!-- MES GAINS -->
+            <!-- =========================
+                 MES GAINS
+            ========================= -->
 
             <a
                 href="mes-gains.html"
@@ -704,20 +810,43 @@
             </a>
 
 
-            <!-- PROBLÈMES & INCIDENTS -->
+            <!-- =========================
+                 SÉCURITÉ
+            ========================= -->
 
             <a
-                href="problemes-incidents.html"
+                href="securite.html"
                 class="category-card"
             >
 
                 <h2 class="category-title">
-                    Problèmes &amp; incidents
+                    Sécurité
                 </h2>
 
                 <p class="category-description">
-                    Que faire en cas de problème pendant
-                    une course, un retrait ou une livraison ?
+                    Sécurité, incidents, accidents et
+                    bonnes pratiques pendant vos courses.
+                </p>
+
+            </a>
+
+
+            <!-- =========================
+                 SUPPORT
+            ========================= -->
+
+            <a
+                href="support.html"
+                class="category-card"
+            >
+
+                <h2 class="category-title">
+                    Support et assistance
+                </h2>
+
+                <p class="category-description">
+                    Contactez le support et trouvez de l'aide
+                    en cas de problème.
                 </p>
 
             </a>
@@ -727,18 +856,18 @@
 
 
         <!-- =========================
-             SUPPORT
+             SUPPORT BREVO
         ========================= -->
 
         <section class="support">
 
             <h2>
-                Vous ne trouvez pas votre réponse ?
+                Vous avez encore besoin d'aide ?
             </h2>
 
 
             <p>
-                Une question reste sans réponse ?
+                Vous n'avez pas trouvé la réponse à votre question ?
                 Parlez directement avec notre équipe Allez HOP!.
             </p>
 
@@ -756,15 +885,119 @@
     </main>
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
     <footer>
 
         Allez HOP! · Centre d'aide
 
     </footer>
+
+
+    <!-- =========================
+         RECHERCHE GLOBALE
+    ========================= -->
+
+    <script>
+
+        const globalSearch =
+            document.getElementById('globalSearch');
+
+
+        const categoryCards =
+            Array.from(
+                document.querySelectorAll('.category-card')
+            );
+
+
+        function normalizeText(text) {
+
+            return text
+
+                .toLowerCase()
+
+                .normalize('NFD')
+
+                .replace(/[\u0300-\u036f]/g, '')
+
+                .replace(/[’']/g, ' ')
+
+                .replace(/[^a-z0-9\s-]/g, ' ')
+
+                .replace(/\s+/g, ' ')
+
+                .trim();
+
+        }
+
+
+        globalSearch.addEventListener(
+            'input',
+            function() {
+
+                const search =
+                    normalizeText(
+                        this.value
+                    );
+
+
+                if (search === '') {
+
+                    categoryCards.forEach(
+                        function(card) {
+
+                            card.style.display =
+                                'block';
+
+                        }
+                    );
+
+                    return;
+
+                }
+
+
+                const words =
+                    search
+                        .split(' ')
+                        .filter(
+                            function(word) {
+
+                                return word.length > 1;
+
+                            }
+                        );
+
+
+                categoryCards.forEach(
+                    function(card) {
+
+                        const text =
+                            normalizeText(
+                                card.textContent
+                            );
+
+
+                        const match =
+                            words.every(
+                                function(word) {
+
+                                    return text.includes(word);
+
+                                }
+                            );
+
+
+                        card.style.display =
+                            match
+                                ? 'block'
+                                : 'none';
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
 
 
 </body>
