@@ -10,11 +10,13 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Cotransporteur — Allez HOP! | Centre d'aide</title>
+    <title>
+        Cotransporteur — Allez HOP! | Centre d'aide
+    </title>
 
     <meta
         name="description"
-        content="Toutes les informations utiles aux cotransporteurs Allez HOP! : fonctionnement, inscription, trajets, notifications et courses."
+        content="Centre d'aide Allez HOP! pour les cotransporteurs : compte, trajets, courses, notifications et assistance."
     >
 
     <style>
@@ -30,6 +32,7 @@
         }
 
         body {
+
             font-family:
                 Inter,
                 Arial,
@@ -37,262 +40,306 @@
                 sans-serif;
 
             background: #f8f9fa;
+
             color: #202124;
         }
+
 
         /* =========================
            HEADER
         ========================= */
 
         .header {
+
             background: #ffffff;
-            border-bottom: 1px solid #eeeeee;
-            padding: 25px 20px 35px;
+
+            border-bottom:
+                1px solid #eeeeee;
+
+            padding:
+                25px 20px 35px;
         }
 
+
         .header-inner {
+
             max-width: 1000px;
+
             margin: 0 auto;
         }
 
+
         .logo {
+
             display: inline-block;
+
             margin-bottom: 25px;
 
             font-size: 23px;
+
             font-weight: 800;
 
             color: #ff9100;
         }
 
-        .back {
+
+        .breadcrumb {
+
             display: inline-flex;
+
             align-items: center;
 
-            margin-bottom: 22px;
+            margin-bottom: 24px;
 
             color: #73777f;
+
             text-decoration: none;
 
             font-size: 14px;
+
             font-weight: 600;
         }
 
-        .back:hover {
+
+        .breadcrumb:hover {
+
             color: #ff9100;
         }
 
+
         .header h1 {
+
+            max-width: 760px;
+
             margin: 0;
 
-            font-size: 34px;
-            line-height: 1.2;
+            font-size: 36px;
 
-            letter-spacing: -0.7px;
+            line-height: 1.25;
+
+            letter-spacing: -0.8px;
         }
 
-        .header p {
-            max-width: 650px;
 
-            margin: 10px 0 0;
+        .header-subtitle {
 
-            font-size: 16px;
+            max-width: 700px;
+
+            margin:
+                12px 0 0;
+
+            font-size: 17px;
+
             line-height: 1.6;
 
             color: #73777f;
         }
 
+
         /* =========================
-           CONTENT
+           CONTENU
         ========================= */
 
         .content {
+
             width: 100%;
+
             max-width: 900px;
 
             margin: 0 auto;
 
-            padding: 40px 20px 60px;
+            padding:
+                45px 20px 60px;
         }
 
-        .article-count {
-            margin-bottom: 18px;
 
-            font-size: 14px;
-            color: #73777f;
+        .intro {
+
+            margin-bottom: 25px;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            color: #555b63;
         }
 
-        /* =========================
-           SEARCH
-        ========================= */
-
-        .search {
-            display: flex;
-            align-items: center;
-
-            width: 100%;
-            height: 54px;
-
-            margin-bottom: 30px;
-            padding: 0 18px;
-
-            background: #ffffff;
-
-            border: 1px solid #dddddd;
-            border-radius: 11px;
-
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-        }
-
-        .search-icon {
-            margin-right: 12px;
-
-            font-size: 20px;
-            color: #8a8f98;
-        }
-
-        .search-text {
-            font-size: 14px;
-            color: #8a8f98;
-        }
 
         /* =========================
            ARTICLES
         ========================= */
 
         .articles {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 15px;
         }
 
+
         .article {
-            display: flex;
-            align-items: center;
 
-            width: 100%;
+            display: block;
 
-            padding: 22px;
+            padding:
+                22px 24px;
 
             background: #ffffff;
 
-            border: 1px solid #e8e8e8;
-            border-radius: 13px;
+            border:
+                1px solid #e8e8e8;
+
+            border-radius: 12px;
 
             text-decoration: none;
-            color: inherit;
 
             transition:
-                transform 0.18s ease,
-                box-shadow 0.18s ease,
-                border-color 0.18s ease;
+                transform 0.15s ease,
+                box-shadow 0.15s ease,
+                border-color 0.15s ease;
         }
+
 
         .article:hover {
-            transform: translateY(-1px);
 
-            border-color: #ffb866;
+            transform:
+                translateY(-2px);
 
-            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            border-color:
+                #ffd29b;
+
+            box-shadow:
+                0 5px 18px rgba(0,0,0,0.06);
         }
 
-        .article-content {
-            flex: 1;
-        }
 
-        .article h2 {
-            margin: 0;
+        .article-title {
 
-            font-size: 16px;
+            margin: 0 0 8px;
+
+            font-size: 17px;
+
             line-height: 1.4;
 
             font-weight: 700;
+
+            color: #202124;
         }
 
-        .article p {
-            margin: 6px 0 0;
 
-            font-size: 13px;
-            line-height: 1.5;
+        .article-description {
+
+            margin: 0;
+
+            font-size: 14px;
+
+            line-height: 1.55;
 
             color: #73777f;
         }
 
-        .arrow {
-            margin-left: 20px;
-
-            font-size: 22px;
-            color: #a0a4aa;
-        }
 
         /* =========================
            SUPPORT
         ========================= */
 
         .support {
-            margin-top: 40px;
-            padding: 28px;
+
+            margin-top: 30px;
+
+            padding:
+                28px;
 
             background: #ffffff;
 
-            border: 1px solid #e8e8e8;
-            border-radius: 13px;
+            border:
+                1px solid #e8e8e8;
+
+            border-radius: 14px;
 
             text-align: center;
         }
 
+
         .support h2 {
+
             margin: 0;
+
             font-size: 19px;
         }
 
+
         .support p {
+
             max-width: 520px;
 
-            margin: 8px auto 18px;
+            margin:
+                8px auto 18px;
 
             font-size: 14px;
+
             line-height: 1.5;
 
             color: #73777f;
         }
 
+
         .support-button {
+
             display: inline-flex;
+
             align-items: center;
+
             justify-content: center;
 
             min-height: 45px;
-            padding: 0 21px;
+
+            padding:
+                0 21px;
 
             border: none;
+
             border-radius: 9px;
 
-            background: #ff9100;
+            background:
+                #ff9100;
+
             color: #ffffff;
 
             font-size: 14px;
+
             font-weight: 700;
 
             cursor: pointer;
         }
 
+
         .support-button:hover {
-            background: #ed8400;
+
+            background:
+                #ed8400;
         }
+
 
         /* =========================
            FOOTER
         ========================= */
 
         footer {
-            padding: 0 20px 30px;
+
+            padding:
+                0 20px 30px;
 
             text-align: center;
 
             font-size: 12px;
+
             color: #9a9da3;
         }
+
 
         /* =========================
            MOBILE
@@ -301,24 +348,51 @@
         @media (max-width: 700px) {
 
             .header {
-                padding: 22px 16px 30px;
+
+                padding:
+                    22px 16px 30px;
             }
 
+
             .header h1 {
+
                 font-size: 29px;
             }
 
-            .content {
-                padding: 30px 16px 45px;
+
+            .header-subtitle {
+
+                font-size: 15px;
             }
+
+
+            .content {
+
+                padding:
+                    25px 12px 45px;
+            }
+
+
+            .articles {
+
+                grid-template-columns:
+                    1fr;
+            }
+
 
             .article {
-                padding: 19px;
+
+                padding:
+                    20px;
             }
 
+
             .support {
-                padding: 24px 18px;
+
+                padding:
+                    24px 18px;
             }
+
         }
 
     </style>
@@ -329,11 +403,14 @@
 <body>
 
 
-    <!-- HEADER -->
+    <!-- =========================
+         HEADER
+    ========================= -->
 
     <header class="header">
 
         <div class="header-inner">
+
 
             <div class="logo">
                 Allez HOP!
@@ -342,9 +419,9 @@
 
             <a
                 href="index.html"
-                class="back"
+                class="breadcrumb"
             >
-                ← Retour au centre d'aide
+                ← Centre d'aide
             </a>
 
 
@@ -353,10 +430,9 @@
             </h1>
 
 
-            <p>
-                Retrouvez toutes les informations utiles
-                pour comprendre le fonctionnement de Allez HOP!
-                en tant que cotransporteur.
+            <p class="header-subtitle">
+                Retrouvez toutes les informations utiles pour utiliser
+                Allez HOP! en tant que cotransporteur.
             </p>
 
         </div>
@@ -364,235 +440,205 @@
     </header>
 
 
-    <!-- CONTENU -->
+    <!-- =========================
+         CONTENU
+    ========================= -->
 
     <main class="content">
 
 
-        <div class="article-count">
-            8 articles
-        </div>
+        <p class="intro">
+            Retrouvez les réponses aux questions les plus fréquentes
+            concernant votre compte, vos trajets, les courses et les
+            notifications Allez HOP!.
+        </p>
 
 
-        <!-- RECHERCHE -->
-
-        <div class="search">
-
-            <span class="search-icon">
-                ⌕
-            </span>
-
-            <span class="search-text">
-                Rechercher dans Cotransporteur
-            </span>
-
-        </div>
+        <section class="articles">
 
 
-        <!-- ARTICLES -->
+            <!-- ARTICLE 1 -->
 
-        <div class="articles">
+            <a
+                href="articles/quest-ce-quun-cotransporteur.html"
+                class="article"
+            >
 
+                <h2 class="article-title">
+                    Qu'est-ce qu'un cotransporteur ?
+                </h2>
 
-            <a href="#" class="article">
-
-                <div class="article-content">
-
-                    <h2>
-                        Qu'est-ce qu'un cotransporteur ?
-                    </h2>
-
-                    <p>
-                        Comprendre le rôle du cotransporteur
-                        et le fonctionnement de Allez HOP!.
-                    </p>
-
-                </div>
-
-                <span class="arrow">
-                    ›
-                </span>
+                <p class="article-description">
+                    Découvrez le rôle du cotransporteur et le principe
+                    du cotransportage avec Allez HOP!.
+                </p>
 
             </a>
 
 
-            <a href="articles/quest-ce-quun-cotransporteur.html" class="article">
+            <!-- ARTICLE 2 -->
 
-                <div class="article-content">
+            <a
+                href="articles/comment-fonctionne-allez-hop-cotransporteur.html"
+                class="article"
+            >
 
-                    <h2>
-                        Comment fonctionne Allez HOP! pour les cotransporteurs ?
-                    </h2>
+                <h2 class="article-title">
+                    Comment fonctionne Allez HOP! pour les cotransporteurs ?
+                </h2>
 
-                    <p>
-                        Découvrez les principales étapes
-                        pour trouver et effectuer une course.
-                    </p>
-
-                </div>
-
-                <span class="arrow">
-                    ›
-                </span>
+                <p class="article-description">
+                    Découvrez les principales étapes pour trouver,
+                    accepter et effectuer une course.
+                </p>
 
             </a>
 
 
-            <a href="#" class="article">
+            <!-- ARTICLE 3 -->
 
-                <div class="article-content">
+            <a
+                href="articles/comment-devenir-cotransporteur.html"
+                class="article"
+            >
 
-                    <h2>
-                        Comment devenir cotransporteur sur Allez HOP! ?
-                    </h2>
+                <h2 class="article-title">
+                    Comment devenir cotransporteur sur Allez HOP! ?
+                </h2>
 
-                    <p>
-                        Les étapes pour créer votre compte
-                        et commencer à utiliser Allez HOP!.
-                    </p>
-
-                </div>
-
-                <span class="arrow">
-                    ›
-                </span>
+                <p class="article-description">
+                    Créez votre compte, configurez votre profil et
+                    commencez à rechercher des courses.
+                </p>
 
             </a>
 
 
-            <a href="#" class="article">
+            <!-- ARTICLE 4 -->
 
-                <div class="article-content">
+            <a
+                href="articles/comment-trouver-une-course.html"
+                class="article"
+            >
 
-                    <h2>
-                        Comment trouver une course correspondant à mon trajet ?
-                    </h2>
+                <h2 class="article-title">
+                    Comment trouver une course correspondant à mon trajet ?
+                </h2>
 
-                    <p>
-                        Trouvez des courses adaptées à vos déplacements
-                        grâce à vos trajets et à votre rayon de recherche.
-                    </p>
-
-                </div>
-
-                <span class="arrow">
-                    ›
-                </span>
+                <p class="article-description">
+                    Apprenez à rechercher des courses adaptées à vos
+                    trajets et à votre rayon de recherche.
+                </p>
 
             </a>
 
 
-            <a href="#" class="article">
+            <!-- ARTICLE 5 -->
 
-                <div class="article-content">
+            <a
+                href="articles/comment-renseigner-trajets-reguliers.html"
+                class="article"
+            >
 
-                    <h2>
-                        Comment renseigner mes trajets réguliers ?
-                    </h2>
+                <h2 class="article-title">
+                    Comment renseigner mes trajets réguliers ?
+                </h2>
 
-                    <p>
-                        Ajoutez vos adresses habituelles
-                        pour recevoir des notifications ciblées.
-                    </p>
-
-                </div>
-
-                <span class="arrow">
-                    ›
-                </span>
+                <p class="article-description">
+                    Ajoutez vos trajets et vos adresses habituelles
+                    pour recevoir des notifications ciblées.
+                </p>
 
             </a>
 
 
-            <a href="#" class="article">
+            <!-- ARTICLE 6 -->
 
-                <div class="article-content">
+            <a
+                href="articles/modifier-supprimer-trajet.html"
+                class="article"
+            >
 
-                    <h2>
-                        Comment modifier ou supprimer un trajet régulier ?
-                    </h2>
+                <h2 class="article-title">
+                    Comment modifier ou supprimer un trajet régulier ?
+                </h2>
 
-                    <p>
-                        Mettez à jour vos adresses et validez
-                        vos modifications.
-                    </p>
-
-                </div>
-
-                <span class="arrow">
-                    ›
-                </span>
+                <p class="article-description">
+                    Modifiez vos adresses, mettez à jour un trajet
+                    ou supprimez un trajet enregistré.
+                </p>
 
             </a>
 
 
-            <a href="#" class="article">
+            <!-- ARTICLE 7 -->
 
-                <div class="article-content">
+            <a
+                href="articles/notifications-courses.html"
+                class="article"
+            >
 
-                    <h2>
-                        Comment fonctionnent les notifications de courses ?
-                    </h2>
+                <h2 class="article-title">
+                    Comment fonctionnent les notifications de courses ?
+                </h2>
 
-                    <p>
-                        Comprenez comment recevoir des notifications
-                        correspondant à vos trajets et critères.
-                    </p>
-
-                </div>
-
-                <span class="arrow">
-                    ›
-                </span>
+                <p class="article-description">
+                    Comprenez les notifications de courses et comment
+                    recevoir des propositions adaptées à vos trajets.
+                </p>
 
             </a>
 
 
-            <a href="#" class="article">
+            <!-- ARTICLE 8 -->
 
-                <div class="article-content">
+            <a
+                href="articles/modifier-informations-cotransporteur.html"
+                class="article"
+            >
 
-                    <h2>
-                        Comment modifier mes informations de cotransporteur ?
-                    </h2>
+                <h2 class="article-title">
+                    Comment modifier mes informations de cotransporteur ?
+                </h2>
 
-                    <p>
-                        Modifiez vos informations et validez
-                        vos changements dans votre compte.
-                    </p>
-
-                </div>
-
-                <span class="arrow">
-                    ›
-                </span>
+                <p class="article-description">
+                    Mettez à jour les informations de votre compte
+                    et de votre profil.
+                </p>
 
             </a>
 
-        </div>
+
+        </section>
 
 
-        <!-- SUPPORT -->
+        <!-- =========================
+             SUPPORT
+        ========================= -->
 
         <section class="support">
 
             <h2>
-                Vous ne trouvez pas votre réponse ?
+                Vous avez encore besoin d'aide ?
             </h2>
 
+
             <p>
-                Notre équipe Allez HOP! peut vous accompagner
-                directement par chat.
+                Vous n'avez pas trouvé la réponse à votre question ?
+                Notre assistant IA peut vous aider directement.
             </p>
+
 
             <button
                 class="support-button"
                 type="button"
+                onclick="ouvrirSupport()"
             >
                 💬 Chatter avec le support
             </button>
 
         </section>
+
 
     </main>
 
@@ -600,6 +646,57 @@
     <footer>
         Allez HOP! · Centre d'aide
     </footer>
+
+
+    <!-- =========================
+         TAWK.TO
+    ========================= -->
+
+    <script type="text/javascript">
+
+        var Tawk_API = Tawk_API || {};
+        var Tawk_LoadStart = new Date();
+
+
+        function ouvrirSupport() {
+
+            if (
+                typeof Tawk_API !== 'undefined' &&
+                typeof Tawk_API.maximize === 'function'
+            ) {
+
+                Tawk_API.maximize();
+
+            }
+
+        }
+
+
+        (function() {
+
+            var s1 = document.createElement("script");
+            var s0 = document.getElementsByTagName("script")[0];
+
+            s1.async = true;
+
+            s1.src =
+                'https://embed.tawk.to/6a8da5b6c0e0d43447f68e02/1k0tcvbbn';
+
+            s1.charset = 'UTF-8';
+
+            s1.setAttribute(
+                'crossorigin',
+                '*'
+            );
+
+            s0.parentNode.insertBefore(
+                s1,
+                s0
+            );
+
+        })();
+
+    </script>
 
 
 </body>
