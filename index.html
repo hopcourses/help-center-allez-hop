@@ -1,297 +1,366 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Allez HOP — Centre d'aide</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Allez HOP! — Centre d'aide
+    </title>
 
     <meta
         name="description"
-        content="Centre d'aide Allez HOP by HOP Coursez. Trouvez rapidement une réponse à vos questions."
+        content="Centre d'aide Allez HOP! : retrouvez rapidement les réponses à vos questions sur les courses, les commandes, votre compte, vos trajets et votre activité de cotransporteur."
     >
 
+
+    <!-- =========================
+         BREVO CONVERSATIONS
+    ========================= -->
+
+    <script>
+        (function(d, w, c) {
+            w.BrevoConversationsID = '66de1609df5363314100b775';
+
+            w[c] = w[c] || function() {
+                (w[c].q = w[c].q || []).push(arguments);
+            };
+
+            var s = d.createElement('script');
+
+            s.async = true;
+
+            s.src =
+                'https://conversations-widget.brevo.com/brevo-conversations.js';
+
+            if (d.head) {
+                d.head.appendChild(s);
+            }
+
+        })(document, window, 'BrevoConversations');
+    </script>
+
+
     <style>
+
         * {
             box-sizing: border-box;
         }
 
-        html {
-            margin: 0;
-            padding: 0;
-        }
 
+        html,
         body {
             margin: 0;
             padding: 0;
-            font-family: Inter, Arial, Helvetica, sans-serif;
+        }
+
+
+        body {
+
+            font-family:
+                Inter,
+                Arial,
+                Helvetica,
+                sans-serif;
+
             background: #f8f9fa;
+
             color: #202124;
         }
 
-        /* =========================
-           PAGE
-        ========================= */
-
-        .page {
-            min-height: 100vh;
-        }
 
         /* =========================
            HEADER
         ========================= */
 
-        .hero {
+        .header {
+
             background: #ffffff;
-            border-bottom: 1px solid #eeeeee;
-            padding: 42px 20px 48px;
+
+            border-bottom:
+                1px solid #eeeeee;
+
+            padding:
+                28px 20px 40px;
+        }
+
+
+        .header-inner {
+
+            max-width: 1000px;
+
+            margin: 0 auto;
+
             text-align: center;
         }
 
-        .logo {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 28px;
 
-            font-size: 24px;
+        .logo {
+
+            display: inline-block;
+
+            margin-bottom: 25px;
+
+            font-size: 25px;
+
             font-weight: 800;
-            letter-spacing: -0.5px;
+
             color: #ff9100;
         }
 
-        .hero h1 {
-            margin: 0;
+
+        .header h1 {
+
+            max-width: 760px;
+
+            margin: 0 auto;
+
             font-size: 38px;
-            line-height: 1.2;
-            font-weight: 700;
-            letter-spacing: -1px;
-            color: #202124;
+
+            line-height: 1.25;
+
+            letter-spacing: -0.8px;
         }
 
-        .hero p {
-            max-width: 600px;
-            margin: 14px auto 0;
+
+        .header-subtitle {
+
+            max-width: 680px;
+
+            margin:
+                14px auto 0;
 
             font-size: 17px;
+
             line-height: 1.6;
-            color: #6b7280;
+
+            color: #73777f;
         }
 
+
         /* =========================
-           SEARCH
+           RECHERCHE
         ========================= */
 
-        .search-wrapper {
-            width: 100%;
-            max-width: 650px;
-            margin: 30px auto 0;
+        .search-container {
+
+            max-width: 680px;
+
+            margin:
+                28px auto 0;
         }
+
 
         .search-box {
-            display: flex;
-            align-items: center;
 
             width: 100%;
-            height: 58px;
 
-            padding: 0 20px;
+            height: 56px;
+
+            padding:
+                0 20px;
 
             background: #ffffff;
-            border: 1px solid #dddddd;
+
+            border:
+                1px solid #dddddd;
+
             border-radius: 12px;
 
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
-        }
+            outline: none;
 
-        .search-icon {
-            flex-shrink: 0;
-            margin-right: 13px;
+            font-family: inherit;
 
-            font-size: 21px;
-            color: #8a8f98;
-        }
-
-        .search-placeholder {
             font-size: 15px;
-            color: #8a8f98;
+
+            color: #202124;
+
+            box-shadow:
+                0 3px 12px rgba(0,0,0,0.04);
         }
+
+
+        .search-box:focus {
+
+            border-color:
+                #ffb55c;
+
+            box-shadow:
+                0 0 0 3px rgba(255,145,0,0.10);
+        }
+
 
         /* =========================
-           CONTENT
+           CONTENU
         ========================= */
 
         .content {
+
             width: 100%;
+
             max-width: 1000px;
+
             margin: 0 auto;
-            padding: 48px 20px 60px;
+
+            padding:
+                45px 20px 70px;
         }
+
 
         .section-title {
-            margin: 0 0 24px;
+
+            margin:
+                0 0 20px;
 
             font-size: 21px;
+
             font-weight: 700;
-            color: #202124;
         }
+
 
         /* =========================
            CATEGORIES
         ========================= */
 
         .categories {
+
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
             gap: 16px;
         }
 
-        .category {
-            display: flex;
-            align-items: center;
 
-            min-height: 105px;
-            padding: 22px;
+        .category-card {
+
+            display: block;
+
+            padding:
+                25px 26px;
 
             background: #ffffff;
-            border: 1px solid #e8e8e8;
+
+            border:
+                1px solid #e8e8e8;
+
             border-radius: 14px;
 
             text-decoration: none;
-            color: inherit;
-
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.025);
 
             transition:
-                transform 0.18s ease,
-                box-shadow 0.18s ease,
-                border-color 0.18s ease;
+                transform 0.15s ease,
+                box-shadow 0.15s ease,
+                border-color 0.15s ease;
         }
 
-        .category:hover {
-            transform: translateY(-2px);
 
-            border-color: #ffb866;
+        .category-card:hover {
 
-            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.07);
+            transform:
+                translateY(-2px);
+
+            border-color:
+                #ffd29b;
+
+            box-shadow:
+                0 6px 20px rgba(0,0,0,0.06);
         }
 
-        .category-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            width: 48px;
-            height: 48px;
-
-            flex-shrink: 0;
-            margin-right: 17px;
-
-            background: #fff4e6;
-            border-radius: 12px;
-
-            font-size: 23px;
-        }
-
-        .category-content {
-            flex: 1;
-        }
 
         .category-title {
-            margin: 0;
 
-            font-size: 16px;
-            font-weight: 700;
+            margin:
+                0 0 8px;
+
+            font-size: 18px;
+
+            line-height: 1.4;
+
             color: #202124;
         }
 
-        .category-description {
-            margin: 5px 0 0;
 
-            font-size: 13px;
-            line-height: 1.45;
+        .category-description {
+
+            margin: 0;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
             color: #73777f;
         }
 
-        .category-arrow {
-            margin-left: 12px;
-
-            font-size: 20px;
-            color: #a0a4aa;
-        }
 
         /* =========================
            SUPPORT
         ========================= */
 
         .support {
-            margin-top: 45px;
-            padding: 30px;
+
+            margin-top: 35px;
+
+            padding:
+                30px;
 
             background: #ffffff;
-            border: 1px solid #e8e8e8;
+
+            border:
+                1px solid #e8e8e8;
+
             border-radius: 14px;
 
             text-align: center;
         }
 
+
         .support h2 {
+
             margin: 0;
 
             font-size: 20px;
-            font-weight: 700;
         }
 
+
         .support p {
-            max-width: 550px;
-            margin: 9px auto 20px;
+
+            max-width: 560px;
+
+            margin:
+                9px auto 0;
 
             font-size: 14px;
-            line-height: 1.5;
+
+            line-height: 1.6;
+
             color: #73777f;
         }
 
-        .support-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-
-            min-height: 46px;
-            padding: 0 22px;
-
-            border: 0;
-            border-radius: 9px;
-
-            background: #ff9100;
-            color: #ffffff;
-
-            font-size: 14px;
-            font-weight: 700;
-
-            cursor: pointer;
-
-            transition:
-                background 0.18s ease,
-                transform 0.18s ease;
-        }
-
-        .support-button:hover {
-            background: #ed8400;
-            transform: translateY(-1px);
-        }
 
         /* =========================
            FOOTER
         ========================= */
 
-        .footer {
-            padding: 0 20px 30px;
+        footer {
+
+            padding:
+                0 20px 35px;
 
             text-align: center;
 
-            font-size: 10px;
+            font-size: 12px;
+
             color: #9a9da3;
         }
+
 
         /* =========================
            MOBILE
@@ -299,90 +368,106 @@
 
         @media (max-width: 700px) {
 
-            .hero {
-                padding: 32px 16px 38px;
+            .header {
+
+                padding:
+                    24px 16px 32px;
             }
 
-            .logo {
-                margin-bottom: 22px;
-                font-size: 22px;
+
+            .header h1 {
+
+                font-size: 29px;
             }
 
-            .hero h1 {
-                font-size: 30px;
-                letter-spacing: -0.7px;
-            }
 
-            .hero p {
+            .header-subtitle {
+
                 font-size: 15px;
             }
 
-            .search-wrapper {
-                margin-top: 24px;
-            }
 
             .search-box {
-                height: 54px;
-                padding: 0 16px;
+
+                height: 52px;
             }
+
 
             .content {
-                padding: 35px 16px 45px;
+
+                padding:
+                    30px 12px 55px;
             }
+
 
             .categories {
-                grid-template-columns: 1fr;
-                gap: 12px;
+
+                grid-template-columns:
+                    1fr;
             }
 
-            .category {
-                min-height: 92px;
-                padding: 18px;
+
+            .category-card {
+
+                padding:
+                    21px;
             }
+
 
             .support {
-                margin-top: 35px;
-                padding: 25px 18px;
+
+                padding:
+                    25px 20px;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-<div class="page">
 
     <!-- =========================
          HEADER
     ========================= -->
 
-    <header class="hero">
+    <header class="header">
 
-        <div class="logo">
-            Allez HOP
-        </div>
+        <div class="header-inner">
 
-        <h1>
-            Centre d'aide
-        </h1>
 
-        <p>
-            Trouvez rapidement une réponse à vos questions
-            et découvrez comment utiliser l'App web
-        </p>
+            <div class="logo">
+                Allez HOP!
+            </div>
 
-        <!-- Barre de recherche - sera rendue fonctionnelle à l'étape 3 -->
-        <div class="search-wrapper">
 
-            <div class="search-box">
+            <h1>
+                Centre d'aide
+            </h1>
 
-                <span class="search-icon">⌕</span>
 
-                <span class="search-placeholder">
-                    Rechercher une question...
-                </span>
+            <p class="header-subtitle">
+                Comment pouvons-nous vous aider ?
+                Retrouvez rapidement les réponses à vos questions.
+            </p>
+
+
+            <!-- RECHERCHE -->
+
+            <div class="search-container">
+
+                <input
+                    type="search"
+                    class="search-box"
+                    placeholder="Rechercher une question..."
+                    aria-label="Rechercher dans le centre d'aide"
+                >
 
             </div>
+
 
         </div>
 
@@ -395,196 +480,163 @@
 
     <main class="content">
 
+
         <h2 class="section-title">
-            Comment pouvons-nous vous aider ?
+            Parcourir le centre d'aide
         </h2>
 
 
-        <div class="categories">
+        <section class="categories">
 
-            <!-- Cotransporteur -->
-            <a href="cotransporteur.html" class="category">
 
-                <div class="category-icon">
-                    🤝
-                </div>
+            <!-- =========================
+                 COTRANSPORTEUR
+            ========================= -->
 
-                <div class="category-content">
+            <a
+                href="cotransporteur.html"
+                class="category-card"
+            >
 
-                    <h3 class="category-title">
-                        Cotransporteur
-                    </h3>
+                <h2 class="category-title">
+                    Cotransporteur
+                </h2>
 
-                    <p class="category-description">
-                        Découvrez le fonctionnement de l'application web
-                        et les informations essentielles pour commencer.
-                    </p>
-
-                </div>
-
-                <div class="category-arrow">
-                    ›
-                </div>
+                <p class="category-description">
+                    Compte, inscription, trajets réguliers,
+                    recherche de courses et notifications.
+                </p>
 
             </a>
 
 
-            <!-- Courses -->
-            <a href="#" class="category">
+            <!-- =========================
+                 COURSES
+            ========================= -->
 
-                <div class="category-icon">
-                    🚚
-                </div>
+            <a
+                href="courses.html"
+                class="category-card"
+            >
 
-                <div class="category-content">
+                <h2 class="category-title">
+                    Courses
+                </h2>
 
-                    <h3 class="category-title">
-                        Courses
-                    </h3>
-
-                    <p class="category-description">
-                        Trouver, accepter et effectuer une course.
-                    </p>
-
-                </div>
-
-                <div class="category-arrow">
-                    ›
-                </div>
+                <p class="category-description">
+                    Trouver, accepter, réaliser et suivre
+                    une course sur Allez HOP!.
+                </p>
 
             </a>
 
 
-            <!-- Commandes -->
-            <a href="#" class="category">
+            <!-- =========================
+                 COMMANDES
+            ========================= -->
 
-                <div class="category-icon">
-                    📦
-                </div>
+            <a
+                href="commandes.html"
+                class="category-card"
+            >
 
-                <div class="category-content">
+                <h2 class="category-title">
+                    Commandes
+                </h2>
 
-                    <h3 class="category-title">
-                        Commandes
-                    </h3>
-
-                    <p class="category-description">
-                        Retrait, livraison et suivi des commandes.
-                    </p>
-
-                </div>
-
-                <div class="category-arrow">
-                    ›
-                </div>
+                <p class="category-description">
+                    Retrait, livraison, commande, code-barres
+                    et problèmes liés aux commandes.
+                </p>
 
             </a>
 
 
-            <!-- Mon compte -->
-            <a href="#" class="category">
+            <!-- =========================
+                 MON COMPTE
+            ========================= -->
 
-                <div class="category-icon">
-                    👤
-                </div>
+            <a
+                href="mon-compte.html"
+                class="category-card"
+            >
 
-                <div class="category-content">
+                <h2 class="category-title">
+                    Mon compte
+                </h2>
 
-                    <h3 class="category-title">
-                        Mon compte
-                    </h3>
-
-                    <p class="category-description">
-                        Gérer vos informations et les paramètres de votre compte.
-                    </p>
-
-                </div>
-
-                <div class="category-arrow">
-                    ›
-                </div>
+                <p class="category-description">
+                    Connexion, informations personnelles,
+                    profil et paramètres du compte.
+                </p>
 
             </a>
 
 
-            <!-- Mes trajets -->
-            <a href="#" class="category">
+            <!-- =========================
+                 MES TRAJETS
+            ========================= -->
 
-                <div class="category-icon">
-                    📍
-                </div>
+            <a
+                href="mes-trajets.html"
+                class="category-card"
+            >
 
-                <div class="category-content">
+                <h2 class="category-title">
+                    Mes trajets
+                </h2>
 
-                    <h3 class="category-title">
-                        Mes trajets
-                    </h3>
-
-                    <p class="category-description">
-                        Gérer vos trajets réguliers et vos notifications.
-                    </p>
-
-                </div>
-
-                <div class="category-arrow">
-                    ›
-                </div>
+                <p class="category-description">
+                    Ajouter, modifier ou supprimer vos trajets
+                    et gérer vos critères de recherche.
+                </p>
 
             </a>
 
 
-            <!-- Mes gains -->
-            <a href="#" class="category">
+            <!-- =========================
+                 MES GAINS
+            ========================= -->
 
-                <div class="category-icon">
-                    💰
-                </div>
+            <a
+                href="mes-gains.html"
+                class="category-card"
+            >
 
-                <div class="category-content">
+                <h2 class="category-title">
+                    Mes gains
+                </h2>
 
-                    <h3 class="category-title">
-                        Mes gains
-                    </h3>
-
-                    <p class="category-description">
-                        Comprendre vos gains, paiements et informations associées.
-                    </p>
-
-                </div>
-
-                <div class="category-arrow">
-                    ›
-                </div>
+                <p class="category-description">
+                    Consultez vos gains, vos paiements
+                    et vos informations financières.
+                </p>
 
             </a>
 
 
-            <!-- Problèmes & Incidents -->
-            <a href="#" class="category">
+            <!-- =========================
+                 PROBLÈMES & INCIDENTS
+            ========================= -->
 
-                <div class="category-icon">
-                    ⚠️
-                </div>
+            <a
+                href="problemes-incidents.html"
+                class="category-card"
+            >
 
-                <div class="category-content">
+                <h2 class="category-title">
+                    Problèmes &amp; incidents
+                </h2>
 
-                    <h3 class="category-title">
-                        Problèmes &amp; Incidents
-                    </h3>
-
-                    <p class="category-description">
-                        Que faire en cas de problème pendant une course ?
-                    </p>
-
-                </div>
-
-                <div class="category-arrow">
-                    ›
-                </div>
+                <p class="category-description">
+                    Que faire en cas de problème pendant
+                    une course, un retrait ou une livraison ?
+                </p>
 
             </a>
 
-        </div>
+
+        </section>
 
 
         <!-- =========================
@@ -597,15 +649,14 @@
                 Vous ne trouvez pas votre réponse ?
             </h2>
 
+
             <p>
-            Contactez le support directement par chat.
+                Utilisez le chat Allez HOP! pour contacter
+                notre équipe directement.
             </p>
 
-            <button class="support-button" type="button">
-                💬 Chatter avec le support
-            </button>
-
         </section>
+
 
     </main>
 
@@ -614,11 +665,13 @@
          FOOTER
     ========================= -->
 
-    <footer class="footer">
+    <footer>
+
         Allez HOP! · Centre d'aide
+
     </footer>
 
-</div>
 
 </body>
+
 </html>
