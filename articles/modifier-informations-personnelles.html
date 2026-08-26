@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Modifier ses informations personnelles — Allez HOP! | Centre d'aide
+    </title>
+
+    <meta
+        name="description"
+        content="Comment modifier les informations personnelles de son compte cotransporteur Allez HOP!."
+    >
+
+
+    <!-- =========================
+         BREVO CONVERSATIONS
+    ========================= -->
+
+    <script>
+
+        window.BrevoConversationsSetup = {
+
+            customWidgetButton: '.brevo-chat-button',
+
+            chatWidth: 400,
+
+            chatHeight: 550,
+
+            buttonPosition: 'br'
+
+        };
+
+    </script>
+
+
+    <script>
+
+        (function(d, w, c) {
+
+            w.BrevoConversationsID =
+                '66de1609df5363314100b775';
+
+            w[c] = w[c] || function() {
+
+                (w[c].q = w[c].q || []).push(arguments);
+
+            };
+
+            var s = d.createElement('script');
+
+            s.async = true;
+
+            s.src =
+                'https://conversations-widget.brevo.com/brevo-conversations.js';
+
+            if (d.head) {
+
+                d.head.appendChild(s);
+
+            }
+
+        })(document, window, 'BrevoConversations');
+
+    </script>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+
+            font-family:
+                Inter,
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #f8f9fa;
+
+            color: #202124;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+
+            background: #ffffff;
+
+            border-bottom:
+                1px solid #eeeeee;
+
+            padding:
+                25px 20px 35px;
+        }
+
+
+        .header-inner {
+
+            max-width: 1000px;
+
+            margin: 0 auto;
+        }
+
+
+        .logo {
+
+            display: inline-block;
+
+            margin-bottom: 25px;
+
+            font-size: 23px;
+
+            font-weight: 800;
+
+            color: #ff9100;
+        }
+
+
+        .breadcrumb {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            margin-bottom: 24px;
+
+            color: #73777f;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 600;
+        }
+
+
+        .breadcrumb:hover {
+
+            color: #ff9100;
+        }
+
+
+        .header h1 {
+
+            max-width: 760px;
+
+            margin: 0;
+
+            font-size: 36px;
+
+            line-height: 1.25;
+
+            letter-spacing: -0.8px;
+        }
+
+
+        .header-subtitle {
+
+            max-width: 700px;
+
+            margin:
+                12px 0 0;
+
+            font-size: 17px;
+
+            line-height: 1.6;
+
+            color: #73777f;
+        }
+
+
+        /* =========================
+           CONTENU
+        ========================= */
+
+        .content {
+
+            width: 100%;
+
+            max-width: 800px;
+
+            margin: 0 auto;
+
+            padding:
+                45px 20px 60px;
+        }
+
+
+        .article {
+
+            background: #ffffff;
+
+            border:
+                1px solid #e8e8e8;
+
+            border-radius: 14px;
+
+            padding:
+                35px 40px;
+
+            box-shadow:
+                0 2px 10px rgba(0,0,0,0.025);
+        }
+
+
+        .article p {
+
+            margin:
+                0 0 20px;
+
+            font-size: 16px;
+
+            line-height: 1.75;
+
+            color: #44484f;
+        }
+
+
+        .article h2 {
+
+            margin:
+                30px 0 12px;
+
+            font-size: 22px;
+
+            line-height: 1.35;
+
+            color: #202124;
+        }
+
+
+        .article h2:first-child {
+
+            margin-top: 0;
+        }
+
+
+        .article strong {
+
+            color: #202124;
+        }
+
+
+        /* =========================
+           LISTES
+        ========================= */
+
+        .article ul {
+
+            margin:
+                8px 0 24px;
+
+            padding-left: 22px;
+
+            color: #44484f;
+        }
+
+
+        .article li {
+
+            margin-bottom: 10px;
+
+            padding-left: 4px;
+
+            font-size: 15px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           ENCADRES
+        ========================= */
+
+        .highlight {
+
+            margin:
+                28px 0;
+
+            padding:
+                20px 22px;
+
+            background:
+                #fff7ed;
+
+            border-left:
+                4px solid #ff9100;
+
+            border-radius: 8px;
+        }
+
+
+        .highlight p {
+
+            margin: 0;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           TABLEAU
+        ========================= */
+
+        .info-table-wrapper {
+
+            width: 100%;
+
+            margin:
+                25px 0 30px;
+
+            overflow-x: auto;
+        }
+
+
+        .info-table {
+
+            width: 100%;
+
+            border-collapse: collapse;
+
+            background: #ffffff;
+
+            font-size: 14px;
+        }
+
+
+        .info-table th {
+
+            padding:
+                14px 15px;
+
+            background:
+                #fafafa;
+
+            border:
+                1px solid #e5e5e5;
+
+            text-align: left;
+
+            font-weight: 700;
+
+            color: #202124;
+        }
+
+
+        .info-table td {
+
+            padding:
+                14px 15px;
+
+            border:
+                1px solid #e5e5e5;
+
+            vertical-align: top;
+
+            line-height: 1.5;
+
+            color: #555a61;
+        }
+
+
+        .info-table td:first-child {
+
+            font-weight: 600;
+
+            color: #202124;
+        }
+
+
+        /* =========================
+           CARTES
+        ========================= */
+
+        .case {
+
+            margin:
+                20px 0;
+
+            padding:
+                20px 22px;
+
+            background:
+                #fafafa;
+
+            border:
+                1px solid #eeeeee;
+
+            border-radius: 10px;
+        }
+
+
+        .case-title {
+
+            margin:
+                0 0 8px;
+
+            font-size: 17px;
+
+            font-weight: 800;
+
+            color: #202124;
+        }
+
+
+        .case p {
+
+            margin: 0;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           FEEDBACK
+        ========================= */
+
+        .feedback {
+
+            margin-top: 35px;
+
+            padding-top: 28px;
+
+            border-top:
+                1px solid #eeeeee;
+
+            text-align: center;
+        }
+
+
+        .feedback h3 {
+
+            margin:
+                0 0 15px;
+
+            font-size: 16px;
+        }
+
+
+        .feedback-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 10px;
+        }
+
+
+        .feedback-button {
+
+            min-width: 90px;
+
+            padding:
+                9px 16px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #dddddd;
+
+            border-radius: 8px;
+
+            color: #555;
+
+            cursor: pointer;
+
+            font-size: 14px;
+        }
+
+
+        .feedback-button:hover {
+
+            border-color:
+                #ff9100;
+
+            color:
+                #ff9100;
+        }
+
+
+        /* =========================
+           SUPPORT
+        ========================= */
+
+        .support {
+
+            margin-top: 25px;
+
+            padding:
+                28px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #e8e8e8;
+
+            border-radius: 14px;
+
+            text-align: center;
+        }
+
+
+        .support h2 {
+
+            margin: 0;
+
+            font-size: 19px;
+        }
+
+
+        .support p {
+
+            max-width: 500px;
+
+            margin:
+                8px auto 18px;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+
+            color: #73777f;
+        }
+
+
+        .brevo-chat-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 46px;
+
+            padding:
+                0 24px;
+
+            border: none;
+
+            border-radius: 9px;
+
+            background:
+                #ff9100;
+
+            color: #ffffff;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                background 0.15s ease,
+                transform 0.15s ease;
+        }
+
+
+        .brevo-chat-button:hover {
+
+            background:
+                #ed8400;
+
+            transform:
+                translateY(-1px);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding:
+                0 20px 30px;
+
+            text-align: center;
+
+            font-size: 12px;
+
+            color: #9a9da3;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .header {
+
+                padding:
+                    22px 16px 30px;
+            }
+
+
+            .header h1 {
+
+                font-size: 29px;
+            }
+
+
+            .header-subtitle {
+
+                font-size: 15px;
+            }
+
+
+            .content {
+
+                padding:
+                    25px 12px 45px;
+            }
+
+
+            .article {
+
+                padding:
+                    25px 20px;
+            }
+
+
+            .article p {
+
+                font-size: 15px;
+
+                line-height: 1.7;
+            }
+
+
+            .article h2 {
+
+                font-size: 20px;
+            }
+
+
+            .article li {
+
+                font-size: 15px;
+            }
+
+
+            .support {
+
+                padding:
+                    24px 18px;
+            }
+
+
+            .brevo-chat-button {
+
+                width: 100%;
+            }
+
+
+            .info-table {
+
+                min-width: 620px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="header">
+
+        <div class="header-inner">
+
+
+            <div class="logo">
+                Allez HOP!
+            </div>
+
+
+            <a
+                href="../compte.html"
+                class="breadcrumb"
+            >
+                ← Compte et profil
+            </a>
+
+
+            <h1>
+                Modifier ses informations personnelles
+            </h1>
+
+
+            <p class="header-subtitle">
+                Comment modifier les informations de votre
+                profil et quand contacter le support Allez HOP!.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENU
+    ========================= -->
+
+    <main class="content">
+
+
+        <article class="article">
+
+
+            <h2>
+                Gardez vos informations à jour
+            </h2>
+
+
+            <p>
+                Il est important de maintenir les informations
+                de votre compte <strong>à jour</strong> afin de
+                garantir le bon déroulement des opérations de
+                livraison, des virements et des obligations
+                administratives.
+            </p>
+
+
+            <div class="highlight">
+
+                <p>
+                    <strong>À savoir :</strong>
+                    certaines informations peuvent être modifiées
+                    directement depuis votre profil, tandis que
+                    d'autres nécessitent l'intervention du support.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Quelles informations puis-je modifier moi-même ?
+            </h2>
+
+
+            <p>
+                Depuis votre profil, vous pouvez modifier
+                directement :
+            </p>
+
+
+            <ul>
+
+                <li>
+                    votre <strong>numéro de téléphone</strong> ;
+                </li>
+
+                <li>
+                    votre <strong>photo</strong>.
+                </li>
+
+            </ul>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    📱 Numéro de téléphone
+                </p>
+
+                <p>
+                    Le numéro de téléphone peut être modifié
+                    directement depuis votre profil et ne
+                    nécessite pas de vérification supplémentaire.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Modifier son RIB
+            </h2>
+
+
+            <p>
+                Le RIB ne peut pas être modifié directement
+                depuis le profil.
+            </p>
+
+
+            <p>
+                Pour modifier vos coordonnées bancaires,
+                <strong>contactez le support par e-mail</strong>.
+            </p>
+
+
+            <div class="highlight">
+
+                <p>
+                    🏦 Pour toute modification de votre RIB,
+                    passez par le support afin de garantir
+                    que les virements soient effectués vers
+                    le bon IBAN.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Modifier son nom ou son prénom
+            </h2>
+
+
+            <p>
+                Le nom et le prénom ne peuvent pas être
+                modifiés directement depuis le profil.
+            </p>
+
+
+            <p>
+                Pour demander une modification,
+                <strong>contactez le support par e-mail</strong>.
+            </p>
+
+
+            <h2>
+                Modifier son adresse postale
+            </h2>
+
+
+            <p>
+                L'adresse postale ne peut pas être modifiée
+                directement depuis le profil.
+            </p>
+
+
+            <p>
+                Pour demander une modification,
+                <strong>contactez le support par e-mail</strong>.
+            </p>
+
+
+            <h2>
+                Modifier son identifiant fiscal
+            </h2>
+
+
+            <p>
+                L'identifiant fiscal, ou
+                <strong>NIF</strong>, ne peut pas être modifié
+                directement depuis le profil.
+            </p>
+
+
+            <p>
+                Pour toute modification,
+                <strong>contactez le support par e-mail</strong>.
+            </p>
+
+
+            <h2>
+                Modifier sa pièce d'identité
+            </h2>
+
+
+            <p>
+                Si votre pièce d'identité doit être remplacée
+                ou mise à jour, <strong>contactez le support
+                par e-mail</strong>.
+            </p>
+
+
+            <p>
+                Il est important de conserver une pièce
+                d'identité <strong>valide et à jour</strong>
+                dans votre dossier.
+            </p>
+
+
+            <h2>
+                Une information est incorrecte ?
+            </h2>
+
+
+            <p>
+                Si une information de votre profil est incorrecte
+                mais que vous ne pouvez pas la modifier directement,
+                ne laissez pas cette information sans correction.
+            </p>
+
+
+            <p>
+                <strong>Contactez le support par e-mail</strong>
+                afin qu'une correction puisse être effectuée.
+            </p>
+
+
+            <h2>
+                Puis-je continuer à effectuer des courses ?
+            </h2>
+
+
+            <div class="highlight">
+
+                <p>
+                    <strong>Oui.</strong>
+                    La modification d'une information de profil
+                    ne vous empêche pas de continuer à effectuer
+                    des courses.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Pourquoi est-il important de maintenir ses
+                informations à jour ?
+            </h2>
+
+
+            <p>
+                La mise à jour de vos informations permet
+                notamment de garantir :
+            </p>
+
+
+            <ul>
+
+                <li>
+                    le respect de la
+                    <strong>législation et des obligations
+                    auprès de l'administration fiscale</strong> ;
+                </li>
+
+                <li>
+                    la bonne tenue des
+                    <strong>opérations de livraison</strong> ;
+                </li>
+
+                <li>
+                    la réalisation correcte des
+                    <strong>virements vers les IBAN enregistrés</strong> ;
+                </li>
+
+                <li>
+                    la validité des
+                    <strong>pièces d'identité</strong>
+                    associées au compte.
+                </li>
+
+            </ul>
+
+
+            <h2>
+                Récapitulatif
+            </h2>
+
+
+            <div class="info-table-wrapper">
+
+                <table class="info-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Information
+                            </th>
+
+                            <th>
+                                Comment la modifier ?
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                📱 Numéro de téléphone
+                            </td>
+
+                            <td>
+                                Directement dans le profil
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                📷 Photo
+                            </td>
+
+                            <td>
+                                Directement dans le profil
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                🏦 RIB
+                            </td>
+
+                            <td>
+                                Support par e-mail
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                👤 Nom / prénom
+                            </td>
+
+                            <td>
+                                Support par e-mail
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                🏠 Adresse postale
+                            </td>
+
+                            <td>
+                                Support par e-mail
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                🔢 Identifiant fiscal
+                            </td>
+
+                            <td>
+                                Support par e-mail
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                🪪 Pièce d'identité
+                            </td>
+
+                            <td>
+                                Support par e-mail
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <h2>
+                À retenir
+            </h2>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    ✏️ Modification directe
+                </p>
+
+                <p>
+                    Seuls le <strong>numéro de téléphone</strong>
+                    et la <strong>photo</strong> peuvent être
+                    modifiés directement depuis le profil.
+                </p>
+
+            </div>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    📧 Support
+                </p>
+
+                <p>
+                    Pour le RIB, le nom, le prénom, l'adresse,
+                    le NIF ou la pièce d'identité, contactez
+                    le <strong>support par e-mail</strong>.
+                </p>
+
+            </div>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    🔄 Gardez vos données à jour
+                </p>
+
+                <p>
+                    Des informations exactes et à jour sont
+                    nécessaires pour le bon fonctionnement
+                    de votre compte, des livraisons et des
+                    virements, ainsi que pour respecter les
+                    obligations administratives.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Besoin d'aide ?
+            </h2>
+
+
+            <p>
+                Si vous ne pouvez pas modifier une information
+                directement depuis votre profil ou si une
+                information est incorrecte, contactez le
+                <strong>support par e-mail</strong>.
+            </p>
+
+
+            <!-- =========================
+                 FEEDBACK
+            ========================= -->
+
+            <div class="feedback">
+
+                <h3>
+                    Cet article vous a-t-il été utile ?
+                </h3>
+
+
+                <div class="feedback-buttons">
+
+                    <button
+                        class="feedback-button"
+                        type="button"
+                    >
+                        👍 Oui
+                    </button>
+
+
+                    <button
+                        class="feedback-button"
+                        type="button"
+                    >
+                        👎 Non
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =========================
+             SUPPORT
+        ========================= -->
+
+        <section class="support">
+
+            <h2>
+                Vous avez encore besoin d'aide ?
+            </h2>
+
+
+            <p>
+                Vous n'avez pas trouvé la réponse à votre question ?
+                Parlez directement avec notre équipe Allez HOP!.
+            </p>
+
+
+            <button
+                type="button"
+                class="brevo-chat-button"
+            >
+                💬 Parler avec le support
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        Allez HOP! · Centre d'aide
+
+    </footer>
+
+
+</body>
+
+</html>
