@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Comment modifier mes informations de cotransporteur ? — Allez HOP! | Centre d'aide
+    </title>
+
+    <meta
+        name="description"
+        content="Découvrez comment modifier vos informations de cotransporteur sur Allez HOP!, mettre à jour votre profil, vos coordonnées et valider vos modifications."
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family:
+                Inter,
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #f8f9fa;
+            color: #202124;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            background: #ffffff;
+            border-bottom: 1px solid #eeeeee;
+            padding: 25px 20px 35px;
+        }
+
+        .header-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: inline-block;
+            margin-bottom: 25px;
+
+            font-size: 23px;
+            font-weight: 800;
+
+            color: #ff9100;
+        }
+
+        .breadcrumb {
+            display: inline-flex;
+            align-items: center;
+
+            margin-bottom: 24px;
+
+            color: #73777f;
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .breadcrumb:hover {
+            color: #ff9100;
+        }
+
+        .header h1 {
+            max-width: 760px;
+
+            margin: 0;
+
+            font-size: 36px;
+            line-height: 1.25;
+
+            letter-spacing: -0.8px;
+        }
+
+        .header-subtitle {
+            max-width: 700px;
+
+            margin: 12px 0 0;
+
+            font-size: 17px;
+            line-height: 1.6;
+
+            color: #73777f;
+        }
+
+
+        /* =========================
+           ARTICLE
+        ========================= */
+
+        .content {
+            width: 100%;
+            max-width: 800px;
+
+            margin: 0 auto;
+
+            padding: 45px 20px 60px;
+        }
+
+        .article {
+            background: #ffffff;
+
+            border: 1px solid #e8e8e8;
+            border-radius: 14px;
+
+            padding: 35px 40px;
+
+            box-shadow:
+                0 2px 10px rgba(0,0,0,0.025);
+        }
+
+        .article p {
+            margin: 0 0 20px;
+
+            font-size: 16px;
+            line-height: 1.75;
+
+            color: #44484f;
+        }
+
+        .article h2 {
+            margin: 30px 0 12px;
+
+            font-size: 22px;
+            line-height: 1.35;
+
+            color: #202124;
+        }
+
+        .article h2:first-child {
+            margin-top: 0;
+        }
+
+        .article strong {
+            color: #202124;
+        }
+
+
+        /* =========================
+           ETAPES
+        ========================= */
+
+        .steps {
+            margin: 25px 0 28px;
+            padding: 0;
+
+            list-style: none;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+
+            margin-bottom: 17px;
+        }
+
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 32px;
+            height: 32px;
+
+            flex-shrink: 0;
+
+            margin-right: 14px;
+
+            background: #fff4e6;
+
+            border-radius: 50%;
+
+            color: #ff9100;
+
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .step-text {
+            padding-top: 4px;
+
+            font-size: 15px;
+            line-height: 1.6;
+
+            color: #44484f;
+        }
+
+
+        /* =========================
+           HIGHLIGHT
+        ========================= */
+
+        .highlight {
+            margin: 28px 0;
+
+            padding: 20px 22px;
+
+            background: #fff7ed;
+
+            border-left: 4px solid #ff9100;
+
+            border-radius: 8px;
+        }
+
+        .highlight p {
+            margin: 0;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           FEEDBACK
+        ========================= */
+
+        .feedback {
+            margin-top: 35px;
+
+            padding-top: 28px;
+
+            border-top: 1px solid #eeeeee;
+
+            text-align: center;
+        }
+
+        .feedback h3 {
+            margin: 0 0 15px;
+
+            font-size: 16px;
+        }
+
+        .feedback-buttons {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 10px;
+        }
+
+        .feedback-button {
+            min-width: 90px;
+
+            padding: 9px 16px;
+
+            background: #ffffff;
+
+            border: 1px solid #dddddd;
+
+            border-radius: 8px;
+
+            color: #555;
+
+            cursor: pointer;
+
+            font-size: 14px;
+        }
+
+        .feedback-button:hover {
+            border-color: #ff9100;
+            color: #ff9100;
+        }
+
+
+        /* =========================
+           SUPPORT
+        ========================= */
+
+        .support {
+            margin-top: 25px;
+
+            padding: 28px;
+
+            background: #ffffff;
+
+            border: 1px solid #e8e8e8;
+            border-radius: 14px;
+
+            text-align: center;
+        }
+
+        .support h2 {
+            margin: 0;
+
+            font-size: 19px;
+        }
+
+        .support p {
+            max-width: 500px;
+
+            margin: 8px auto 18px;
+
+            font-size: 14px;
+            line-height: 1.5;
+
+            color: #73777f;
+        }
+
+        .support-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 45px;
+
+            padding: 0 21px;
+
+            border: none;
+            border-radius: 9px;
+
+            background: #ff9100;
+            color: #ffffff;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+        .support-button:hover {
+            background: #ed8400;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 0 20px 30px;
+
+            text-align: center;
+
+            font-size: 12px;
+
+            color: #9a9da3;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .header {
+                padding: 22px 16px 30px;
+            }
+
+            .header h1 {
+                font-size: 29px;
+            }
+
+            .header-subtitle {
+                font-size: 15px;
+            }
+
+            .content {
+                padding: 25px 12px 45px;
+            }
+
+            .article {
+                padding: 25px 20px;
+            }
+
+            .article p {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+
+            .article h2 {
+                font-size: 20px;
+            }
+
+            .support {
+                padding: 24px 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="header">
+
+        <div class="header-inner">
+
+            <div class="logo">
+                Allez HOP!
+            </div>
+
+
+            <a
+                href="../cotransporteur.html"
+                class="breadcrumb"
+            >
+                ← Cotransporteur
+            </a>
+
+
+            <h1>
+                Comment modifier mes informations de cotransporteur ?
+            </h1>
+
+
+            <p class="header-subtitle">
+                Mettez à jour les informations de votre compte
+                pour qu'elles restent correctes et adaptées
+                à votre activité de cotransporteur.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         ARTICLE
+    ========================= -->
+
+    <main class="content">
+
+
+        <article class="article">
+
+
+            <h2>
+                Pourquoi modifier mes informations ?
+            </h2>
+
+
+            <p>
+                Il est important de conserver des
+                <strong>informations à jour</strong> dans votre compte
+                Allez HOP!.
+            </p>
+
+
+            <p>
+                Si vos coordonnées, vos informations personnelles
+                ou certains éléments de votre profil changent,
+                pensez à les modifier afin que votre compte
+                reste correctement renseigné.
+            </p>
+
+
+            <div class="highlight">
+
+                <p>
+                    <strong>Bon à savoir :</strong>
+                    après une modification, pensez à cliquer sur
+                    <strong>« Soumettre »</strong> lorsque ce bouton
+                    est disponible afin de valider et enregistrer
+                    vos changements.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Comment modifier mes informations ?
+            </h2>
+
+
+            <div class="steps">
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        1
+                    </div>
+
+                    <div class="step-text">
+                        <strong>Ouvrez votre compte</strong>
+                        et accédez à la rubrique contenant
+                        vos informations personnelles.
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        2
+                    </div>
+
+                    <div class="step-text">
+                        <strong>Repérez l'information</strong>
+                        que vous souhaitez modifier.
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        3
+                    </div>
+
+                    <div class="step-text">
+                        <strong>Effectuez la modification</strong>
+                        en renseignant les nouvelles informations.
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        4
+                    </div>
+
+                    <div class="step-text">
+                        <strong>Vérifiez les informations saisies</strong>
+                        avant de les valider.
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        5
+                    </div>
+
+                    <div class="step-text">
+                        <strong>Cliquez sur « Soumettre »</strong>
+                        afin de valider et enregistrer
+                        votre modification.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <h2>
+                Puis-je modifier mon adresse ?
+            </h2>
+
+
+            <p>
+                Si votre adresse change, vous pouvez mettre à jour
+                les informations correspondantes dans votre compte
+                lorsque cette modification est disponible.
+            </p>
+
+
+            <p>
+                Vérifiez attentivement la nouvelle adresse avant
+                de cliquer sur <strong>« Soumettre »</strong>.
+            </p>
+
+
+            <h2>
+                Puis-je modifier mes informations de profil ?
+            </h2>
+
+
+            <p>
+                Les informations de votre profil peuvent être mises
+                à jour lorsqu'une modification est nécessaire.
+                Pensez à vérifier que les informations enregistrées
+                sont exactes.
+            </p>
+
+
+            <h2>
+                Que faire si ma modification n'est pas enregistrée ?
+            </h2>
+
+
+            <p>
+                Vérifiez d'abord que tous les champs obligatoires
+                sont correctement renseignés et que vous avez bien
+                cliqué sur <strong>« Soumettre »</strong>.
+            </p>
+
+
+            <p>
+                Si la modification ne semble toujours pas être prise
+                en compte, vous pouvez contacter le support Allez HOP!
+                directement depuis le bouton de chat situé en bas
+                de cette page.
+            </p>
+
+
+            <h2>
+                Mes informations doivent-elles rester à jour ?
+            </h2>
+
+
+            <p>
+                Oui. Des informations correctement renseignées
+                permettent de conserver un compte fiable et de
+                faciliter l'utilisation d'Allez HOP!.
+            </p>
+
+
+            <p>
+                Pensez également à vérifier régulièrement vos
+                <strong>trajets réguliers</strong> et votre
+                <strong>rayon de recherche</strong> afin que les
+                courses et notifications proposées correspondent
+                toujours à vos déplacements.
+            </p>
+
+
+            <!-- FEEDBACK -->
+
+            <div class="feedback">
+
+                <h3>
+                    Cet article vous a-t-il été utile ?
+                </h3>
+
+
+                <div class="feedback-buttons">
+
+                    <button
+                        class="feedback-button"
+                        type="button"
+                    >
+                        👍 Oui
+                    </button>
+
+
+                    <button
+                        class="feedback-button"
+                        type="button"
+                    >
+                        👎 Non
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =========================
+             SUPPORT
+        ========================= -->
+
+        <section class="support">
+
+            <h2>
+                Vous avez encore besoin d'aide ?
+            </h2>
+
+
+            <p>
+                Vous n'avez pas trouvé la réponse à votre question ?
+                Notre équipe Allez HOP! peut vous aider directement.
+            </p>
+
+
+            <button
+                class="support-button"
+                type="button"
+                onclick="ouvrirSupport()"
+            >
+                💬 Chatter avec le support
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        Allez HOP! · Centre d'aide
+    </footer>
+
+
+    <!-- =========================
+         TAWK.TO
+    ========================= -->
+
+    <script type="text/javascript">
+
+        var Tawk_API = Tawk_API || {};
+        var Tawk_LoadStart = new Date();
+
+
+        function ouvrirSupport() {
+
+            if (
+                typeof Tawk_API !== 'undefined' &&
+                typeof Tawk_API.maximize === 'function'
+            ) {
+
+                Tawk_API.maximize();
+
+            }
+
+        }
+
+
+        (function() {
+
+            var s1 = document.createElement("script");
+            var s0 = document.getElementsByTagName("script")[0];
+
+            s1.async = true;
+
+            s1.src =
+                'https://embed.tawk.to/6a8da5b6c0e0d43447f68e02/1k0tcvbbn';
+
+            s1.charset = 'UTF-8';
+
+            s1.setAttribute(
+                'crossorigin',
+                '*'
+            );
+
+            s0.parentNode.insertBefore(
+                s1,
+                s0
+            );
+
+        })();
+
+    </script>
+
+
+</body>
+
+</html>
