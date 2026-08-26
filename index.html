@@ -28,14 +28,30 @@
 
         window.BrevoConversationsSetup = {
 
+            /*
+             * Cette classe indique à Brevo
+             * quel élément doit ouvrir le chat.
+             *
+             * Le bouton correspondant est
+             * plus bas dans la page.
+             */
+
             customWidgetButton:
                 '.brevo-chat-button',
+
+            /*
+             * Taille de la fenêtre du chat
+             */
 
             chatWidth:
                 400,
 
             chatHeight:
                 550,
+
+            /*
+             * Position du widget sur l'écran
+             */
 
             buttonPosition:
                 'br'
@@ -91,9 +107,11 @@
         html,
         body {
 
-            margin: 0;
+            margin:
+                0;
 
-            padding: 0;
+            padding:
+                0;
 
         }
 
@@ -665,10 +683,8 @@
                 <input
                     type="search"
                     class="search-box"
-                    id="globalSearch"
                     placeholder="Rechercher une question..."
                     aria-label="Rechercher dans le centre d'aide"
-                    autocomplete="off"
                 >
 
             </div>
