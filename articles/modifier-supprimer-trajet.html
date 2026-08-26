@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Comment modifier ou supprimer un trajet régulier ? — Allez HOP! | Centre d'aide
+    </title>
+
+    <meta
+        name="description"
+        content="Découvrez comment modifier une adresse, modifier un trajet régulier ou supprimer un trajet enregistré sur Allez HOP!."
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family:
+                Inter,
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #f8f9fa;
+            color: #202124;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            background: #ffffff;
+            border-bottom: 1px solid #eeeeee;
+            padding: 25px 20px 35px;
+        }
+
+        .header-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: inline-block;
+            margin-bottom: 25px;
+
+            font-size: 23px;
+            font-weight: 800;
+
+            color: #ff9100;
+        }
+
+        .breadcrumb {
+            display: inline-flex;
+            align-items: center;
+
+            margin-bottom: 24px;
+
+            color: #73777f;
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .breadcrumb:hover {
+            color: #ff9100;
+        }
+
+        .header h1 {
+            max-width: 760px;
+
+            margin: 0;
+
+            font-size: 36px;
+            line-height: 1.25;
+
+            letter-spacing: -0.8px;
+        }
+
+        .header-subtitle {
+            max-width: 700px;
+
+            margin: 12px 0 0;
+
+            font-size: 17px;
+            line-height: 1.6;
+
+            color: #73777f;
+        }
+
+
+        /* =========================
+           ARTICLE
+        ========================= */
+
+        .content {
+            width: 100%;
+            max-width: 800px;
+
+            margin: 0 auto;
+
+            padding: 45px 20px 60px;
+        }
+
+        .article {
+            background: #ffffff;
+
+            border: 1px solid #e8e8e8;
+            border-radius: 14px;
+
+            padding: 35px 40px;
+
+            box-shadow:
+                0 2px 10px rgba(0,0,0,0.025);
+        }
+
+        .article p {
+            margin: 0 0 20px;
+
+            font-size: 16px;
+            line-height: 1.75;
+
+            color: #44484f;
+        }
+
+        .article h2 {
+            margin: 30px 0 12px;
+
+            font-size: 22px;
+            line-height: 1.35;
+
+            color: #202124;
+        }
+
+        .article h2:first-child {
+            margin-top: 0;
+        }
+
+        .article strong {
+            color: #202124;
+        }
+
+
+        /* =========================
+           ETAPES
+        ========================= */
+
+        .steps {
+            margin: 25px 0 28px;
+            padding: 0;
+
+            list-style: none;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+
+            margin-bottom: 17px;
+        }
+
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 32px;
+            height: 32px;
+
+            flex-shrink: 0;
+
+            margin-right: 14px;
+
+            background: #fff4e6;
+
+            border-radius: 50%;
+
+            color: #ff9100;
+
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .step-text {
+            padding-top: 4px;
+
+            font-size: 15px;
+            line-height: 1.6;
+
+            color: #44484f;
+        }
+
+
+        /* =========================
+           HIGHLIGHT
+        ========================= */
+
+        .highlight {
+            margin: 28px 0;
+
+            padding: 20px 22px;
+
+            background: #fff7ed;
+
+            border-left: 4px solid #ff9100;
+
+            border-radius: 8px;
+        }
+
+        .highlight p {
+            margin: 0;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           FEEDBACK
+        ========================= */
+
+        .feedback {
+            margin-top: 35px;
+
+            padding-top: 28px;
+
+            border-top: 1px solid #eeeeee;
+
+            text-align: center;
+        }
+
+        .feedback h3 {
+            margin: 0 0 15px;
+
+            font-size: 16px;
+        }
+
+        .feedback-buttons {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 10px;
+        }
+
+        .feedback-button {
+            min-width: 90px;
+
+            padding: 9px 16px;
+
+            background: #ffffff;
+
+            border: 1px solid #dddddd;
+
+            border-radius: 8px;
+
+            color: #555;
+
+            cursor: pointer;
+
+            font-size: 14px;
+        }
+
+        .feedback-button:hover {
+            border-color: #ff9100;
+            color: #ff9100;
+        }
+
+
+        /* =========================
+           SUPPORT
+        ========================= */
+
+        .support {
+            margin-top: 25px;
+
+            padding: 28px;
+
+            background: #ffffff;
+
+            border: 1px solid #e8e8e8;
+            border-radius: 14px;
+
+            text-align: center;
+        }
+
+        .support h2 {
+            margin: 0;
+
+            font-size: 19px;
+        }
+
+        .support p {
+            max-width: 500px;
+
+            margin: 8px auto 18px;
+
+            font-size: 14px;
+            line-height: 1.5;
+
+            color: #73777f;
+        }
+
+        .support-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 45px;
+
+            padding: 0 21px;
+
+            border: none;
+            border-radius: 9px;
+
+            background: #ff9100;
+            color: #ffffff;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+        .support-button:hover {
+            background: #ed8400;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 0 20px 30px;
+
+            text-align: center;
+
+            font-size: 12px;
+
+            color: #9a9da3;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .header {
+                padding: 22px 16px 30px;
+            }
+
+            .header h1 {
+                font-size: 29px;
+            }
+
+            .header-subtitle {
+                font-size: 15px;
+            }
+
+            .content {
+                padding: 25px 12px 45px;
+            }
+
+            .article {
+                padding: 25px 20px;
+            }
+
+            .article p {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+
+            .article h2 {
+                font-size: 20px;
+            }
+
+            .support {
+                padding: 24px 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="header">
+
+        <div class="header-inner">
+
+            <div class="logo">
+                Allez HOP!
+            </div>
+
+
+            <a
+                href="../cotransporteur.html"
+                class="breadcrumb"
+            >
+                ← Cotransporteur
+            </a>
+
+
+            <h1>
+                Comment modifier ou supprimer un trajet régulier ?
+            </h1>
+
+
+            <p class="header-subtitle">
+                Modifiez vos adresses, mettez à jour votre trajet
+                ou supprimez un trajet qui ne correspond plus
+                à vos déplacements.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         ARTICLE
+    ========================= -->
+
+    <main class="content">
+
+
+        <article class="article">
+
+
+            <h2>
+                Comment modifier un trajet régulier ?
+            </h2>
+
+
+            <p>
+                Si votre trajet habituel change, vous pouvez
+                <strong>modifier votre trajet régulier</strong>
+                afin que les informations enregistrées dans
+                Allez HOP! correspondent à vos déplacements actuels.
+            </p>
+
+
+            <p>
+                Vous pouvez notamment modifier les
+                <strong>adresses de votre trajet</strong> lorsque
+                votre point de départ ou votre destination habituelle
+                change.
+            </p>
+
+
+            <div class="highlight">
+
+                <p>
+                    <strong>Important :</strong>
+                    après avoir modifié les informations de votre trajet,
+                    cliquez sur <strong>« Soumettre »</strong> lorsque
+                    ce bouton est disponible afin de valider et
+                    enregistrer votre modification.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Les étapes pour modifier un trajet
+            </h2>
+
+
+            <div class="steps">
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        1
+                    </div>
+
+                    <div class="step-text">
+                        <strong>Ouvrez la rubrique de vos trajets</strong>
+                        dans votre compte Allez HOP!.
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        2
+                    </div>
+
+                    <div class="step-text">
+                        <strong>Sélectionnez le trajet</strong>
+                        que vous souhaitez modifier.
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        3
+                    </div>
+
+                    <div class="step-text">
+                        <strong>Modifiez les informations</strong>
+                        nécessaires, notamment les adresses
+                        de votre trajet.
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        4
+                    </div>
+
+                    <div class="step-text">
+                        <strong>Vérifiez les informations</strong>
+                        avant de valider votre modification.
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        5
+                    </div>
+
+                    <div class="step-text">
+                        <strong>Cliquez sur « Soumettre »</strong>
+                        afin d'enregistrer et valider
+                        les changements.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <h2>
+                Pourquoi faut-il valider avec « Soumettre » ?
+            </h2>
+
+
+            <p>
+                La modification de votre trajet doit être
+                <strong>soumise pour être enregistrée</strong>.
+                Si vous quittez la page sans valider votre modification,
+                les nouvelles informations peuvent ne pas être prises
+                en compte.
+            </p>
+
+
+            <p>
+                Après avoir cliqué sur « Soumettre », vérifiez que
+                les informations affichées correspondent bien à votre
+                trajet actualisé.
+            </p>
+
+
+            <h2>
+                Comment supprimer un trajet régulier ?
+            </h2>
+
+
+            <p>
+                Si vous n'effectuez plus un trajet enregistré,
+                vous pouvez <strong>supprimer ce trajet régulier</strong>
+                afin qu'il ne soit plus utilisé pour rechercher
+                des courses correspondant à vos déplacements.
+            </p>
+
+
+            <p>
+                La suppression d'un trajet est particulièrement utile
+                lorsque vos habitudes de déplacement changent
+                et que vous ne souhaitez plus recevoir de
+                <strong>notifications de courses</strong> liées
+                à cet ancien trajet.
+            </p>
+
+
+            <h2>
+                Que faire si mon adresse a changé ?
+            </h2>
+
+
+            <p>
+                Si votre adresse de départ ou votre destination habituelle
+                change, modifiez directement les informations de votre
+                trajet régulier.
+            </p>
+
+
+            <p>
+                Pensez ensuite à <strong>soumettre la modification</strong>
+                afin que la nouvelle adresse soit bien enregistrée.
+            </p>
+
+
+            <h2>
+                Mon trajet ne correspond plus à mes déplacements
+            </h2>
+
+
+            <p>
+                Si votre trajet a changé de manière importante,
+                vérifiez les adresses enregistrées et votre
+                <strong>rayon de recherche</strong>.
+            </p>
+
+
+            <p>
+                Vous pouvez modifier votre trajet existant ou supprimer
+                celui-ci et enregistrer un nouveau trajet correspondant
+                mieux à vos déplacements.
+            </p>
+
+
+            <!-- FEEDBACK -->
+
+            <div class="feedback">
+
+                <h3>
+                    Cet article vous a-t-il été utile ?
+                </h3>
+
+
+                <div class="feedback-buttons">
+
+                    <button
+                        class="feedback-button"
+                        type="button"
+                    >
+                        👍 Oui
+                    </button>
+
+
+                    <button
+                        class="feedback-button"
+                        type="button"
+                    >
+                        👎 Non
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =========================
+             SUPPORT
+        ========================= -->
+
+        <section class="support">
+
+            <h2>
+                Vous avez encore besoin d'aide ?
+            </h2>
+
+
+            <p>
+                Vous n'avez pas trouvé la réponse à votre question ?
+                Notre équipe Allez HOP! peut vous aider directement.
+            </p>
+
+
+            <button
+                class="support-button"
+                type="button"
+                onclick="ouvrirSupport()"
+            >
+                💬 Chatter avec le support
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        Allez HOP! · Centre d'aide
+    </footer>
+
+
+    <!-- =========================
+         TAWK.TO
+    ========================= -->
+
+    <script type="text/javascript">
+
+        var Tawk_API = Tawk_API || {};
+        var Tawk_LoadStart = new Date();
+
+
+        function ouvrirSupport() {
+
+            if (
+                typeof Tawk_API !== 'undefined' &&
+                typeof Tawk_API.maximize === 'function'
+            ) {
+
+                Tawk_API.maximize();
+
+            }
+
+        }
+
+
+        (function() {
+
+            var s1 = document.createElement("script");
+            var s0 = document.getElementsByTagName("script")[0];
+
+            s1.async = true;
+
+            s1.src =
+                'https://embed.tawk.to/6a8da5b6c0e0d43447f68e02/1k0tcvbbn';
+
+            s1.charset = 'UTF-8';
+
+            s1.setAttribute(
+                'crossorigin',
+                '*'
+            );
+
+            s0.parentNode.insertBefore(
+                s1,
+                s0
+            );
+
+        })();
+
+    </script>
+
+
+</body>
+
+</html>
