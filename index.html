@@ -21,15 +21,57 @@
 
 
     <!-- =========================
+         BREVO — CONFIGURATION
+    ========================= -->
+
+    <script>
+
+        window.BrevoConversationsSetup = {
+
+            /*
+             * Cette classe indique à Brevo
+             * quel élément doit ouvrir le chat.
+             *
+             * Le bouton correspondant est
+             * plus bas dans la page.
+             */
+
+            customWidgetButton: '.brevo-chat-button',
+
+            /*
+             * Taille de la fenêtre du chat
+             */
+
+            chatWidth: 400,
+
+            chatHeight: 550,
+
+            /*
+             * Position du widget sur l'écran
+             */
+
+            buttonPosition: 'br'
+
+        };
+
+    </script>
+
+
+    <!-- =========================
          BREVO CONVERSATIONS
     ========================= -->
 
     <script>
+
         (function(d, w, c) {
-            w.BrevoConversationsID = '66de1609df5363314100b775';
+
+            w.BrevoConversationsID =
+                '66de1609df5363314100b775';
 
             w[c] = w[c] || function() {
+
                 (w[c].q = w[c].q || []).push(arguments);
+
             };
 
             var s = d.createElement('script');
@@ -40,10 +82,13 @@
                 'https://conversations-widget.brevo.com/brevo-conversations.js';
 
             if (d.head) {
+
                 d.head.appendChild(s);
+
             }
 
         })(document, window, 'BrevoConversations');
+
     </script>
 
 
@@ -335,13 +380,63 @@
             max-width: 560px;
 
             margin:
-                9px auto 0;
+                9px auto 18px;
 
             font-size: 14px;
 
             line-height: 1.6;
 
             color: #73777f;
+        }
+
+
+        /* =========================
+           BOUTON BREVO
+        ========================= */
+
+        .brevo-chat-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 46px;
+
+            padding:
+                0 24px;
+
+            border: none;
+
+            border-radius: 9px;
+
+            background:
+                #ff9100;
+
+            color: #ffffff;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                background 0.15s ease,
+                transform 0.15s ease;
+        }
+
+
+        .brevo-chat-button:hover {
+
+            background:
+                #ed8400;
+
+            transform:
+                translateY(-1px);
         }
 
 
@@ -420,6 +515,12 @@
                     25px 20px;
             }
 
+
+            .brevo-chat-button {
+
+                width: 100%;
+            }
+
         }
 
     </style>
@@ -489,9 +590,7 @@
         <section class="categories">
 
 
-            <!-- =========================
-                 COTRANSPORTEUR
-            ========================= -->
+            <!-- COTRANSPORTEUR -->
 
             <a
                 href="cotransporteur.html"
@@ -510,9 +609,7 @@
             </a>
 
 
-            <!-- =========================
-                 COURSES
-            ========================= -->
+            <!-- COURSES -->
 
             <a
                 href="courses.html"
@@ -531,9 +628,7 @@
             </a>
 
 
-            <!-- =========================
-                 COMMANDES
-            ========================= -->
+            <!-- COMMANDES -->
 
             <a
                 href="commandes.html"
@@ -552,9 +647,7 @@
             </a>
 
 
-            <!-- =========================
-                 MON COMPTE
-            ========================= -->
+            <!-- MON COMPTE -->
 
             <a
                 href="mon-compte.html"
@@ -573,9 +666,7 @@
             </a>
 
 
-            <!-- =========================
-                 MES TRAJETS
-            ========================= -->
+            <!-- MES TRAJETS -->
 
             <a
                 href="mes-trajets.html"
@@ -594,9 +685,7 @@
             </a>
 
 
-            <!-- =========================
-                 MES GAINS
-            ========================= -->
+            <!-- MES GAINS -->
 
             <a
                 href="mes-gains.html"
@@ -615,9 +704,7 @@
             </a>
 
 
-            <!-- =========================
-                 PROBLÈMES & INCIDENTS
-            ========================= -->
+            <!-- PROBLÈMES & INCIDENTS -->
 
             <a
                 href="problemes-incidents.html"
@@ -651,9 +738,17 @@
 
 
             <p>
-                Utilisez le chat Allez HOP! pour contacter
-                notre équipe directement.
+                Une question reste sans réponse ?
+                Parlez directement avec notre équipe Allez HOP!.
             </p>
+
+
+            <button
+                type="button"
+                class="brevo-chat-button"
+            >
+                💬 Parler avec le support
+            </button>
 
         </section>
 
