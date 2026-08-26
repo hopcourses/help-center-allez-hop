@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Renseigner ses trajets réguliers — Allez HOP! | Centre d'aide
+    </title>
+
+    <meta
+        name="description"
+        content="Comment renseigner ses trajets réguliers sur Allez HOP! et recevoir des notifications ciblées pour les courses correspondant à ses déplacements."
+    >
+
+
+    <!-- =========================
+         BREVO CONVERSATIONS
+    ========================= -->
+
+    <script>
+
+        window.BrevoConversationsSetup = {
+
+            customWidgetButton: '.brevo-chat-button',
+
+            chatWidth: 400,
+
+            chatHeight: 550,
+
+            buttonPosition: 'br'
+
+        };
+
+    </script>
+
+
+    <script>
+
+        (function(d, w, c) {
+
+            w.BrevoConversationsID =
+                '66de1609df5363314100b775';
+
+            w[c] = w[c] || function() {
+
+                (w[c].q = w[c].q || []).push(arguments);
+
+            };
+
+            var s = d.createElement('script');
+
+            s.async = true;
+
+            s.src =
+                'https://conversations-widget.brevo.com/brevo-conversations.js';
+
+            if (d.head) {
+
+                d.head.appendChild(s);
+
+            }
+
+        })(document, window, 'BrevoConversations');
+
+    </script>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+
+            font-family:
+                Inter,
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #f8f9fa;
+
+            color: #202124;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+
+            background: #ffffff;
+
+            border-bottom:
+                1px solid #eeeeee;
+
+            padding:
+                25px 20px 35px;
+        }
+
+
+        .header-inner {
+
+            max-width: 1000px;
+
+            margin: 0 auto;
+        }
+
+
+        .logo {
+
+            display: inline-block;
+
+            margin-bottom: 25px;
+
+            font-size: 23px;
+
+            font-weight: 800;
+
+            color: #ff9100;
+        }
+
+
+        .breadcrumb {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            margin-bottom: 24px;
+
+            color: #73777f;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 600;
+        }
+
+
+        .breadcrumb:hover {
+
+            color: #ff9100;
+        }
+
+
+        .header h1 {
+
+            max-width: 760px;
+
+            margin: 0;
+
+            font-size: 36px;
+
+            line-height: 1.25;
+
+            letter-spacing: -0.8px;
+        }
+
+
+        .header-subtitle {
+
+            max-width: 700px;
+
+            margin:
+                12px 0 0;
+
+            font-size: 17px;
+
+            line-height: 1.6;
+
+            color: #73777f;
+        }
+
+
+        /* =========================
+           CONTENU
+        ========================= */
+
+        .content {
+
+            width: 100%;
+
+            max-width: 800px;
+
+            margin: 0 auto;
+
+            padding:
+                45px 20px 60px;
+        }
+
+
+        .article {
+
+            background: #ffffff;
+
+            border:
+                1px solid #e8e8e8;
+
+            border-radius: 14px;
+
+            padding:
+                35px 40px;
+
+            box-shadow:
+                0 2px 10px rgba(0,0,0,0.025);
+        }
+
+
+        .article p {
+
+            margin:
+                0 0 20px;
+
+            font-size: 16px;
+
+            line-height: 1.75;
+
+            color: #44484f;
+        }
+
+
+        .article h2 {
+
+            margin:
+                30px 0 12px;
+
+            font-size: 22px;
+
+            line-height: 1.35;
+
+            color: #202124;
+        }
+
+
+        .article h2:first-child {
+
+            margin-top: 0;
+        }
+
+
+        .article strong {
+
+            color: #202124;
+        }
+
+
+        /* =========================
+           LISTES
+        ========================= */
+
+        .article ul {
+
+            margin:
+                8px 0 24px;
+
+            padding-left: 22px;
+
+            color: #44484f;
+        }
+
+
+        .article li {
+
+            margin-bottom: 10px;
+
+            padding-left: 4px;
+
+            font-size: 15px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           ENCADRES
+        ========================= */
+
+        .highlight {
+
+            margin:
+                28px 0;
+
+            padding:
+                20px 22px;
+
+            background:
+                #fff7ed;
+
+            border-left:
+                4px solid #ff9100;
+
+            border-radius: 8px;
+        }
+
+
+        .highlight p {
+
+            margin: 0;
+
+            font-size: 15px;
+        }
+
+
+        .case {
+
+            margin:
+                20px 0;
+
+            padding:
+                20px 22px;
+
+            background:
+                #fafafa;
+
+            border:
+                1px solid #eeeeee;
+
+            border-radius: 10px;
+        }
+
+
+        .case-title {
+
+            margin:
+                0 0 8px;
+
+            font-size: 17px;
+
+            font-weight: 800;
+
+            color: #202124;
+        }
+
+
+        .case p {
+
+            margin: 0;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           CHEMIN APP
+        ========================= */
+
+        .path {
+
+            display: inline-block;
+
+            margin:
+                8px 0 20px;
+
+            padding:
+                11px 15px;
+
+            background:
+                #f5f5f5;
+
+            border-radius: 8px;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            color: #44484f;
+        }
+
+
+        /* =========================
+           ETAPES
+        ========================= */
+
+        .steps {
+
+            margin:
+                25px 0 30px;
+        }
+
+
+        .step {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 14px;
+
+            margin-bottom: 16px;
+
+            padding:
+                17px 18px;
+
+            background:
+                #fafafa;
+
+            border:
+                1px solid #eeeeee;
+
+            border-radius: 10px;
+        }
+
+
+        .step-number {
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 30px;
+
+            height: 30px;
+
+            border-radius: 50%;
+
+            background:
+                #ff9100;
+
+            color:
+                #ffffff;
+
+            font-size: 14px;
+
+            font-weight: 800;
+        }
+
+
+        .step-content {
+
+            flex: 1;
+        }
+
+
+        .step-content strong {
+
+            display: block;
+
+            margin-bottom: 4px;
+
+            font-size: 16px;
+        }
+
+
+        .step-content p {
+
+            margin: 0;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FEEDBACK
+        ========================= */
+
+        .feedback {
+
+            margin-top: 35px;
+
+            padding-top: 28px;
+
+            border-top:
+                1px solid #eeeeee;
+
+            text-align: center;
+        }
+
+
+        .feedback h3 {
+
+            margin:
+                0 0 15px;
+
+            font-size: 16px;
+        }
+
+
+        .feedback-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 10px;
+        }
+
+
+        .feedback-button {
+
+            min-width: 90px;
+
+            padding:
+                9px 16px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #dddddd;
+
+            border-radius: 8px;
+
+            color: #555;
+
+            cursor: pointer;
+
+            font-size: 14px;
+        }
+
+
+        .feedback-button:hover {
+
+            border-color:
+                #ff9100;
+
+            color:
+                #ff9100;
+        }
+
+
+        /* =========================
+           SUPPORT
+        ========================= */
+
+        .support {
+
+            margin-top: 25px;
+
+            padding:
+                28px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #e8e8e8;
+
+            border-radius: 14px;
+
+            text-align: center;
+        }
+
+
+        .support h2 {
+
+            margin: 0;
+
+            font-size: 19px;
+        }
+
+
+        .support p {
+
+            max-width: 500px;
+
+            margin:
+                8px auto 18px;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+
+            color: #73777f;
+        }
+
+
+        .brevo-chat-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 46px;
+
+            padding:
+                0 24px;
+
+            border: none;
+
+            border-radius: 9px;
+
+            background:
+                #ff9100;
+
+            color: #ffffff;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                background 0.15s ease,
+                transform 0.15s ease;
+        }
+
+
+        .brevo-chat-button:hover {
+
+            background:
+                #ed8400;
+
+            transform:
+                translateY(-1px);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding:
+                0 20px 30px;
+
+            text-align: center;
+
+            font-size: 12px;
+
+            color: #9a9da3;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .header {
+
+                padding:
+                    22px 16px 30px;
+            }
+
+
+            .header h1 {
+
+                font-size: 29px;
+            }
+
+
+            .header-subtitle {
+
+                font-size: 15px;
+            }
+
+
+            .content {
+
+                padding:
+                    25px 12px 45px;
+            }
+
+
+            .article {
+
+                padding:
+                    25px 20px;
+            }
+
+
+            .article p {
+
+                font-size: 15px;
+
+                line-height: 1.7;
+            }
+
+
+            .article h2 {
+
+                font-size: 20px;
+            }
+
+
+            .article li {
+
+                font-size: 15px;
+            }
+
+
+            .step {
+
+                padding:
+                    15px;
+            }
+
+
+            .support {
+
+                padding:
+                    24px 18px;
+            }
+
+
+            .brevo-chat-button {
+
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="header">
+
+        <div class="header-inner">
+
+
+            <div class="logo">
+                Allez HOP!
+            </div>
+
+
+            <a
+                href="../compte.html"
+                class="breadcrumb"
+            >
+                ← Compte et profil
+            </a>
+
+
+            <h1>
+                Renseigner ses trajets réguliers
+            </h1>
+
+
+            <p class="header-subtitle">
+                Indiquez vos déplacements habituels pour recevoir
+                des notifications ciblées sur les courses disponibles.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENU
+    ========================= -->
+
+    <main class="content">
+
+
+        <article class="article">
+
+
+            <h2>
+                À quoi servent les trajets réguliers ?
+            </h2>
+
+
+            <p>
+                Les <strong>trajets réguliers</strong> permettent
+                d'indiquer les déplacements que vous effectuez
+                habituellement et que vous connaissez à l'avance.
+            </p>
+
+
+            <p>
+                En les renseignant dans votre profil, vous pouvez
+                recevoir des <strong>notifications ciblées</strong>
+                lorsqu'une course devient disponible sur un trajet
+                correspondant.
+            </p>
+
+
+            <div class="highlight">
+
+                <p>
+                    <strong>L'objectif :</strong>
+                    pouvoir profiter d'une course qui s'intègre
+                    naturellement à un déplacement que vous aviez
+                    déjà prévu.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Où renseigner ses trajets ?
+            </h2>
+
+
+            <p>
+                Depuis votre profil, rendez-vous dans :
+            </p>
+
+
+            <div class="path">
+                Profil → Trajet(s) régulier(s)
+            </div>
+
+
+            <p>
+                Vous pouvez enregistrer
+                <strong>jusqu'à 5 trajets réguliers</strong>.
+            </p>
+
+
+            <h2>
+                Créer un trajet régulier
+            </h2>
+
+
+            <p>
+                Pour créer un trajet, renseignez :
+            </p>
+
+
+            <div class="steps">
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        1
+                    </div>
+
+                    <div class="step-content">
+
+                        <strong>
+                            Code postal de départ
+                        </strong>
+
+                        <p>
+                            Indiquez le code postal correspondant
+                            à la ville de départ.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        2
+                    </div>
+
+                    <div class="step-content">
+
+                        <strong>
+                            Code postal d'arrivée
+                        </strong>
+
+                        <p>
+                            Indiquez le code postal correspondant
+                            à la ville d'arrivée.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="highlight">
+
+                <p>
+                    <strong>Les deux informations sont obligatoires :</strong>
+                    un trajet régulier doit comporter un code postal
+                    de départ et un code postal d'arrivée.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Jusqu'à 5 trajets réguliers
+            </h2>
+
+
+            <p>
+                Vous pouvez enregistrer
+                <strong>jusqu'à 5 trajets réguliers
+                simultanément</strong>.
+            </p>
+
+
+            <p>
+                Vous pouvez ainsi renseigner plusieurs déplacements
+                habituels si vous effectuez régulièrement différents
+                trajets.
+            </p>
+
+
+            <h2>
+                Modifier ou supprimer un trajet
+            </h2>
+
+
+            <p>
+                Vos trajets réguliers peuvent être
+                <strong>modifiés ou supprimés</strong>.
+            </p>
+
+
+            <p>
+                Vous pouvez donc les adapter lorsque vos habitudes
+                de déplacement évoluent.
+            </p>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    🔄 Vos trajets changent ?
+                </p>
+
+                <p>
+                    Pensez à mettre vos trajets réguliers à jour
+                    afin que les notifications reçues restent
+                    pertinentes.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Comment fonctionnent les notifications ciblées ?
+            </h2>
+
+
+            <p>
+                Les trajets réguliers servent à recevoir des
+                <strong>notifications ciblées</strong>.
+            </p>
+
+
+            <p>
+                Lorsqu'une course devient disponible, une
+                notification peut vous être envoyée si la course
+                correspond à l'une des villes renseignées dans
+                vos trajets réguliers.
+            </p>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    📦 Course disponible au départ
+                </p>
+
+                <p>
+                    Vous pouvez être notifié lorsqu'une course
+                    est disponible au <strong>départ</strong>
+                    de l'une des villes renseignées.
+                </p>
+
+            </div>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    📍 Course disponible à l'arrivée
+                </p>
+
+                <p>
+                    Vous pouvez également être notifié lorsqu'une
+                    course est disponible à <strong>l'arrivée</strong>
+                    de l'une des villes renseignées.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Et si je n'ai aucun trajet régulier ?
+            </h2>
+
+
+            <p>
+                Ce n'est pas bloquant.
+            </p>
+
+
+            <p>
+                Vous pouvez toujours consulter les courses
+                disponibles directement depuis la
+                <strong>page d'accueil de l'App web</strong>
+                et utiliser les filtres pour rechercher les
+                courses correspondant à vos déplacements.
+            </p>
+
+
+            <div class="highlight">
+
+                <p>
+                    <strong>Bon réflexe :</strong>
+                    consultez régulièrement l'App web et
+                    restez à l'affût des nouvelles courses
+                    disponibles.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Gardez vos trajets à jour
+            </h2>
+
+
+            <p>
+                Vos trajets réguliers peuvent être modifiés ou
+                supprimés à tout moment.
+            </p>
+
+
+            <p>
+                Pensez à les actualiser lorsque vos habitudes
+                de déplacement changent afin de conserver des
+                <strong>notifications ciblées pertinentes</strong>.
+            </p>
+
+
+            <h2>
+                À retenir
+            </h2>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    📍 Où ?
+                </p>
+
+                <p>
+                    <strong>Profil → Trajet(s) régulier(s)</strong>
+                </p>
+
+            </div>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    🔢 Combien ?
+                </p>
+
+                <p>
+                    Jusqu'à <strong>5 trajets réguliers</strong>.
+                </p>
+
+            </div>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    🏁 Quelles informations ?
+                </p>
+
+                <p>
+                    Un <strong>code postal de départ</strong>
+                    et un <strong>code postal d'arrivée</strong>.
+                </p>
+
+            </div>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    🔔 Pourquoi ?
+                </p>
+
+                <p>
+                    Pour recevoir des
+                    <strong>notifications ciblées</strong>
+                    lorsqu'une course est disponible au départ
+                    ou à l'arrivée de l'une des villes renseignées.
+                </p>
+
+            </div>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    🔄 Modification
+                </p>
+
+                <p>
+                    Les trajets peuvent être
+                    <strong>modifiés ou supprimés</strong>.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Besoin d'aide ?
+            </h2>
+
+
+            <p>
+                Si vous rencontrez un problème avec vos trajets
+                réguliers ou vos notifications, contactez le
+                support Allez HOP!.
+            </p>
+
+
+            <!-- =========================
+                 FEEDBACK
+            ========================= -->
+
+            <div class="feedback">
+
+                <h3>
+                    Cet article vous a-t-il été utile ?
+                </h3>
+
+
+                <div class="feedback-buttons">
+
+                    <button
+                        class="feedback-button"
+                        type="button"
+                    >
+                        👍 Oui
+                    </button>
+
+
+                    <button
+                        class="feedback-button"
+                        type="button"
+                    >
+                        👎 Non
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =========================
+             SUPPORT
+        ========================= -->
+
+        <section class="support">
+
+            <h2>
+                Vous avez encore besoin d'aide ?
+            </h2>
+
+
+            <p>
+                Vous n'avez pas trouvé la réponse à votre question ?
+                Parlez directement avec notre équipe Allez HOP!.
+            </p>
+
+
+            <button
+                type="button"
+                class="brevo-chat-button"
+            >
+                💬 Parler avec le support
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        Allez HOP! · Centre d'aide
+
+    </footer>
+
+
+</body>
+
+</html>
