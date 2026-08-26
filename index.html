@@ -3,57 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Widget Chat - HOP Courses</title>
+
+    <title>HOP Courses - Support</title>
+
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100%;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 30px;
             background-color: #f7f9fa;
             color: #333;
         }
+
         .container {
-            max-width: 800px;
+            width: 100%;
+            max-width: 900px;
             margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 25px 20px;
         }
-        h1 {
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0 0 8px;
             color: #ff5722;
+            font-size: 28px;
         }
-        /* Style pour centrer ou dimensionner ton bloc de chat intégré */
+
+        .header p {
+            margin: 0;
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* Zone du widget Tawk.to */
         #tawk_6a8da5b6c0e0d43447f68e02 {
             width: 100%;
-            height: 500px; 
+            height: 650px;
             margin-top: 20px;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                padding: 15px 10px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            #tawk_6a8da5b6c0e0d43447f68e02 {
+                height: 600px;
+                margin-top: 15px;
+                border-radius: 8px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
-        <h1>HOP Courses - Support en ligne</h1>
-        <p>Veuillez patienter...</p>
 
-        <!-- EMPLACEMENT OÙ LE CHAT VA S'INCRUSTER -->
-        <div id='tawk_6a8da5b6c0e0d43447f68e02'></div>
+        <div class="header">
+            <h1>HOP Courses - Support</h1>
+            <p>Besoin d'aide ? Notre équipe est là pour vous accompagner.</p>
+        </div>
+
+        <!-- Zone d'intégration du widget Tawk.to -->
+        <div id="tawk_6a8da5b6c0e0d43447f68e02"></div>
+
     </div>
 
-    <!--Start of Tawk.to Script-->
+
+    <!-- Tawk.to -->
     <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date(); 
-    Tawk_API.embedded='tawk_6a8da5b6c0e0d43447f68e02';
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/6a8da5b6c0e0d43447f68e02/1k0tcvbbn';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);})();
+
+        var Tawk_API = Tawk_API || {};
+        var Tawk_LoadStart = new Date();
+
+        /* Indique à Tawk.to que le widget doit être intégré dans cette div */
+        Tawk_API.embedded = 'tawk_6a8da5b6c0e0d43447f68e02';
+
+        (function() {
+
+            var s1 = document.createElement("script");
+            var s0 = document.getElementsByTagName("script")[0];
+
+            s1.async = true;
+
+            s1.src = 'https://embed.tawk.to/6a8da5b6c0e0d43447f68e02/1k0tcvbbn';
+
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+
+            s0.parentNode.insertBefore(s1, s0);
+
+        })();
+
     </script>
-    <!--End of Tawk.to Script-->
 
 </body>
 </html>
