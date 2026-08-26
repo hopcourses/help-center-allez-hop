@@ -19,17 +19,73 @@
         content="Centre d'aide Allez HOP! pour les cotransporteurs : compte, trajets, courses, notifications et assistance."
     >
 
+
+    <!-- =========================
+         BREVO CONVERSATIONS
+    ========================= -->
+
+    <script>
+
+        window.BrevoConversationsSetup = {
+
+            customWidgetButton:
+                '.brevo-chat-button',
+
+            chatWidth: 400,
+
+            chatHeight: 550,
+
+            buttonPosition: 'br'
+
+        };
+
+    </script>
+
+
+    <script>
+
+        (function(d, w, c) {
+
+            w.BrevoConversationsID =
+                '66de1609df5363314100b775';
+
+            w[c] = w[c] || function() {
+
+                (w[c].q = w[c].q || []).push(arguments);
+
+            };
+
+            var s = d.createElement('script');
+
+            s.async = true;
+
+            s.src =
+                'https://conversations-widget.brevo.com/brevo-conversations.js';
+
+            if (d.head) {
+
+                d.head.appendChild(s);
+
+            }
+
+        })(document, window, 'BrevoConversations');
+
+    </script>
+
+
     <style>
 
         * {
             box-sizing: border-box;
         }
 
+
         html,
         body {
             margin: 0;
             padding: 0;
         }
+
 
         body {
 
@@ -218,7 +274,8 @@
 
         .article-title {
 
-            margin: 0 0 8px;
+            margin:
+                0 0 8px;
 
             font-size: 17px;
 
@@ -287,7 +344,11 @@
         }
 
 
-        .support-button {
+        /* =========================
+           BOUTON BREVO
+        ========================= */
+
+        .brevo-chat-button {
 
             display: inline-flex;
 
@@ -295,10 +356,10 @@
 
             justify-content: center;
 
-            min-height: 45px;
+            min-height: 46px;
 
             padding:
-                0 21px;
+                0 24px;
 
             border: none;
 
@@ -309,18 +370,27 @@
 
             color: #ffffff;
 
+            font-family: inherit;
+
             font-size: 14px;
 
             font-weight: 700;
 
             cursor: pointer;
+
+            transition:
+                background 0.15s ease,
+                transform 0.15s ease;
         }
 
 
-        .support-button:hover {
+        .brevo-chat-button:hover {
 
             background:
                 #ed8400;
+
+            transform:
+                translateY(-1px);
         }
 
 
@@ -393,6 +463,12 @@
                     24px 18px;
             }
 
+
+            .brevo-chat-button {
+
+                width: 100%;
+            }
+
         }
 
     </style>
@@ -457,8 +533,6 @@
         <section class="articles">
 
 
-            <!-- ARTICLE 1 -->
-
             <a
                 href="articles/quest-ce-quun-cotransporteur.html"
                 class="article"
@@ -475,8 +549,6 @@
 
             </a>
 
-
-            <!-- ARTICLE 2 -->
 
             <a
                 href="articles/comment-fonctionne-allez-hop-cotransporteur.html"
@@ -495,8 +567,6 @@
             </a>
 
 
-            <!-- ARTICLE 3 -->
-
             <a
                 href="articles/comment-devenir-cotransporteur.html"
                 class="article"
@@ -513,8 +583,6 @@
 
             </a>
 
-
-            <!-- ARTICLE 4 -->
 
             <a
                 href="articles/comment-trouver-une-course.html"
@@ -533,8 +601,6 @@
             </a>
 
 
-            <!-- ARTICLE 5 -->
-
             <a
                 href="articles/comment-renseigner-trajets-reguliers.html"
                 class="article"
@@ -551,8 +617,6 @@
 
             </a>
 
-
-            <!-- ARTICLE 6 -->
 
             <a
                 href="articles/modifier-supprimer-trajet.html"
@@ -571,8 +635,6 @@
             </a>
 
 
-            <!-- ARTICLE 7 -->
-
             <a
                 href="articles/notifications-courses.html"
                 class="article"
@@ -589,8 +651,6 @@
 
             </a>
 
-
-            <!-- ARTICLE 8 -->
 
             <a
                 href="articles/modifier-informations-cotransporteur.html"
@@ -625,16 +685,15 @@
 
             <p>
                 Vous n'avez pas trouvé la réponse à votre question ?
-                Notre assistant IA peut vous aider directement.
+                Parlez directement avec notre équipe Allez HOP!.
             </p>
 
 
             <button
-                class="support-button"
                 type="button"
-                onclick="ouvrirSupport()"
+                class="brevo-chat-button"
             >
-                💬 Chatter avec le support
+                💬 Parler avec le support
             </button>
 
         </section>
@@ -646,57 +705,6 @@
     <footer>
         Allez HOP! · Centre d'aide
     </footer>
-
-
-    <!-- =========================
-         TAWK.TO
-    ========================= -->
-
-    <script type="text/javascript">
-
-        var Tawk_API = Tawk_API || {};
-        var Tawk_LoadStart = new Date();
-
-
-        function ouvrirSupport() {
-
-            if (
-                typeof Tawk_API !== 'undefined' &&
-                typeof Tawk_API.maximize === 'function'
-            ) {
-
-                Tawk_API.maximize();
-
-            }
-
-        }
-
-
-        (function() {
-
-            var s1 = document.createElement("script");
-            var s0 = document.getElementsByTagName("script")[0];
-
-            s1.async = true;
-
-            s1.src =
-                'https://embed.tawk.to/6a8da5b6c0e0d43447f68e02/1k0tcvbbn';
-
-            s1.charset = 'UTF-8';
-
-            s1.setAttribute(
-                'crossorigin',
-                '*'
-            );
-
-            s0.parentNode.insertBefore(
-                s1,
-                s0
-            );
-
-        })();
-
-    </script>
 
 
 </body>
