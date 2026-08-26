@@ -28,30 +28,14 @@
 
         window.BrevoConversationsSetup = {
 
-            /*
-             * Cette classe indique à Brevo
-             * quel élément doit ouvrir le chat.
-             *
-             * Le bouton correspondant est
-             * plus bas dans la page.
-             */
-
             customWidgetButton:
                 '.brevo-chat-button',
-
-            /*
-             * Taille de la fenêtre du chat
-             */
 
             chatWidth:
                 400,
 
             chatHeight:
                 550,
-
-            /*
-             * Position du widget sur l'écran
-             */
 
             buttonPosition:
                 'br'
@@ -107,11 +91,8 @@
         html,
         body {
 
-            margin:
-                0;
-
-            padding:
-                0;
+            margin: 0;
+            padding: 0;
 
         }
 
@@ -667,12 +648,8 @@
 
 
             <p class="header-subtitle">
-
                 Comment pouvons-nous vous aider ?
-
-                Retrouvez rapidement les réponses
-                à vos questions.
-
+                Retrouvez rapidement les réponses à vos questions.
             </p>
 
 
@@ -683,8 +660,10 @@
                 <input
                     type="search"
                     class="search-box"
+                    id="siteSearch"
                     placeholder="Rechercher une question..."
                     aria-label="Rechercher dans le centre d'aide"
+                    autocomplete="off"
                 >
 
             </div>
@@ -715,7 +694,7 @@
             ========================= -->
 
             <a
-                href="cotransporteur.html"
+                href="/cotransporteur"
                 class="category-card"
             >
 
@@ -723,11 +702,10 @@
                     Cotransporteur
                 </h2>
 
-                <p class="category-description">
 
+                <p class="category-description">
                     Compte, inscription, trajets réguliers,
                     recherche de courses et notifications.
-
                 </p>
 
             </a>
@@ -738,7 +716,7 @@
             ========================= -->
 
             <a
-                href="courses.html"
+                href="/courses"
                 class="category-card"
             >
 
@@ -746,11 +724,10 @@
                     Courses
                 </h2>
 
-                <p class="category-description">
 
+                <p class="category-description">
                     Trouver, accepter, réaliser et suivre
                     une course sur Allez HOP!.
-
                 </p>
 
             </a>
@@ -761,7 +738,7 @@
             ========================= -->
 
             <a
-                href="commandes.html"
+                href="/commandes"
                 class="category-card"
             >
 
@@ -769,34 +746,32 @@
                     Commandes
                 </h2>
 
-                <p class="category-description">
 
+                <p class="category-description">
                     Retrait, livraison, commande, code-barres
                     et problèmes liés aux commandes.
-
                 </p>
 
             </a>
 
 
             <!-- =========================
-                 MON COMPTE
+                 COMPTE
             ========================= -->
 
             <a
-                href="compte"
+                href="/compte"
                 class="category-card"
             >
 
                 <h2 class="category-title">
-                    Mon compte
+                    Compte
                 </h2>
 
-                <p class="category-description">
 
+                <p class="category-description">
                     Connexion, informations personnelles,
                     profil et paramètres du compte.
-
                 </p>
 
             </a>
@@ -807,7 +782,7 @@
             ========================= -->
 
             <a
-                href="mes-trajets.html"
+                href="/mes-trajets"
                 class="category-card"
             >
 
@@ -815,11 +790,10 @@
                     Mes trajets
                 </h2>
 
-                <p class="category-description">
 
+                <p class="category-description">
                     Ajouter, modifier ou supprimer vos trajets
                     et gérer vos critères de recherche.
-
                 </p>
 
             </a>
@@ -830,7 +804,7 @@
             ========================= -->
 
             <a
-                href="mes-gains.html"
+                href="/mes-gains"
                 class="category-card"
             >
 
@@ -838,11 +812,10 @@
                     Mes gains
                 </h2>
 
+
                 <p class="category-description">
-
-                    Consultez vos gains, vos paiements
-                    et vos informations financières.
-
+                    Consultez vos gains, votre cagnotte,
+                    vos retraits et vos versements.
                 </p>
 
             </a>
@@ -853,7 +826,7 @@
             ========================= -->
 
             <a
-                href="problemes-incidents.html"
+                href="/problemes-incidents"
                 class="category-card"
             >
 
@@ -861,11 +834,10 @@
                     Problèmes &amp; incidents
                 </h2>
 
-                <p class="category-description">
 
+                <p class="category-description">
                     Que faire en cas de problème pendant
                     une course, un retrait ou une livraison ?
-
                 </p>
 
             </a>
@@ -886,12 +858,8 @@
 
 
             <p>
-
                 Une question reste sans réponse ?
-
-                Parlez directement avec notre équipe
-                Allez HOP!.
-
+                Parlez directement avec notre équipe Allez HOP!.
             </p>
 
 
@@ -899,9 +867,7 @@
                 type="button"
                 class="brevo-chat-button"
             >
-
                 💬 Parler avec le support
-
             </button>
 
         </section>
@@ -919,6 +885,66 @@
         Allez HOP! · Centre d'aide
 
     </footer>
+
+
+    <!-- =========================
+         RECHERCHE GLOBALE
+    ========================= -->
+
+    <script>
+
+        const searchInput =
+            document.getElementById('siteSearch');
+
+
+        const categoryCards =
+            Array.from(
+                document.querySelectorAll('.category-card')
+            );
+
+
+        searchInput.addEventListener(
+            'input',
+            function() {
+
+                const search =
+                    this.value
+                        .toLowerCase()
+                        .normalize('NFD')
+                        .replace(/[\u0300-\u036f]/g, '')
+                        .trim();
+
+
+                categoryCards.forEach(function(card) {
+
+                    const text =
+                        card.textContent
+                            .toLowerCase()
+                            .normalize('NFD')
+                            .replace(/[\u0300-\u036f]/g, '');
+
+
+                    if (
+                        search === '' ||
+                        text.includes(search)
+                    ) {
+
+                        card.style.display =
+                            'block';
+
+                    } else {
+
+                        card.style.display =
+                            'none';
+
+                    }
+
+                });
+
+            }
+        );
+
+    </script>
 
 
 </body>
