@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Comment valider le retrait d'une commande ? — Allez HOP! | Centre d'aide
+    </title>
+
+    <meta
+        name="description"
+        content="Découvrez comment valider le retrait d'une commande dans Allez HOP! et quoi faire en cas de problème lors de la prise en charge."
+    >
+
+    <!-- =========================
+         BREVO CONVERSATIONS
+    ========================= -->
+
+    <script>
+
+        window.BrevoConversationsSetup = {
+
+            customWidgetButton: '.brevo-chat-button',
+
+            chatWidth: 400,
+
+            chatHeight: 550,
+
+            buttonPosition: 'br'
+
+        };
+
+    </script>
+
+
+    <script>
+
+        (function(d, w, c) {
+
+            w.BrevoConversationsID =
+                '66de1609df5363314100b775';
+
+            w[c] = w[c] || function() {
+
+                (w[c].q = w[c].q || []).push(arguments);
+
+            };
+
+            var s = d.createElement('script');
+
+            s.async = true;
+
+            s.src =
+                'https://conversations-widget.brevo.com/brevo-conversations.js';
+
+            if (d.head) {
+
+                d.head.appendChild(s);
+
+            }
+
+        })(document, window, 'BrevoConversations');
+
+    </script>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+
+            font-family:
+                Inter,
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #f8f9fa;
+
+            color: #202124;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+
+            background: #ffffff;
+
+            border-bottom:
+                1px solid #eeeeee;
+
+            padding:
+                25px 20px 35px;
+        }
+
+
+        .header-inner {
+
+            max-width: 1000px;
+
+            margin: 0 auto;
+        }
+
+
+        .logo {
+
+            display: inline-block;
+
+            margin-bottom: 25px;
+
+            font-size: 23px;
+
+            font-weight: 800;
+
+            color: #ff9100;
+        }
+
+
+        .breadcrumb {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            margin-bottom: 24px;
+
+            color: #73777f;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 600;
+        }
+
+
+        .breadcrumb:hover {
+
+            color: #ff9100;
+        }
+
+
+        .header h1 {
+
+            max-width: 760px;
+
+            margin: 0;
+
+            font-size: 36px;
+
+            line-height: 1.25;
+
+            letter-spacing: -0.8px;
+        }
+
+
+        .header-subtitle {
+
+            max-width: 700px;
+
+            margin:
+                12px 0 0;
+
+            font-size: 17px;
+
+            line-height: 1.6;
+
+            color: #73777f;
+        }
+
+
+        /* =========================
+           CONTENU
+        ========================= */
+
+        .content {
+
+            width: 100%;
+
+            max-width: 800px;
+
+            margin: 0 auto;
+
+            padding:
+                45px 20px 60px;
+        }
+
+
+        .article {
+
+            background: #ffffff;
+
+            border:
+                1px solid #e8e8e8;
+
+            border-radius: 14px;
+
+            padding:
+                35px 40px;
+
+            box-shadow:
+                0 2px 10px rgba(0,0,0,0.025);
+        }
+
+
+        .article p {
+
+            margin:
+                0 0 20px;
+
+            font-size: 16px;
+
+            line-height: 1.75;
+
+            color: #44484f;
+        }
+
+
+        .article h2 {
+
+            margin:
+                30px 0 12px;
+
+            font-size: 22px;
+
+            line-height: 1.35;
+
+            color: #202124;
+        }
+
+
+        .article h2:first-child {
+
+            margin-top: 0;
+        }
+
+
+        .article strong {
+
+            color: #202124;
+        }
+
+
+        /* =========================
+           ETAPES
+        ========================= */
+
+        .steps {
+
+            margin:
+                25px 0 28px;
+
+            padding: 0;
+
+            list-style: none;
+        }
+
+
+        .step {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            margin-bottom: 17px;
+        }
+
+
+        .step-number {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 32px;
+
+            height: 32px;
+
+            flex-shrink: 0;
+
+            margin-right: 14px;
+
+            background: #fff4e6;
+
+            border-radius: 50%;
+
+            color: #ff9100;
+
+            font-size: 14px;
+
+            font-weight: 800;
+        }
+
+
+        .step-text {
+
+            padding-top: 4px;
+
+            font-size: 15px;
+
+            line-height: 1.6;
+
+            color: #44484f;
+        }
+
+
+        /* =========================
+           ENCADRE IMPORTANT
+        ========================= */
+
+        .highlight {
+
+            margin:
+                28px 0;
+
+            padding:
+                20px 22px;
+
+            background:
+                #fff7ed;
+
+            border-left:
+                4px solid #ff9100;
+
+            border-radius: 8px;
+        }
+
+
+        .highlight p {
+
+            margin: 0;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           FEEDBACK
+        ========================= */
+
+        .feedback {
+
+            margin-top: 35px;
+
+            padding-top: 28px;
+
+            border-top:
+                1px solid #eeeeee;
+
+            text-align: center;
+        }
+
+
+        .feedback h3 {
+
+            margin:
+                0 0 15px;
+
+            font-size: 16px;
+        }
+
+
+        .feedback-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 10px;
+        }
+
+
+        .feedback-button {
+
+            min-width: 90px;
+
+            padding:
+                9px 16px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #dddddd;
+
+            border-radius: 8px;
+
+            color: #555;
+
+            cursor: pointer;
+
+            font-size: 14px;
+        }
+
+
+        .feedback-button:hover {
+
+            border-color:
+                #ff9100;
+
+            color:
+                #ff9100;
+        }
+
+
+        /* =========================
+           SUPPORT
+        ========================= */
+
+        .support {
+
+            margin-top: 25px;
+
+            padding:
+                28px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #e8e8e8;
+
+            border-radius: 14px;
+
+            text-align: center;
+        }
+
+
+        .support h2 {
+
+            margin: 0;
+
+            font-size: 19px;
+        }
+
+
+        .support p {
+
+            max-width: 500px;
+
+            margin:
+                8px auto 18px;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+
+            color: #73777f;
+        }
+
+
+        /* =========================
+           BOUTON BREVO
+        ========================= */
+
+        .brevo-chat-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 46px;
+
+            padding:
+                0 24px;
+
+            border: none;
+
+            border-radius: 9px;
+
+            background:
+                #ff9100;
+
+            color: #ffffff;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                background 0.15s ease,
+                transform 0.15s ease;
+        }
+
+
+        .brevo-chat-button:hover {
+
+            background:
+                #ed8400;
+
+            transform:
+                translateY(-1px);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding:
+                0 20px 30px;
+
+            text-align: center;
+
+            font-size: 12px;
+
+            color: #9a9da3;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .header {
+
+                padding:
+                    22px 16px 30px;
+            }
+
+
+            .header h1 {
+
+                font-size: 29px;
+            }
+
+
+            .header-subtitle {
+
+                font-size: 15px;
+            }
+
+
+            .content {
+
+                padding:
+                    25px 12px 45px;
+            }
+
+
+            .article {
+
+                padding:
+                    25px 20px;
+            }
+
+
+            .article p {
+
+                font-size: 15px;
+
+                line-height: 1.7;
+            }
+
+
+            .article h2 {
+
+                font-size: 20px;
+            }
+
+
+            .support {
+
+                padding:
+                    24px 18px;
+            }
+
+
+            .brevo-chat-button {
+
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="header">
+
+        <div class="header-inner">
+
+
+            <div class="logo">
+                Allez HOP!
+            </div>
+
+
+            <a
+                href="../courses.html"
+                class="breadcrumb"
+            >
+                ← Courses
+            </a>
+
+
+            <h1>
+                Comment valider le retrait d'une commande ?
+            </h1>
+
+
+            <p class="header-subtitle">
+                Découvrez comment confirmer la prise en charge
+                de votre commande dans l'application.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENU
+    ========================= -->
+
+    <main class="content">
+
+
+        <article class="article">
+
+
+            <h2>
+                À quoi sert la validation du retrait ?
+            </h2>
+
+
+            <p>
+                La validation du retrait permet d'indiquer dans
+                l'application que vous avez bien
+                <strong>pris en charge la commande</strong>
+                au point de retrait.
+            </p>
+
+
+            <p>
+                Cette étape permet de poursuivre correctement
+                votre course et de confirmer que la commande
+                est désormais avec vous.
+            </p>
+
+
+            <div class="highlight">
+
+                <p>
+                    <strong>Important :</strong>
+                    effectuez la validation uniquement lorsque
+                    vous avez réellement récupéré la commande.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Comment valider le retrait ?
+            </h2>
+
+
+            <div class="steps">
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        1
+                    </div>
+
+                    <div class="step-text">
+                        <strong>Rendez-vous au point de retrait</strong>
+                        indiqué dans les informations de votre course.
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        2
+                    </div>
+
+                    <div class="step-text">
+                        <strong>Récupérez la commande</strong>
+                        en suivant les indications du point de retrait.
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        3
+                    </div>
+
+                    <div class="step-text">
+                        <strong>Ouvrez votre course dans l'application</strong>
+                        et vérifiez que vous êtes bien sur la course
+                        concernée.
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        4
+                    </div>
+
+                    <div class="step-text">
+                        <strong>Validez le retrait</strong>
+                        en utilisant l'action de validation prévue
+                        dans l'application.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <h2>
+                Quand effectuer la validation ?
+            </h2>
+
+
+            <p>
+                La validation doit être effectuée
+                <strong>après avoir récupéré la commande</strong>.
+            </p>
+
+
+            <p>
+                Ne validez pas le retrait avant d'avoir effectivement
+                pris possession de la commande.
+            </p>
+
+
+            <h2>
+                Le retrait n'est pas encore effectué
+            </h2>
+
+
+            <p>
+                Si vous êtes encore en attente de la commande,
+                ne validez pas son retrait.
+            </p>
+
+
+            <p>
+                Attendez d'avoir effectivement récupéré la commande
+                avant de confirmer la prise en charge dans
+                l'application.
+            </p>
+
+
+            <h2>
+                Je ne trouve pas le bouton de validation
+            </h2>
+
+
+            <p>
+                Vérifiez que vous consultez bien la course concernée
+                et que la commande a bien été récupérée.
+            </p>
+
+
+            <p>
+                Si l'action de validation n'apparaît toujours pas
+                ou si vous rencontrez un problème, contactez
+                le support Allez HOP! depuis le chat.
+            </p>
+
+
+            <h2>
+                La validation ne fonctionne pas
+            </h2>
+
+
+            <p>
+                Si vous avez récupéré la commande mais que vous
+                ne parvenez pas à valider le retrait, ne tentez
+                pas de confirmer plusieurs fois inutilement.
+            </p>
+
+
+            <p>
+                Contactez le support et indiquez la course concernée
+                ainsi que le problème rencontré.
+            </p>
+
+
+            <h2>
+                J'ai validé le retrait par erreur
+            </h2>
+
+
+            <p>
+                Si vous avez validé le retrait alors que la commande
+                n'avait pas encore été récupérée, contactez
+                immédiatement le support Allez HOP!.
+            </p>
+
+
+            <p>
+                Expliquez clairement la situation afin que l'équipe
+                puisse vous indiquer la marche à suivre.
+            </p>
+
+
+            <h2>
+                Que faire après la validation ?
+            </h2>
+
+
+            <p>
+                Une fois le retrait validé, poursuivez votre course
+                conformément aux informations affichées dans
+                l'application.
+            </p>
+
+
+            <p>
+                Rendez-vous ensuite au lieu de livraison indiqué
+                afin de remettre la commande.
+            </p>
+
+
+            <h2>
+                Besoin d'aide ?
+            </h2>
+
+
+            <p>
+                Vous avez récupéré la commande mais vous rencontrez
+                un problème avec la validation du retrait ?
+                Contactez directement l'équipe Allez HOP! depuis
+                le chat.
+            </p>
+
+
+            <!-- =========================
+                 FEEDBACK
+            ========================= -->
+
+            <div class="feedback">
+
+                <h3>
+                    Cet article vous a-t-il été utile ?
+                </h3>
+
+
+                <div class="feedback-buttons">
+
+                    <button
+                        class="feedback-button"
+                        type="button"
+                    >
+                        👍 Oui
+                    </button>
+
+
+                    <button
+                        class="feedback-button"
+                        type="button"
+                    >
+                        👎 Non
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =========================
+             SUPPORT
+        ========================= -->
+
+        <section class="support">
+
+            <h2>
+                Vous avez encore besoin d'aide ?
+            </h2>
+
+
+            <p>
+                Vous n'avez pas trouvé la réponse à votre question ?
+                Parlez directement avec notre équipe Allez HOP!.
+            </p>
+
+
+            <button
+                type="button"
+                class="brevo-chat-button"
+            >
+                💬 Parler avec le support
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        Allez HOP! · Centre d'aide
+
+    </footer>
+
+
+</body>
+
+</html>
