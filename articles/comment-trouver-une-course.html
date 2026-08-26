@@ -11,13 +11,67 @@
     >
 
     <title>
-        Comment trouver une course correspondant à mon trajet ? — Allez HOP!
+        Comment trouver une course correspondant à mon trajet ? — Allez HOP! | Centre d'aide
     </title>
 
     <meta
         name="description"
-        content="Découvrez comment trouver une course correspondant à votre trajet sur Allez HOP!, utiliser vos trajets réguliers et définir votre rayon de recherche."
+        content="Découvrez comment rechercher une course correspondant à votre trajet sur Allez HOP!, utiliser vos trajets réguliers et ajuster votre rayon de recherche."
     >
+
+
+    <!-- =========================
+         BREVO CONVERSATIONS
+    ========================= -->
+
+    <script>
+
+        window.BrevoConversationsSetup = {
+
+            customWidgetButton:
+                '.brevo-chat-button',
+
+            chatWidth: 400,
+
+            chatHeight: 550,
+
+            buttonPosition: 'br'
+
+        };
+
+    </script>
+
+
+    <script>
+
+        (function(d, w, c) {
+
+            w.BrevoConversationsID =
+                '66de1609df5363314100b775';
+
+            w[c] = w[c] || function() {
+
+                (w[c].q = w[c].q || []).push(arguments);
+
+            };
+
+            var s = d.createElement('script');
+
+            s.async = true;
+
+            s.src =
+                'https://conversations-widget.brevo.com/brevo-conversations.js';
+
+            if (d.head) {
+
+                d.head.appendChild(s);
+
+            }
+
+        })(document, window, 'BrevoConversations');
+
+    </script>
+
 
     <style>
 
@@ -25,13 +79,16 @@
             box-sizing: border-box;
         }
 
+
         html,
         body {
             margin: 0;
             padding: 0;
         }
 
+
         body {
+
             font-family:
                 Inter,
                 Arial,
@@ -39,6 +96,7 @@
                 sans-serif;
 
             background: #f8f9fa;
+
             color: #202124;
         }
 
@@ -48,60 +106,86 @@
         ========================= */
 
         .header {
+
             background: #ffffff;
-            border-bottom: 1px solid #eeeeee;
-            padding: 25px 20px 35px;
+
+            border-bottom:
+                1px solid #eeeeee;
+
+            padding:
+                25px 20px 35px;
         }
 
+
         .header-inner {
+
             max-width: 1000px;
+
             margin: 0 auto;
         }
 
+
         .logo {
+
             display: inline-block;
+
             margin-bottom: 25px;
 
             font-size: 23px;
+
             font-weight: 800;
 
             color: #ff9100;
         }
 
+
         .breadcrumb {
+
             display: inline-flex;
+
             align-items: center;
 
             margin-bottom: 24px;
 
             color: #73777f;
+
             text-decoration: none;
 
             font-size: 14px;
+
             font-weight: 600;
         }
 
+
         .breadcrumb:hover {
+
             color: #ff9100;
         }
 
+
         .header h1 {
+
             max-width: 760px;
 
             margin: 0;
 
             font-size: 36px;
+
             line-height: 1.25;
 
             letter-spacing: -0.8px;
         }
 
+
         .header-subtitle {
+
             max-width: 700px;
 
-            margin: 12px 0 0;
+            margin:
+                12px 0 0;
 
             font-size: 17px;
+
             line-height: 1.6;
 
             color: #73777f;
@@ -113,49 +197,69 @@
         ========================= */
 
         .content {
+
             width: 100%;
+
             max-width: 800px;
 
             margin: 0 auto;
 
-            padding: 45px 20px 60px;
+            padding:
+                45px 20px 60px;
         }
 
+
         .article {
+
             background: #ffffff;
 
-            border: 1px solid #e8e8e8;
+            border:
+                1px solid #e8e8e8;
+
             border-radius: 14px;
 
-            padding: 35px 40px;
+            padding:
+                35px 40px;
 
             box-shadow:
                 0 2px 10px rgba(0,0,0,0.025);
         }
 
+
         .article p {
-            margin: 0 0 20px;
+
+            margin:
+                0 0 20px;
 
             font-size: 16px;
+
             line-height: 1.75;
 
             color: #44484f;
         }
 
+
         .article h2 {
-            margin: 30px 0 12px;
+
+            margin:
+                30px 0 12px;
 
             font-size: 22px;
+
             line-height: 1.35;
 
             color: #202124;
         }
 
+
         .article h2:first-child {
+
             margin-top: 0;
         }
 
+
         .article strong {
+
             color: #202124;
         }
 
@@ -165,25 +269,36 @@
         ========================= */
 
         .steps {
-            margin: 25px 0 28px;
+
+            margin:
+                25px 0 28px;
+
             padding: 0;
 
             list-style: none;
         }
 
+
         .step {
+
             display: flex;
+
             align-items: flex-start;
 
             margin-bottom: 17px;
         }
 
+
         .step-number {
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             width: 32px;
+
             height: 32px;
 
             flex-shrink: 0;
@@ -197,13 +312,17 @@
             color: #ff9100;
 
             font-size: 14px;
+
             font-weight: 800;
         }
 
+
         .step-text {
+
             padding-top: 4px;
 
             font-size: 15px;
+
             line-height: 1.6;
 
             color: #44484f;
@@ -215,18 +334,25 @@
         ========================= */
 
         .highlight {
-            margin: 28px 0;
 
-            padding: 20px 22px;
+            margin:
+                28px 0;
 
-            background: #fff7ed;
+            padding:
+                20px 22px;
 
-            border-left: 4px solid #ff9100;
+            background:
+                #fff7ed;
+
+            border-left:
+                4px solid #ff9100;
 
             border-radius: 8px;
         }
 
+
         .highlight p {
+
             margin: 0;
 
             font-size: 15px;
@@ -238,22 +364,29 @@
         ========================= */
 
         .feedback {
+
             margin-top: 35px;
 
             padding-top: 28px;
 
-            border-top: 1px solid #eeeeee;
+            border-top:
+                1px solid #eeeeee;
 
             text-align: center;
         }
 
+
         .feedback h3 {
-            margin: 0 0 15px;
+
+            margin:
+                0 0 15px;
 
             font-size: 16px;
         }
 
+
         .feedback-buttons {
+
             display: flex;
 
             justify-content: center;
@@ -261,14 +394,19 @@
             gap: 10px;
         }
 
+
         .feedback-button {
+
             min-width: 90px;
 
-            padding: 9px 16px;
+            padding:
+                9px 16px;
 
-            background: #ffffff;
+            background:
+                #ffffff;
 
-            border: 1px solid #dddddd;
+            border:
+                1px solid #dddddd;
 
             border-radius: 8px;
 
@@ -279,9 +417,14 @@
             font-size: 14px;
         }
 
+
         .feedback-button:hover {
-            border-color: #ff9100;
-            color: #ff9100;
+
+            border-color:
+                #ff9100;
+
+            color:
+                #ff9100;
         }
 
 
@@ -290,58 +433,94 @@
         ========================= */
 
         .support {
+
             margin-top: 25px;
 
-            padding: 28px;
+            padding:
+                28px;
 
-            background: #ffffff;
+            background:
+                #ffffff;
 
-            border: 1px solid #e8e8e8;
+            border:
+                1px solid #e8e8e8;
+
             border-radius: 14px;
 
             text-align: center;
         }
 
+
         .support h2 {
+
             margin: 0;
 
             font-size: 19px;
         }
 
+
         .support p {
+
             max-width: 500px;
 
-            margin: 8px auto 18px;
+            margin:
+                8px auto 18px;
 
             font-size: 14px;
+
             line-height: 1.5;
 
             color: #73777f;
         }
 
-        .support-button {
+
+        /* =========================
+           BOUTON BREVO
+        ========================= */
+
+        .brevo-chat-button {
+
             display: inline-flex;
+
             align-items: center;
+
             justify-content: center;
 
-            min-height: 45px;
+            min-height: 46px;
 
-            padding: 0 21px;
+            padding:
+                0 24px;
 
             border: none;
+
             border-radius: 9px;
 
-            background: #ff9100;
+            background:
+                #ff9100;
+
             color: #ffffff;
 
+            font-family: inherit;
+
             font-size: 14px;
+
             font-weight: 700;
 
             cursor: pointer;
+
+            transition:
+                background 0.15s ease,
+                transform 0.15s ease;
         }
 
-        .support-button:hover {
-            background: #ed8400;
+
+        .brevo-chat-button:hover {
+
+            background:
+                #ed8400;
+
+            transform:
+                translateY(-1px);
         }
 
 
@@ -350,7 +529,9 @@
         ========================= */
 
         footer {
-            padding: 0 20px 30px;
+
+            padding:
+                0 20px 30px;
 
             text-align: center;
 
@@ -367,36 +548,62 @@
         @media (max-width: 700px) {
 
             .header {
-                padding: 22px 16px 30px;
+
+                padding:
+                    22px 16px 30px;
             }
 
+
             .header h1 {
+
                 font-size: 29px;
             }
 
+
             .header-subtitle {
+
                 font-size: 15px;
             }
+
 
             .content {
-                padding: 25px 12px 45px;
+
+                padding:
+                    25px 12px 45px;
             }
+
 
             .article {
-                padding: 25px 20px;
+
+                padding:
+                    25px 20px;
             }
 
+
             .article p {
+
                 font-size: 15px;
+
                 line-height: 1.7;
             }
 
+
             .article h2 {
+
                 font-size: 20px;
             }
 
+
             .support {
-                padding: 24px 18px;
+
+                padding:
+                    24px 18px;
+            }
+
+
+            .brevo-chat-button {
+
+                width: 100%;
             }
 
         }
@@ -417,6 +624,7 @@
 
         <div class="header-inner">
 
+
             <div class="logo">
                 Allez HOP!
             </div>
@@ -436,8 +644,8 @@
 
 
             <p class="header-subtitle">
-                Découvrez comment rechercher une course adaptée
-                à votre trajet, à vos adresses et à votre rayon de recherche.
+                Découvrez comment rechercher des courses adaptées
+                à vos trajets et à votre rayon de recherche.
             </p>
 
         </div>
@@ -446,7 +654,7 @@
 
 
     <!-- =========================
-         ARTICLE
+         CONTENU
     ========================= -->
 
     <main class="content">
@@ -456,40 +664,39 @@
 
 
             <h2>
-                Comment trouver une course correspondant à mon trajet ?
+                Comment rechercher une course correspondant à mon trajet ?
             </h2>
 
 
             <p>
                 Allez HOP! vous permet de rechercher des
                 <strong>courses correspondant à vos trajets</strong>.
-                Pour faciliter votre recherche, renseignez vos
-                trajets réguliers ainsi que votre rayon de recherche.
+                L'objectif est de trouver des courses qui peuvent
+                s'intégrer naturellement dans un déplacement que
+                vous effectuez déjà.
             </p>
 
 
             <p>
-                L'objectif est de trouver des courses qui correspondent
-                le mieux possible à un déplacement que vous effectuez déjà.
-                Vous pouvez ensuite consulter les courses disponibles
-                et choisir celles qui correspondent à votre trajet.
+                Pour obtenir des résultats pertinents, il est important
+                de renseigner correctement vos <strong>trajets réguliers</strong>,
+                vos adresses et votre <strong>rayon de recherche</strong>.
             </p>
 
 
             <div class="highlight">
 
                 <p>
-                    <strong>Astuce :</strong>
-                    plus vos trajets et vos critères de recherche sont
-                    correctement renseignés, plus les courses proposées
-                    peuvent être pertinentes pour vos déplacements.
+                    <strong>Bon à savoir :</strong>
+                    plus vos informations de trajet sont précises,
+                    plus votre recherche peut être ciblée.
                 </p>
 
             </div>
 
 
             <h2>
-                Comment rechercher une course ?
+                Comment trouver une course ?
             </h2>
 
 
@@ -504,8 +711,8 @@
 
                     <div class="step-text">
                         <strong>Renseignez votre trajet</strong>
-                        avec les adresses correspondant à vos
-                        déplacements habituels.
+                        en utilisant vos adresses et vos trajets
+                        réguliers.
                     </div>
 
                 </div>
@@ -519,8 +726,8 @@
 
                     <div class="step-text">
                         <strong>Définissez votre rayon de recherche</strong>
-                        afin de déterminer la distance autour de votre
-                        trajet que vous acceptez de rechercher.
+                        afin d'indiquer la distance autour de votre
+                        trajet que vous êtes prêt à prendre en compte.
                     </div>
 
                 </div>
@@ -534,7 +741,7 @@
 
                     <div class="step-text">
                         <strong>Consultez les courses disponibles</strong>
-                        correspondant à vos critères et à votre déplacement.
+                        correspondant à vos critères de recherche.
                     </div>
 
                 </div>
@@ -547,9 +754,23 @@
                     </div>
 
                     <div class="step-text">
-                        <strong>Choisissez une course</strong>
-                        qui correspond à votre trajet et aux informations
-                        indiquées dans la course.
+                        <strong>Vérifiez les informations de la course</strong>
+                        avant de choisir de l'accepter.
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        5
+                    </div>
+
+                    <div class="step-text">
+                        <strong>Choisissez la course</strong>
+                        si elle correspond à votre trajet
+                        et à vos possibilités.
                     </div>
 
                 </div>
@@ -558,87 +779,98 @@
 
 
             <h2>
-                À quoi sert le rayon de recherche ?
+                Pourquoi je ne trouve aucune course ?
             </h2>
 
 
             <p>
-                Le <strong>rayon de recherche</strong> permet de définir
-                la distance autour de votre trajet dans laquelle vous
-                souhaitez rechercher des courses.
+                Si aucune course ne correspond à votre recherche,
+                commencez par vérifier vos <strong>trajets réguliers</strong>
+                et les adresses que vous avez enregistrées.
             </p>
 
 
             <p>
-                Si votre rayon de recherche est plus large, davantage
-                de courses peuvent potentiellement correspondre à vos
-                critères. À l'inverse, un rayon plus restreint permet
-                de cibler davantage les courses proches de votre trajet.
+                Vérifiez également votre <strong>rayon de recherche</strong>.
+                Un rayon trop restreint peut réduire le nombre de
+                courses correspondant à vos critères.
+            </p>
+
+
+            <p>
+                Il est également possible qu'aucune course ne soit
+                actuellement disponible sur votre trajet ou dans
+                la zone recherchée.
             </p>
 
 
             <h2>
-                Pourquoi renseigner mes trajets réguliers ?
+                Comment élargir ma recherche ?
             </h2>
 
 
             <p>
-                Les <strong>trajets réguliers</strong> permettent d'indiquer
-                les déplacements que vous effectuez habituellement.
-                Ces informations servent à mieux cibler les courses
-                susceptibles de correspondre à vos déplacements.
+                Si vous souhaitez recevoir davantage de propositions,
+                vous pouvez augmenter votre <strong>rayon de recherche</strong>
+                lorsque cela correspond à vos possibilités de déplacement.
             </p>
 
 
             <p>
-                Si vos trajets changent, pensez à modifier vos informations
-                afin que votre recherche et vos
-                <strong>notifications de courses</strong> restent adaptées
-                à vos déplacements actuels.
+                Vous pouvez également renseigner plusieurs
+                <strong>trajets réguliers</strong> correspondant
+                à vos déplacements habituels.
             </p>
 
 
             <h2>
-                Comment recevoir des notifications de courses adaptées ?
+                Comment savoir si une course correspond vraiment à mon trajet ?
             </h2>
 
 
             <p>
-                En renseignant correctement vos trajets réguliers et vos
-                critères de recherche, vous pouvez recevoir des
-                <strong>notifications ciblées</strong> lorsqu'une course
-                correspond à vos critères.
+                Avant d'accepter une course, consultez attentivement
+                les informations disponibles : point de départ,
+                point d'arrivée et autres informations utiles
+                concernant le transport.
             </p>
 
 
             <p>
-                Pensez à vérifier régulièrement vos trajets et votre
-                rayon de recherche si vous souhaitez recevoir des
-                notifications correspondant à vos déplacements.
+                Assurez-vous que la course peut être réalisée
+                dans le cadre de votre déplacement prévu.
             </p>
 
 
             <h2>
-                Je ne trouve aucune course correspondant à mon trajet
+                Puis-je recevoir des notifications pour les courses ?
             </h2>
 
 
             <p>
-                Si aucune course ne correspond à votre trajet, vérifiez
-                d'abord que vos adresses sont correctement renseignées
-                et que votre <strong>rayon de recherche</strong> est
-                suffisamment large.
+                Oui. En renseignant correctement vos
+                <strong>trajets réguliers</strong> et votre
+                <strong>rayon de recherche</strong>, vous pouvez
+                recevoir des notifications correspondant davantage
+                à vos critères.
             </p>
+
+
+            <h2>
+                Besoin d'aide ?
+            </h2>
 
 
             <p>
-                Vous pouvez également consulter les courses disponibles
-                ultérieurement : de nouvelles courses peuvent être ajoutées
-                en fonction des besoins de livraison.
+                Vous ne trouvez pas la course recherchée ou vous
+                avez une question concernant votre recherche ?
+                Notre équipe Allez HOP! peut vous aider directement.
             </p>
 
 
-            <!-- FEEDBACK -->
+            <!-- =========================
+                 FEEDBACK
+            ========================= -->
 
             <div class="feedback">
 
@@ -684,77 +916,28 @@
 
             <p>
                 Vous n'avez pas trouvé la réponse à votre question ?
-                Notre équipe Allez HOP! peut vous aider directement.
+                Parlez directement avec notre équipe Allez HOP!.
             </p>
 
 
             <button
-                class="support-button"
                 type="button"
-                onclick="ouvrirSupport()"
+                class="brevo-chat-button"
             >
-                💬 Chatter avec le support
+                💬 Parler avec le support
             </button>
 
         </section>
+
 
     </main>
 
 
     <footer>
+
         Allez HOP! · Centre d'aide
+
     </footer>
-
-
-    <!-- =========================
-         TAWK.TO
-    ========================= -->
-
-    <script type="text/javascript">
-
-        var Tawk_API = Tawk_API || {};
-        var Tawk_LoadStart = new Date();
-
-
-        function ouvrirSupport() {
-
-            if (
-                typeof Tawk_API !== 'undefined' &&
-                typeof Tawk_API.maximize === 'function'
-            ) {
-
-                Tawk_API.maximize();
-
-            }
-
-        }
-
-
-        (function() {
-
-            var s1 = document.createElement("script");
-            var s0 = document.getElementsByTagName("script")[0];
-
-            s1.async = true;
-
-            s1.src =
-                'https://embed.tawk.to/6a8da5b6c0e0d43447f68e02/1k0tcvbbn';
-
-            s1.charset = 'UTF-8';
-
-            s1.setAttribute(
-                'crossorigin',
-                '*'
-            );
-
-            s0.parentNode.insertBefore(
-                s1,
-                s0
-            );
-
-        })();
-
-    </script>
 
 
 </body>
