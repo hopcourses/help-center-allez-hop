@@ -10,12 +10,65 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Comment fonctionne Allez HOP! pour les cotransporteurs ? — Centre d'aide</title>
+    <title>
+        Comment fonctionne Allez HOP! pour les cotransporteurs ? — Allez HOP! | Centre d'aide
+    </title>
 
     <meta
         name="description"
-        content="Découvrez comment fonctionne Allez HOP! pour les cotransporteurs : recherche de courses, trajets, acceptation d'une course, retrait et livraison."
+        content="Découvrez comment fonctionne Allez HOP! pour les cotransporteurs : rechercher une course, consulter les informations, accepter une course et effectuer la livraison."
     >
+
+    <!-- BREVO CONVERSATIONS -->
+
+    <script>
+
+        window.BrevoConversationsSetup = {
+
+            customWidgetButton:
+                '.brevo-chat-button',
+
+            chatWidth: 400,
+
+            chatHeight: 550,
+
+            buttonPosition: 'br'
+
+        };
+
+    </script>
+
+
+    <script>
+
+        (function(d, w, c) {
+
+            w.BrevoConversationsID =
+                '66de1609df5363314100b775';
+
+            w[c] = w[c] || function() {
+
+                (w[c].q = w[c].q || []).push(arguments);
+
+            };
+
+            var s = d.createElement('script');
+
+            s.async = true;
+
+            s.src =
+                'https://conversations-widget.brevo.com/brevo-conversations.js';
+
+            if (d.head) {
+
+                d.head.appendChild(s);
+
+            }
+
+        })(document, window, 'BrevoConversations');
+
+    </script>
+
 
     <style>
 
@@ -30,6 +83,7 @@
         }
 
         body {
+
             font-family:
                 Inter,
                 Arial,
@@ -37,33 +91,41 @@
                 sans-serif;
 
             background: #f8f9fa;
+
             color: #202124;
         }
 
 
-        /* =========================
-           HEADER
-        ========================= */
+        /* HEADER */
 
         .header {
+
             background: #ffffff;
-            border-bottom: 1px solid #eeeeee;
-            padding: 25px 20px 35px;
+
+            border-bottom:
+                1px solid #eeeeee;
+
+            padding:
+                25px 20px 35px;
         }
 
 
         .header-inner {
+
             max-width: 1000px;
+
             margin: 0 auto;
         }
 
 
         .logo {
+
             display: inline-block;
 
             margin-bottom: 25px;
 
             font-size: 23px;
+
             font-weight: 800;
 
             color: #ff9100;
@@ -71,30 +133,37 @@
 
 
         .breadcrumb {
+
             display: inline-flex;
+
             align-items: center;
 
             margin-bottom: 24px;
 
             color: #73777f;
+
             text-decoration: none;
 
             font-size: 14px;
+
             font-weight: 600;
         }
 
 
         .breadcrumb:hover {
+
             color: #ff9100;
         }
 
 
         .header h1 {
+
             max-width: 760px;
 
             margin: 0;
 
             font-size: 36px;
+
             line-height: 1.25;
 
             letter-spacing: -0.8px;
@@ -102,38 +171,46 @@
 
 
         .header-subtitle {
+
             max-width: 700px;
 
-            margin: 12px 0 0;
+            margin:
+                12px 0 0;
 
             font-size: 17px;
+
             line-height: 1.6;
 
             color: #73777f;
         }
 
 
-        /* =========================
-           ARTICLE
-        ========================= */
+        /* ARTICLE */
 
         .content {
+
             width: 100%;
+
             max-width: 800px;
 
             margin: 0 auto;
 
-            padding: 45px 20px 60px;
+            padding:
+                45px 20px 60px;
         }
 
 
         .article {
+
             background: #ffffff;
 
-            border: 1px solid #e8e8e8;
+            border:
+                1px solid #e8e8e8;
+
             border-radius: 14px;
 
-            padding: 35px 40px;
+            padding:
+                35px 40px;
 
             box-shadow:
                 0 2px 10px rgba(0,0,0,0.025);
@@ -141,9 +218,12 @@
 
 
         .article p {
-            margin: 0 0 20px;
+
+            margin:
+                0 0 20px;
 
             font-size: 16px;
+
             line-height: 1.75;
 
             color: #44484f;
@@ -151,9 +231,12 @@
 
 
         .article h2 {
-            margin: 30px 0 12px;
+
+            margin:
+                30px 0 12px;
 
             font-size: 22px;
+
             line-height: 1.35;
 
             color: #202124;
@@ -161,21 +244,24 @@
 
 
         .article h2:first-child {
+
             margin-top: 0;
         }
 
 
         .article strong {
+
             color: #202124;
         }
 
 
-        /* =========================
-           LISTE
-        ========================= */
+        /* ETAPES */
 
         .steps {
-            margin: 25px 0 28px;
+
+            margin:
+                25px 0 28px;
+
             padding: 0;
 
             list-style: none;
@@ -183,19 +269,25 @@
 
 
         .step {
+
             display: flex;
+
             align-items: flex-start;
 
-            margin-bottom: 16px;
+            margin-bottom: 17px;
         }
 
 
         .step-number {
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             width: 32px;
+
             height: 32px;
 
             flex-shrink: 0;
@@ -209,67 +301,77 @@
             color: #ff9100;
 
             font-size: 14px;
+
             font-weight: 800;
         }
 
 
         .step-text {
+
             padding-top: 4px;
 
             font-size: 15px;
+
             line-height: 1.6;
 
             color: #44484f;
         }
 
 
-        /* =========================
-           HIGHLIGHT
-        ========================= */
+        /* HIGHLIGHT */
 
         .highlight {
-            margin: 28px 0;
 
-            padding: 20px 22px;
+            margin:
+                28px 0;
 
-            background: #fff7ed;
+            padding:
+                20px 22px;
 
-            border-left: 4px solid #ff9100;
+            background:
+                #fff7ed;
+
+            border-left:
+                4px solid #ff9100;
 
             border-radius: 8px;
         }
 
 
         .highlight p {
+
             margin: 0;
 
             font-size: 15px;
         }
 
 
-        /* =========================
-           FEEDBACK
-        ========================= */
+        /* FEEDBACK */
 
         .feedback {
+
             margin-top: 35px;
 
             padding-top: 28px;
 
-            border-top: 1px solid #eeeeee;
+            border-top:
+                1px solid #eeeeee;
 
             text-align: center;
         }
 
 
         .feedback h3 {
-            margin: 0 0 15px;
+
+            margin:
+                0 0 15px;
 
             font-size: 16px;
         }
 
 
         .feedback-buttons {
+
             display: flex;
 
             justify-content: center;
@@ -279,13 +381,17 @@
 
 
         .feedback-button {
+
             min-width: 90px;
 
-            padding: 9px 16px;
+            padding:
+                9px 16px;
 
-            background: #ffffff;
+            background:
+                #ffffff;
 
-            border: 1px solid #dddddd;
+            border:
+                1px solid #dddddd;
 
             border-radius: 8px;
 
@@ -298,23 +404,30 @@
 
 
         .feedback-button:hover {
-            border-color: #ff9100;
-            color: #ff9100;
+
+            border-color:
+                #ff9100;
+
+            color:
+                #ff9100;
         }
 
 
-        /* =========================
-           SUPPORT
-        ========================= */
+        /* SUPPORT */
 
         .support {
+
             margin-top: 25px;
 
-            padding: 28px;
+            padding:
+                28px;
 
-            background: #ffffff;
+            background:
+                #ffffff;
 
-            border: 1px solid #e8e8e8;
+            border:
+                1px solid #e8e8e8;
+
             border-radius: 14px;
 
             text-align: center;
@@ -322,6 +435,7 @@
 
 
         .support h2 {
+
             margin: 0;
 
             font-size: 19px;
@@ -329,50 +443,74 @@
 
 
         .support p {
+
             max-width: 500px;
 
-            margin: 8px auto 18px;
+            margin:
+                8px auto 18px;
 
             font-size: 14px;
+
             line-height: 1.5;
 
             color: #73777f;
         }
 
 
-        .support-button {
+        /* BOUTON BREVO */
+
+        .brevo-chat-button {
+
             display: inline-flex;
+
             align-items: center;
+
             justify-content: center;
 
-            min-height: 45px;
+            min-height: 46px;
 
-            padding: 0 21px;
+            padding:
+                0 24px;
 
             border: none;
+
             border-radius: 9px;
 
-            background: #ff9100;
+            background:
+                #ff9100;
+
             color: #ffffff;
 
+            font-family: inherit;
+
             font-size: 14px;
+
             font-weight: 700;
 
             cursor: pointer;
+
+            transition:
+                background 0.15s ease,
+                transform 0.15s ease;
         }
 
 
-        .support-button:hover {
-            background: #ed8400;
+        .brevo-chat-button:hover {
+
+            background:
+                #ed8400;
+
+            transform:
+                translateY(-1px);
         }
 
 
-        /* =========================
-           FOOTER
-        ========================= */
+        /* FOOTER */
 
         footer {
-            padding: 0 20px 30px;
+
+            padding:
+                0 20px 30px;
 
             text-align: center;
 
@@ -382,50 +520,67 @@
         }
 
 
-        /* =========================
-           MOBILE
-        ========================= */
+        /* MOBILE */
 
         @media (max-width: 700px) {
 
             .header {
-                padding: 22px 16px 30px;
+
+                padding:
+                    22px 16px 30px;
             }
 
 
             .header h1 {
+
                 font-size: 29px;
             }
 
 
             .header-subtitle {
+
                 font-size: 15px;
             }
 
 
             .content {
-                padding: 25px 12px 45px;
+
+                padding:
+                    25px 12px 45px;
             }
 
 
             .article {
-                padding: 25px 20px;
+
+                padding:
+                    25px 20px;
             }
 
 
             .article p {
+
                 font-size: 15px;
+
                 line-height: 1.7;
             }
 
 
             .article h2 {
+
                 font-size: 20px;
             }
 
 
             .support {
-                padding: 24px 18px;
+
+                padding:
+                    24px 18px;
+            }
+
+
+            .brevo-chat-button {
+
+                width: 100%;
             }
 
         }
@@ -438,9 +593,7 @@
 <body>
 
 
-    <!-- =========================
-         HEADER
-    ========================= -->
+    <!-- HEADER -->
 
     <header class="header">
 
@@ -466,7 +619,7 @@
 
 
             <p class="header-subtitle">
-                Découvrez les principales étapes pour trouver,
+                Découvrez les principales étapes pour rechercher,
                 accepter et effectuer une course avec Allez HOP!.
             </p>
 
@@ -475,9 +628,7 @@
     </header>
 
 
-    <!-- =========================
-         ARTICLE
-    ========================= -->
+    <!-- CONTENU -->
 
     <main class="content">
 
@@ -491,28 +642,24 @@
 
 
             <p>
-                Allez HOP! permet aux <strong>cotransporteurs</strong>
-                de trouver des courses correspondant à des trajets
-                qu'ils effectuent déjà.
+                Allez HOP! permet aux cotransporteurs de rechercher
+                des courses correspondant à leurs trajets habituels.
             </p>
 
 
             <p>
-                Le principe est simple : vous indiquez vos trajets,
-                vos critères de recherche et vos disponibilités.
-                Vous pouvez ensuite consulter les
-                <strong>courses disponibles</strong> qui correspondent
-                à votre déplacement.
+                Le principe est simple : vous effectuez déjà un trajet
+                et vous pouvez profiter de ce déplacement pour transporter
+                une commande correspondant à votre itinéraire.
             </p>
 
 
             <div class="highlight">
 
                 <p>
-                    <strong>Le principe du cotransportage :</strong>
-                    vous profitez d'un trajet que vous effectuez déjà
-                    pour transporter une commande correspondant
-                    à votre itinéraire.
+                    <strong>À retenir :</strong>
+                    vous choisissez les courses qui correspondent
+                    à vos déplacements et à vos disponibilités.
                 </p>
 
             </div>
@@ -533,9 +680,9 @@
                     </div>
 
                     <div class="step-text">
-                        <strong>Configurez votre compte</strong>
-                        et renseignez les informations nécessaires
-                        à votre activité de cotransporteur.
+                        <strong>Renseignez vos trajets réguliers</strong>
+                        afin d'indiquer les déplacements que vous
+                        effectuez habituellement.
                     </div>
 
                 </div>
@@ -548,9 +695,9 @@
                     </div>
 
                     <div class="step-text">
-                        <strong>Renseignez vos trajets réguliers</strong>
-                        afin d'indiquer les déplacements que vous
-                        effectuez habituellement.
+                        <strong>Recherchez des courses</strong>
+                        correspondant à votre trajet et à votre
+                        rayon de recherche.
                     </div>
 
                 </div>
@@ -563,9 +710,9 @@
                     </div>
 
                     <div class="step-text">
-                        <strong>Recherchez des courses</strong>
-                        correspondant à vos trajets et à votre
-                        rayon de recherche.
+                        <strong>Consultez les informations de la course</strong>
+                        afin de vérifier que celle-ci correspond
+                        bien à votre déplacement.
                     </div>
 
                 </div>
@@ -578,9 +725,9 @@
                     </div>
 
                     <div class="step-text">
-                        <strong>Choisissez une course</strong>
-                        qui correspond à votre déplacement et
-                        aux conditions indiquées.
+                        <strong>Acceptez la course</strong>
+                        si elle correspond à votre trajet
+                        et à vos possibilités.
                     </div>
 
                 </div>
@@ -594,8 +741,8 @@
 
                     <div class="step-text">
                         <strong>Récupérez la commande</strong>
-                        au point de retrait indiqué dans les
-                        informations de la course.
+                        au lieu et dans les conditions indiqués
+                        pour la course.
                     </div>
 
                 </div>
@@ -608,9 +755,9 @@
                     </div>
 
                     <div class="step-text">
-                        <strong>Effectuez votre trajet</strong>
-                        puis remettez la commande au destinataire
-                        à l'adresse de livraison prévue.
+                        <strong>Effectuez le transport et la livraison</strong>
+                        en respectant les informations et les consignes
+                        associées à la course.
                     </div>
 
                 </div>
@@ -624,32 +771,34 @@
 
 
             <p>
-                Pour trouver une <strong>course correspondant à votre trajet</strong>,
-                renseignez vos trajets réguliers et votre
+                Les courses disponibles peuvent être recherchées
+                en fonction de vos trajets et de votre
                 <strong>rayon de recherche</strong>.
             </p>
 
 
             <p>
-                Les courses disponibles peuvent ainsi être recherchées
-                en fonction de vos déplacements. Vous pouvez également
-                recevoir des <strong>notifications de courses</strong>
-                lorsque celles-ci correspondent aux critères
-                que vous avez renseignés.
+                Plus vos informations sont précises et à jour,
+                plus il est facile d'identifier les courses
+                susceptibles de correspondre à vos déplacements.
             </p>
 
 
             <h2>
-                Dois-je effectuer un trajet uniquement pour une course ?
+                Dois-je accepter toutes les courses proposées ?
             </h2>
 
 
             <p>
-                Le principe du cotransportage repose sur un trajet
-                que vous effectuez déjà. L'objectif est donc de profiter
-                d'un déplacement prévu pour transporter une commande,
-                plutôt que de réaliser un trajet uniquement pour
-                effectuer une livraison.
+                Non. Vous choisissez les courses qui correspondent
+                à vos déplacements et à vos possibilités.
+            </p>
+
+
+            <p>
+                Avant d'accepter une course, vérifiez les informations
+                disponibles afin de vous assurer qu'elle correspond
+                bien à votre trajet.
             </p>
 
 
@@ -659,17 +808,41 @@
 
 
             <p>
-                Une fois la course acceptée, consultez attentivement
-                les informations indiquées dans la course afin de connaître
-                le point de retrait, le point de livraison et les
-                instructions nécessaires à son bon déroulement.
+                Une fois la course acceptée, vous devez suivre les
+                informations et les étapes indiquées dans l'application
+                pour effectuer correctement le retrait et la livraison.
             </p>
 
 
             <p>
-                Lors du retrait puis de la livraison, utilisez les
-                fonctionnalités prévues dans Allez HOP! pour suivre
-                et valider les différentes étapes de la course.
+                En cas de problème pendant la course, consultez la
+                rubrique <strong>Problèmes &amp; incidents</strong>
+                du centre d'aide ou contactez notre équipe.
+            </p>
+
+
+            <h2>
+                Comment recevoir des notifications ?
+            </h2>
+
+
+            <p>
+                Vous pouvez renseigner vos
+                <strong>trajets réguliers</strong> et vos critères
+                de recherche afin de recevoir des notifications
+                correspondant davantage à vos déplacements.
+            </p>
+
+
+            <h2>
+                Besoin d'aide ?
+            </h2>
+
+
+            <p>
+                Si vous avez une question concernant le fonctionnement
+                d'Allez HOP!, vous pouvez contacter directement
+                notre équipe depuis le chat.
             </p>
 
 
@@ -706,9 +879,7 @@
         </article>
 
 
-        <!-- =========================
-             SUPPORT
-        ========================= -->
+        <!-- SUPPORT -->
 
         <section class="support">
 
@@ -719,16 +890,15 @@
 
             <p>
                 Vous n'avez pas trouvé la réponse à votre question ?
-                Notre équipe Allez HOP! peut vous aider directement.
+                Parlez directement avec notre équipe Allez HOP!.
             </p>
 
 
             <button
-                class="support-button"
                 type="button"
-                onclick="ouvrirSupport()"
+                class="brevo-chat-button"
             >
-                💬 Chatter avec le support
+                💬 Parler avec le support
             </button>
 
         </section>
@@ -738,59 +908,10 @@
 
 
     <footer>
+
         Allez HOP! · Centre d'aide
+
     </footer>
-
-
-    <!-- =========================
-         TAWK.TO
-    ========================= -->
-
-    <script type="text/javascript">
-
-        var Tawk_API = Tawk_API || {};
-        var Tawk_LoadStart = new Date();
-
-
-        function ouvrirSupport() {
-
-            if (
-                typeof Tawk_API !== 'undefined' &&
-                typeof Tawk_API.maximize === 'function'
-            ) {
-
-                Tawk_API.maximize();
-
-            }
-
-        }
-
-
-        (function() {
-
-            var s1 = document.createElement("script");
-            var s0 = document.getElementsByTagName("script")[0];
-
-            s1.async = true;
-
-            s1.src =
-                'https://embed.tawk.to/6a8da5b6c0e0d43447f68e02/1k0tcvbbn';
-
-            s1.charset = 'UTF-8';
-
-            s1.setAttribute(
-                'crossorigin',
-                '*'
-            );
-
-            s0.parentNode.insertBefore(
-                s1,
-                s0
-            );
-
-        })();
-
-    </script>
 
 
 </body>
