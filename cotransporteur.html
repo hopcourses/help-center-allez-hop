@@ -775,7 +775,56 @@
 
 
     </main>
+<script>
 
+    const searchInput = document.getElementById('articleSearch');
+
+    const articles = document.querySelectorAll('.article');
+
+
+    searchInput.addEventListener('input', function() {
+
+        const search = this.value
+            .toLowerCase()
+            .trim();
+
+
+        articles.forEach(function(article) {
+
+            const title = article
+                .querySelector('.article-title')
+                .textContent
+                .toLowerCase();
+
+
+            const description = article
+                .querySelector('.article-description')
+                .textContent
+                .toLowerCase();
+
+
+            const content =
+                title + ' ' + description;
+
+
+            if (
+                search === '' ||
+                content.includes(search)
+            ) {
+
+                article.style.display = 'block';
+
+            } else {
+
+                article.style.display = 'none';
+
+            }
+
+        });
+
+    });
+
+</script>
 
     <footer>
         Allez HOP! · Centre d'aide
