@@ -19,6 +19,60 @@
         content="Découvrez comment renseigner vos trajets réguliers sur Allez HOP!, ajouter vos adresses habituelles et recevoir des notifications de courses ciblées."
     >
 
+
+    <!-- =========================
+         BREVO CONVERSATIONS
+    ========================= -->
+
+    <script>
+
+        window.BrevoConversationsSetup = {
+
+            customWidgetButton:
+                '.brevo-chat-button',
+
+            chatWidth: 400,
+
+            chatHeight: 550,
+
+            buttonPosition: 'br'
+
+        };
+
+    </script>
+
+
+    <script>
+
+        (function(d, w, c) {
+
+            w.BrevoConversationsID =
+                '66de1609df5363314100b775';
+
+            w[c] = w[c] || function() {
+
+                (w[c].q = w[c].q || []).push(arguments);
+
+            };
+
+            var s = d.createElement('script');
+
+            s.async = true;
+
+            s.src =
+                'https://conversations-widget.brevo.com/brevo-conversations.js';
+
+            if (d.head) {
+
+                d.head.appendChild(s);
+
+            }
+
+        })(document, window, 'BrevoConversations');
+
+    </script>
+
+
     <style>
 
         * {
@@ -32,6 +86,7 @@
         }
 
         body {
+
             font-family:
                 Inter,
                 Arial,
@@ -39,6 +94,7 @@
                 sans-serif;
 
             background: #f8f9fa;
+
             color: #202124;
         }
 
@@ -48,60 +104,86 @@
         ========================= */
 
         .header {
+
             background: #ffffff;
-            border-bottom: 1px solid #eeeeee;
-            padding: 25px 20px 35px;
+
+            border-bottom:
+                1px solid #eeeeee;
+
+            padding:
+                25px 20px 35px;
         }
 
+
         .header-inner {
+
             max-width: 1000px;
+
             margin: 0 auto;
         }
 
+
         .logo {
+
             display: inline-block;
+
             margin-bottom: 25px;
 
             font-size: 23px;
+
             font-weight: 800;
 
             color: #ff9100;
         }
 
+
         .breadcrumb {
+
             display: inline-flex;
+
             align-items: center;
 
             margin-bottom: 24px;
 
             color: #73777f;
+
             text-decoration: none;
 
             font-size: 14px;
+
             font-weight: 600;
         }
 
+
         .breadcrumb:hover {
+
             color: #ff9100;
         }
 
+
         .header h1 {
+
             max-width: 760px;
 
             margin: 0;
 
             font-size: 36px;
+
             line-height: 1.25;
 
             letter-spacing: -0.8px;
         }
 
+
         .header-subtitle {
+
             max-width: 700px;
 
-            margin: 12px 0 0;
+            margin:
+                12px 0 0;
 
             font-size: 17px;
+
             line-height: 1.6;
 
             color: #73777f;
@@ -113,49 +195,69 @@
         ========================= */
 
         .content {
+
             width: 100%;
+
             max-width: 800px;
 
             margin: 0 auto;
 
-            padding: 45px 20px 60px;
+            padding:
+                45px 20px 60px;
         }
 
+
         .article {
+
             background: #ffffff;
 
-            border: 1px solid #e8e8e8;
+            border:
+                1px solid #e8e8e8;
+
             border-radius: 14px;
 
-            padding: 35px 40px;
+            padding:
+                35px 40px;
 
             box-shadow:
                 0 2px 10px rgba(0,0,0,0.025);
         }
 
+
         .article p {
-            margin: 0 0 20px;
+
+            margin:
+                0 0 20px;
 
             font-size: 16px;
+
             line-height: 1.75;
 
             color: #44484f;
         }
 
+
         .article h2 {
-            margin: 30px 0 12px;
+
+            margin:
+                30px 0 12px;
 
             font-size: 22px;
+
             line-height: 1.35;
 
             color: #202124;
         }
 
+
         .article h2:first-child {
+
             margin-top: 0;
         }
 
+
         .article strong {
+
             color: #202124;
         }
 
@@ -165,25 +267,36 @@
         ========================= */
 
         .steps {
-            margin: 25px 0 28px;
+
+            margin:
+                25px 0 28px;
+
             padding: 0;
 
             list-style: none;
         }
 
+
         .step {
+
             display: flex;
+
             align-items: flex-start;
 
             margin-bottom: 17px;
         }
 
+
         .step-number {
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             width: 32px;
+
             height: 32px;
 
             flex-shrink: 0;
@@ -197,13 +310,17 @@
             color: #ff9100;
 
             font-size: 14px;
+
             font-weight: 800;
         }
 
+
         .step-text {
+
             padding-top: 4px;
 
             font-size: 15px;
+
             line-height: 1.6;
 
             color: #44484f;
@@ -215,18 +332,25 @@
         ========================= */
 
         .highlight {
-            margin: 28px 0;
 
-            padding: 20px 22px;
+            margin:
+                28px 0;
 
-            background: #fff7ed;
+            padding:
+                20px 22px;
 
-            border-left: 4px solid #ff9100;
+            background:
+                #fff7ed;
+
+            border-left:
+                4px solid #ff9100;
 
             border-radius: 8px;
         }
 
+
         .highlight p {
+
             margin: 0;
 
             font-size: 15px;
@@ -238,22 +362,29 @@
         ========================= */
 
         .feedback {
+
             margin-top: 35px;
 
             padding-top: 28px;
 
-            border-top: 1px solid #eeeeee;
+            border-top:
+                1px solid #eeeeee;
 
             text-align: center;
         }
 
+
         .feedback h3 {
-            margin: 0 0 15px;
+
+            margin:
+                0 0 15px;
 
             font-size: 16px;
         }
 
+
         .feedback-buttons {
+
             display: flex;
 
             justify-content: center;
@@ -261,14 +392,19 @@
             gap: 10px;
         }
 
+
         .feedback-button {
+
             min-width: 90px;
 
-            padding: 9px 16px;
+            padding:
+                9px 16px;
 
-            background: #ffffff;
+            background:
+                #ffffff;
 
-            border: 1px solid #dddddd;
+            border:
+                1px solid #dddddd;
 
             border-radius: 8px;
 
@@ -279,9 +415,14 @@
             font-size: 14px;
         }
 
+
         .feedback-button:hover {
-            border-color: #ff9100;
-            color: #ff9100;
+
+            border-color:
+                #ff9100;
+
+            color:
+                #ff9100;
         }
 
 
@@ -290,58 +431,94 @@
         ========================= */
 
         .support {
+
             margin-top: 25px;
 
-            padding: 28px;
+            padding:
+                28px;
 
-            background: #ffffff;
+            background:
+                #ffffff;
 
-            border: 1px solid #e8e8e8;
+            border:
+                1px solid #e8e8e8;
+
             border-radius: 14px;
 
             text-align: center;
         }
 
+
         .support h2 {
+
             margin: 0;
 
             font-size: 19px;
         }
 
+
         .support p {
+
             max-width: 500px;
 
-            margin: 8px auto 18px;
+            margin:
+                8px auto 18px;
 
             font-size: 14px;
+
             line-height: 1.5;
 
             color: #73777f;
         }
 
-        .support-button {
+
+        /* =========================
+           BOUTON BREVO
+        ========================= */
+
+        .brevo-chat-button {
+
             display: inline-flex;
+
             align-items: center;
+
             justify-content: center;
 
-            min-height: 45px;
+            min-height: 46px;
 
-            padding: 0 21px;
+            padding:
+                0 24px;
 
             border: none;
+
             border-radius: 9px;
 
-            background: #ff9100;
+            background:
+                #ff9100;
+
             color: #ffffff;
 
+            font-family: inherit;
+
             font-size: 14px;
+
             font-weight: 700;
 
             cursor: pointer;
+
+            transition:
+                background 0.15s ease,
+                transform 0.15s ease;
         }
 
-        .support-button:hover {
-            background: #ed8400;
+
+        .brevo-chat-button:hover {
+
+            background:
+                #ed8400;
+
+            transform:
+                translateY(-1px);
         }
 
 
@@ -350,7 +527,9 @@
         ========================= */
 
         footer {
-            padding: 0 20px 30px;
+
+            padding:
+                0 20px 30px;
 
             text-align: center;
 
@@ -367,36 +546,62 @@
         @media (max-width: 700px) {
 
             .header {
-                padding: 22px 16px 30px;
+
+                padding:
+                    22px 16px 30px;
             }
 
+
             .header h1 {
+
                 font-size: 29px;
             }
 
+
             .header-subtitle {
+
                 font-size: 15px;
             }
+
 
             .content {
-                padding: 25px 12px 45px;
+
+                padding:
+                    25px 12px 45px;
             }
+
 
             .article {
-                padding: 25px 20px;
+
+                padding:
+                    25px 20px;
             }
 
+
             .article p {
+
                 font-size: 15px;
+
                 line-height: 1.7;
             }
 
+
             .article h2 {
+
                 font-size: 20px;
             }
 
+
             .support {
-                padding: 24px 18px;
+
+                padding:
+                    24px 18px;
+            }
+
+
+            .brevo-chat-button {
+
+                width: 100%;
             }
 
         }
@@ -417,6 +622,7 @@
 
         <div class="header-inner">
 
+
             <div class="logo">
                 Allez HOP!
             </div>
@@ -436,8 +642,8 @@
 
 
             <p class="header-subtitle">
-                Ajoutez vos adresses habituelles pour permettre à Allez HOP!
-                de mieux cibler les courses correspondant à vos déplacements.
+                Ajoutez vos trajets habituels pour rechercher
+                des courses adaptées et recevoir des notifications ciblées.
             </p>
 
         </div>
@@ -446,7 +652,7 @@
 
 
     <!-- =========================
-         ARTICLE
+         CONTENU
     ========================= -->
 
     <main class="content">
@@ -461,16 +667,15 @@
 
 
             <p>
-                Les <strong>trajets réguliers</strong> permettent d'indiquer
-                à Allez HOP! les déplacements que vous effectuez
+                Les <strong>trajets réguliers</strong> permettent
+                d'indiquer les déplacements que vous effectuez
                 habituellement.
             </p>
 
 
             <p>
-                En renseignant vos trajets et vos adresses habituelles,
-                vous permettez à Allez HOP! de mieux identifier les
-                <strong>courses correspondant à votre trajet</strong>
+                Ces informations permettent à Allez HOP! de mieux
+                cibler les <strong>courses correspondant à votre trajet</strong>
                 et de vous proposer des notifications plus pertinentes.
             </p>
 
@@ -479,9 +684,9 @@
 
                 <p>
                     <strong>Bon à savoir :</strong>
-                    renseignez vos trajets habituels avec précision et
-                    pensez à les mettre à jour si vos habitudes de
-                    déplacement changent.
+                    renseignez vos trajets avec des adresses aussi
+                    précises que possible afin d'obtenir des recherches
+                    et notifications plus adaptées.
                 </p>
 
             </div>
@@ -503,7 +708,7 @@
 
                     <div class="step-text">
                         <strong>Accédez à la rubrique de vos trajets</strong>
-                        dans votre compte Allez HOP!.
+                        depuis votre compte Allez HOP!.
                     </div>
 
                 </div>
@@ -517,8 +722,8 @@
 
                     <div class="step-text">
                         <strong>Ajoutez un nouveau trajet</strong>
-                        correspondant à un déplacement que vous
-                        effectuez régulièrement.
+                        correspondant à un déplacement que
+                        vous effectuez régulièrement.
                     </div>
 
                 </div>
@@ -531,8 +736,9 @@
                     </div>
 
                     <div class="step-text">
-                        <strong>Renseignez les adresses de votre trajet</strong>
-                        afin de définir votre parcours habituel.
+                        <strong>Renseignez l'adresse de départ</strong>
+                        correspondant au point depuis lequel
+                        vous effectuez habituellement votre trajet.
                     </div>
 
                 </div>
@@ -545,8 +751,8 @@
                     </div>
 
                     <div class="step-text">
-                        <strong>Vérifiez les informations saisies</strong>
-                        avant de valider votre trajet.
+                        <strong>Renseignez l'adresse d'arrivée</strong>
+                        correspondant à votre destination habituelle.
                     </div>
 
                 </div>
@@ -559,9 +765,23 @@
                     </div>
 
                     <div class="step-text">
-                        <strong>Cliquez sur « Soumettre »</strong>
-                        lorsque ce bouton est disponible afin
-                        d'enregistrer et valider votre modification.
+                        <strong>Vérifiez les informations</strong>
+                        afin de vous assurer que votre trajet
+                        est correctement renseigné.
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        6
+                    </div>
+
+                    <div class="step-text">
+                        <strong>Validez votre trajet</strong>
+                        afin qu'il soit enregistré dans votre compte.
                     </div>
 
                 </div>
@@ -570,100 +790,99 @@
 
 
             <h2>
-                Quelles adresses dois-je renseigner ?
+                Combien de trajets réguliers puis-je renseigner ?
             </h2>
 
 
             <p>
-                Renseignez les <strong>adresses correspondant à votre
-                trajet habituel</strong>. Il peut s'agir par exemple
-                de votre point de départ et de votre destination
-                habituelle.
+                Vous pouvez renseigner les trajets qui correspondent
+                réellement à vos déplacements habituels.
             </p>
 
 
             <p>
-                L'objectif est de permettre à Allez HOP! d'identifier
-                les courses qui peuvent correspondre à votre déplacement.
-                Vérifiez donc que les adresses saisies correspondent
-                bien à votre trajet réel.
+                Si vous effectuez régulièrement plusieurs déplacements
+                différents, il peut être utile d'enregistrer plusieurs
+                <strong>trajets réguliers</strong>.
             </p>
 
 
             <h2>
-                Quel est l'intérêt des trajets réguliers ?
+                Pourquoi mes adresses sont-elles importantes ?
             </h2>
 
 
             <p>
-                Vos trajets réguliers permettent de mieux cibler les
-                <strong>courses disponibles</strong> et les
-                <strong>notifications de courses</strong> susceptibles
-                de correspondre à vos déplacements.
+                Les adresses permettent de déterminer précisément
+                votre trajet et de rechercher des courses qui peuvent
+                correspondre à votre déplacement.
             </p>
 
 
             <p>
-                Cela vous évite de devoir rechercher manuellement les
-                mêmes critères à chaque fois que vous effectuez
-                un trajet habituel.
+                Une adresse incorrecte ou trop imprécise peut entraîner
+                des résultats de recherche moins pertinents.
             </p>
 
 
             <h2>
-                Puis-je modifier un trajet régulier ?
+                À quoi sert le rayon de recherche ?
             </h2>
 
 
             <p>
-                Oui. Si votre trajet habituel change, vous pouvez
-                <strong>modifier les informations de votre trajet</strong>
-                afin qu'elles correspondent à votre nouveau déplacement.
+                Le <strong>rayon de recherche</strong> permet de définir
+                la distance autour de votre trajet dans laquelle
+                vous souhaitez rechercher des courses.
             </p>
 
 
             <p>
-                Après avoir effectué une modification, cliquez sur
-                <strong>« Soumettre »</strong> afin de valider et
-                enregistrer le changement lorsque cette option est
-                disponible.
+                Si votre rayon est trop petit, certaines courses
+                intéressantes peuvent ne pas apparaître dans vos résultats.
             </p>
 
 
             <h2>
-                Puis-je supprimer un trajet régulier ?
+                Puis-je modifier mon trajet plus tard ?
             </h2>
 
 
             <p>
-                Si vous n'effectuez plus un trajet enregistré, vous pouvez
-                le supprimer afin d'éviter de recevoir des informations
-                ou des notifications qui ne correspondent plus à vos
-                déplacements.
+                Oui. Si votre trajet habituel change, pensez à mettre
+                à jour les informations enregistrées afin que vos
+                recherches et notifications restent adaptées.
             </p>
 
 
             <h2>
-                Mes trajets ont changé : que dois-je faire ?
+                Comment recevoir des notifications ciblées ?
             </h2>
 
 
             <p>
-                Si votre trajet habituel change, pensez à mettre à jour
-                les <strong>adresses de votre trajet régulier</strong>.
-                Vous pouvez également ajuster votre rayon de recherche
-                si vos nouveaux déplacements le nécessitent.
+                Pour recevoir des notifications correspondant davantage
+                à vos déplacements, renseignez correctement vos
+                <strong>trajets réguliers</strong>, vos adresses et
+                votre <strong>rayon de recherche</strong>.
             </p>
+
+
+            <h2>
+                Besoin d'aide ?
+            </h2>
 
 
             <p>
-                Des informations correctement renseignées permettent
-                à Allez HOP! de mieux cibler les courses et les
-                notifications correspondant à votre situation.
+                Si vous avez des difficultés pour ajouter un trajet
+                ou renseigner une adresse, notre équipe Allez HOP!
+                peut vous aider directement.
             </p>
 
 
-            <!-- FEEDBACK -->
+            <!-- =========================
+                 FEEDBACK
+            ========================= -->
 
             <div class="feedback">
 
@@ -709,77 +928,28 @@
 
             <p>
                 Vous n'avez pas trouvé la réponse à votre question ?
-                Notre équipe Allez HOP! peut vous aider directement.
+                Parlez directement avec notre équipe Allez HOP!.
             </p>
 
 
             <button
-                class="support-button"
                 type="button"
-                onclick="ouvrirSupport()"
+                class="brevo-chat-button"
             >
-                💬 Chatter avec le support
+                💬 Parler avec le support
             </button>
 
         </section>
+
 
     </main>
 
 
     <footer>
+
         Allez HOP! · Centre d'aide
+
     </footer>
-
-
-    <!-- =========================
-         TAWK.TO
-    ========================= -->
-
-    <script type="text/javascript">
-
-        var Tawk_API = Tawk_API || {};
-        var Tawk_LoadStart = new Date();
-
-
-        function ouvrirSupport() {
-
-            if (
-                typeof Tawk_API !== 'undefined' &&
-                typeof Tawk_API.maximize === 'function'
-            ) {
-
-                Tawk_API.maximize();
-
-            }
-
-        }
-
-
-        (function() {
-
-            var s1 = document.createElement("script");
-            var s0 = document.getElementsByTagName("script")[0];
-
-            s1.async = true;
-
-            s1.src =
-                'https://embed.tawk.to/6a8da5b6c0e0d43447f68e02/1k0tcvbbn';
-
-            s1.charset = 'UTF-8';
-
-            s1.setAttribute(
-                'crossorigin',
-                '*'
-            );
-
-            s0.parentNode.insertBefore(
-                s1,
-                s0
-            );
-
-        })();
-
-    </script>
 
 
 </body>
