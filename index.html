@@ -11,17 +11,17 @@
     >
 
     <title>
-        Centre d'aide — Allez HOP!
+        Allez HOP! — Centre d'aide
     </title>
 
     <meta
         name="description"
-        content="Centre d'aide Allez HOP! — Retrouvez rapidement les réponses à vos questions."
+        content="Centre d'aide Allez HOP! : retrouvez rapidement les réponses à vos questions sur les courses, les commandes, votre compte, vos trajets et votre activité de cotransporteur."
     >
 
 
     <!-- =========================
-         BREVO CONVERSATIONS
+         BREVO — CONFIGURATION
     ========================= -->
 
     <script>
@@ -31,16 +31,23 @@
             customWidgetButton:
                 '.brevo-chat-button',
 
-            chatWidth: 400,
+            chatWidth:
+                400,
 
-            chatHeight: 550,
+            chatHeight:
+                550,
 
-            buttonPosition: 'br'
+            buttonPosition:
+                'br'
 
         };
 
     </script>
 
+
+    <!-- =========================
+         BREVO CONVERSATIONS
+    ========================= -->
 
     <script>
 
@@ -55,7 +62,8 @@
 
             };
 
-            var s = d.createElement('script');
+            var s =
+                d.createElement('script');
 
             s.async = true;
 
@@ -120,7 +128,7 @@
                 1px solid #eeeeee;
 
             padding:
-                45px 20px 50px;
+                28px 20px 40px;
 
         }
 
@@ -132,6 +140,9 @@
 
             margin:
                 0 auto;
+
+            text-align:
+                center;
 
         }
 
@@ -145,7 +156,7 @@
                 25px;
 
             font-size:
-                23px;
+                25px;
 
             font-weight:
                 800;
@@ -158,8 +169,11 @@
 
         .header h1 {
 
+            max-width:
+                760px;
+
             margin:
-                0;
+                0 auto;
 
             font-size:
                 38px;
@@ -176,10 +190,10 @@
         .header-subtitle {
 
             max-width:
-                700px;
+                680px;
 
             margin:
-                12px 0 0;
+                14px auto 0;
 
             font-size:
                 17px;
@@ -200,10 +214,10 @@
         .search-container {
 
             max-width:
-                700px;
+                680px;
 
             margin:
-                28px 0 0;
+                28px auto 0;
 
         }
 
@@ -223,7 +237,7 @@
                 #ffffff;
 
             border:
-                1px solid #e1e3e6;
+                1px solid #dddddd;
 
             border-radius:
                 12px;
@@ -243,25 +257,13 @@
             box-shadow:
                 0 3px 12px rgba(0,0,0,0.04);
 
-            transition:
-                border-color 0.15s ease,
-                box-shadow 0.15s ease;
-
-        }
-
-
-        .search-box::placeholder {
-
-            color:
-                #9a9da3;
-
         }
 
 
         .search-box:focus {
 
             border-color:
-                #ffb45c;
+                #ffb55c;
 
             box-shadow:
                 0 0 0 3px rgba(255,145,0,0.10);
@@ -275,6 +277,9 @@
 
         .content {
 
+            width:
+                100%;
+
             max-width:
                 1000px;
 
@@ -282,7 +287,7 @@
                 0 auto;
 
             padding:
-                45px 20px 60px;
+                45px 20px 70px;
 
         }
 
@@ -293,10 +298,10 @@
                 0 0 20px;
 
             font-size:
-                22px;
+                21px;
 
-            line-height:
-                1.4;
+            font-weight:
+                700;
 
         }
 
@@ -311,7 +316,7 @@
                 grid;
 
             grid-template-columns:
-                repeat(2, minmax(0, 1fr));
+                repeat(2, 1fr);
 
             gap:
                 16px;
@@ -331,7 +336,7 @@
                 #ffffff;
 
             border:
-                1px solid #e7e8ea;
+                1px solid #e8e8e8;
 
             border-radius:
                 14px;
@@ -339,13 +344,10 @@
             text-decoration:
                 none;
 
-            color:
-                inherit;
-
             transition:
                 transform 0.15s ease,
-                border-color 0.15s ease,
-                box-shadow 0.15s ease;
+                box-shadow 0.15s ease,
+                border-color 0.15s ease;
 
         }
 
@@ -370,13 +372,10 @@
                 0 0 8px;
 
             font-size:
-                19px;
+                18px;
 
             line-height:
                 1.4;
-
-            font-weight:
-                750;
 
             color:
                 #202124;
@@ -408,7 +407,7 @@
         .support {
 
             margin-top:
-                30px;
+                35px;
 
             padding:
                 30px;
@@ -434,7 +433,7 @@
                 0;
 
             font-size:
-                19px;
+                20px;
 
         }
 
@@ -442,16 +441,16 @@
         .support p {
 
             max-width:
-                520px;
+                560px;
 
             margin:
-                8px auto 18px;
+                9px auto 18px;
 
             font-size:
                 14px;
 
             line-height:
-                1.55;
+                1.6;
 
             color:
                 #73777f;
@@ -529,7 +528,7 @@
         footer {
 
             padding:
-                0 20px 30px;
+                0 20px 35px;
 
             text-align:
                 center;
@@ -552,7 +551,7 @@
             .header {
 
                 padding:
-                    30px 16px 35px;
+                    24px 16px 32px;
 
             }
 
@@ -560,7 +559,7 @@
             .header h1 {
 
                 font-size:
-                    30px;
+                    29px;
 
             }
 
@@ -573,10 +572,18 @@
             }
 
 
+            .search-box {
+
+                height:
+                    52px;
+
+            }
+
+
             .content {
 
                 padding:
-                    30px 12px 45px;
+                    30px 12px 55px;
 
             }
 
@@ -592,7 +599,7 @@
             .category-card {
 
                 padding:
-                    22px;
+                    21px;
 
             }
 
@@ -600,7 +607,7 @@
             .support {
 
                 padding:
-                    24px 18px;
+                    25px 20px;
 
             }
 
@@ -642,14 +649,16 @@
 
 
             <p class="header-subtitle">
+
                 Comment pouvons-nous vous aider ?
-                Retrouvez rapidement les réponses à vos questions.
+
+                Retrouvez rapidement les réponses
+                à vos questions.
+
             </p>
 
 
-            <!-- =========================
-                 RECHERCHE
-            ========================= -->
+            <!-- RECHERCHE -->
 
             <div class="search-container">
 
@@ -663,6 +672,7 @@
                 >
 
             </div>
+
 
         </div>
 
@@ -698,8 +708,10 @@
                 </h2>
 
                 <p class="category-description">
+
                     Compte, inscription, trajets réguliers,
                     recherche de courses et notifications.
+
                 </p>
 
             </a>
@@ -719,8 +731,10 @@
                 </h2>
 
                 <p class="category-description">
+
                     Trouver, accepter, réaliser et suivre
                     une course sur Allez HOP!.
+
                 </p>
 
             </a>
@@ -740,8 +754,10 @@
                 </h2>
 
                 <p class="category-description">
+
                     Retrait, livraison, commande, code-barres
                     et problèmes liés aux commandes.
+
                 </p>
 
             </a>
@@ -752,7 +768,7 @@
             ========================= -->
 
             <a
-                href="mon-compte.html"
+                href="compte"
                 class="category-card"
             >
 
@@ -761,8 +777,10 @@
                 </h2>
 
                 <p class="category-description">
+
                     Connexion, informations personnelles,
                     profil et paramètres du compte.
+
                 </p>
 
             </a>
@@ -782,8 +800,10 @@
                 </h2>
 
                 <p class="category-description">
+
                     Ajouter, modifier ou supprimer vos trajets
                     et gérer vos critères de recherche.
+
                 </p>
 
             </a>
@@ -803,50 +823,33 @@
                 </h2>
 
                 <p class="category-description">
+
                     Consultez vos gains, vos paiements
                     et vos informations financières.
+
                 </p>
 
             </a>
 
 
             <!-- =========================
-                 SÉCURITÉ
+                 PROBLÈMES & INCIDENTS
             ========================= -->
 
             <a
-                href="securite.html"
+                href="problemes-incidents.html"
                 class="category-card"
             >
 
                 <h2 class="category-title">
-                    Sécurité
+                    Problèmes &amp; incidents
                 </h2>
 
                 <p class="category-description">
-                    Sécurité, incidents, accidents et
-                    bonnes pratiques pendant vos courses.
-                </p>
 
-            </a>
+                    Que faire en cas de problème pendant
+                    une course, un retrait ou une livraison ?
 
-
-            <!-- =========================
-                 SUPPORT
-            ========================= -->
-
-            <a
-                href="support.html"
-                class="category-card"
-            >
-
-                <h2 class="category-title">
-                    Support et assistance
-                </h2>
-
-                <p class="category-description">
-                    Contactez le support et trouvez de l'aide
-                    en cas de problème.
                 </p>
 
             </a>
@@ -856,19 +859,23 @@
 
 
         <!-- =========================
-             SUPPORT BREVO
+             SUPPORT
         ========================= -->
 
         <section class="support">
 
             <h2>
-                Vous avez encore besoin d'aide ?
+                Vous ne trouvez pas votre réponse ?
             </h2>
 
 
             <p>
-                Vous n'avez pas trouvé la réponse à votre question ?
-                Parlez directement avec notre équipe Allez HOP!.
+
+                Une question reste sans réponse ?
+
+                Parlez directement avec notre équipe
+                Allez HOP!.
+
             </p>
 
 
@@ -876,7 +883,9 @@
                 type="button"
                 class="brevo-chat-button"
             >
+
                 💬 Parler avec le support
+
             </button>
 
         </section>
@@ -885,119 +894,15 @@
     </main>
 
 
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
     <footer>
 
         Allez HOP! · Centre d'aide
 
     </footer>
-
-
-    <!-- =========================
-         RECHERCHE GLOBALE
-    ========================= -->
-
-    <script>
-
-        const globalSearch =
-            document.getElementById('globalSearch');
-
-
-        const categoryCards =
-            Array.from(
-                document.querySelectorAll('.category-card')
-            );
-
-
-        function normalizeText(text) {
-
-            return text
-
-                .toLowerCase()
-
-                .normalize('NFD')
-
-                .replace(/[\u0300-\u036f]/g, '')
-
-                .replace(/[’']/g, ' ')
-
-                .replace(/[^a-z0-9\s-]/g, ' ')
-
-                .replace(/\s+/g, ' ')
-
-                .trim();
-
-        }
-
-
-        globalSearch.addEventListener(
-            'input',
-            function() {
-
-                const search =
-                    normalizeText(
-                        this.value
-                    );
-
-
-                if (search === '') {
-
-                    categoryCards.forEach(
-                        function(card) {
-
-                            card.style.display =
-                                'block';
-
-                        }
-                    );
-
-                    return;
-
-                }
-
-
-                const words =
-                    search
-                        .split(' ')
-                        .filter(
-                            function(word) {
-
-                                return word.length > 1;
-
-                            }
-                        );
-
-
-                categoryCards.forEach(
-                    function(card) {
-
-                        const text =
-                            normalizeText(
-                                card.textContent
-                            );
-
-
-                        const match =
-                            words.every(
-                                function(word) {
-
-                                    return text.includes(word);
-
-                                }
-                            );
-
-
-                        card.style.display =
-                            match
-                                ? 'block'
-                                : 'none';
-
-                    }
-                );
-
-            }
-        );
-
-    </script>
 
 
 </body>
