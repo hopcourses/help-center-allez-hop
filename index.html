@@ -16,7 +16,7 @@
 
     <meta
         name="description"
-        content="Centre d'aide Allez HOP! : retrouvez rapidement les réponses à vos questions sur les courses, les commandes, votre compte, vos trajets et votre activité de cotransporteur."
+        content="Centre d'aide Allez HOP! : retrouvez rapidement les réponses à vos questions sur les courses, les commandes, votre compte, vos trajets et vos gains."
     >
 
 
@@ -266,6 +266,170 @@
 
             box-shadow:
                 0 0 0 3px rgba(255,145,0,0.10);
+
+        }
+
+
+        /* =========================
+           RESULTATS DE RECHERCHE
+        ========================= */
+
+        .search-results {
+
+            display:
+                none;
+
+            max-width:
+                680px;
+
+            margin:
+                14px auto 0;
+
+            text-align:
+                left;
+
+        }
+
+
+        .search-status {
+
+            margin:
+                0 0 10px;
+
+            font-size:
+                13px;
+
+            color:
+                #73777f;
+
+        }
+
+
+        .search-result {
+
+            display:
+                block;
+
+            margin-bottom:
+                10px;
+
+            padding:
+                17px 19px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #e8e8e8;
+
+            border-radius:
+                12px;
+
+            text-decoration:
+                none;
+
+            transition:
+                border-color 0.15s ease,
+                box-shadow 0.15s ease,
+                transform 0.15s ease;
+
+        }
+
+
+        .search-result:hover {
+
+            transform:
+                translateY(-1px);
+
+            border-color:
+                #ffd29b;
+
+            box-shadow:
+                0 5px 16px rgba(0,0,0,0.05);
+
+        }
+
+
+        .search-result-category {
+
+            margin-bottom:
+                5px;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+            color:
+                #ff9100;
+
+        }
+
+
+        .search-result-title {
+
+            margin:
+                0 0 5px;
+
+            font-size:
+                16px;
+
+            line-height:
+                1.4;
+
+            font-weight:
+                700;
+
+            color:
+                #202124;
+
+        }
+
+
+        .search-result-description {
+
+            margin:
+                0;
+
+            font-size:
+                13px;
+
+            line-height:
+                1.55;
+
+            color:
+                #73777f;
+
+        }
+
+
+        .search-loading,
+        .search-empty {
+
+            padding:
+                20px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #e8e8e8;
+
+            border-radius:
+                12px;
+
+            font-size:
+                14px;
+
+            line-height:
+                1.6;
+
+            color:
+                #73777f;
+
+            text-align:
+                center;
 
         }
 
@@ -603,6 +767,14 @@
             }
 
 
+            .search-result {
+
+                padding:
+                    16px;
+
+            }
+
+
             .support {
 
                 padding:
@@ -653,7 +825,9 @@
             </p>
 
 
-            <!-- RECHERCHE -->
+            <!-- =========================
+                 RECHERCHE
+            ========================= -->
 
             <div class="search-container">
 
@@ -665,6 +839,25 @@
                     aria-label="Rechercher dans le centre d'aide"
                     autocomplete="off"
                 >
+
+
+                <!-- RESULTATS -->
+
+                <div
+                    id="searchResults"
+                    class="search-results"
+                >
+
+                    <div
+                        id="searchStatus"
+                        class="search-status"
+                    ></div>
+
+                    <div
+                        id="searchResultsList"
+                    ></div>
+
+                </div>
 
             </div>
 
@@ -893,53 +1086,687 @@
 
     <script>
 
+        /*
+         * Toutes les rubriques du centre d'aide.
+         * On utilise les routes définitives.
+         */
+
+        const helpSections = [
+
+            {
+                name: 'Cotransporteur',
+                url: '/cotransporteur'
+            },
+
+            {
+                name: 'Courses',
+                url: '/courses'
+            },
+
+            {
+                name: 'Commandes',
+                url: '/commandes'
+            },
+
+            {
+                name: 'Compte',
+                url: '/compte'
+            },
+
+            {
+                name: 'Mes trajets',
+                url: '/mes-trajets'
+            },
+
+            {
+                name: 'Mes gains',
+                url: '/mes-gains'
+            },
+
+            {
+                name: 'Problèmes & incidents',
+                url: '/problemes-incidents'
+            }
+
+        ];
+
+
         const searchInput =
             document.getElementById('siteSearch');
 
 
-        const categoryCards =
-            Array.from(
-                document.querySelectorAll('.category-card')
+        const searchResults =
+            document.getElementById('searchResults');
+
+
+        const searchStatus =
+            document.getElementById('searchStatus');
+
+
+        const searchResultsList =
+            document.getElementById('searchResultsList');
+
+
+        /*
+         * Normalisation du texte.
+         * Permet notamment de chercher :
+         *
+         * "cagnotte"
+         * "CAgNotTe"
+         * "cagnotte"
+         * etc.
+         */
+
+        function normalizeText(text) {
+
+            return text
+                .toLowerCase()
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .replace(/[’']/g, ' ')
+                .replace(/[^a-z0-9\s-]/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim();
+
+        }
+
+
+        /*
+         * Cache des pages déjà chargées.
+         *
+         * Cela évite de télécharger plusieurs fois
+         * les mêmes pages pendant la recherche.
+         */
+
+        const pageCache = new Map();
+
+
+        /*
+         * Récupération du contenu d'une rubrique.
+         */
+
+        async function loadSection(section) {
+
+            if (
+                pageCache.has(section.url)
+            ) {
+
+                return pageCache.get(section.url);
+
+            }
+
+
+            const response =
+                await fetch(
+                    section.url,
+                    {
+                        method: 'GET',
+                        cache: 'no-cache'
+                    }
+                );
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    'Impossible de charger ' +
+                    section.url
+                );
+
+            }
+
+
+            const html =
+                await response.text();
+
+
+            const parser =
+                new DOMParser();
+
+
+            const documentPage =
+                parser.parseFromString(
+                    html,
+                    'text/html'
+                );
+
+
+            const articles =
+                Array.from(
+                    documentPage.querySelectorAll('.article')
+                );
+
+
+            const results =
+                articles.map(function(article) {
+
+                    const titleElement =
+                        article.querySelector(
+                            '.article-title'
+                        );
+
+
+                    const descriptionElement =
+                        article.querySelector(
+                            '.article-description'
+                        );
+
+
+                    const keywordsElement =
+                        article.querySelector(
+                            '.article-keywords'
+                        );
+
+
+                    const title =
+                        titleElement
+                            ? titleElement.textContent.trim()
+                            : '';
+
+
+                    const description =
+                        descriptionElement
+                            ? descriptionElement.textContent.trim()
+                            : '';
+
+
+                    const keywords =
+                        keywordsElement
+                            ? keywordsElement.textContent.trim()
+                            : '';
+
+
+                    return {
+
+                        category:
+                            section.name,
+
+                        title:
+                            title,
+
+                        description:
+                            description,
+
+                        keywords:
+                            keywords,
+
+                        url:
+                            article.getAttribute('href') || '#'
+
+                    };
+
+                });
+
+
+            pageCache.set(
+                section.url,
+                results
             );
+
+
+            return results;
+
+        }
+
+
+        /*
+         * Calcule un score de pertinence.
+         */
+
+        function scoreArticle(
+            article,
+            searchWords
+        ) {
+
+            const title =
+                normalizeText(
+                    article.title
+                );
+
+
+            const description =
+                normalizeText(
+                    article.description
+                );
+
+
+            const keywords =
+                normalizeText(
+                    article.keywords
+                );
+
+
+            let score = 0;
+
+
+            searchWords.forEach(
+                function(word) {
+
+
+                    /*
+                     * Titre :
+                     * très fortement pondéré.
+                     */
+
+                    if (
+                        title.includes(word)
+                    ) {
+
+                        score += 10;
+
+                    }
+
+
+                    /*
+                     * Description.
+                     */
+
+                    if (
+                        description.includes(word)
+                    ) {
+
+                        score += 5;
+
+                    }
+
+
+                    /*
+                     * Mots-clés.
+                     */
+
+                    if (
+                        keywords.includes(word)
+                    ) {
+
+                        score += 3;
+
+                    }
+
+                }
+            );
+
+
+            return score;
+
+        }
+
+
+        /*
+         * Affichage du message de chargement.
+         */
+
+        function showLoading() {
+
+            searchResults.style.display =
+                'block';
+
+
+            searchStatus.textContent =
+                'Recherche en cours…';
+
+
+            searchResultsList.innerHTML =
+
+                '<div class="search-loading">' +
+                'Recherche dans le centre d’aide…' +
+                '</div>';
+
+        }
+
+
+        /*
+         * Affichage des résultats.
+         */
+
+        function renderResults(results) {
+
+            searchResults.style.display =
+                'block';
+
+
+            if (
+                results.length === 0
+            ) {
+
+                searchStatus.textContent =
+                    'Aucun article trouvé';
+
+
+                searchResultsList.innerHTML =
+
+                    '<div class="search-empty">' +
+                    'Essayez avec un autre mot-clé ou une autre formulation.' +
+                    '</div>';
+
+                return;
+
+            }
+
+
+            searchStatus.textContent =
+                results.length +
+                (
+                    results.length > 1
+                        ? ' articles trouvés'
+                        : ' article trouvé'
+                );
+
+
+            searchResultsList.innerHTML =
+                results
+                    .slice(0, 12)
+                    .map(
+                        function(result) {
+
+                            return (
+
+                                '<a ' +
+
+                                'href="' +
+                                result.url +
+                                '" ' +
+
+                                'class="search-result">' +
+
+                                    '<div ' +
+                                    'class="search-result-category">' +
+                                        escapeHtml(
+                                            result.category
+                                        ) +
+                                    '</div>' +
+
+                                    '<h3 ' +
+                                    'class="search-result-title">' +
+                                        escapeHtml(
+                                            result.title
+                                        ) +
+                                    '</h3>' +
+
+                                    '<p ' +
+                                    'class="search-result-description">' +
+                                        escapeHtml(
+                                            result.description
+                                        ) +
+                                    '</p>' +
+
+                                '</a>'
+
+                            );
+
+                        }
+                    )
+                    .join('');
+
+        }
+
+
+        /*
+         * Protection du HTML avant insertion.
+         */
+
+        function escapeHtml(text) {
+
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+
+        }
+
+
+        /*
+         * Recherche globale.
+         */
+
+        let searchTimer = null;
 
 
         searchInput.addEventListener(
             'input',
             function() {
 
+                clearTimeout(
+                    searchTimer
+                );
+
+
+                const rawSearch =
+                    this.value;
+
+
                 const search =
-                    this.value
-                        .toLowerCase()
-                        .normalize('NFD')
-                        .replace(/[\u0300-\u036f]/g, '')
-                        .trim();
+                    normalizeText(
+                        rawSearch
+                    );
 
 
-                categoryCards.forEach(function(card) {
+                /*
+                 * Champ vide :
+                 * on masque les résultats.
+                 */
 
-                    const text =
-                        card.textContent
-                            .toLowerCase()
-                            .normalize('NFD')
-                            .replace(/[\u0300-\u036f]/g, '');
+                if (
+                    search.length === 0
+                ) {
+
+                    searchResults.style.display =
+                        'none';
+
+                    searchStatus.textContent =
+                        '';
+
+                    searchResultsList.innerHTML =
+                        '';
+
+                    return;
+
+                }
 
 
-                    if (
-                        search === '' ||
-                        text.includes(search)
-                    ) {
+                /*
+                 * On attend un minimum
+                 * avant de lancer les requêtes.
+                 */
 
-                        card.style.display =
-                            'block';
+                searchTimer =
+                    setTimeout(
+                        async function() {
 
-                    } else {
+                            const searchWords =
+                                search
+                                    .split(' ')
+                                    .filter(
+                                        function(word) {
 
-                        card.style.display =
-                            'none';
+                                            return (
+                                                word.length > 1
+                                            );
 
-                    }
+                                        }
+                                    );
 
-                });
+
+                            if (
+                                searchWords.length === 0
+                            ) {
+
+                                return;
+
+                            }
+
+
+                            showLoading();
+
+
+                            try {
+
+
+                                /*
+                                 * Charge toutes les rubriques
+                                 * en parallèle.
+                                 */
+
+                                const sectionResults =
+                                    await Promise.all(
+                                        helpSections.map(
+                                            loadSection
+                                        )
+                                    );
+
+
+                                const allArticles =
+                                    sectionResults.flat();
+
+
+                                /*
+                                 * Calcule le score
+                                 * de chaque article.
+                                 */
+
+                                const scoredResults =
+                                    allArticles
+                                        .map(
+                                            function(article) {
+
+                                                return {
+
+                                                    article:
+                                                        article,
+
+                                                    score:
+                                                        scoreArticle(
+                                                            article,
+                                                            searchWords
+                                                        )
+
+                                                };
+
+                                            }
+                                        )
+                                        .filter(
+                                            function(item) {
+
+                                                return (
+                                                    item.score > 0
+                                                );
+
+                                            }
+                                        )
+                                        .sort(
+                                            function(a, b) {
+
+                                                return (
+                                                    b.score -
+                                                    a.score
+                                                );
+
+                                            }
+                                        );
+
+
+                                /*
+                                 * On transforme
+                                 * les résultats pour l'affichage.
+                                 */
+
+                                const results =
+                                    scoredResults.map(
+                                        function(item) {
+
+                                            return item.article;
+
+                                        }
+                                    );
+
+
+                                renderResults(
+                                    results
+                                );
+
+
+                            } catch (error) {
+
+                                console.error(
+                                    'Erreur recherche centre d’aide :',
+                                    error
+                                );
+
+
+                                searchResults.style.display =
+                                    'block';
+
+
+                                searchStatus.textContent =
+                                    'Recherche indisponible';
+
+
+                                searchResultsList.innerHTML =
+
+                                    '<div class="search-empty">' +
+                                    'Impossible de charger les résultats pour le moment. ' +
+                                    'Vous pouvez parcourir les rubriques ci-dessous.' +
+                                    '</div>';
+
+                            }
+
+                        },
+                        250
+                    );
+
+            }
+        );
+
+
+        /*
+         * Clic en dehors :
+         * on conserve le champ mais on peut
+         * fermer les résultats.
+         */
+
+        document.addEventListener(
+            'click',
+            function(event) {
+
+                const clickedInsideSearch =
+                    event.target.closest(
+                        '.search-container'
+                    );
+
+
+                if (
+                    !clickedInsideSearch
+                ) {
+
+                    searchResults.style.display =
+                        'none';
+
+                }
+
+            }
+        );
+
+
+        /*
+         * Revenir dans le champ :
+         * réafficher les résultats existants.
+         */
+
+        searchInput.addEventListener(
+            'focus',
+            function() {
+
+                if (
+                    this.value.trim() !== ''
+                    &&
+                    searchResultsList.innerHTML !== ''
+                ) {
+
+                    searchResults.style.display =
+                        'block';
+
+                }
 
             }
         );
