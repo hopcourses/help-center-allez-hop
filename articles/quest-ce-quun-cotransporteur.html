@@ -10,12 +10,68 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Qu'est-ce qu'un cotransporteur ? — Allez HOP! | Centre d'aide</title>
+    <title>
+        Qu'est-ce qu'un cotransporteur ? — Allez HOP! | Centre d'aide
+    </title>
 
     <meta
         name="description"
-        content="Découvrez ce qu'est un cotransporteur, son rôle et comment fonctionne le cotransportage de colis et de commandes avec Allez HOP!."
+        content="Découvrez ce qu'est un cotransporteur, comment fonctionne le cotransportage et quel est le rôle du cotransporteur sur Allez HOP!."
     >
+
+
+    <!-- =========================
+         BREVO CONVERSATIONS
+    ========================= -->
+
+    <script>
+
+        window.BrevoConversationsSetup = {
+
+            customWidgetButton:
+                '.brevo-chat-button',
+
+            chatWidth: 400,
+
+            chatHeight: 550,
+
+            buttonPosition: 'br'
+
+        };
+
+    </script>
+
+
+    <script>
+
+        (function(d, w, c) {
+
+            w.BrevoConversationsID =
+                '66de1609df5363314100b775';
+
+            w[c] = w[c] || function() {
+
+                (w[c].q = w[c].q || []).push(arguments);
+
+            };
+
+            var s = d.createElement('script');
+
+            s.async = true;
+
+            s.src =
+                'https://conversations-widget.brevo.com/brevo-conversations.js';
+
+            if (d.head) {
+
+                d.head.appendChild(s);
+
+            }
+
+        })(document, window, 'BrevoConversations');
+
+    </script>
+
 
     <style>
 
@@ -23,11 +79,13 @@
             box-sizing: border-box;
         }
 
+
         html,
         body {
             margin: 0;
             padding: 0;
         }
+
 
         body {
 
@@ -38,6 +96,7 @@
                 sans-serif;
 
             background: #f8f9fa;
+
             color: #202124;
         }
 
@@ -73,6 +132,7 @@
             margin-bottom: 25px;
 
             font-size: 23px;
+
             font-weight: 800;
 
             color: #ff9100;
@@ -84,8 +144,6 @@
             display: inline-flex;
 
             align-items: center;
-
-            gap: 6px;
 
             margin-bottom: 24px;
 
@@ -107,7 +165,7 @@
 
         .header h1 {
 
-            max-width: 750px;
+            max-width: 760px;
 
             margin: 0;
 
@@ -218,7 +276,8 @@
             padding:
                 20px 22px;
 
-            background: #fff7ed;
+            background:
+                #fff7ed;
 
             border-left:
                 4px solid #ff9100;
@@ -254,7 +313,8 @@
 
         .feedback h3 {
 
-            margin: 0 0 15px;
+            margin:
+                0 0 15px;
 
             font-size: 16px;
         }
@@ -277,7 +337,8 @@
             padding:
                 9px 16px;
 
-            background: #ffffff;
+            background:
+                #ffffff;
 
             border:
                 1px solid #dddddd;
@@ -313,7 +374,8 @@
             padding:
                 28px;
 
-            background: #ffffff;
+            background:
+                #ffffff;
 
             border:
                 1px solid #e8e8e8;
@@ -347,7 +409,11 @@
         }
 
 
-        .support-button {
+        /* =========================
+           BOUTON BREVO
+        ========================= */
+
+        .brevo-chat-button {
 
             display: inline-flex;
 
@@ -355,10 +421,10 @@
 
             justify-content: center;
 
-            min-height: 45px;
+            min-height: 46px;
 
             padding:
-                0 21px;
+                0 24px;
 
             border: none;
 
@@ -369,18 +435,27 @@
 
             color: #ffffff;
 
+            font-family: inherit;
+
             font-size: 14px;
 
             font-weight: 700;
 
             cursor: pointer;
+
+            transition:
+                background 0.15s ease,
+                transform 0.15s ease;
         }
 
 
-        .support-button:hover {
+        .brevo-chat-button:hover {
 
             background:
                 #ed8400;
+
+            transform:
+                translateY(-1px);
         }
 
 
@@ -460,6 +535,12 @@
                     24px 18px;
             }
 
+
+            .brevo-chat-button {
+
+                width: 100%;
+            }
+
         }
 
     </style>
@@ -498,9 +579,8 @@
 
 
             <p class="header-subtitle">
-                Comprendre le rôle du cotransporteur,
-                le fonctionnement du cotransportage
-                et son utilisation avec Allez HOP!.
+                Découvrez le principe du cotransportage et le rôle
+                du cotransporteur sur Allez HOP!.
             </p>
 
         </div>
@@ -524,17 +604,16 @@
 
 
             <p>
-                Un <strong>cotransporteur</strong> est une personne qui
-                profite d'un trajet qu'elle effectue déjà pour transporter
-                une commande ou un colis avec Allez HOP!.
+                Un <strong>cotransporteur</strong> est une personne
+                qui profite d'un trajet qu'elle effectue déjà pour
+                transporter une commande correspondant à son itinéraire.
             </p>
 
 
             <p>
-                Le principe du <strong>cotransportage</strong> est simple :
-                plutôt que de réaliser un trajet uniquement pour effectuer
-                une livraison, le cotransporteur transporte une commande
-                pendant un déplacement qu'il avait déjà prévu.
+                Avec <strong>Allez HOP!</strong>, le cotransporteur peut
+                rechercher des courses correspondant à ses déplacements
+                habituels et choisir celles qui correspondent à son trajet.
             </p>
 
 
@@ -542,33 +621,30 @@
 
                 <p>
                     <strong>À retenir :</strong>
-                    le cotransporteur choisit les courses qui correspondent
-                    à son trajet, à ses disponibilités et aux critères
-                    qu'il a renseignés dans son compte.
+                    le principe est simple : vous effectuez déjà un trajet,
+                    et Allez HOP! vous permet de rechercher une course
+                    qui peut correspondre à ce déplacement.
                 </p>
 
             </div>
 
 
             <h2>
-                Quel est le rôle d'un cotransporteur ?
+                Quel est le rôle du cotransporteur ?
             </h2>
 
 
             <p>
-                Le rôle du cotransporteur est de récupérer une commande
-                au point de retrait indiqué, de la transporter pendant
-                son trajet et de la remettre au destinataire à l'adresse
-                prévue.
+                Le cotransporteur récupère la commande au point prévu,
+                la transporte pendant son trajet puis la remet au
+                destinataire ou au point de livraison indiqué.
             </p>
 
 
             <p>
-                Le cotransporteur peut consulter les courses disponibles
-                et sélectionner celles qui correspondent à son déplacement.
-                Il peut notamment utiliser ses <strong>trajets réguliers</strong>
-                et son <strong>rayon de recherche</strong> pour trouver
-                des courses adaptées.
+                Il doit respecter les informations et les consignes
+                associées à la course afin que la livraison puisse
+                se dérouler dans de bonnes conditions.
             </p>
 
 
@@ -578,32 +654,22 @@
 
 
             <p>
-                Allez HOP! met en relation les besoins de livraison avec
-                des personnes qui effectuent déjà un trajet. Le cotransporteur
-                peut ainsi rechercher une course correspondant à son
-                déplacement, accepter la course, récupérer la commande
-                puis effectuer la livraison.
+                Le cotransporteur renseigne ses
+                <strong>trajets réguliers</strong> et peut définir
+                un <strong>rayon de recherche</strong>.
             </p>
 
 
             <p>
-                Les informations concernant la course indiquent notamment
-                le point de retrait, le point de livraison et les éléments
-                nécessaires à la bonne réalisation de la livraison.
+                Allez HOP! lui permet ensuite de rechercher des courses
+                susceptibles de correspondre à ses déplacements.
             </p>
 
 
-            <h2>
-                Comment devenir cotransporteur ?
-            </h2>
-
-
             <p>
-                Pour utiliser Allez HOP! en tant que cotransporteur,
-                il faut créer et configurer son compte. Une fois le profil
-                renseigné, le cotransporteur peut indiquer ses trajets
-                réguliers et ses critères de recherche afin de trouver
-                des courses correspondant à ses déplacements.
+                Lorsqu'une course lui convient, il peut consulter
+                les informations disponibles et suivre les étapes
+                prévues pour effectuer la course.
             </p>
 
 
@@ -613,17 +679,47 @@
 
 
             <p>
-                Les <strong>trajets réguliers</strong> permettent à Allez HOP!
-                de mieux identifier les courses susceptibles de correspondre
-                aux déplacements du cotransporteur.
+                Les trajets réguliers permettent d'indiquer les
+                déplacements que vous effectuez habituellement.
             </p>
 
 
             <p>
-                En renseignant correctement ses adresses de trajet et son
-                <strong>rayon de recherche</strong>, le cotransporteur peut
-                recevoir des notifications plus pertinentes concernant
-                les courses disponibles.
+                Ces informations permettent de mieux cibler les
+                <strong>courses correspondant à votre trajet</strong>
+                et de recevoir des notifications plus pertinentes.
+            </p>
+
+
+            <h2>
+                Le cotransporteur doit-il modifier ses trajets ?
+            </h2>
+
+
+            <p>
+                Si vos habitudes de déplacement changent, pensez à
+                modifier vos <strong>trajets réguliers</strong> afin
+                que les informations enregistrées correspondent
+                toujours à votre situation.
+            </p>
+
+
+            <p>
+                Vous pouvez également ajuster votre
+                <strong>rayon de recherche</strong> afin de mieux
+                correspondre aux distances que vous êtes prêt à parcourir.
+            </p>
+
+
+            <h2>
+                Besoin d'aide ?
+            </h2>
+
+
+            <p>
+                Si vous avez une question concernant le fonctionnement
+                d'Allez HOP! ou votre activité de cotransporteur,
+                vous pouvez contacter notre équipe directement.
             </p>
 
 
@@ -673,17 +769,16 @@
 
             <p>
                 Vous n'avez pas trouvé la réponse à votre question ?
-                Notre équipe Allez HOP! peut vous aider directement.
+                Parlez directement avec notre équipe Allez HOP!.
             </p>
 
 
             <button
-    class="support-button"
-    type="button"
-    onclick="ouvrirSupport()"
->
-    💬 Chatter avec le support
-</button>
+                type="button"
+                class="brevo-chat-button"
+            >
+                💬 Parler avec le support
+            </button>
 
         </section>
 
@@ -694,57 +789,7 @@
     <footer>
         Allez HOP! · Centre d'aide
     </footer>
-<!-- Tawk.to - Chat support Allez HOP! -->
 
-<script type="text/javascript">
-
-    var Tawk_API = Tawk_API || {};
-    var Tawk_LoadStart = new Date();
-
-    /*
-     * Fonction appelée par le bouton
-     * "Chatter avec le support".
-     */
-    function ouvrirSupport() {
-
-        if (
-            typeof Tawk_API !== 'undefined' &&
-            typeof Tawk_API.maximize === 'function'
-        ) {
-            Tawk_API.maximize();
-        }
-
-    }
-
-    /*
-     * Chargement du widget Tawk.to
-     */
-    (function() {
-
-        var s1 = document.createElement("script");
-        var s0 = document.getElementsByTagName("script")[0];
-
-        s1.async = true;
-
-        s1.src =
-            'https://embed.tawk.to/6a8da5b6c0e0d43447f68e02/1k0tcvbbn';
-
-        s1.charset = 'UTF-8';
-
-        s1.setAttribute(
-            'crossorigin',
-            '*'
-        );
-
-        s0.parentNode.insertBefore(
-            s1,
-            s0
-        );
-
-    })();
-
-</script>
-</body>
 
 </body>
 
