@@ -11,12 +11,12 @@
     >
 
     <title>
-        Compte et profil — Allez HOP! | Centre d'aide
+        Mon compte — Allez HOP! | Centre d'aide
     </title>
 
     <meta
         name="description"
-        content="Toutes les informations pour créer, gérer et paramétrer votre compte cotransporteur Allez HOP!."
+        content="Centre d'aide Allez HOP! pour gérer son compte, son profil, ses documents, ses coordonnées bancaires et ses paramètres."
     >
 
 
@@ -28,7 +28,8 @@
 
         window.BrevoConversationsSetup = {
 
-            customWidgetButton: '.brevo-chat-button',
+            customWidgetButton:
+                '.brevo-chat-button',
 
             chatWidth: 400,
 
@@ -81,8 +82,11 @@
 
         html,
         body {
+
             margin: 0;
+
             padding: 0;
+
         }
 
 
@@ -97,6 +101,7 @@
             background: #f8f9fa;
 
             color: #202124;
+
         }
 
 
@@ -113,6 +118,7 @@
 
             padding:
                 25px 20px 35px;
+
         }
 
 
@@ -121,6 +127,7 @@
             max-width: 1000px;
 
             margin: 0 auto;
+
         }
 
 
@@ -135,6 +142,7 @@
             font-weight: 800;
 
             color: #ff9100;
+
         }
 
 
@@ -153,12 +161,14 @@
             font-size: 14px;
 
             font-weight: 600;
+
         }
 
 
         .breadcrumb:hover {
 
             color: #ff9100;
+
         }
 
 
@@ -173,6 +183,7 @@
             line-height: 1.25;
 
             letter-spacing: -0.8px;
+
         }
 
 
@@ -188,6 +199,7 @@
             line-height: 1.6;
 
             color: #73777f;
+
         }
 
 
@@ -199,30 +211,148 @@
 
             width: 100%;
 
-            max-width: 800px;
+            max-width: 900px;
 
             margin: 0 auto;
 
             padding:
                 45px 20px 60px;
+
         }
 
 
         .intro {
 
-            margin-bottom: 28px;
-        }
-
-
-        .intro p {
-
-            margin: 0;
+            margin-bottom: 20px;
 
             font-size: 16px;
 
             line-height: 1.7;
 
-            color: #555a61;
+            color: #555b63;
+
+        }
+
+
+        /* =========================
+           RECHERCHE
+        ========================= */
+
+        .search-box {
+
+            width: 100%;
+
+            margin:
+                0 0 28px;
+
+        }
+
+
+        #articleSearch {
+
+            width: 100%;
+
+            height: 54px;
+
+            padding:
+                0 20px;
+
+            background: #ffffff;
+
+            border:
+                1px solid #e3e5e8;
+
+            border-radius: 12px;
+
+            outline: none;
+
+            font-family: inherit;
+
+            font-size: 15px;
+
+            color: #202124;
+
+            box-shadow:
+                0 2px 8px rgba(0,0,0,0.03);
+
+            transition:
+                border-color 0.15s ease,
+                box-shadow 0.15s ease;
+
+        }
+
+
+        #articleSearch::placeholder {
+
+            color: #9a9da3;
+
+        }
+
+
+        #articleSearch:focus {
+
+            border-color:
+                #ffb45c;
+
+            box-shadow:
+                0 0 0 3px rgba(255,145,0,0.10);
+
+        }
+
+
+        /* =========================
+           RESULTATS
+        ========================= */
+
+        .search-status {
+
+            display: none;
+
+            margin:
+                -10px 0 18px;
+
+            font-size: 14px;
+
+            color: #73777f;
+
+        }
+
+
+        .no-results {
+
+            display: none;
+
+            padding:
+                30px 20px;
+
+            background: #ffffff;
+
+            border:
+                1px solid #e8e8e8;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            color: #73777f;
+
+            font-size: 15px;
+
+            line-height: 1.6;
+
+        }
+
+
+        .no-results strong {
+
+            display: block;
+
+            margin-bottom: 6px;
+
+            color: #202124;
+
+            font-size: 17px;
+
         }
 
 
@@ -232,11 +362,13 @@
 
         .articles {
 
-            display: flex;
+            display: grid;
 
-            flex-direction: column;
+            grid-template-columns:
+                repeat(2, 1fr);
 
-            gap: 12px;
+            gap: 15px;
+
         }
 
 
@@ -250,43 +382,47 @@
             background: #ffffff;
 
             border:
-                1px solid #e5e5e5;
+                1px solid #e8e8e8;
 
             border-radius: 12px;
 
             text-decoration: none;
 
             transition:
-                border-color 0.15s ease,
                 transform 0.15s ease,
-                box-shadow 0.15s ease;
+                box-shadow 0.15s ease,
+                border-color 0.15s ease;
+
         }
 
 
         .article:hover {
 
-            border-color:
-                #ff9100;
-
             transform:
-                translateY(-1px);
+                translateY(-2px);
+
+            border-color:
+                #ffd29b;
 
             box-shadow:
-                0 4px 14px rgba(0,0,0,0.05);
+                0 5px 18px rgba(0,0,0,0.06);
+
         }
 
 
         .article-title {
 
-            margin: 0 0 7px;
+            margin:
+                0 0 8px;
 
-            font-size: 18px;
+            font-size: 17px;
 
-            line-height: 1.35;
+            line-height: 1.4;
 
             font-weight: 700;
 
             color: #202124;
+
         }
 
 
@@ -299,36 +435,33 @@
             line-height: 1.55;
 
             color: #73777f;
-        }
 
-
-        .article-arrow {
-
-            float: right;
-
-            margin-left: 15px;
-
-            color: #ff9100;
-
-            font-size: 18px;
-
-            font-weight: 700;
         }
 
 
         /* =========================
-           SUPPORT BREVO
+           MOTS-CLES
+        ========================= */
+
+        .article-keywords {
+
+            display: none;
+
+        }
+
+
+        /* =========================
+           SUPPORT
         ========================= */
 
         .support {
 
-            margin-top: 28px;
+            margin-top: 30px;
 
             padding:
                 28px;
 
-            background:
-                #ffffff;
+            background: #ffffff;
 
             border:
                 1px solid #e8e8e8;
@@ -336,6 +469,7 @@
             border-radius: 14px;
 
             text-align: center;
+
         }
 
 
@@ -345,26 +479,28 @@
 
             font-size: 19px;
 
-            line-height: 1.35;
-
-            color: #202124;
         }
 
 
         .support p {
 
-            max-width: 500px;
+            max-width: 520px;
 
             margin:
-                9px auto 18px;
+                8px auto 18px;
 
             font-size: 14px;
 
             line-height: 1.5;
 
             color: #73777f;
+
         }
 
+
+        /* =========================
+           BOUTON BREVO
+        ========================= */
 
         .brevo-chat-button {
 
@@ -399,6 +535,7 @@
             transition:
                 background 0.15s ease,
                 transform 0.15s ease;
+
         }
 
 
@@ -409,34 +546,7 @@
 
             transform:
                 translateY(-1px);
-        }
 
-
-        /* =========================
-           RETOUR
-        ========================= */
-
-        .back {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            margin-top: 32px;
-
-            color: #73777f;
-
-            text-decoration: none;
-
-            font-size: 14px;
-
-            font-weight: 600;
-        }
-
-
-        .back:hover {
-
-            color: #ff9100;
         }
 
 
@@ -454,6 +564,7 @@
             font-size: 12px;
 
             color: #9a9da3;
+
         }
 
 
@@ -467,18 +578,21 @@
 
                 padding:
                     22px 16px 30px;
+
             }
 
 
             .header h1 {
 
                 font-size: 29px;
+
             }
 
 
             .header-subtitle {
 
                 font-size: 15px;
+
             }
 
 
@@ -486,6 +600,15 @@
 
                 padding:
                     25px 12px 45px;
+
+            }
+
+
+            .articles {
+
+                grid-template-columns:
+                    1fr;
+
             }
 
 
@@ -493,12 +616,7 @@
 
                 padding:
                     20px;
-            }
 
-
-            .article-title {
-
-                font-size: 17px;
             }
 
 
@@ -506,12 +624,14 @@
 
                 padding:
                     24px 18px;
+
             }
 
 
             .brevo-chat-button {
 
                 width: 100%;
+
             }
 
         }
@@ -547,13 +667,13 @@
 
 
             <h1>
-                Compte et profil
+                Mon compte
             </h1>
 
 
             <p class="header-subtitle">
-                Créez, gérez et paramétrez votre compte
-                cotransporteur Allez HOP!.
+                Retrouvez toutes les informations utiles pour
+                créer, gérer et sécuriser votre compte Allez HOP!.
             </p>
 
         </div>
@@ -568,119 +688,395 @@
     <main class="content">
 
 
-        <div class="intro">
+        <p class="intro">
 
-            <p>
-                Retrouvez ici toutes les informations nécessaires
-                pour créer votre compte, modifier vos informations
-                et paramétrer votre profil de cotransporteur.
-            </p>
+            Retrouvez les réponses aux questions concernant
+            votre compte, votre profil, vos documents,
+            vos coordonnées bancaires et vos paramètres.
+
+        </p>
+
+
+        <!-- =========================
+             BARRE DE RECHERCHE
+        ========================= -->
+
+        <div class="search-box">
+
+            <input
+                type="search"
+                id="articleSearch"
+                placeholder="Rechercher une question, un mot-clé..."
+                autocomplete="off"
+                aria-label="Rechercher dans les articles"
+            >
 
         </div>
 
 
+        <div
+            class="search-status"
+            id="searchStatus"
+        ></div>
+
+
+        <div
+            class="no-results"
+            id="noResults"
+        >
+
+            <strong>
+                Aucun article trouvé
+            </strong>
+
+            Essayez avec un autre mot-clé ou une autre formulation.
+
+        </div>
+
+
+        <!-- =========================
+             ARTICLES
+        ========================= -->
+
         <section class="articles">
 
 
-            <!-- =========================
-                 ARTICLE 1
-            ========================= -->
+            <!-- ARTICLE 1 -->
 
             <a
                 href="articles/creer-gerer-compte.html"
                 class="article"
             >
 
-                <span class="article-arrow">
-                    →
+                <span class="article-keywords">
+
+                    créer compte
+                    créer un compte
+                    inscription
+                    s'inscrire
+                    compte
+                    nouveau compte
+                    créer profil
+                    profil
+                    inscription cotransporteur
+                    particulier
+                    professionnel
+                    adresse email
+                    code email
+                    téléphone
+                    inscription application
+
                 </span>
 
+
                 <h2 class="article-title">
-                    Créer et gérer son compte
+                    Comment créer et gérer son compte ?
                 </h2>
 
+
                 <p class="article-description">
-                    Inscription, vérification, informations du compte,
-                    suppression et paramètres du profil.
+                    Découvrez comment créer votre compte,
+                    choisir votre statut et gérer les informations
+                    principales de votre profil.
                 </p>
 
             </a>
 
 
-            <!-- =========================
-                 ARTICLES À VENIR
-            ========================= -->
+            <!-- ARTICLE 2 -->
 
-            <div class="article">
+            <a
+                href="articles/verification-identite.html"
+                class="article"
+            >
+
+                <span class="article-keywords">
+
+                    vérification identité
+                    identité
+                    vérifier identité
+                    didit
+                    pièce identité
+                    carte identité
+                    passeport
+                    permis conduire
+                    permis séjour
+                    nif
+                    identifiant fiscal
+                    kbis
+                    siret
+                    document identité
+                    document entreprise
+                    vérification
+                    validation identité
+                    identité vérifiée
+                    problème vérification
+                    document refusé
+                    support
+
+                </span>
+
 
                 <h2 class="article-title">
-                    Modifier ses informations
+                    Comment fonctionne la vérification de l'identité ?
                 </h2>
 
+
                 <p class="article-description">
-                    Comment modifier votre téléphone, votre RIB
-                    et les informations nécessitant l'intervention
-                    du support.
+                    Découvrez les documents nécessaires et les étapes
+                    de vérification de votre identité et de votre activité.
                 </p>
 
-            </div>
+            </a>
 
 
-            <div class="article">
+            <!-- ARTICLE 3 -->
+
+            <a
+                href="articles/modifier-informations-cotransporteur.html"
+                class="article"
+            >
+
+                <span class="article-keywords">
+
+                    modifier informations
+                    modifier mes informations
+                    informations cotransporteur
+                    informations compte
+                    informations profil
+                    modifier profil
+                    modifier compte
+                    mettre à jour profil
+                    mettre à jour compte
+                    changer informations
+                    données personnelles
+                    adresse
+                    téléphone
+                    email
+                    nom
+                    prénom
+                    coordonnées
+                    modifier données
+                    soumettre
+                    valider modification
+                    enregistrer modification
+                    information incorrecte
+
+                </span>
+
 
                 <h2 class="article-title">
-                    Vérification de l'identité
+                    Comment modifier mes informations de cotransporteur ?
                 </h2>
 
+
                 <p class="article-description">
-                    Comprendre la vérification d'identité et les
-                    documents nécessaires pour devenir cotransporteur.
+                    Mettez à jour les informations de votre compte
+                    et de votre profil.
                 </p>
 
-            </div>
+            </a>
 
 
-            <div class="article">
+            <!-- ARTICLE 4 -->
+
+            <a
+                href="articles/se-connecter-compte.html"
+                class="article"
+            >
+
+                <span class="article-keywords">
+
+                    connexion
+                    se connecter
+                    connecter compte
+                    connexion compte
+                    adresse email
+                    email
+                    code
+                    code email
+                    code connexion
+                    mot de passe
+                    pas de mot de passe
+                    session
+                    session ouverte
+                    déconnexion
+                    se déconnecter
+                    appareil
+                    téléphone
+                    tablette
+                    ordinateur
+                    plusieurs appareils
+                    compte bloqué
+                    compte restreint
+                    problème connexion
+                    code non reçu
+                    support
+
+                </span>
+
 
                 <h2 class="article-title">
-                    Paramétrer son profil cotransporteur
+                    Comment se connecter à son compte ?
                 </h2>
 
+
                 <p class="article-description">
-                    Moyens de transport, rayon de recherche,
-                    trajets favoris et notifications ciblées.
+                    Connectez-vous avec votre adresse e-mail
+                    et le code reçu par e-mail.
                 </p>
 
-            </div>
+            </a>
 
 
-            <div class="article">
+            <!-- ARTICLE 5 -->
+
+            <a
+                href="articles/particulier-ou-professionnel.html"
+                class="article"
+            >
+
+                <span class="article-keywords">
+
+                    particulier
+                    professionnel
+                    profil particulier
+                    profil professionnel
+                    statut
+                    choisir statut
+                    changer statut
+                    passer professionnel
+                    passer particulier
+                    compte professionnel
+                    compte particulier
+                    kbis
+                    siret
+                    rib professionnel
+                    licence transport
+                    transport marchandises
+                    véhicule moteur
+                    deux profils
+                    basculer profil
+                    bascule
+                    dashboard
+                    particulier pro
+                    dac7
+
+                </span>
+
 
                 <h2 class="article-title">
-                    Se connecter à son compte
+                    Particulier ou Professionnel : quel profil choisir ?
                 </h2>
 
+
                 <p class="article-description">
-                    Que faire en cas de problème de connexion
-                    ou d'accès à votre compte ?
+                    Comprenez les différences entre les deux profils
+                    et comment passer de l'un à l'autre.
                 </p>
 
-            </div>
+            </a>
 
 
-            <div class="article">
+            <!-- ARTICLE 6 -->
+
+            <a
+                href="articles/modifier-rib.html"
+                class="article"
+            >
+
+                <span class="article-keywords">
+
+                    rib
+                    RIB
+                    modifier rib
+                    changer rib
+                    modifier coordonnées bancaires
+                    coordonnées bancaires
+                    compte bancaire
+                    banque
+                    iban
+                    nouveau rib
+                    nouveau compte
+                    changement rib
+                    modifier banque
+                    virement
+                    cagnotte
+                    paiement
+                    rib particulier
+                    rib professionnel
+                    rib entreprise
+                    erreur rib
+                    mauvais rib
+                    support
+                    contact hop courses
+
+                </span>
+
 
                 <h2 class="article-title">
-                    Supprimer son compte
+                    Comment modifier son RIB ?
                 </h2>
 
+
                 <p class="article-description">
-                    Les conséquences de la suppression du compte
-                    et les précautions à prendre avant de lancer
-                    la procédure.
+                    Découvrez comment demander l'enregistrement
+                    d'un nouveau compte bancaire.
                 </p>
 
-            </div>
+            </a>
+
+
+            <!-- ARTICLE 7 -->
+
+            <a
+                href="articles/supprimer-compte.html"
+                class="article"
+            >
+
+                <span class="article-keywords">
+
+                    supprimer compte
+                    supprimer son compte
+                    suppression compte
+                    supprimer profil
+                    suppression profil
+                    fermer compte
+                    fermer profil
+                    désactiver compte
+                    supprimer particulier
+                    supprimer professionnel
+                    supprimer deux profils
+                    supprimer données
+                    données supprimées
+                    cagnotte
+                    retirer cagnotte
+                    virement
+                    relevé dac7
+                    dac7
+                    courses réservées
+                    annuler courses
+                    données fiscales
+                    données judiciaires
+                    conservation données
+                    18 mois
+                    recréer compte
+                    recréer profil
+
+                </span>
+
+
+                <h2 class="article-title">
+                    Comment supprimer son compte ?
+                </h2>
+
+
+                <p class="article-description">
+                    Découvrez les précautions à prendre avant de
+                    supprimer définitivement votre compte ou votre profil.
+                </p>
+
+            </a>
 
 
         </section>
@@ -713,18 +1109,6 @@
         </section>
 
 
-        <!-- =========================
-             RETOUR
-        ========================= -->
-
-        <a
-            href="index.html"
-            class="back"
-        >
-            ← Retour au centre d'aide
-        </a>
-
-
     </main>
 
 
@@ -733,6 +1117,389 @@
         Allez HOP! · Centre d'aide
 
     </footer>
+
+
+    <!-- =========================
+         RECHERCHE JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        const searchInput =
+            document.getElementById('articleSearch');
+
+
+        const articles =
+            Array.from(
+                document.querySelectorAll('.article')
+            );
+
+
+        const searchStatus =
+            document.getElementById('searchStatus');
+
+
+        const noResults =
+            document.getElementById('noResults');
+
+
+        /* =========================
+           NORMALISATION
+        ========================= */
+
+        function normalizeText(text) {
+
+            return text
+
+                .toLowerCase()
+
+                .normalize('NFD')
+
+                .replace(/[\u0300-\u036f]/g, '')
+
+                .replace(/[’']/g, ' ')
+
+                .replace(/[^a-z0-9\s-]/g, ' ')
+
+                .replace(/\s+/g, ' ')
+
+                .trim();
+
+        }
+
+
+        /* =========================
+           PREPARATION
+        ========================= */
+
+        const articleData =
+
+            articles.map(function(article) {
+
+                const title =
+
+                    article
+
+                        .querySelector(
+                            '.article-title'
+                        )
+
+                        .textContent;
+
+
+                const description =
+
+                    article
+
+                        .querySelector(
+                            '.article-description'
+                        )
+
+                        .textContent;
+
+
+                const keywordsElement =
+
+                    article
+
+                        .querySelector(
+                            '.article-keywords'
+                        );
+
+
+                const keywords =
+
+                    keywordsElement
+
+                        ? keywordsElement.textContent
+
+                        : '';
+
+
+                return {
+
+                    element:
+                        article,
+
+                    title:
+                        normalizeText(title),
+
+                    description:
+                        normalizeText(description),
+
+                    keywords:
+                        normalizeText(keywords)
+
+                };
+
+            });
+
+
+        /* =========================
+           RECHERCHE
+        ========================= */
+
+        searchInput.addEventListener(
+
+            'input',
+
+            function() {
+
+
+                const search =
+
+                    normalizeText(
+                        this.value
+                    );
+
+
+                /* =====================
+                   RECHERCHE VIDE
+                ===================== */
+
+                if (search === '') {
+
+
+                    articleData.forEach(
+
+                        function(item) {
+
+                            item.element.style.display =
+                                'block';
+
+                        }
+
+                    );
+
+
+                    searchStatus.style.display =
+                        'none';
+
+
+                    noResults.style.display =
+                        'none';
+
+
+                    return;
+
+                }
+
+
+                /* =====================
+                   MOTS RECHERCHES
+                ===================== */
+
+                const searchWords =
+
+                    search
+
+                        .split(' ')
+
+                        .filter(
+
+                            function(word) {
+
+                                return word.length > 1;
+
+                            }
+
+                        );
+
+
+                const results = [];
+
+
+                /* =====================
+                   ANALYSE
+                ===================== */
+
+                articleData.forEach(
+
+                    function(item) {
+
+
+                        const fullText =
+
+                            item.title +
+                            ' ' +
+                            item.description +
+                            ' ' +
+                            item.keywords;
+
+
+                        let score = 0;
+
+
+                        searchWords.forEach(
+
+                            function(word) {
+
+
+                                /* TITRE */
+
+                                if (
+                                    item.title
+                                        .includes(word)
+                                ) {
+
+                                    score += 5;
+
+                                }
+
+
+                                /* DESCRIPTION */
+
+                                if (
+                                    item.description
+                                        .includes(word)
+                                ) {
+
+                                    score += 3;
+
+                                }
+
+
+                                /* MOT-CLE */
+
+                                if (
+                                    item.keywords
+                                        .includes(word)
+                                ) {
+
+                                    score += 2;
+
+                                }
+
+
+                                /* TEXTE */
+
+                                if (
+                                    fullText
+                                        .includes(word)
+                                ) {
+
+                                    score += 1;
+
+                                }
+
+                            }
+
+                        );
+
+
+                        if (score > 0) {
+
+                            results.push({
+
+                                item:
+                                    item,
+
+                                score:
+                                    score
+
+                            });
+
+                        }
+
+                    }
+
+                );
+
+
+                /* =====================
+                   TRI
+                ===================== */
+
+                results.sort(
+
+                    function(a, b) {
+
+                        return b.score - a.score;
+
+                    }
+
+                );
+
+
+                /* =====================
+                   MASQUER ARTICLES
+                ===================== */
+
+                articleData.forEach(
+
+                    function(item) {
+
+                        item.element.style.display =
+                            'none';
+
+                    }
+
+                );
+
+
+                /* =====================
+                   AFFICHER RESULTATS
+                ===================== */
+
+                results.forEach(
+
+                    function(result) {
+
+                        result.item.element.style.display =
+                            'block';
+
+                    }
+
+                );
+
+
+                /* =====================
+                   MESSAGE
+                ===================== */
+
+                if (results.length === 0) {
+
+
+                    searchStatus.style.display =
+                        'none';
+
+
+                    noResults.style.display =
+                        'block';
+
+
+                } else {
+
+
+                    noResults.style.display =
+                        'none';
+
+
+                    searchStatus.style.display =
+                        'block';
+
+
+                    searchStatus.textContent =
+
+                        results.length +
+
+                        (
+
+                            results.length > 1
+
+                                ? ' articles trouvés'
+
+                                : ' article trouvé'
+
+                        );
+
+                }
+
+            }
+
+        );
+
+    </script>
 
 
 </body>
