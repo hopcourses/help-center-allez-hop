@@ -211,7 +211,7 @@
 
         .intro {
 
-            margin-bottom: 25px;
+            margin-bottom: 20px;
 
             font-size: 16px;
 
@@ -219,66 +219,122 @@
 
             color: #555b63;
         }
-/* =========================
-   RECHERCHE
-========================= */
-
-.search-box {
-
-    width: 100%;
-
-    margin:
-        0 0 28px;
-}
 
 
-#articleSearch {
+        /* =========================
+           RECHERCHE
+        ========================= */
 
-    width: 100%;
+        .search-box {
 
-    height: 54px;
+            width: 100%;
 
-    padding:
-        0 20px;
-
-    background: #ffffff;
-
-    border:
-        1px solid #e3e5e8;
-
-    border-radius: 12px;
-
-    outline: none;
-
-    font-family: inherit;
-
-    font-size: 15px;
-
-    color: #202124;
-
-    box-shadow:
-        0 2px 8px rgba(0,0,0,0.03);
-
-    transition:
-        border-color 0.15s ease,
-        box-shadow 0.15s ease;
-}
+            margin:
+                0 0 28px;
+        }
 
 
-#articleSearch::placeholder {
+        #articleSearch {
 
-    color: #9a9da3;
-}
+            width: 100%;
+
+            height: 54px;
+
+            padding:
+                0 20px;
+
+            background: #ffffff;
+
+            border:
+                1px solid #e3e5e8;
+
+            border-radius: 12px;
+
+            outline: none;
+
+            font-family: inherit;
+
+            font-size: 15px;
+
+            color: #202124;
+
+            box-shadow:
+                0 2px 8px rgba(0,0,0,0.03);
+
+            transition:
+                border-color 0.15s ease,
+                box-shadow 0.15s ease;
+        }
 
 
-#articleSearch:focus {
+        #articleSearch::placeholder {
 
-    border-color:
-        #ffb45c;
+            color: #9a9da3;
+        }
 
-    box-shadow:
-        0 0 0 3px rgba(255,145,0,0.10);
-}
+
+        #articleSearch:focus {
+
+            border-color:
+                #ffb45c;
+
+            box-shadow:
+                0 0 0 3px rgba(255,145,0,0.10);
+        }
+
+
+        /* =========================
+           RESULTATS RECHERCHE
+        ========================= */
+
+        .search-status {
+
+            display: none;
+
+            margin:
+                -10px 0 18px;
+
+            font-size: 14px;
+
+            color: #73777f;
+        }
+
+
+        .no-results {
+
+            display: none;
+
+            padding:
+                30px 20px;
+
+            background: #ffffff;
+
+            border:
+                1px solid #e8e8e8;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            color: #73777f;
+
+            font-size: 15px;
+
+            line-height: 1.6;
+        }
+
+
+        .no-results strong {
+
+            display: block;
+
+            margin-bottom: 6px;
+
+            color: #202124;
+
+            font-size: 17px;
+        }
+
 
         /* =========================
            ARTICLES
@@ -355,6 +411,16 @@
             line-height: 1.55;
 
             color: #73777f;
+        }
+
+
+        /* =========================
+           MOTS-CLES
+        ========================= */
+
+        .article-keywords {
+
+            display: none;
         }
 
 
@@ -583,50 +649,85 @@
 
 
         <p class="intro">
-    Retrouvez les réponses aux questions les plus fréquentes
-    concernant votre compte, vos trajets, les courses et les
-    notifications Allez HOP!.
-</p>
+            Retrouvez les réponses aux questions les plus fréquentes
+            concernant votre compte, vos trajets, les courses et les
+            notifications Allez HOP!.
+        </p>
 
 
-<!-- =========================
-     RECHERCHE
-========================= -->
+        <!-- =========================
+             BARRE DE RECHERCHE
+        ========================= -->
 
-<div class="search-box">
+        <div class="search-box">
 
-    <input
-        type="search"
-        id="articleSearch"
-        placeholder="Rechercher une question, un mot-clé..."
-        autocomplete="off"
-    >
+            <input
+                type="search"
+                id="articleSearch"
+                placeholder="Rechercher une question, un mot-clé..."
+                autocomplete="off"
+                aria-label="Rechercher dans les articles"
+            >
 
-</div>
+        </div>
 
 
-<section class="articles">
+        <div
+            class="search-status"
+            id="searchStatus"
+        ></div>
 
+
+        <div
+            class="no-results"
+            id="noResults"
+        >
+
+            <strong>
+                Aucun article trouvé
+            </strong>
+
+            Essayez avec un autre mot-clé ou une autre formulation.
+
+        </div>
+
+
+        <!-- =========================
+             ARTICLES
+        ========================= -->
+
+        <section class="articles">
+
+
+            <!-- ARTICLE 1 -->
 
             <a
                 href="articles/quest-ce-quun-cotransporteur.html"
                 class="article"
             >
-<span class="article-keywords">
-    cotransporteur
-    cotransportage
-    transport
-    livraison
-    livrer
-    course
-    coursier
-    devenir cotransporteur
-    rôle cotransporteur
-    qu'est-ce qu'un cotransporteur
-</span>
+
+                <span class="article-keywords">
+                    cotransporteur
+                    cotransportage
+                    transport
+                    livraison
+                    livrer
+                    course
+                    coursier
+                    devenir cotransporteur
+                    rôle cotransporteur
+                    qu'est-ce qu'un cotransporteur
+                    principe cotransportage
+                    fonctionnement cotransportage
+                    transporter un colis
+                    transporter une commande
+                </span>
+
+
                 <h2 class="article-title">
                     Qu'est-ce qu'un cotransporteur ?
                 </h2>
+
 
                 <p class="article-description">
                     Découvrez le rôle du cotransporteur et le principe
@@ -636,14 +737,38 @@
             </a>
 
 
+            <!-- ARTICLE 2 -->
+
             <a
                 href="articles/comment-fonctionne-allez-hop-cotransporteur.html"
                 class="article"
             >
 
+                <span class="article-keywords">
+                    comment fonctionne allez hop
+                    fonctionnement allez hop
+                    fonctionnement application
+                    utiliser allez hop
+                    utiliser l'application
+                    cotransporteur
+                    course
+                    courses
+                    rechercher une course
+                    trouver une course
+                    accepter une course
+                    effectuer une course
+                    livraison
+                    commande
+                    colis
+                    étape course
+                    comment ça marche
+                </span>
+
+
                 <h2 class="article-title">
                     Comment fonctionne Allez HOP! pour les cotransporteurs ?
                 </h2>
+
 
                 <p class="article-description">
                     Découvrez les principales étapes pour trouver,
@@ -653,14 +778,37 @@
             </a>
 
 
+            <!-- ARTICLE 3 -->
+
             <a
                 href="articles/comment-devenir-cotransporteur.html"
                 class="article"
             >
 
+                <span class="article-keywords">
+                    devenir cotransporteur
+                    inscription
+                    s'inscrire
+                    créer un compte
+                    création compte
+                    compte cotransporteur
+                    nouveau compte
+                    profil
+                    créer profil
+                    inscription cotransporteur
+                    commencer
+                    débuter
+                    rejoindre allez hop
+                    comment devenir cotransporteur
+                    conditions
+                    informations inscription
+                </span>
+
+
                 <h2 class="article-title">
                     Comment devenir cotransporteur sur Allez HOP! ?
                 </h2>
+
 
                 <p class="article-description">
                     Créez votre compte, configurez votre profil et
@@ -670,14 +818,44 @@
             </a>
 
 
+            <!-- ARTICLE 4 -->
+
             <a
                 href="articles/comment-trouver-une-course.html"
                 class="article"
             >
 
+                <span class="article-keywords">
+                    trouver une course
+                    rechercher une course
+                    recherche course
+                    course disponible
+                    courses disponibles
+                    course correspondant trajet
+                    trajet
+                    trouver course trajet
+                    rechercher trajet
+                    rayon
+                    rayon de recherche
+                    distance
+                    zone recherche
+                    livraison
+                    commande
+                    colis
+                    départ
+                    arrivée
+                    adresse départ
+                    adresse arrivée
+                    aucune course
+                    pas de course
+                    course introuvable
+                </span>
+
+
                 <h2 class="article-title">
                     Comment trouver une course correspondant à mon trajet ?
                 </h2>
+
 
                 <p class="article-description">
                     Apprenez à rechercher des courses adaptées à vos
@@ -687,14 +865,42 @@
             </a>
 
 
+            <!-- ARTICLE 5 -->
+
             <a
                 href="articles/comment-renseigner-trajets-reguliers.html"
                 class="article"
             >
 
+                <span class="article-keywords">
+                    trajet régulier
+                    trajets réguliers
+                    renseigner trajet
+                    ajouter trajet
+                    ajouter un trajet
+                    enregistrer trajet
+                    modifier trajet
+                    adresse
+                    adresses
+                    adresse départ
+                    adresse arrivée
+                    domicile
+                    travail
+                    trajet habituel
+                    déplacement habituel
+                    itinéraire
+                    rayon recherche
+                    notifications ciblées
+                    recevoir notifications
+                    trajet quotidien
+                    trajet domicile travail
+                </span>
+
+
                 <h2 class="article-title">
                     Comment renseigner mes trajets réguliers ?
                 </h2>
+
 
                 <p class="article-description">
                     Ajoutez vos trajets et vos adresses habituelles
@@ -704,14 +910,42 @@
             </a>
 
 
+            <!-- ARTICLE 6 -->
+
             <a
                 href="articles/modifier-supprimer-trajet.html"
                 class="article"
             >
 
+                <span class="article-keywords">
+                    modifier trajet
+                    modifier un trajet
+                    supprimer trajet
+                    supprimer un trajet
+                    changer trajet
+                    mettre à jour trajet
+                    mise à jour trajet
+                    modifier adresse
+                    changer adresse
+                    nouvelle adresse
+                    adresse départ
+                    adresse arrivée
+                    supprimer adresse
+                    modifier trajet régulier
+                    supprimer trajet régulier
+                    soumettre
+                    valider modification
+                    enregistrer modification
+                    modification non enregistrée
+                    trajet incorrect
+                    erreur trajet
+                </span>
+
+
                 <h2 class="article-title">
                     Comment modifier ou supprimer un trajet régulier ?
                 </h2>
+
 
                 <p class="article-description">
                     Modifiez vos adresses, mettez à jour un trajet
@@ -721,14 +955,42 @@
             </a>
 
 
+            <!-- ARTICLE 7 -->
+
             <a
                 href="articles/notifications-courses.html"
                 class="article"
             >
 
+                <span class="article-keywords">
+                    notification
+                    notifications
+                    notification course
+                    notifications courses
+                    recevoir notification
+                    recevoir notifications
+                    alerte
+                    alertes
+                    nouvelle course
+                    proposition course
+                    proposition livraison
+                    course disponible
+                    pas de notification
+                    aucune notification
+                    je ne reçois pas de notification
+                    notifications ciblées
+                    notification trajet
+                    notification rayon
+                    rayon recherche
+                    trajet régulier
+                    course correspondant trajet
+                </span>
+
+
                 <h2 class="article-title">
                     Comment fonctionnent les notifications de courses ?
                 </h2>
+
 
                 <p class="article-description">
                     Comprenez les notifications de courses et comment
@@ -738,14 +1000,45 @@
             </a>
 
 
+            <!-- ARTICLE 8 -->
+
             <a
                 href="articles/modifier-informations-cotransporteur.html"
                 class="article"
             >
 
+                <span class="article-keywords">
+                    modifier informations
+                    modifier mes informations
+                    informations cotransporteur
+                    informations compte
+                    informations profil
+                    modifier profil
+                    modifier compte
+                    mettre à jour profil
+                    mettre à jour compte
+                    changer informations
+                    changer profil
+                    données personnelles
+                    adresse
+                    téléphone
+                    email
+                    nom
+                    prénom
+                    compte cotransporteur
+                    profil cotransporteur
+                    soumettre
+                    valider modification
+                    enregistrer modification
+                    modification compte
+                    information incorrecte
+                </span>
+
+
                 <h2 class="article-title">
                     Comment modifier mes informations de cotransporteur ?
                 </h2>
+
 
                 <p class="article-description">
                     Mettez à jour les informations de votre compte
@@ -786,60 +1079,303 @@
 
 
     </main>
-<script>
 
-    const searchInput = document.getElementById('articleSearch');
-
-    const articles = document.querySelectorAll('.article');
-
-
-    searchInput.addEventListener('input', function() {
-
-        const search = this.value
-            .toLowerCase()
-            .trim();
-
-
-        articles.forEach(function(article) {
-
-            const title = article
-                .querySelector('.article-title')
-                .textContent
-                .toLowerCase();
-
-
-            const description = article
-                .querySelector('.article-description')
-                .textContent
-                .toLowerCase();
-
-
-            const content =
-                title + ' ' + description;
-
-
-            if (
-                search === '' ||
-                content.includes(search)
-            ) {
-
-                article.style.display = 'block';
-
-            } else {
-
-                article.style.display = 'none';
-
-            }
-
-        });
-
-    });
-
-</script>
 
     <footer>
+
         Allez HOP! · Centre d'aide
+
     </footer>
+
+
+    <!-- =========================
+         RECHERCHE JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        const searchInput =
+            document.getElementById('articleSearch');
+
+        const articles =
+            Array.from(
+                document.querySelectorAll('.article')
+            );
+
+        const searchStatus =
+            document.getElementById('searchStatus');
+
+        const noResults =
+            document.getElementById('noResults');
+
+
+        /* =========================
+           NORMALISATION DU TEXTE
+        ========================= */
+
+        function normalizeText(text) {
+
+            return text
+                .toLowerCase()
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .replace(/[’']/g, ' ')
+                .replace(/[^a-z0-9\s-]/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim();
+
+        }
+
+
+        /* =========================
+           PREPARATION DES ARTICLES
+        ========================= */
+
+        const articleData =
+            articles.map(function(article) {
+
+                const title =
+                    article
+                        .querySelector('.article-title')
+                        .textContent;
+
+                const description =
+                    article
+                        .querySelector('.article-description')
+                        .textContent;
+
+                const keywordsElement =
+                    article
+                        .querySelector('.article-keywords');
+
+                const keywords =
+                    keywordsElement
+                        ? keywordsElement.textContent
+                        : '';
+
+
+                return {
+
+                    element: article,
+
+                    title:
+                        normalizeText(title),
+
+                    description:
+                        normalizeText(description),
+
+                    keywords:
+                        normalizeText(keywords)
+
+                };
+
+            });
+
+
+        /* =========================
+           RECHERCHE
+        ========================= */
+
+        searchInput.addEventListener(
+            'input',
+            function() {
+
+                const search =
+                    normalizeText(this.value);
+
+
+                /* -------------------------
+                   RECHERCHE VIDE
+                ------------------------- */
+
+                if (search === '') {
+
+                    articleData.forEach(function(item) {
+
+                        item.element.style.display =
+                            'block';
+
+                    });
+
+
+                    searchStatus.style.display =
+                        'none';
+
+                    noResults.style.display =
+                        'none';
+
+                    return;
+
+                }
+
+
+                /* -------------------------
+                   MOTS RECHERCHES
+                ------------------------- */
+
+                const searchWords =
+                    search
+                        .split(' ')
+                        .filter(function(word) {
+
+                            return word.length > 1;
+
+                        });
+
+
+                const results = [];
+
+
+                /* -------------------------
+                   ANALYSE DES ARTICLES
+                ------------------------- */
+
+                articleData.forEach(function(item) {
+
+                    const fullText =
+                        item.title +
+                        ' ' +
+                        item.description +
+                        ' ' +
+                        item.keywords;
+
+
+                    let score = 0;
+
+
+                    searchWords.forEach(function(word) {
+
+
+                        /* Mot dans le titre */
+
+                        if (
+                            item.title.includes(word)
+                        ) {
+
+                            score += 5;
+
+                        }
+
+
+                        /* Mot dans la description */
+
+                        if (
+                            item.description.includes(word)
+                        ) {
+
+                            score += 3;
+
+                        }
+
+
+                        /* Mot-clé */
+
+                        if (
+                            item.keywords.includes(word)
+                        ) {
+
+                            score += 2;
+
+                        }
+
+
+                        /* Mot présent quelque part */
+
+                        if (
+                            fullText.includes(word)
+                        ) {
+
+                            score += 1;
+
+                        }
+
+                    });
+
+
+                    if (score > 0) {
+
+                        results.push({
+
+                            item: item,
+
+                            score: score
+
+                        });
+
+                    }
+
+                });
+
+
+                /* -------------------------
+                   TRI DES RESULTATS
+                ------------------------- */
+
+                results.sort(function(a, b) {
+
+                    return b.score - a.score;
+
+                });
+
+
+                /* -------------------------
+                   MASQUER TOUS LES ARTICLES
+                ------------------------- */
+
+                articleData.forEach(function(item) {
+
+                    item.element.style.display =
+                        'none';
+
+                });
+
+
+                /* -------------------------
+                   AFFICHER LES RESULTATS
+                ------------------------- */
+
+                results.forEach(function(result) {
+
+                    result.item.element.style.display =
+                        'block';
+
+                });
+
+
+                /* -------------------------
+                   MESSAGE RESULTATS
+                ------------------------- */
+
+                if (results.length === 0) {
+
+                    searchStatus.style.display =
+                        'none';
+
+                    noResults.style.display =
+                        'block';
+
+                } else {
+
+                    noResults.style.display =
+                        'none';
+
+                    searchStatus.style.display =
+                        'block';
+
+                    searchStatus.textContent =
+                        results.length +
+                        (
+                            results.length > 1
+                                ? ' articles trouvés'
+                                : ' article trouvé'
+                        );
+
+                }
+
+            }
+        );
+
+    </script>
 
 
 </body>
