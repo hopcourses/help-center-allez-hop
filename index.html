@@ -120,6 +120,8 @@
 
         .header {
 
+            position: relative;
+
             background:
                 #ffffff;
 
@@ -134,6 +136,8 @@
 
         .header-inner {
 
+            position: relative;
+
             max-width:
                 1000px;
 
@@ -145,6 +149,45 @@
 
         }
 
+
+        /* =========================
+           PETIT LOGO EN HAUT À GAUCHE
+        ========================= */
+
+        .logo-top-left {
+
+            position:
+                absolute;
+
+            top:
+                0;
+
+            left:
+                0;
+
+            z-index:
+                10;
+
+        }
+
+
+        .logo-top-left img {
+
+            display:
+                block;
+
+            width:
+                55px;
+
+            height:
+                auto;
+
+        }
+
+
+        /* =========================
+           TEXTE ALLEZ HOP! CENTRÉ
+        ========================= */
 
         .logo {
 
@@ -166,6 +209,10 @@
         }
 
 
+        /* =========================
+           TITRE
+        ========================= */
+
         .header h1 {
 
             max-width:
@@ -185,6 +232,10 @@
 
         }
 
+
+        /* =========================
+           SOUS-TITRE
+        ========================= */
 
         .header-subtitle {
 
@@ -217,6 +268,12 @@
 
             margin:
                 28px auto 0;
+
+            position:
+                relative;
+
+            z-index:
+                20;
 
         }
 
@@ -259,6 +316,14 @@
         }
 
 
+        .search-box::placeholder {
+
+            color:
+                #96999f;
+
+        }
+
+
         .search-box:focus {
 
             border-color:
@@ -271,7 +336,7 @@
 
 
         /* =========================
-           RESULTATS DE RECHERCHE
+           RESULTATS
         ========================= */
 
         .search-results {
@@ -283,7 +348,7 @@
                 680px;
 
             margin:
-                14px auto 0;
+                12px auto 0;
 
             text-align:
                 left;
@@ -719,6 +784,44 @@
             }
 
 
+            .header-inner {
+
+                padding:
+                    0 4px;
+
+            }
+
+
+            .logo-top-left {
+
+                top:
+                    0;
+
+                left:
+                    0;
+
+            }
+
+
+            .logo-top-left img {
+
+                width:
+                    45px;
+
+            }
+
+
+            .logo {
+
+                margin-bottom:
+                    22px;
+
+                font-size:
+                    23px;
+
+            }
+
+
             .header h1 {
 
                 font-size:
@@ -809,6 +912,24 @@
         <div class="header-inner">
 
 
+            <!-- =========================
+                 PETIT LOGO
+            ========================= -->
+
+            <div class="logo-top-left">
+
+                <img
+                    src="https://res.cloudinary.com/glide/image/fetch/f_auto,h_75,c_limit/https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fglide-prod.appspot.com%2Fo%2Ficon-images%252Fanonymous-211f85c6-37b9-42f9-a42b-863241ad5c41.gif%3Falt%3Dmedia%26token%3D53b1d784-5919-4428-8c6c-473cd7a47885"
+                    alt="Allez HOP!"
+                >
+
+            </div>
+
+
+            <!-- =========================
+                 TEXTE CENTRE
+            ========================= -->
+
             <div class="logo">
                 Allez HOP!
             </div>
@@ -820,8 +941,11 @@
 
 
             <p class="header-subtitle">
+
                 Comment pouvons-nous vous aider ?<br>
+
                 Retrouvez rapidement les réponses à vos questions.
+
             </p>
 
 
@@ -841,8 +965,6 @@
                 >
 
 
-                <!-- RESULTATS -->
-
                 <div
                     id="searchResults"
                     class="search-results"
@@ -852,6 +974,7 @@
                         id="searchStatus"
                         class="search-status"
                     ></div>
+
 
                     <div
                         id="searchResultsList"
@@ -1087,8 +1210,7 @@
     <script>
 
         /*
-         * Toutes les rubriques du centre d'aide.
-         * On utilise les routes définitives.
+         * Les 7 rubriques du centre d'aide.
          */
 
         const helpSections = [
@@ -1149,12 +1271,6 @@
 
         /*
          * Normalisation du texte.
-         * Permet notamment de chercher :
-         *
-         * "cagnotte"
-         * "CAgNotTe"
-         * "cagnotte"
-         * etc.
          */
 
         function normalizeText(text) {
@@ -1172,17 +1288,15 @@
 
 
         /*
-         * Cache des pages déjà chargées.
-         *
-         * Cela évite de télécharger plusieurs fois
-         * les mêmes pages pendant la recherche.
+         * Cache des pages déjà récupérées.
          */
 
         const pageCache = new Map();
 
 
         /*
-         * Récupération du contenu d'une rubrique.
+         * Charge une rubrique et récupère
+         * toutes ses cartes d'articles.
          */
 
         async function loadSection(section) {
@@ -1291,7 +1405,9 @@
                             keywords,
 
                         url:
-                            article.getAttribute('href') || '#'
+                            article.getAttribute(
+                                'href'
+                            ) || '#'
 
                     };
 
@@ -1310,7 +1426,38 @@
 
 
         /*
-         * Calcule un score de pertinence.
+         * Transforme un lien relatif en lien absolu
+         * utilisable depuis la page d'accueil.
+         */
+
+        function resolveArticleUrl(
+            sectionUrl,
+            articleUrl
+        ) {
+
+            try {
+
+                return new URL(
+                    articleUrl,
+                    window.location.origin +
+                    (
+                        sectionUrl.endsWith('/')
+                            ? sectionUrl
+                            : sectionUrl + '/'
+                    )
+                ).pathname;
+
+            } catch (error) {
+
+                return articleUrl;
+
+            }
+
+        }
+
+
+        /*
+         * Score de pertinence.
          */
 
         function scoreArticle(
@@ -1343,11 +1490,6 @@
                 function(word) {
 
 
-                    /*
-                     * Titre :
-                     * très fortement pondéré.
-                     */
-
                     if (
                         title.includes(word)
                     ) {
@@ -1357,10 +1499,6 @@
                     }
 
 
-                    /*
-                     * Description.
-                     */
-
                     if (
                         description.includes(word)
                     ) {
@@ -1369,10 +1507,6 @@
 
                     }
 
-
-                    /*
-                     * Mots-clés.
-                     */
 
                     if (
                         keywords.includes(word)
@@ -1392,7 +1526,7 @@
 
 
         /*
-         * Affichage du message de chargement.
+         * Affichage pendant le chargement.
          */
 
         function showLoading() {
@@ -1410,6 +1544,22 @@
                 '<div class="search-loading">' +
                 'Recherche dans le centre d’aide…' +
                 '</div>';
+
+        }
+
+
+        /*
+         * Sécurisation HTML.
+         */
+
+        function escapeHtml(text) {
+
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
 
         }
 
@@ -1463,7 +1613,9 @@
                                 '<a ' +
 
                                 'href="' +
-                                result.url +
+                                escapeHtml(
+                                    result.url
+                                ) +
                                 '" ' +
 
                                 'class="search-result">' +
@@ -1501,22 +1653,6 @@
 
 
         /*
-         * Protection du HTML avant insertion.
-         */
-
-        function escapeHtml(text) {
-
-            return String(text)
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;')
-                .replace(/'/g, '&#039;');
-
-        }
-
-
-        /*
          * Recherche globale.
          */
 
@@ -1543,8 +1679,7 @@
 
 
                 /*
-                 * Champ vide :
-                 * on masque les résultats.
+                 * Champ vide.
                  */
 
                 if (
@@ -1564,11 +1699,6 @@
 
                 }
 
-
-                /*
-                 * On attend un minimum
-                 * avant de lancer les requêtes.
-                 */
 
                 searchTimer =
                     setTimeout(
@@ -1604,7 +1734,7 @@
 
 
                                 /*
-                                 * Charge toutes les rubriques
+                                 * Charge les 7 rubriques
                                  * en parallèle.
                                  */
 
@@ -1616,16 +1746,58 @@
                                     );
 
 
-                                const allArticles =
-                                    sectionResults.flat();
+                                const allArticles = [];
 
 
                                 /*
-                                 * Calcule le score
+                                 * Ajoute l'URL absolue
                                  * de chaque article.
                                  */
 
-                                const scoredResults =
+                                helpSections.forEach(
+                                    function(section, index) {
+
+                                        const articles =
+                                            sectionResults[index];
+
+
+                                        articles.forEach(
+                                            function(article) {
+
+                                                allArticles.push({
+
+                                                    category:
+                                                        article.category,
+
+                                                    title:
+                                                        article.title,
+
+                                                    description:
+                                                        article.description,
+
+                                                    keywords:
+                                                        article.keywords,
+
+                                                    url:
+                                                        resolveArticleUrl(
+                                                            section.url,
+                                                            article.url
+                                                        )
+
+                                                });
+
+                                            }
+                                        );
+
+                                    }
+                                );
+
+
+                                /*
+                                 * Classe les articles.
+                                 */
+
+                                const results =
                                     allArticles
                                         .map(
                                             function(article) {
@@ -1663,22 +1835,14 @@
                                                 );
 
                                             }
+                                        )
+                                        .map(
+                                            function(item) {
+
+                                                return item.article;
+
+                                            }
                                         );
-
-
-                                /*
-                                 * On transforme
-                                 * les résultats pour l'affichage.
-                                 */
-
-                                const results =
-                                    scoredResults.map(
-                                        function(item) {
-
-                                            return item.article;
-
-                                        }
-                                    );
 
 
                                 renderResults(
@@ -1720,9 +1884,7 @@
 
 
         /*
-         * Clic en dehors :
-         * on conserve le champ mais on peut
-         * fermer les résultats.
+         * Fermer les résultats quand on clique ailleurs.
          */
 
         document.addEventListener(
@@ -1749,8 +1911,8 @@
 
 
         /*
-         * Revenir dans le champ :
-         * réafficher les résultats existants.
+         * Réafficher les résultats
+         * lorsque le champ reprend le focus.
          */
 
         searchInput.addEventListener(
