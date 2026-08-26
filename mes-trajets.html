@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Mes trajets — Allez HOP! | Centre d'aide
+    </title>
+
+    <meta
+        name="description"
+        content="Centre d'aide Allez HOP! pour gérer vos trajets réguliers, vos adresses habituelles et vos critères de recherche."
+    >
+
+
+    <!-- =========================
+         BREVO CONVERSATIONS
+    ========================= -->
+
+    <script>
+
+        window.BrevoConversationsSetup = {
+
+            customWidgetButton:
+                '.brevo-chat-button',
+
+            chatWidth: 400,
+
+            chatHeight: 550,
+
+            buttonPosition: 'br'
+
+        };
+
+    </script>
+
+
+    <script>
+
+        (function(d, w, c) {
+
+            w.BrevoConversationsID =
+                '66de1609df5363314100b775';
+
+            w[c] = w[c] || function() {
+
+                (w[c].q = w[c].q || []).push(arguments);
+
+            };
+
+            var s =
+                d.createElement('script');
+
+            s.async = true;
+
+            s.src =
+                'https://conversations-widget.brevo.com/brevo-conversations.js';
+
+            if (d.head) {
+
+                d.head.appendChild(s);
+
+            }
+
+        })(document, window, 'BrevoConversations');
+
+    </script>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+
+            margin: 0;
+            padding: 0;
+
+        }
+
+
+        body {
+
+            font-family:
+                Inter,
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background:
+                #f8f9fa;
+
+            color:
+                #202124;
+
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+
+            background:
+                #ffffff;
+
+            border-bottom:
+                1px solid #eeeeee;
+
+            padding:
+                25px 20px 35px;
+
+        }
+
+
+        .header-inner {
+
+            max-width:
+                1000px;
+
+            margin:
+                0 auto;
+
+        }
+
+
+        .logo {
+
+            display:
+                inline-block;
+
+            margin-bottom:
+                25px;
+
+            font-size:
+                23px;
+
+            font-weight:
+                800;
+
+            color:
+                #ff9100;
+
+        }
+
+
+        .breadcrumb {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            margin-bottom:
+                24px;
+
+            color:
+                #73777f;
+
+            text-decoration:
+                none;
+
+            font-size:
+                14px;
+
+            font-weight:
+                600;
+
+        }
+
+
+        .breadcrumb:hover {
+
+            color:
+                #ff9100;
+
+        }
+
+
+        .header h1 {
+
+            max-width:
+                760px;
+
+            margin:
+                0;
+
+            font-size:
+                36px;
+
+            line-height:
+                1.25;
+
+            letter-spacing:
+                -0.8px;
+
+        }
+
+
+        .header-subtitle {
+
+            max-width:
+                700px;
+
+            margin:
+                12px 0 0;
+
+            font-size:
+                17px;
+
+            line-height:
+                1.6;
+
+            color:
+                #73777f;
+
+        }
+
+
+        /* =========================
+           CONTENU
+        ========================= */
+
+        .content {
+
+            width:
+                100%;
+
+            max-width:
+                900px;
+
+            margin:
+                0 auto;
+
+            padding:
+                45px 20px 60px;
+
+        }
+
+
+        .intro {
+
+            margin-bottom:
+                20px;
+
+            font-size:
+                16px;
+
+            line-height:
+                1.7;
+
+            color:
+                #555b63;
+
+        }
+
+
+        /* =========================
+           RECHERCHE
+        ========================= */
+
+        .search-box {
+
+            width:
+                100%;
+
+            margin:
+                0 0 28px;
+
+        }
+
+
+        #articleSearch {
+
+            width:
+                100%;
+
+            height:
+                54px;
+
+            padding:
+                0 20px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #e3e5e8;
+
+            border-radius:
+                12px;
+
+            outline:
+                none;
+
+            font-family:
+                inherit;
+
+            font-size:
+                15px;
+
+            color:
+                #202124;
+
+            box-shadow:
+                0 2px 8px rgba(0,0,0,0.03);
+
+            transition:
+                border-color 0.15s ease,
+                box-shadow 0.15s ease;
+
+        }
+
+
+        #articleSearch::placeholder {
+
+            color:
+                #9a9da3;
+
+        }
+
+
+        #articleSearch:focus {
+
+            border-color:
+                #ffb45c;
+
+            box-shadow:
+                0 0 0 3px rgba(255,145,0,0.10);
+
+        }
+
+
+        /* =========================
+           RESULTATS
+        ========================= */
+
+        .search-status {
+
+            display:
+                none;
+
+            margin:
+                -10px 0 18px;
+
+            font-size:
+                14px;
+
+            color:
+                #73777f;
+
+        }
+
+
+        .no-results {
+
+            display:
+                none;
+
+            padding:
+                30px 20px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #e8e8e8;
+
+            border-radius:
+                12px;
+
+            text-align:
+                center;
+
+            color:
+                #73777f;
+
+            font-size:
+                15px;
+
+            line-height:
+                1.6;
+
+        }
+
+
+        .no-results strong {
+
+            display:
+                block;
+
+            margin-bottom:
+                6px;
+
+            color:
+                #202124;
+
+            font-size:
+                17px;
+
+        }
+
+
+        /* =========================
+           ARTICLES
+        ========================= */
+
+        .articles {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap:
+                15px;
+
+        }
+
+
+        .article {
+
+            display:
+                block;
+
+            padding:
+                22px 24px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #e8e8e8;
+
+            border-radius:
+                12px;
+
+            text-decoration:
+                none;
+
+            transition:
+                transform 0.15s ease,
+                box-shadow 0.15s ease,
+                border-color 0.15s ease;
+
+        }
+
+
+        .article:hover {
+
+            transform:
+                translateY(-2px);
+
+            border-color:
+                #ffd29b;
+
+            box-shadow:
+                0 5px 18px rgba(0,0,0,0.06);
+
+        }
+
+
+        .article-title {
+
+            margin:
+                0 0 8px;
+
+            font-size:
+                17px;
+
+            line-height:
+                1.4;
+
+            font-weight:
+                700;
+
+            color:
+                #202124;
+
+        }
+
+
+        .article-description {
+
+            margin:
+                0;
+
+            font-size:
+                14px;
+
+            line-height:
+                1.55;
+
+            color:
+                #73777f;
+
+        }
+
+
+        .article-keywords {
+
+            display:
+                none;
+
+        }
+
+
+        /* =========================
+           SUPPORT
+        ========================= */
+
+        .support {
+
+            margin-top:
+                30px;
+
+            padding:
+                28px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #e8e8e8;
+
+            border-radius:
+                14px;
+
+            text-align:
+                center;
+
+        }
+
+
+        .support h2 {
+
+            margin:
+                0;
+
+            font-size:
+                19px;
+
+        }
+
+
+        .support p {
+
+            max-width:
+                520px;
+
+            margin:
+                8px auto 18px;
+
+            font-size:
+                14px;
+
+            line-height:
+                1.5;
+
+            color:
+                #73777f;
+
+        }
+
+
+        /* =========================
+           BOUTON BREVO
+        ========================= */
+
+        .brevo-chat-button {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            min-height:
+                46px;
+
+            padding:
+                0 24px;
+
+            border:
+                none;
+
+            border-radius:
+                9px;
+
+            background:
+                #ff9100;
+
+            color:
+                #ffffff;
+
+            font-family:
+                inherit;
+
+            font-size:
+                14px;
+
+            font-weight:
+                700;
+
+            cursor:
+                pointer;
+
+            transition:
+                background 0.15s ease,
+                transform 0.15s ease;
+
+        }
+
+
+        .brevo-chat-button:hover {
+
+            background:
+                #ed8400;
+
+            transform:
+                translateY(-1px);
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding:
+                0 20px 30px;
+
+            text-align:
+                center;
+
+            font-size:
+                12px;
+
+            color:
+                #9a9da3;
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .header {
+
+                padding:
+                    22px 16px 30px;
+
+            }
+
+
+            .header h1 {
+
+                font-size:
+                    29px;
+
+            }
+
+
+            .header-subtitle {
+
+                font-size:
+                    15px;
+
+            }
+
+
+            .content {
+
+                padding:
+                    25px 12px 45px;
+
+            }
+
+
+            .articles {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .article {
+
+                padding:
+                    20px;
+
+            }
+
+
+            .support {
+
+                padding:
+                    24px 18px;
+
+            }
+
+
+            .brevo-chat-button {
+
+                width:
+                    100%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="header">
+
+        <div class="header-inner">
+
+
+            <div class="logo">
+                Allez HOP!
+            </div>
+
+
+            <a
+                href="/"
+                class="breadcrumb"
+            >
+                ← Centre d'aide
+            </a>
+
+
+            <h1>
+                Mes trajets
+            </h1>
+
+
+            <p class="header-subtitle">
+                Gérez vos trajets réguliers et vos adresses
+                habituelles pour faciliter votre recherche
+                de courses avec Allez HOP!.
+            </p>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENU
+    ========================= -->
+
+    <main class="content">
+
+
+        <p class="intro">
+            Retrouvez les informations utiles pour enregistrer,
+            modifier ou supprimer vos trajets réguliers.
+        </p>
+
+
+        <!-- =========================
+             RECHERCHE
+        ========================= -->
+
+        <div class="search-box">
+
+            <input
+                type="search"
+                id="articleSearch"
+                placeholder="Rechercher une question, un mot-clé..."
+                autocomplete="off"
+                aria-label="Rechercher dans les articles"
+            >
+
+        </div>
+
+
+        <div
+            class="search-status"
+            id="searchStatus"
+        ></div>
+
+
+        <div
+            class="no-results"
+            id="noResults"
+        >
+
+            <strong>
+                Aucun article trouvé
+            </strong>
+
+            Essayez avec un autre mot-clé ou une autre formulation.
+
+        </div>
+
+
+        <!-- =========================
+             ARTICLES
+        ========================= -->
+
+        <section class="articles">
+
+
+            <!-- ARTICLE 1 -->
+
+            <a
+                href="/articles/comment-renseigner-trajets-reguliers.html"
+                class="article"
+            >
+
+                <span class="article-keywords">
+
+                    trajet régulier
+                    trajets réguliers
+                    renseigner trajet
+                    ajouter trajet
+                    ajouter un trajet
+                    enregistrer trajet
+                    adresse
+                    adresses
+                    adresse départ
+                    adresse arrivée
+                    domicile
+                    travail
+                    trajet habituel
+                    déplacement habituel
+                    itinéraire
+                    rayon recherche
+                    notifications ciblées
+                    recevoir notifications
+                    trajet quotidien
+                    trajet domicile travail
+
+                </span>
+
+
+                <h2 class="article-title">
+                    Comment renseigner mes trajets réguliers ?
+                </h2>
+
+
+                <p class="article-description">
+                    Ajoutez vos trajets et vos adresses habituelles
+                    pour recevoir des notifications ciblées.
+                </p>
+
+            </a>
+
+
+            <!-- ARTICLE 2 -->
+
+            <a
+                href="/articles/modifier-supprimer-trajet.html"
+                class="article"
+            >
+
+                <span class="article-keywords">
+
+                    modifier trajet
+                    modifier un trajet
+                    supprimer trajet
+                    supprimer un trajet
+                    changer trajet
+                    mettre à jour trajet
+                    mise à jour trajet
+                    modifier adresse
+                    changer adresse
+                    nouvelle adresse
+                    adresse départ
+                    adresse arrivée
+                    supprimer adresse
+                    modifier trajet régulier
+                    supprimer trajet régulier
+                    soumettre
+                    valider modification
+                    enregistrer modification
+                    modification non enregistrée
+                    trajet incorrect
+                    erreur trajet
+
+                </span>
+
+
+                <h2 class="article-title">
+                    Comment modifier ou supprimer un trajet régulier ?
+                </h2>
+
+
+                <p class="article-description">
+                    Modifiez vos adresses, mettez à jour un trajet
+                    ou supprimez un trajet enregistré.
+                </p>
+
+            </a>
+
+
+        </section>
+
+
+        <!-- =========================
+             SUPPORT
+        ========================= -->
+
+        <section class="support">
+
+            <h2>
+                Vous avez encore besoin d'aide ?
+            </h2>
+
+
+            <p>
+                Vous n'avez pas trouvé la réponse à votre question ?
+                Parlez directement avec notre équipe Allez HOP!.
+            </p>
+
+
+            <button
+                type="button"
+                class="brevo-chat-button"
+            >
+                💬 Parler avec le support
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        Allez HOP! · Centre d'aide
+
+    </footer>
+
+
+    <!-- =========================
+         RECHERCHE JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        const searchInput =
+            document.getElementById('articleSearch');
+
+        const articles =
+            Array.from(
+                document.querySelectorAll('.article')
+            );
+
+        const searchStatus =
+            document.getElementById('searchStatus');
+
+        const noResults =
+            document.getElementById('noResults');
+
+
+        function normalizeText(text) {
+
+            return text
+                .toLowerCase()
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .replace(/[’']/g, ' ')
+                .replace(/[^a-z0-9\s-]/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim();
+
+        }
+
+
+        const articleData =
+            articles.map(function(article) {
+
+                const title =
+                    article
+                        .querySelector('.article-title')
+                        .textContent;
+
+                const description =
+                    article
+                        .querySelector('.article-description')
+                        .textContent;
+
+                const keywordsElement =
+                    article
+                        .querySelector('.article-keywords');
+
+                const keywords =
+                    keywordsElement
+                        ? keywordsElement.textContent
+                        : '';
+
+
+                return {
+
+                    element:
+                        article,
+
+                    title:
+                        normalizeText(title),
+
+                    description:
+                        normalizeText(description),
+
+                    keywords:
+                        normalizeText(keywords)
+
+                };
+
+            });
+
+
+        searchInput.addEventListener(
+            'input',
+            function() {
+
+                const search =
+                    normalizeText(this.value);
+
+
+                if (search === '') {
+
+                    articleData.forEach(function(item) {
+
+                        item.element.style.display =
+                            'block';
+
+                    });
+
+
+                    searchStatus.style.display =
+                        'none';
+
+                    noResults.style.display =
+                        'none';
+
+                    return;
+
+                }
+
+
+                const searchWords =
+                    search
+                        .split(' ')
+                        .filter(function(word) {
+
+                            return word.length > 1;
+
+                        });
+
+
+                const results = [];
+
+
+                articleData.forEach(function(item) {
+
+                    const fullText =
+                        item.title +
+                        ' ' +
+                        item.description +
+                        ' ' +
+                        item.keywords;
+
+
+                    let score = 0;
+
+
+                    searchWords.forEach(function(word) {
+
+                        if (
+                            item.title.includes(word)
+                        ) {
+
+                            score += 5;
+
+                        }
+
+
+                        if (
+                            item.description.includes(word)
+                        ) {
+
+                            score += 3;
+
+                        }
+
+
+                        if (
+                            item.keywords.includes(word)
+                        ) {
+
+                            score += 2;
+
+                        }
+
+
+                        if (
+                            fullText.includes(word)
+                        ) {
+
+                            score += 1;
+
+                        }
+
+                    });
+
+
+                    if (score > 0) {
+
+                        results.push({
+
+                            item:
+                                item,
+
+                            score:
+                                score
+
+                        });
+
+                    }
+
+                });
+
+
+                results.sort(function(a, b) {
+
+                    return b.score - a.score;
+
+                });
+
+
+                articleData.forEach(function(item) {
+
+                    item.element.style.display =
+                        'none';
+
+                });
+
+
+                results.forEach(function(result) {
+
+                    result.item.element.style.display =
+                        'block';
+
+                });
+
+
+                if (results.length === 0) {
+
+                    searchStatus.style.display =
+                        'none';
+
+                    noResults.style.display =
+                        'block';
+
+                } else {
+
+                    noResults.style.display =
+                        'none';
+
+                    searchStatus.style.display =
+                        'block';
+
+                    searchStatus.textContent =
+                        results.length +
+                        (
+                            results.length > 1
+                                ? ' articles trouvés'
+                                : ' article trouvé'
+                        );
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
