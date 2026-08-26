@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Paramétrer son profil cotransporteur — Allez HOP! | Centre d'aide
+    </title>
+
+    <meta
+        name="description"
+        content="Comment paramétrer ses moyens de transport, son périmètre de recherche et ses trajets réguliers sur Allez HOP!."
+    >
+
+
+    <!-- =========================
+         BREVO CONVERSATIONS
+    ========================= -->
+
+    <script>
+
+        window.BrevoConversationsSetup = {
+
+            customWidgetButton: '.brevo-chat-button',
+
+            chatWidth: 400,
+
+            chatHeight: 550,
+
+            buttonPosition: 'br'
+
+        };
+
+    </script>
+
+
+    <script>
+
+        (function(d, w, c) {
+
+            w.BrevoConversationsID =
+                '66de1609df5363314100b775';
+
+            w[c] = w[c] || function() {
+
+                (w[c].q = w[c].q || []).push(arguments);
+
+            };
+
+            var s = d.createElement('script');
+
+            s.async = true;
+
+            s.src =
+                'https://conversations-widget.brevo.com/brevo-conversations.js';
+
+            if (d.head) {
+
+                d.head.appendChild(s);
+
+            }
+
+        })(document, window, 'BrevoConversations');
+
+    </script>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+
+            font-family:
+                Inter,
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #f8f9fa;
+
+            color: #202124;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+
+            background: #ffffff;
+
+            border-bottom:
+                1px solid #eeeeee;
+
+            padding:
+                25px 20px 35px;
+        }
+
+
+        .header-inner {
+
+            max-width: 1000px;
+
+            margin: 0 auto;
+        }
+
+
+        .logo {
+
+            display: inline-block;
+
+            margin-bottom: 25px;
+
+            font-size: 23px;
+
+            font-weight: 800;
+
+            color: #ff9100;
+        }
+
+
+        .breadcrumb {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            margin-bottom: 24px;
+
+            color: #73777f;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 600;
+        }
+
+
+        .breadcrumb:hover {
+
+            color: #ff9100;
+        }
+
+
+        .header h1 {
+
+            max-width: 760px;
+
+            margin: 0;
+
+            font-size: 36px;
+
+            line-height: 1.25;
+
+            letter-spacing: -0.8px;
+        }
+
+
+        .header-subtitle {
+
+            max-width: 700px;
+
+            margin:
+                12px 0 0;
+
+            font-size: 17px;
+
+            line-height: 1.6;
+
+            color: #73777f;
+        }
+
+
+        /* =========================
+           CONTENU
+        ========================= */
+
+        .content {
+
+            width: 100%;
+
+            max-width: 800px;
+
+            margin: 0 auto;
+
+            padding:
+                45px 20px 60px;
+        }
+
+
+        .article {
+
+            background: #ffffff;
+
+            border:
+                1px solid #e8e8e8;
+
+            border-radius: 14px;
+
+            padding:
+                35px 40px;
+
+            box-shadow:
+                0 2px 10px rgba(0,0,0,0.025);
+        }
+
+
+        .article p {
+
+            margin:
+                0 0 20px;
+
+            font-size: 16px;
+
+            line-height: 1.75;
+
+            color: #44484f;
+        }
+
+
+        .article h2 {
+
+            margin:
+                30px 0 12px;
+
+            font-size: 22px;
+
+            line-height: 1.35;
+
+            color: #202124;
+        }
+
+
+        .article h2:first-child {
+
+            margin-top: 0;
+        }
+
+
+        .article strong {
+
+            color: #202124;
+        }
+
+
+        /* =========================
+           LISTES
+        ========================= */
+
+        .article ul {
+
+            margin:
+                8px 0 24px;
+
+            padding-left: 22px;
+
+            color: #44484f;
+        }
+
+
+        .article li {
+
+            margin-bottom: 10px;
+
+            padding-left: 4px;
+
+            font-size: 15px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           ENCADRES
+        ========================= */
+
+        .highlight {
+
+            margin:
+                28px 0;
+
+            padding:
+                20px 22px;
+
+            background:
+                #fff7ed;
+
+            border-left:
+                4px solid #ff9100;
+
+            border-radius: 8px;
+        }
+
+
+        .highlight p {
+
+            margin: 0;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           CARTES
+        ========================= */
+
+        .case {
+
+            margin:
+                20px 0;
+
+            padding:
+                20px 22px;
+
+            background:
+                #fafafa;
+
+            border:
+                1px solid #eeeeee;
+
+            border-radius: 10px;
+        }
+
+
+        .case-title {
+
+            margin:
+                0 0 8px;
+
+            font-size: 17px;
+
+            font-weight: 800;
+
+            color: #202124;
+        }
+
+
+        .case p {
+
+            margin: 0;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           MOYENS DE TRANSPORT
+        ========================= */
+
+        .transport-list {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 10px;
+
+            margin:
+                20px 0 28px;
+        }
+
+
+        .transport {
+
+            padding:
+                14px 16px;
+
+            background:
+                #fafafa;
+
+            border:
+                1px solid #eeeeee;
+
+            border-radius: 9px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            color: #33373c;
+        }
+
+
+        /* =========================
+           PERIMETRES
+        ========================= */
+
+        .radius-list {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin:
+                20px 0 28px;
+        }
+
+
+        .radius {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-width: 70px;
+
+            padding:
+                11px 16px;
+
+            background:
+                #fff7ed;
+
+            border:
+                1px solid #ffcf9b;
+
+            border-radius: 9px;
+
+            color:
+                #202124;
+
+            font-size: 15px;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           CHEMIN APP
+        ========================= */
+
+        .path {
+
+            display: inline-block;
+
+            margin:
+                8px 0 20px;
+
+            padding:
+                11px 15px;
+
+            background:
+                #f5f5f5;
+
+            border-radius: 8px;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            color: #44484f;
+        }
+
+
+        /* =========================
+           FEEDBACK
+        ========================= */
+
+        .feedback {
+
+            margin-top: 35px;
+
+            padding-top: 28px;
+
+            border-top:
+                1px solid #eeeeee;
+
+            text-align: center;
+        }
+
+
+        .feedback h3 {
+
+            margin:
+                0 0 15px;
+
+            font-size: 16px;
+        }
+
+
+        .feedback-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 10px;
+        }
+
+
+        .feedback-button {
+
+            min-width: 90px;
+
+            padding:
+                9px 16px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #dddddd;
+
+            border-radius: 8px;
+
+            color: #555;
+
+            cursor: pointer;
+
+            font-size: 14px;
+        }
+
+
+        .feedback-button:hover {
+
+            border-color:
+                #ff9100;
+
+            color:
+                #ff9100;
+        }
+
+
+        /* =========================
+           SUPPORT
+        ========================= */
+
+        .support {
+
+            margin-top: 25px;
+
+            padding:
+                28px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #e8e8e8;
+
+            border-radius: 14px;
+
+            text-align: center;
+        }
+
+
+        .support h2 {
+
+            margin: 0;
+
+            font-size: 19px;
+        }
+
+
+        .support p {
+
+            max-width: 500px;
+
+            margin:
+                8px auto 18px;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+
+            color: #73777f;
+        }
+
+
+        /* =========================
+           BOUTON BREVO
+        ========================= */
+
+        .brevo-chat-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 46px;
+
+            padding:
+                0 24px;
+
+            border: none;
+
+            border-radius: 9px;
+
+            background:
+                #ff9100;
+
+            color: #ffffff;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                background 0.15s ease,
+                transform 0.15s ease;
+        }
+
+
+        .brevo-chat-button:hover {
+
+            background:
+                #ed8400;
+
+            transform:
+                translateY(-1px);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding:
+                0 20px 30px;
+
+            text-align: center;
+
+            font-size: 12px;
+
+            color: #9a9da3;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .header {
+
+                padding:
+                    22px 16px 30px;
+            }
+
+
+            .header h1 {
+
+                font-size: 29px;
+            }
+
+
+            .header-subtitle {
+
+                font-size: 15px;
+            }
+
+
+            .content {
+
+                padding:
+                    25px 12px 45px;
+            }
+
+
+            .article {
+
+                padding:
+                    25px 20px;
+            }
+
+
+            .article p {
+
+                font-size: 15px;
+
+                line-height: 1.7;
+            }
+
+
+            .article h2 {
+
+                font-size: 20px;
+            }
+
+
+            .article li {
+
+                font-size: 15px;
+            }
+
+
+            .transport-list {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .support {
+
+                padding:
+                    24px 18px;
+            }
+
+
+            .brevo-chat-button {
+
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="header">
+
+        <div class="header-inner">
+
+
+            <div class="logo">
+                Allez HOP!
+            </div>
+
+
+            <a
+                href="../compte.html"
+                class="breadcrumb"
+            >
+                ← Compte et profil
+            </a>
+
+
+            <h1>
+                Paramétrer son profil cotransporteur
+            </h1>
+
+
+            <p class="header-subtitle">
+                Configurez vos moyens de transport, votre
+                périmètre de recherche et vos trajets réguliers.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENU
+    ========================= -->
+
+    <main class="content">
+
+
+        <article class="article">
+
+
+            <h2>
+                Pourquoi paramétrer son profil ?
+            </h2>
+
+
+            <p>
+                Votre profil permet d'indiquer vos habitudes
+                de déplacement afin qu'Allez HOP! puisse vous
+                proposer des courses correspondant au mieux
+                à vos trajets.
+            </p>
+
+
+            <div class="highlight">
+
+                <p>
+                    <strong>Conseil :</strong>
+                    prenez quelques instants pour renseigner
+                    correctement vos paramètres. Un profil
+                    bien configuré vous permet de recevoir
+                    des courses plus adaptées à vos déplacements.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Ajouter ses moyens de transport
+            </h2>
+
+
+            <p>
+                Depuis :
+            </p>
+
+
+            <div class="path">
+                Profil → Réglages
+            </div>
+
+
+            <p>
+                Vous pouvez renseigner vos moyens de transport.
+                Vous pouvez en sélectionner <strong>plusieurs</strong>.
+            </p>
+
+
+            <div class="transport-list">
+
+
+                <div class="transport">
+                    🚆 Transports en commun
+                </div>
+
+
+                <div class="transport">
+                    🚲 Vélo
+                </div>
+
+
+                <div class="transport">
+                    🛴 Trottinette
+                </div>
+
+
+                <div class="transport">
+                    🛵 Scooter
+                </div>
+
+
+                <div class="transport">
+                    🏍️ Moto
+                </div>
+
+
+                <div class="transport">
+                    🚗 Voiture
+                </div>
+
+
+                <div class="transport">
+                    🚐 Utilitaire
+                </div>
+
+
+                <div class="transport">
+                    🚚 Camionnette
+                </div>
+
+
+            </div>
+
+
+            <p>
+                Vous pouvez également
+                <strong>modifier ou supprimer</strong>
+                un moyen de transport enregistré.
+            </p>
+
+
+            <h2>
+                Définir son périmètre de recherche
+            </h2>
+
+
+            <p>
+                Depuis :
+            </p>
+
+
+            <div class="path">
+                Profil → Réglages → Périmètre de recherche
+            </div>
+
+
+            <p>
+                Vous pouvez définir la distance maximale dans
+                laquelle vous souhaitez rechercher des courses.
+            </p>
+
+
+            <div class="radius-list">
+
+
+                <div class="radius">
+                    10 km
+                </div>
+
+
+                <div class="radius">
+                    30 km
+                </div>
+
+
+                <div class="radius">
+                    50 km
+                </div>
+
+
+            </div>
+
+
+            <h2>
+                À quoi sert le périmètre de recherche ?
+            </h2>
+
+
+            <p>
+                Le périmètre de recherche permet de rechercher
+                des courses dont le
+                <strong>point de collecte se trouve dans le
+                rayon défini</strong>.
+            </p>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    📍 Exemple
+                </p>
+
+                <p>
+                    Si votre périmètre est réglé sur
+                    <strong>30 km</strong>, vous recherchez
+                    les courses dont le point de collecte
+                    se situe dans ce périmètre.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Modifier son périmètre
+            </h2>
+
+
+            <p>
+                Votre périmètre de recherche peut être
+                <strong>modifié à tout moment</strong>.
+            </p>
+
+
+            <p>
+                Adaptez-le à vos habitudes de déplacement
+                afin de recevoir des propositions réellement
+                intéressantes pour vous.
+            </p>
+
+
+            <h2>
+                Les réglages du profil sont-ils définitifs ?
+            </h2>
+
+
+            <p>
+                Non. Les moyens de transport et le périmètre
+                renseignés dans votre profil sont des
+                <strong>informations globales</strong>.
+            </p>
+
+
+            <p>
+                Vous pouvez donc les modifier lorsque vos
+                habitudes ou vos besoins évoluent.
+            </p>
+
+
+            <h2>
+                Un réglage global et une recherche ponctuelle
+            </h2>
+
+
+            <p>
+                Les moyens de transport et le périmètre
+                enregistrés dans votre profil constituent
+                vos paramètres globaux.
+            </p>
+
+
+            <p>
+                Cependant, depuis la page d'accueil
+                <strong>« Cotransporteur »</strong>, vous pouvez
+                également choisir vos critères de recherche
+                pour la recherche en cours.
+            </p>
+
+
+            <div class="highlight">
+
+                <p>
+                    <strong>Profil = réglages globaux.</strong><br>
+                    <strong>Page « Cotransporteur » = critères
+                    de recherche ponctuels.</strong>
+                </p>
+
+            </div>
+
+
+            <h2>
+                Pensez à renseigner vos trajets réguliers
+            </h2>
+
+
+            <p>
+                Le paramétrage de votre profil ne se limite pas
+                aux moyens de transport et au périmètre.
+            </p>
+
+
+            <p>
+                Pensez également à renseigner vos
+                <strong>trajets réguliers</strong>.
+            </p>
+
+
+            <p>
+                Ils permettent de mieux identifier les courses
+                susceptibles de correspondre à vos déplacements
+                habituels.
+            </p>
+
+
+            <h2>
+                Les notifications ciblées
+            </h2>
+
+
+            <p>
+                Les informations renseignées dans votre profil,
+                notamment vos trajets réguliers, participent
+                également au fonctionnement des
+                <strong>notifications ciblées</strong>.
+            </p>
+
+
+            <p>
+                Pensez donc à compléter correctement votre profil
+                et à maintenir vos informations à jour.
+            </p>
+
+
+            <h2>
+                Que se passe-t-il si je ne renseigne rien ?
+            </h2>
+
+
+            <div class="highlight">
+
+                <p>
+                    Si aucun moyen de transport ou périmètre
+                    de recherche pertinent n'est renseigné,
+                    <strong>vous ne verrez aucune course</strong>
+                    correspondant à ces critères.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Gardez votre profil à jour
+            </h2>
+
+
+            <p>
+                Vos habitudes peuvent changer : nouveau véhicule,
+                nouveau mode de déplacement ou nouveau trajet.
+            </p>
+
+
+            <p>
+                Pensez à mettre régulièrement votre profil à jour
+                afin de <strong>recevoir les courses les plus
+                adaptées à vos déplacements</strong>.
+            </p>
+
+
+            <h2>
+                À retenir
+            </h2>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    🚗 Moyens de transport
+                </p>
+
+                <p>
+                    Vous pouvez sélectionner plusieurs moyens
+                    de transport depuis
+                    <strong>Profil → Réglages</strong>.
+                </p>
+
+            </div>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    📍 Périmètre de recherche
+                </p>
+
+                <p>
+                    Choisissez entre
+                    <strong>10, 30 ou 50 km</strong>
+                    depuis
+                    <strong>Profil → Réglages →
+                    Périmètre de recherche</strong>.
+                </p>
+
+            </div>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    🛣️ Trajets réguliers
+                </p>
+
+                <p>
+                    Renseignez vos trajets habituels afin
+                    d'améliorer la pertinence des courses
+                    et des notifications ciblées.
+                </p>
+
+            </div>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    🔄 Pensez à mettre à jour votre profil
+                </p>
+
+                <p>
+                    Gardez vos paramètres à jour afin de
+                    recevoir les courses les plus adaptées
+                    à vos déplacements.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Besoin d'aide ?
+            </h2>
+
+
+            <p>
+                Si vous rencontrez un problème pour modifier
+                vos paramètres ou pour rechercher des courses,
+                contactez le support Allez HOP!.
+            </p>
+
+
+            <!-- =========================
+                 FEEDBACK
+            ========================= -->
+
+            <div class="feedback">
+
+                <h3>
+                    Cet article vous a-t-il été utile ?
+                </h3>
+
+
+                <div class="feedback-buttons">
+
+                    <button
+                        class="feedback-button"
+                        type="button"
+                    >
+                        👍 Oui
+                    </button>
+
+
+                    <button
+                        class="feedback-button"
+                        type="button"
+                    >
+                        👎 Non
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =========================
+             SUPPORT
+        ========================= -->
+
+        <section class="support">
+
+            <h2>
+                Vous avez encore besoin d'aide ?
+            </h2>
+
+
+            <p>
+                Vous n'avez pas trouvé la réponse à votre question ?
+                Parlez directement avec notre équipe Allez HOP!.
+            </p>
+
+
+            <button
+                type="button"
+                class="brevo-chat-button"
+            >
+                💬 Parler avec le support
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        Allez HOP! · Centre d'aide
+
+    </footer>
+
+
+</body>
+
+</html>
