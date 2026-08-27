@@ -11,12 +11,12 @@
     >
 
     <title>
-        Que faire si l'adresse de livraison pose problème ? — Allez HOP! | Centre d'aide
+        Particulier ou Professionnel — Allez HOP! | Centre d'aide
     </title>
 
     <meta
         name="description"
-        content="Que faire si l'adresse de livraison pose problème lors d'une course Allez HOP!."
+        content="Comprendre les profils Particulier et Professionnel sur Allez HOP!."
     >
 
 
@@ -291,7 +291,7 @@
 
 
         /* =========================
-           ENCADRE IMPORTANT
+           ENCADRES
         ========================= */
 
         .highlight {
@@ -317,6 +317,219 @@
             margin: 0;
 
             font-size: 15px;
+        }
+
+
+        .case {
+
+            margin:
+                20px 0;
+
+            padding:
+                20px 22px;
+
+            background:
+                #fafafa;
+
+            border:
+                1px solid #eeeeee;
+
+            border-radius: 10px;
+        }
+
+
+        .case-title {
+
+            margin:
+                0 0 8px;
+
+            font-size: 17px;
+
+            font-weight: 800;
+
+            color: #202124;
+        }
+
+
+        .case p {
+
+            margin: 0;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           COMPARAISON
+        ========================= */
+
+        .comparison {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 16px;
+
+            margin:
+                25px 0 30px;
+        }
+
+
+        .profile-card {
+
+            padding:
+                24px 22px;
+
+            background:
+                #fafafa;
+
+            border:
+                1px solid #eeeeee;
+
+            border-radius: 12px;
+        }
+
+
+        .profile-card h3 {
+
+            margin:
+                0 0 15px;
+
+            font-size: 19px;
+
+            color: #202124;
+        }
+
+
+        .profile-card ul {
+
+            margin:
+                0;
+
+            padding-left: 20px;
+        }
+
+
+        .profile-card li {
+
+            margin-bottom: 8px;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CHEMIN
+        ========================= */
+
+        .path {
+
+            display: inline-block;
+
+            margin:
+                8px 0 20px;
+
+            padding:
+                11px 15px;
+
+            background:
+                #f5f5f5;
+
+            border-radius: 8px;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            color: #44484f;
+        }
+
+
+        /* =========================
+           ETAPES
+        ========================= */
+
+        .steps {
+
+            margin:
+                25px 0 30px;
+        }
+
+
+        .step {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 14px;
+
+            margin-bottom: 16px;
+
+            padding:
+                17px 18px;
+
+            background:
+                #fafafa;
+
+            border:
+                1px solid #eeeeee;
+
+            border-radius: 10px;
+        }
+
+
+        .step-number {
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 30px;
+
+            height: 30px;
+
+            border-radius: 50%;
+
+            background:
+                #ff9100;
+
+            color:
+                #ffffff;
+
+            font-size: 14px;
+
+            font-weight: 800;
+        }
+
+
+        .step-content {
+
+            flex: 1;
+        }
+
+
+        .step-content strong {
+
+            display: block;
+
+            margin-bottom: 4px;
+
+            font-size: 16px;
+        }
+
+
+        .step-content p {
+
+            margin: 0;
+
+            font-size: 14px;
         }
 
 
@@ -561,6 +774,20 @@
             }
 
 
+            .comparison {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .step {
+
+                padding:
+                    15px;
+            }
+
+
             .support {
 
                 padding:
@@ -573,6 +800,33 @@
                 width: 100%;
             }
 
+        }
+
+    
+        /* =========================
+           VOTES ARTICLE
+        ========================= */
+
+        .feedback-count {
+            display: none;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .feedback-button.show-count .feedback-count {
+            display: inline;
+        }
+
+        .feedback-button:disabled {
+            cursor: default;
+            opacity: 0.55;
+            transform: none;
+        }
+
+        .feedback-message {
+            min-height: 24px;
+            margin: 15px 0 0;
+            font-size: 14px;
+            color: #73777f;
         }
 
     </style>
@@ -598,21 +852,21 @@
 
 
             <a
-                href="../courses.html"
+                href="../compte.html"
                 class="breadcrumb"
             >
-                ← Courses
+                ← Compte et profil
             </a>
 
 
             <h1>
-                Que faire si l'adresse de livraison pose problème ?
+                Particulier ou Professionnel ?
             </h1>
 
 
             <p class="header-subtitle">
-                Les bons réflexes lorsque vous rencontrez
-                un problème avec l'adresse de livraison.
+                Comprendre les deux types de profils et passer
+                facilement de l'un à l'autre.
             </p>
 
         </div>
@@ -631,131 +885,174 @@
 
 
             <h2>
-                Contactez le destinataire
+                Choisir son profil
             </h2>
 
 
             <p>
-                Si vous rencontrez un problème avec l'adresse
-                de livraison, utilisez le
-                <strong>numéro de téléphone mis à votre disposition
-                dans l'application</strong> pour contacter
-                le destinataire.
+                Lors de votre inscription sur Allez HOP!,
+                vous choisissez le type de profil que vous
+                souhaitez utiliser :
+            </p>
+
+
+            <div class="comparison">
+
+
+                <div class="profile-card">
+
+                    <h3>
+                        👤 Particulier
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Profil destiné à une activité
+                            de cotransporteur en tant que
+                            particulier.
+                        </li>
+
+                        <li>
+                            Fonctionnement des courses identique
+                            au profil Professionnel.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="profile-card">
+
+                    <h3>
+                        🏢 Professionnel
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Profil destiné à une activité
+                            professionnelle.
+                        </li>
+
+                        <li>
+                            Informations et documents
+                            professionnels supplémentaires.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+            <h2>
+                Quelle est la différence ?
+            </h2>
+
+
+            <p>
+                Pour l'utilisation d'Allez HOP!,
+                <strong>les règles de fonctionnement des courses
+                sont les mêmes</strong>, que vous utilisiez un
+                profil Particulier ou Professionnel.
             </p>
 
 
             <p>
-                Demandez-lui les précisions nécessaires pour
-                localiser correctement le lieu de livraison.
+                La distinction concerne principalement :
             </p>
+
+
+            <ul>
+
+                <li>
+                    la <strong>destination finale des gains</strong> ;
+                </li>
+
+                <li>
+                    les informations figurant sur la
+                    <strong>fiche DAC7</strong>.
+                </li>
+
+            </ul>
 
 
             <div class="highlight">
 
                 <p>
-                    <strong>À savoir :</strong>
-                    l'adresse de livraison prévue est celle
-                    enregistrée au moment de la commande.
+                    <strong>À retenir :</strong>
+                    le choix du profil ne change pas les règles
+                    applicables aux courses.
                 </p>
 
             </div>
 
 
             <h2>
-                L'adresse de livraison reste celle de la commande
+                Peut-on avoir les deux profils ?
             </h2>
 
 
             <p>
-                Même si le destinataire vous communique une
-                autre adresse, <strong>l'adresse de livraison
-                prévue reste celle enregistrée au moment
-                de la commande</strong>.
+                <strong>Oui.</strong>
+                Un même utilisateur peut disposer d'un profil
+                Particulier et d'un profil Professionnel.
             </p>
 
 
             <p>
-                Vous ne pouvez donc pas simplement modifier
-                la destination de la course.
+                Les deux profils peuvent utiliser
+                <strong>la même adresse e-mail</strong>.
             </p>
+
+
+            <p>
+                Il est possible d'avoir au maximum :
+            </p>
+
+
+            <ul>
+
+                <li>
+                    un profil <strong>Particulier</strong> ;
+                </li>
+
+                <li>
+                    un profil <strong>Professionnel</strong>.
+                </li>
+
+            </ul>
 
 
             <h2>
-                Le destinataire ne répond pas
+                Passer d'un profil à l'autre
             </h2>
 
 
             <p>
-                Si vous ne parvenez pas à joindre le destinataire,
-                utilisez les coordonnées téléphoniques disponibles
-                dans l'application et laissez-lui un
-                <strong>message vocal</strong>.
+                Si vous disposez des deux profils, vous pouvez
+                passer de l'un à l'autre directement depuis
+                le dashboard.
             </p>
 
 
-            <p>
-                Attendez ensuite <strong>5 minutes</strong>.
-            </p>
-
-
-            <p>
-                Si vous n'obtenez toujours aucune réponse,
-                <strong>contactez le support Allez HOP!</strong>.
-            </p>
-
-
-            <h2>
-                Quand pouvez-vous quitter les lieux ?
-            </h2>
-
-
-            <p>
-                Ne quittez pas les lieux immédiatement.
-            </p>
-
-
-            <p>
-                Vous pouvez quitter l'adresse lorsque le problème
-                est considéré comme <strong>sans issue</strong>,
-                après avoir effectué les démarches nécessaires
-                et, lorsque cela est nécessaire, contacté
-                le support.
-            </p>
-
-
-            <h2>
-                Si le commerce est partenaire
-            </h2>
-
-
-            <p>
-                Si la livraison ne peut pas être effectuée et
-                que le commerce concerné est un
-                <strong>partenaire</strong>, contactez le
-                <strong>point de retrait</strong> afin d'obtenir
-                les instructions concernant la commande.
-            </p>
-
-
-            <p>
-                Suivez ensuite les indications qui vous sont données.
-            </p>
-
-
-            <div class="highlight">
-
-                <p>
-                    <strong>Important :</strong>
-                    ne prenez pas vous-même la décision de modifier
-                    la destination de la course. L'adresse enregistrée
-                    lors de la commande reste l'adresse prévue.
-                </p>
-
+            <div class="path">
+                Dashboard → Particulier / Pro
             </div>
 
 
+            <p>
+                Sélectionnez simplement le profil avec lequel
+                vous souhaitez utiliser l'application.
+            </p>
+
+
             <h2>
-                Le cotransporteur est-il dédommagé ?
+                Peut-on changer de statut ?
             </h2>
 
 
@@ -765,93 +1062,273 @@
 
 
             <p>
-                Lorsque le problème d'adresse empêche finalement
-                la livraison, <strong>le cotransporteur est
-                dédommagé</strong> conformément à la procédure prévue.
+                Si vous disposez actuellement d'un seul profil,
+                vous pouvez demander la création de l'autre
+                profil sans avoir à créer un nouveau compte.
+            </p>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    🔄 Particulier → Professionnel
+                </p>
+
+                <p>
+                    Contactez le support afin que votre profil
+                    Professionnel puisse être correctement
+                    configuré.
+                </p>
+
+            </div>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    🔄 Professionnel → Particulier
+                </p>
+
+                <p>
+                    Contactez également le support pour effectuer
+                    cette modification.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Documents nécessaires pour un profil Professionnel
+            </h2>
+
+
+            <p>
+                Le profil Professionnel nécessite des informations
+                et documents supplémentaires.
+            </p>
+
+
+            <p>
+                Vous devrez notamment fournir :
+            </p>
+
+
+            <ul>
+
+                <li>
+                    un <strong>extrait K-bis</strong> ;
+                </li>
+
+                <li>
+                    votre <strong>numéro SIRET</strong>.
+                </li>
+
+            </ul>
+
+
+            <h2>
+                RIB professionnel
+            </h2>
+
+
+            <p>
+                Lorsqu'il s'agit d'une
+                <strong>personne morale</strong>, le RIB
+                professionnel doit être au
+                <strong>nom de l'entreprise</strong>.
+            </p>
+
+
+            <div class="highlight">
+
+                <p>
+                    🏦 Le compte bancaire utilisé pour les
+                    opérations professionnelles doit donc
+                    correspondre à l'entreprise concernée.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Licence de transport
+            </h2>
+
+
+            <p>
+                La licence de transport léger est nécessaire
+                <strong>uniquement pour le transport de
+                marchandises avec un véhicule à moteur</strong>.
+            </p>
+
+
+            <p>
+                Elle n'est donc pas nécessaire simplement parce
+                que vous utilisez un profil Professionnel.
             </p>
 
 
             <h2>
-                Les bons réflexes
+                Les courses sont-elles différentes ?
             </h2>
 
 
-            <div class="steps">
+            <div class="highlight">
+
+                <p>
+                    <strong>Non.</strong>
+                    Les règles de fonctionnement des courses
+                    sont les mêmes pour les profils Particulier
+                    et Professionnel.
+                </p>
+
+            </div>
 
 
-                <div class="step">
-
-                    <div class="step-number">
-                        1
-                    </div>
-
-                    <div class="step-text">
-                        <strong>Contactez le destinataire</strong>
-                        à l'aide des coordonnées disponibles
-                        dans l'application.
-                    </div>
-
-                </div>
+            <h2>
+                Les paiements sont-ils différents ?
+            </h2>
 
 
-                <div class="step">
-
-                    <div class="step-number">
-                        2
-                    </div>
-
-                    <div class="step-text">
-                        <strong>Demandez des précisions</strong>
-                        si vous avez besoin d'aide pour localiser
-                        le lieu de livraison.
-                    </div>
-
-                </div>
+            <p>
+                <strong>Non.</strong>
+                Le fonctionnement des paiements et de la
+                cagnotte n'est pas différent selon le type
+                de profil.
+            </p>
 
 
-                <div class="step">
-
-                    <div class="step-number">
-                        3
-                    </div>
-
-                    <div class="step-text">
-                        <strong>En cas de non-réponse, attendez
-                        5 minutes</strong> après vos tentatives
-                        de contact.
-                    </div>
-
-                </div>
+            <p>
+                La distinction concerne notamment la
+                <strong>destination finale des gains</strong>
+                et leur traitement dans les informations
+                déclaratives, notamment la <strong>fiche DAC7</strong>.
+            </p>
 
 
-                <div class="step">
-
-                    <div class="step-number">
-                        4
-                    </div>
-
-                    <div class="step-text">
-                        <strong>Contactez le support</strong>
-                        si le destinataire ne répond pas.
-                    </div>
-
-                </div>
+            <h2>
+                Peut-on utiliser les deux profils en même temps ?
+            </h2>
 
 
-                <div class="step">
+            <p>
+                <strong>Non.</strong>
+            </p>
 
-                    <div class="step-number">
-                        5
-                    </div>
 
-                    <div class="step-text">
-                        <strong>Si le problème est sans issue</strong>,
-                        suivez les indications du support ou du
-                        point de retrait lorsqu'il s'agit d'un
-                        commerce partenaire.
-                    </div>
+            <p>
+                Vous pouvez disposer des deux profils, mais
+                vous utilisez l'un ou l'autre en fonction du
+                profil sélectionné dans l'application.
+            </p>
 
-                </div>
+
+            <h2>
+                Je me suis trompé de statut
+            </h2>
+
+
+            <p>
+                Si vous avez sélectionné le mauvais statut lors
+                de votre inscription, pas d'inquiétude.
+            </p>
+
+
+            <p>
+                <strong>Contactez le support</strong> afin qu'il
+                vous indique la marche à suivre.
+            </p>
+
+
+            <h2>
+                À retenir
+            </h2>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    👤 Particulier ou 🏢 Professionnel
+                </p>
+
+                <p>
+                    Vous choisissez l'un des deux profils lors
+                    de votre inscription.
+                </p>
+
+            </div>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    🔄 Les deux profils
+                </p>
+
+                <p>
+                    Vous pouvez disposer d'un profil Particulier
+                    et d'un profil Professionnel avec la même
+                    adresse e-mail.
+                </p>
+
+            </div>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    🔀 Bascule
+                </p>
+
+                <p>
+                    Passez d'un profil à l'autre depuis
+                    <strong>Dashboard → Particulier / Pro</strong>.
+                </p>
+
+            </div>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    📄 Professionnel
+                </p>
+
+                <p>
+                    Le profil Professionnel nécessite notamment
+                    un <strong>extrait K-bis</strong> et un
+                    <strong>SIRET</strong>.
+                </p>
+
+            </div>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    🚚 Licence
+                </p>
+
+                <p>
+                    La licence de transport léger est nécessaire
+                    uniquement pour le transport de marchandises
+                    avec un véhicule à moteur.
+                </p>
+
+            </div>
+
+
+            <div class="case">
+
+                <p class="case-title">
+                    📋 DAC7
+                </p>
+
+                <p>
+                    La distinction entre les profils concerne
+                    notamment la destination finale des gains
+                    et les informations de la fiche DAC7.
+                </p>
 
             </div>
 
@@ -862,16 +1339,16 @@
 
 
             <p>
-                Vous ne parvenez pas à résoudre le problème
-                d'adresse ?
+                Si vous avez choisi le mauvais statut ou si vous
+                avez besoin d'aide pour créer ou gérer votre
+                profil Professionnel, contactez le support
+                Allez HOP!.
             </p>
 
 
-            <p>
-                Contactez le support Allez HOP! afin d'obtenir
-                les indications nécessaires pour la suite
-                de votre course.
-            </p>
+            <!-- =========================
+                 FEEDBACK
+            ========================= -->
 
 
             <!-- =========================
@@ -884,25 +1361,47 @@
                     Cet article vous a-t-il été utile ?
                 </h3>
 
-
                 <div class="feedback-buttons">
 
                     <button
                         class="feedback-button"
+                        id="feedbackPositive"
                         type="button"
+                        aria-label="Article utile"
                     >
-                        👍 Oui
-                    </button>
+                        👍
 
+                        <span
+                            class="feedback-count"
+                            id="positiveCount"
+                        >
+                            0
+                        </span>
+                    </button>
 
                     <button
                         class="feedback-button"
+                        id="feedbackNegative"
                         type="button"
+                        aria-label="Article non utile"
                     >
-                        👎 Non
+                        👎
+
+                        <span
+                            class="feedback-count"
+                            id="negativeCount"
+                        >
+                            0
+                        </span>
                     </button>
 
                 </div>
+
+                <p
+                    class="feedback-message"
+                    id="feedbackMessage"
+                    aria-live="polite"
+                ></p>
 
             </div>
 
@@ -944,6 +1443,173 @@
         Allez HOP! · Centre d'aide
 
     </footer>
+
+
+
+    <!-- =========================
+         GESTION DES VOTES
+    ========================= -->
+
+    <script>
+
+        const MAKE_WEBHOOK_URL =
+            'https://hook.eu1.make.com/4nwchtqoc7axhe636zay3e6j1mkcn7bs';
+
+        const ARTICLE_ID =
+            'particulier-ou-professionnel.html';
+
+        const positiveButton =
+            document.getElementById('feedbackPositive');
+
+        const negativeButton =
+            document.getElementById('feedbackNegative');
+
+        const positiveCount =
+            document.getElementById('positiveCount');
+
+        const negativeCount =
+            document.getElementById('negativeCount');
+
+        const feedbackMessage =
+            document.getElementById('feedbackMessage');
+
+        const voteStorageKey =
+            'helpcenter_vote_' + ARTICLE_ID;
+
+        function hasAlreadyVoted() {
+
+            return Boolean(
+                localStorage.getItem(voteStorageKey)
+            );
+
+        }
+
+        function disableVoting() {
+
+            positiveButton.disabled = true;
+            negativeButton.disabled = true;
+
+        }
+
+        function showCounts(data) {
+
+            positiveCount.textContent =
+                Number(data.positif || 0);
+
+            negativeCount.textContent =
+                Number(data.negatif || 0);
+
+            positiveButton.classList.add('show-count');
+            negativeButton.classList.add('show-count');
+
+        }
+
+        function saveVote(voteType) {
+
+            localStorage.setItem(
+                voteStorageKey,
+                voteType
+            );
+
+        }
+
+        async function sendVote(voteType) {
+
+            const url =
+                MAKE_WEBHOOK_URL +
+                '?article=' +
+                encodeURIComponent(ARTICLE_ID) +
+                '&vote=' +
+                encodeURIComponent(voteType);
+
+            const response =
+                await fetch(
+                    url,
+                    {
+                        method: 'GET',
+                        cache: 'no-store'
+                    }
+                );
+
+            if (!response.ok) {
+
+                throw new Error(
+                    'Erreur HTTP ' +
+                    response.status
+                );
+
+            }
+
+            return await response.json();
+
+        }
+
+        async function registerVote(voteType) {
+
+            if (hasAlreadyVoted()) {
+                return;
+            }
+
+            disableVoting();
+
+            feedbackMessage.textContent =
+                'Enregistrement de votre vote…';
+
+            try {
+
+                const data =
+                    await sendVote(voteType);
+
+                saveVote(voteType);
+
+                showCounts(data);
+
+                feedbackMessage.textContent =
+                    'Merci pour votre retour !';
+
+            } catch (error) {
+
+                console.error(
+                    'Erreur lors de l’enregistrement du vote :',
+                    error
+                );
+
+                positiveButton.disabled = false;
+                negativeButton.disabled = false;
+
+                feedbackMessage.textContent =
+                    'Votre vote n’a pas pu être enregistré. Réessayez.';
+
+            }
+
+        }
+
+        positiveButton.addEventListener(
+            'click',
+            function() {
+                registerVote('positif');
+            }
+        );
+
+        negativeButton.addEventListener(
+            'click',
+            function() {
+                registerVote('negatif');
+            }
+        );
+
+        /* Aucun appel Make au chargement. */
+
+        if (hasAlreadyVoted()) {
+
+            disableVoting();
+
+            feedbackMessage.textContent =
+                'Vous avez déjà donné votre avis sur cet article.';
+
+        }
+
+    </script>
 
 
 </body>
