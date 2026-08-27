@@ -11,12 +11,12 @@
     >
 
     <title>
-        Que faire si la commande est endommagée ou non conforme ? — Allez HOP! | Centre d'aide
+        Que faire si le code-barres ou la référence ne fonctionne pas ? — Allez HOP! | Centre d'aide
     </title>
 
     <meta
         name="description"
-        content="Que faire si une commande est endommagée, si la quantité est différente ou si le volume réel ne correspond pas au volume déclaré."
+        content="Que faire si le code-barres ou la référence pose problème lors du retrait d'une commande avec Allez HOP!."
     >
 
 
@@ -264,44 +264,6 @@
 
 
         /* =========================
-           LISTES
-        ========================= */
-
-        .article ul {
-
-            margin:
-                8px 0 24px;
-
-            padding-left: 22px;
-
-            color: #44484f;
-        }
-
-
-        .article ol {
-
-            margin:
-                8px 0 24px;
-
-            padding-left: 25px;
-
-            color: #44484f;
-        }
-
-
-        .article li {
-
-            margin-bottom: 10px;
-
-            padding-left: 4px;
-
-            font-size: 15px;
-
-            line-height: 1.6;
-        }
-
-
-        /* =========================
            ENCADRE IMPORTANT
         ========================= */
 
@@ -332,105 +294,67 @@
 
 
         /* =========================
-           CAS SPECIFIQUES
+           ETAPES
         ========================= */
 
-        .case {
+        .steps {
 
             margin:
-                22px 0;
+                25px 0 28px;
 
-            padding:
-                20px 22px;
+            padding: 0;
 
-            background:
-                #fafafa;
-
-            border:
-                1px solid #eeeeee;
-
-            border-radius: 10px;
+            list-style: none;
         }
 
 
-        .case-title {
+        .step {
 
-            margin:
-                0 0 8px;
+            display: flex;
 
-            font-size: 17px;
+            align-items: flex-start;
 
-            font-weight: 800;
-
-            color: #202124;
+            margin-bottom: 17px;
         }
 
 
-        .case p {
+        .step-number {
 
-            margin:
-                0;
+            display: flex;
 
-            font-size: 15px;
-        }
+            align-items: center;
 
+            justify-content: center;
 
-        /* =========================
-           SCHEMA
-        ========================= */
+            width: 32px;
 
-        .flow {
+            height: 32px;
 
-            margin:
-                25px 0 30px;
+            flex-shrink: 0;
 
-            padding:
-                20px;
+            margin-right: 14px;
 
-            background:
-                #ffffff;
+            background: #fff4e6;
 
-            border:
-                1px solid #e8e8e8;
+            border-radius: 50%;
 
-            border-radius: 10px;
-
-            text-align: center;
-        }
-
-
-        .flow-item {
-
-            display: inline-block;
-
-            margin: 4px;
-
-            padding:
-                9px 13px;
-
-            background:
-                #fff4e6;
-
-            border-radius: 8px;
-
-            color: #44484f;
+            color: #ff9100;
 
             font-size: 14px;
 
-            font-weight: 700;
+            font-weight: 800;
         }
 
 
-        .flow-arrow {
+        .step-text {
 
-            display: inline-block;
+            padding-top: 4px;
 
-            margin:
-                0 3px;
+            font-size: 15px;
 
-            color: #999;
+            line-height: 1.6;
 
-            font-weight: 700;
+            color: #44484f;
         }
 
 
@@ -440,14 +364,18 @@
 
         .feedback {
 
-            margin-top: 35px;
+            margin-top:
+                35px;
 
-            padding-top: 28px;
+            padding-top:
+                28px;
 
             border-top:
                 1px solid #eeeeee;
 
-            text-align: center;
+            text-align:
+                center;
+
         }
 
 
@@ -456,26 +384,54 @@
             margin:
                 0 0 15px;
 
-            font-size: 16px;
+            font-size:
+                16px;
+
+            color:
+                #202124;
+
         }
 
 
         .feedback-buttons {
 
-            display: flex;
+            display:
+                flex;
 
-            justify-content: center;
+            justify-content:
+                center;
 
-            gap: 10px;
+            align-items:
+                center;
+
+            gap:
+                10px;
+
         }
 
 
         .feedback-button {
 
-            min-width: 90px;
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                7px;
+
+            min-width:
+                76px;
+
+            height:
+                42px;
 
             padding:
-                9px 16px;
+                0 14px;
 
             background:
                 #ffffff;
@@ -483,13 +439,30 @@
             border:
                 1px solid #dddddd;
 
-            border-radius: 8px;
+            border-radius:
+                10px;
 
-            color: #555;
+            color:
+                #202124;
 
-            cursor: pointer;
+            font-family:
+                inherit;
 
-            font-size: 14px;
+            font-size:
+                15px;
+
+            font-weight:
+                700;
+
+            cursor:
+                pointer;
+
+            transition:
+                border-color 0.15s ease,
+                background 0.15s ease,
+                transform 0.15s ease,
+                opacity 0.15s ease;
+
         }
 
 
@@ -498,8 +471,66 @@
             border-color:
                 #ff9100;
 
+            background:
+                #fffaf3;
+
             color:
                 #ff9100;
+
+            transform:
+                translateY(-1px);
+
+        }
+
+
+        .feedback-button:disabled {
+
+            cursor:
+                default;
+
+            opacity:
+                0.55;
+
+            transform:
+                none;
+
+        }
+
+
+        .feedback-count {
+
+            display:
+                none;
+
+            font-variant-numeric:
+                tabular-nums;
+
+        }
+
+
+        .feedback-button.show-count
+        .feedback-count {
+
+            display:
+                inline;
+
+        }
+
+
+        .feedback-message {
+
+            min-height:
+                24px;
+
+            margin:
+                15px 0 0;
+
+            font-size:
+                14px;
+
+            color:
+                #73777f;
+
         }
 
 
@@ -669,27 +700,11 @@
             }
 
 
-            .article li {
+            .feedback-button {
 
-                font-size: 15px;
-            }
+                min-width:
+                    72px;
 
-
-            .flow-item {
-
-                display: block;
-
-                margin:
-                    6px 0;
-            }
-
-
-            .flow-arrow {
-
-                display: block;
-
-                margin:
-                    2px 0;
             }
 
 
@@ -738,13 +753,13 @@
 
 
             <h1>
-                Que faire si la commande est endommagée ou non conforme ?
+                Que faire si le code-barres ou la référence ne fonctionne pas ?
             </h1>
 
 
             <p class="header-subtitle">
-                Les bons réflexes en cas de marchandise endommagée,
-                de quantité différente ou de volume non conforme.
+                Les bons réflexes lorsque le code-barres ou la référence
+                pose problème lors du retrait d'une commande.
             </p>
 
         </div>
@@ -763,427 +778,139 @@
 
 
             <h2>
-                Vérifiez la commande avant de partir
+                Présentez-vous à l'accueil du point de retrait
             </h2>
 
 
             <p>
-                Dans la mesure du possible, vérifiez la commande
-                <strong>avant de quitter le point de collecte</strong>.
+                Si vous rencontrez un problème avec le code-barres
+                ou la référence de votre commande, présentez-vous
+                directement à <strong>l'accueil du point de retrait</strong>.
             </p>
 
 
             <p>
-                Cela permet de détecter rapidement un éventuel
-                problème et de le faire résoudre directement
-                sur place.
-            </p>
-
-
-            <p>
-                Vérifiez notamment :
-            </p>
-
-
-            <ul>
-
-                <li>
-                    l'<strong>état des colis et des marchandises</strong> ;
-                </li>
-
-                <li>
-                    les <strong>quantités remises</strong> ;
-                </li>
-
-                <li>
-                    le <strong>volume réel de la commande</strong>
-                    par rapport au volume déclaré.
-                </li>
-
-            </ul>
-
-
-            <div class="highlight">
-
-                <p>
-                    <strong>Pourquoi vérifier avant de partir ?</strong>
-                    Cette vérification permet de sécuriser le bon
-                    déroulement de la course et de faire corriger
-                    rapidement un problème lorsqu'une solution
-                    est possible au point de collecte.
-                </p>
-
-            </div>
-
-
-            <h2>
-                Les marchandises ou colis sont endommagés
-            </h2>
-
-
-            <p>
-                Si vous constatez qu'un colis ou une marchandise
-                est endommagé, <strong>signalez-le au point
-                de collecte</strong>.
-            </p>
-
-
-            <p>
-                Lorsque cela est possible, le point de collecte
-                pourra procéder au <strong>remplacement de
-                l'article ou de la marchandise concernée</strong>.
-            </p>
-
-
-            <p>
-                Prenez également <strong>des photos</strong>
-                permettant de constater l'état des articles.
-            </p>
-
-
-            <div class="case">
-
-                <p class="case-title">
-                    📸 Pensez aux photos
-                </p>
-
-                <p>
-                    En cas d'article ou de marchandise dégradé(e),
-                    prenez des photos permettant de constater
-                    clairement le problème.
-                </p>
-
-            </div>
-
-
-            <h2>
-                La quantité ne correspond pas
-            </h2>
-
-
-            <p>
-                Si vous constatez une différence de quantité,
-                signalez-la d'abord au <strong>point de collecte</strong>.
-            </p>
-
-
-            <p>
-                Si le point de collecte peut résoudre le problème
-                directement, il n'est pas nécessaire de contacter
-                immédiatement le support.
-            </p>
-
-
-            <p>
-                Si aucune solution ne peut être trouvée sur place,
-                <strong>contactez ensuite le support Allez HOP!</strong>.
-            </p>
-
-
-            <div class="flow">
-
-                <span class="flow-item">
-                    Point de collecte
-                </span>
-
-                <span class="flow-arrow">
-                    →
-                </span>
-
-                <span class="flow-item">
-                    Résolution si possible
-                </span>
-
-                <span class="flow-arrow">
-                    →
-                </span>
-
-                <span class="flow-item">
-                    Support si nécessaire
-                </span>
-
-            </div>
-
-
-            <h2>
-                Le volume réel est différent du volume déclaré
-            </h2>
-
-
-            <p>
-                Si vous constatez que <strong>le volume réel de
-                la commande est différent du volume déclaré
-                lors de la réservation</strong>, contactez
-                <strong>directement le support Allez HOP!</strong>.
+                L'équipe sur place pourra vous indiquer la marche
+                à suivre pour récupérer votre commande.
             </p>
 
 
             <div class="highlight">
 
                 <p>
-                    <strong>Important :</strong>
-                    une différence entre le volume déclaré
-                    et le volume réellement constaté doit être
-                    signalée directement au support.
+                    <strong>À savoir :</strong>
+                    selon le point de retrait, le code-barres,
+                    la référence ou le bon de commande peut être
+                    utilisé pour permettre le retrait.
                 </p>
 
             </div>
 
 
-            <p>
-                Le support pourra vérifier la différence entre
-                le volume déclaré et le volume réellement constaté
-                et vous indiquer la marche à suivre.
-            </p>
-
-
-            <p>
-                <strong>Ne décidez pas vous-même de poursuivre
-                la course avec un volume différent de celui déclaré.</strong>
-            </p>
-
-
             <h2>
-                Dans quel ordre contacter le point de collecte et le support ?
+                Le code-barres ne fonctionne pas
             </h2>
 
 
             <p>
-                Pour les problèmes pouvant être résolus par le
-                point de collecte, le principe est simple :
-            </p>
-
-
-            <div class="flow">
-
-                <span class="flow-item">
-                    Point de collecte
-                </span>
-
-                <span class="flow-arrow">
-                    →
-                </span>
-
-                <span class="flow-item">
-                    Résolution si possible
-                </span>
-
-                <span class="flow-arrow">
-                    →
-                </span>
-
-                <span class="flow-item">
-                    Support si nécessaire
-                </span>
-
-            </div>
-
-
-            <p>
-                Le point de collecte est donc votre premier
-                interlocuteur lorsqu'il peut résoudre directement
-                le problème.
+                Si le scan du code-barres ne fonctionne pas,
+                présentez-vous à l'accueil du point de retrait
+                afin que l'équipe sur place puisse vous aider.
             </p>
 
 
             <p>
-                <strong>Exception :</strong> lorsqu'il existe
-                une différence entre le volume déclaré et le
-                volume réellement constaté, <strong>contactez
-                directement le support</strong>.
+                Si le point de retrait le demande, vous pouvez
+                également <strong>présenter le bon de commande</strong>.
             </p>
 
 
             <h2>
-                Le problème est découvert pendant le trajet
+                La référence fonctionne
             </h2>
 
 
             <p>
-                Si vous constatez un problème après avoir quitté
-                le point de collecte, <strong>contactez d'abord
-                le point de collecte</strong>.
+                Si le code-barres ne peut pas être utilisé mais
+                que la <strong>référence de la commande</strong>
+                est acceptée par le point de retrait, vous pouvez
+                poursuivre normalement la procédure de retrait.
             </p>
 
 
             <p>
-                Expliquez la situation et suivez ses indications.
+                Une fois la commande récupérée, vous pourrez
+                <strong>valider le retrait dans l'application</strong>.
+            </p>
+
+
+            <h2>
+                Le bon de commande peut être présenté
+            </h2>
+
+
+            <p>
+                Si le point de retrait vous demande le bon de commande,
+                présentez-le directement à l'accueil.
             </p>
 
 
             <p>
-                Si aucune solution ne peut être trouvée,
-                <strong>contactez ensuite le support
+                Suivez les indications du point de retrait pour
+                terminer la procédure de retrait.
+            </p>
+
+
+            <h2>
+                Le problème empêche le retrait
+            </h2>
+
+
+            <p>
+                Si malgré votre passage à l'accueil vous ne parvenez
+                pas à récupérer la commande, <strong>contactez le support
                 Allez HOP!</strong>.
             </p>
 
 
-            <div class="highlight">
-
-                <p>
-                    <strong>Cas particulier :</strong>
-                    si le problème concerne une différence
-                    entre le volume déclaré et le volume
-                    réellement constaté, contactez directement
-                    le support.
-                </p>
-
-            </div>
-
-
-            <h2>
-                Le problème est découvert à la livraison
-            </h2>
-
-
             <p>
-                Si vous découvrez le problème à l'arrivée
-                chez le destinataire :
-            </p>
-
-
-            <ol>
-
-                <li>
-                    <strong>Contactez le point de collecte.</strong>
-                </li>
-
-                <li>
-                    Cherchez une solution avec lui.
-                </li>
-
-                <li>
-                    Si aucune solution n'est possible,
-                    <strong>contactez le support</strong>.
-                </li>
-
-            </ol>
-
-
-            <p>
-                Si le problème concerne une différence entre
-                le <strong>volume déclaré et le volume réel</strong>,
-                contactez directement le support.
+                Le support vous indiquera alors la marche à suivre.
             </p>
 
 
             <h2>
-                Vous êtes responsable de la commande pendant le transport
+                Le problème n'empêche pas le retrait
             </h2>
 
 
             <p>
-                Une fois la commande récupérée, vous êtes
-                <strong>entièrement responsable de sa bonne
-                conservation pendant le transport</strong>.
+                Si le problème rencontré est mineur et que vous avez
+                finalement pu récupérer la commande, vous pouvez
+                poursuivre normalement votre course.
             </p>
 
 
             <p>
-                Les marchandises doivent être
-                <strong>correctement calées et manipulées
-                avec soin</strong>, comme s'il s'agissait
-                de vos propres articles.
+                Une fois le retrait effectué, vous pouvez quitter
+                le point de retrait et continuer votre trajet.
             </p>
-
-
-            <div class="highlight">
-
-                <p>
-                    <strong>À retenir :</strong>
-                    prenez soin des marchandises pendant toute
-                    la course et assurez-vous qu'elles sont
-                    correctement calées.
-                </p>
-
-            </div>
 
 
             <h2>
-                Cas d'un commerce partenaire
+                Y a-t-il un dédommagement ?
             </h2>
 
 
             <p>
-                Pour un commerce partenaire, la procédure
-                reste la même :
+                Non. Les problèmes liés au code-barres, à la référence
+                ou au retrait font partie de la procédure de retrait
+                et de ses éventuels aléas.
             </p>
 
 
-            <ul>
-
-                <li>
-                    prenez des <strong>photos</strong> si nécessaire ;
-                </li>
-
-                <li>
-                    contactez le <strong>point de collecte</strong>
-                    en premier lorsqu'il peut résoudre le problème ;
-                </li>
-
-                <li>
-                    contactez le <strong>support</strong> si aucune
-                    solution ne peut être trouvée ;
-                </li>
-
-                <li>
-                    en cas de <strong>différence entre le volume
-                    déclaré et le volume réel</strong>, contactez
-                    directement le support.
-                </li>
-
-            </ul>
-
-
-            <h2>
-                À retenir
-            </h2>
-
-
-            <div class="case">
-
-                <p class="case-title">
-                    📦 Marchandise endommagée
-                </p>
-
-                <p>
-                    Point de collecte → remplacement si possible
-                    → photos.
-                </p>
-
-            </div>
-
-
-            <div class="case">
-
-                <p class="case-title">
-                    🔢 Quantité différente
-                </p>
-
-                <p>
-                    Point de collecte → support si aucune solution.
-                </p>
-
-            </div>
-
-
-            <div class="case">
-
-                <p class="case-title">
-                    📐 Volume déclaré différent du volume réel
-                </p>
-
-                <p>
-                    <strong>Support directement.</strong>
-                </p>
-
-            </div>
-
-
             <p>
-                Pendant toute la course, manipulez les marchandises
-                avec soin et assurez-vous qu'elles sont correctement
-                calées.
+                Ils ne donnent donc pas lieu à un dédommagement
+                spécifique.
             </p>
 
 
@@ -1193,22 +920,13 @@
 
 
             <p>
-                Vous rencontrez un problème avec la commande ?
+                Si le problème vous empêche de récupérer la commande,
+                contactez directement le support Allez HOP!.
             </p>
 
 
             <p>
-                Lorsque le problème peut être résolu par le point
-                de collecte, contactez-le en premier.
-                Si aucune solution ne peut être trouvée,
-                contactez le support Allez HOP!.
-            </p>
-
-
-            <p>
-                En cas de différence entre le volume déclaré
-                et le volume réellement constaté, contactez
-                directement le support.
+                L'équipe vous indiquera la marche à suivre.
             </p>
 
 
@@ -1222,25 +940,51 @@
                     Cet article vous a-t-il été utile ?
                 </h3>
 
-
                 <div class="feedback-buttons">
 
                     <button
                         class="feedback-button"
+                        id="feedbackPositive"
                         type="button"
+                        aria-label="Article utile"
                     >
-                        👍 Oui
-                    </button>
 
+                        👍
+
+                        <span
+                            class="feedback-count"
+                            id="positiveCount"
+                        >
+                            0
+                        </span>
+
+                    </button>
 
                     <button
                         class="feedback-button"
+                        id="feedbackNegative"
                         type="button"
+                        aria-label="Article non utile"
                     >
-                        👎 Non
+
+                        👎
+
+                        <span
+                            class="feedback-count"
+                            id="negativeCount"
+                        >
+                            0
+                        </span>
+
                     </button>
 
                 </div>
+
+                <p
+                    class="feedback-message"
+                    id="feedbackMessage"
+                    aria-live="polite"
+                ></p>
 
             </div>
 
@@ -1283,6 +1027,356 @@
 
     </footer>
 
+
+
+    <!-- =========================
+         GESTION DES VOTES
+    ========================= -->
+
+    <script>
+
+        /* =====================================================
+           CONFIGURATION
+        ===================================================== */
+
+        const MAKE_WEBHOOK_URL =
+            'https://hook.eu1.make.com/4nwchtqoc7axhe636zay3e6j1mkcn7bs';
+
+
+        /*
+         * Identifiant EXACT de cet article.
+         *
+         * Il correspond au nom du fichier sans .html.
+         */
+
+        const ARTICLE_ID =
+            'code-barres-reference-probleme';
+
+
+        /* =====================================================
+           ELEMENTS
+        ===================================================== */
+
+        const positiveButton =
+            document.getElementById(
+                'feedbackPositive'
+            );
+
+
+        const negativeButton =
+            document.getElementById(
+                'feedbackNegative'
+            );
+
+
+        const positiveCount =
+            document.getElementById(
+                'positiveCount'
+            );
+
+
+        const negativeCount =
+            document.getElementById(
+                'negativeCount'
+            );
+
+
+        const feedbackMessage =
+            document.getElementById(
+                'feedbackMessage'
+            );
+
+
+        /* =====================================================
+           MEMORISATION LOCALE DU VOTE
+        ===================================================== */
+
+        const voteStorageKey =
+            'helpcenter_vote_' + ARTICLE_ID;
+
+
+        function hasAlreadyVoted() {
+
+            return Boolean(
+                localStorage.getItem(
+                    voteStorageKey
+                )
+            );
+
+        }
+
+
+        /* =====================================================
+           DESACTIVER LES BOUTONS
+        ===================================================== */
+
+        function disableVoting() {
+
+            positiveButton.disabled =
+                true;
+
+            negativeButton.disabled =
+                true;
+
+        }
+
+
+        /* =====================================================
+           AFFICHER LES COMPTEURS
+        ===================================================== */
+
+        function showCounts(data) {
+
+            positiveCount.textContent =
+                Number(
+                    data.positif || 0
+                );
+
+
+            negativeCount.textContent =
+                Number(
+                    data.negatif || 0
+                );
+
+
+            positiveButton.classList.add(
+                'show-count'
+            );
+
+
+            negativeButton.classList.add(
+                'show-count'
+            );
+
+        }
+
+
+        /* =====================================================
+           ENREGISTRER LE VOTE LOCALEMENT
+        ===================================================== */
+
+        function saveVote(voteType) {
+
+            localStorage.setItem(
+                voteStorageKey,
+                voteType
+            );
+
+        }
+
+
+        /* =====================================================
+           ENVOYER LE VOTE A MAKE
+        ===================================================== */
+
+        async function sendVote(
+            voteType
+        ) {
+
+            const url =
+                MAKE_WEBHOOK_URL +
+                '?article=' +
+                encodeURIComponent(
+                    ARTICLE_ID
+                ) +
+                '&vote=' +
+                encodeURIComponent(
+                    voteType
+                );
+
+
+            const response =
+                await fetch(
+                    url,
+                    {
+                        method:
+                            'GET',
+
+                        cache:
+                            'no-store'
+                    }
+                );
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    'Erreur HTTP ' +
+                    response.status
+                );
+
+            }
+
+
+            return await response.json();
+
+        }
+
+
+        /* =====================================================
+           VOTE POSITIF
+        ===================================================== */
+
+        positiveButton.addEventListener(
+            'click',
+            async function() {
+
+                if (
+                    hasAlreadyVoted()
+                ) {
+
+                    return;
+
+                }
+
+
+                disableVoting();
+
+
+                feedbackMessage.textContent =
+                    'Enregistrement de votre vote…';
+
+
+                try {
+
+                    const data =
+                        await sendVote(
+                            'positif'
+                        );
+
+
+                    saveVote(
+                        'positif'
+                    );
+
+
+                    showCounts(
+                        data
+                    );
+
+
+                    feedbackMessage.textContent =
+                        'Merci pour votre retour !';
+
+
+                } catch (error) {
+
+                    console.error(
+                        'Erreur vote positif :',
+                        error
+                    );
+
+
+                    positiveButton.disabled =
+                        false;
+
+                    negativeButton.disabled =
+                        false;
+
+
+                    feedbackMessage.textContent =
+                        'Votre vote n’a pas pu être enregistré. Réessayez.';
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           VOTE NEGATIF
+        ===================================================== */
+
+        negativeButton.addEventListener(
+            'click',
+            async function() {
+
+                if (
+                    hasAlreadyVoted()
+                ) {
+
+                    return;
+
+                }
+
+
+                disableVoting();
+
+
+                feedbackMessage.textContent =
+                    'Enregistrement de votre vote…';
+
+
+                try {
+
+                    const data =
+                        await sendVote(
+                            'negatif'
+                        );
+
+
+                    saveVote(
+                        'negatif'
+                    );
+
+
+                    showCounts(
+                        data
+                    );
+
+
+                    feedbackMessage.textContent =
+                        'Merci pour votre retour !';
+
+
+                } catch (error) {
+
+                    console.error(
+                        'Erreur vote négatif :',
+                        error
+                    );
+
+
+                    positiveButton.disabled =
+                        false;
+
+                    negativeButton.disabled =
+                        false;
+
+
+                    feedbackMessage.textContent =
+                        'Votre vote n’a pas pu être enregistré. Réessayez.';
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           ETAT LOCAL AU CHARGEMENT
+        ===================================================== */
+
+        /*
+         * Aucun appel Make au chargement.
+         *
+         * Les compteurs restent donc cachés
+         * tant que l'utilisateur n'a pas voté.
+         */
+
+        if (
+            hasAlreadyVoted()
+        ) {
+
+            disableVoting();
+
+
+            feedbackMessage.textContent =
+                'Vous avez déjà donné votre avis sur cet article.';
+
+        }
+
+    </script>
 
 </body>
 
