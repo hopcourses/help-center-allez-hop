@@ -365,6 +365,169 @@
 
 
         /* =========================
+           AVIS ARTICLE
+        ========================= */
+
+        .article-feedback {
+
+            margin-top:
+                35px;
+
+            padding-top:
+                28px;
+
+            border-top:
+                1px solid #eeeeee;
+
+            text-align:
+                center;
+
+        }
+
+
+        .feedback-question {
+
+            margin:
+                0 0 16px;
+
+            font-size:
+                16px;
+
+            font-weight:
+                700;
+
+            color:
+                #202124;
+
+        }
+
+
+        .feedback-buttons {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                12px;
+
+        }
+
+
+        .feedback-button {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                7px;
+
+            min-width:
+                76px;
+
+            height:
+                42px;
+
+            padding:
+                0 14px;
+
+            background:
+                #ffffff;
+
+            border:
+                1px solid #dddddd;
+
+            border-radius:
+                10px;
+
+            color:
+                #202124;
+
+            font-family:
+                inherit;
+
+            font-size:
+                15px;
+
+            font-weight:
+                700;
+
+            cursor:
+                pointer;
+
+            transition:
+                border-color 0.15s ease,
+                background 0.15s ease,
+                transform 0.15s ease;
+
+        }
+
+
+        .feedback-button:hover {
+
+            border-color:
+                #ffb55c;
+
+            background:
+                #fffaf3;
+
+            transform:
+                translateY(-1px);
+
+        }
+
+
+        .feedback-button:disabled {
+
+            cursor:
+                default;
+
+            opacity:
+                0.7;
+
+            transform:
+                none;
+
+        }
+
+
+        .feedback-count {
+
+            font-variant-numeric:
+                tabular-nums;
+
+        }
+
+
+        .feedback-message {
+
+            min-height:
+                24px;
+
+            margin:
+                15px 0 0;
+
+            font-size:
+                14px;
+
+            color:
+                #73777f;
+
+        }
+
+
+        /* =========================
            SUPPORT
         ========================= */
 
@@ -561,6 +724,22 @@
             }
 
 
+            .feedback-buttons {
+
+                gap:
+                    10px;
+
+            }
+
+
+            .feedback-button {
+
+                min-width:
+                    72px;
+
+            }
+
+
             .support {
 
                 padding:
@@ -687,6 +866,78 @@
             </p>
 
 
+            <!-- =========================
+                 AVIS ARTICLE
+            ========================= -->
+
+            <section
+                class="article-feedback"
+                aria-label="Avis sur l'article"
+            >
+
+                <p class="feedback-question">
+                    Cet article vous a-t-il été utile ?
+                </p>
+
+
+                <div class="feedback-buttons">
+
+
+                    <!-- POUCE HAUT -->
+
+                    <button
+                        type="button"
+                        class="feedback-button"
+                        id="feedbackPositive"
+                        aria-label="Article utile"
+                    >
+
+                        👍
+
+                        <span
+                            class="feedback-count"
+                            id="positiveCount"
+                        >
+                            0
+                        </span>
+
+                    </button>
+
+
+                    <!-- POUCE BAS -->
+
+                    <button
+                        type="button"
+                        class="feedback-button"
+                        id="feedbackNegative"
+                        aria-label="Article non utile"
+                    >
+
+                        👎
+
+                        <span
+                            class="feedback-count"
+                            id="negativeCount"
+                        >
+                            0
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+
+                <p
+                    class="feedback-message"
+                    id="feedbackMessage"
+                    aria-live="polite"
+                ></p>
+
+
+            </section>
+
+
         </article>
 
 
@@ -725,6 +976,238 @@
         Allez HOP! · Centre d'aide
 
     </footer>
+
+
+    <!-- =========================
+         GESTION DES VOTES
+    ========================= -->
+
+    <script>
+
+        /*
+         * URL du webhook Make
+         */
+
+        const MAKE_WEBHOOK_URL =
+            'https://hook.eu1.make.com/4nwchtqoc7axhe636zay3e6j1mkcn7bs';
+
+
+        /*
+         * Identifiant unique de l'article.
+         *
+         * Cet identifiant devra être utilisé
+         * sur les autres articles.
+         */
+
+        const ARTICLE_ID =
+            'gains-cagnotte';
+
+
+        /*
+         * Elements HTML
+         */
+
+        const positiveButton =
+            document.getElementById(
+                'feedbackPositive'
+            );
+
+
+        const negativeButton =
+            document.getElementById(
+                'feedbackNegative'
+            );
+
+
+        const positiveCount =
+            document.getElementById(
+                'positiveCount'
+            );
+
+
+        const negativeCount =
+            document.getElementById(
+                'negativeCount'
+            );
+
+
+        const feedbackMessage =
+            document.getElementById(
+                'feedbackMessage'
+            );
+
+
+        /*
+         * Envoie le vote à Make.
+         *
+         * On utilise une requête GET avec paramètres
+         * afin que le navigateur puisse envoyer la donnée
+         * sans bloquer sur les règles CORS.
+         */
+
+        function sendVote(voteType) {
+
+            const url =
+                MAKE_WEBHOOK_URL +
+                '?article=' +
+                encodeURIComponent(
+                    ARTICLE_ID
+                ) +
+                '&vote=' +
+                encodeURIComponent(
+                    voteType
+                );
+
+
+            /*
+             * Image invisible :
+             * le navigateur appelle le webhook
+             * sans changer de page.
+             */
+
+            const beacon =
+                new Image();
+
+
+            beacon.src =
+                url;
+
+        }
+
+
+        /*
+         * Empêche un même visiteur
+         * de voter plusieurs fois sur cet article
+         * pendant sa visite.
+         */
+
+        let hasVoted = false;
+
+
+        /*
+         * POUCE HAUT
+         */
+
+        positiveButton.addEventListener(
+            'click',
+            function() {
+
+                if (
+                    hasVoted
+                ) {
+
+                    return;
+
+                }
+
+
+                hasVoted =
+                    true;
+
+
+                /*
+                 * Compteur visuel immédiat
+                 */
+
+                const currentPositive =
+                    Number(
+                        positiveCount.textContent
+                    );
+
+
+                positiveCount.textContent =
+                    currentPositive + 1;
+
+
+                /*
+                 * Envoi à Make
+                 */
+
+                sendVote(
+                    'positif'
+                );
+
+
+                /*
+                 * Désactivation
+                 */
+
+                positiveButton.disabled =
+                    true;
+
+                negativeButton.disabled =
+                    true;
+
+
+                feedbackMessage.textContent =
+                    'Merci pour votre retour !';
+
+            }
+        );
+
+
+        /*
+         * POUCE BAS
+         */
+
+        negativeButton.addEventListener(
+            'click',
+            function() {
+
+                if (
+                    hasVoted
+                ) {
+
+                    return;
+
+                }
+
+
+                hasVoted =
+                    true;
+
+
+                /*
+                 * Compteur visuel immédiat
+                 */
+
+                const currentNegative =
+                    Number(
+                        negativeCount.textContent
+                    );
+
+
+                negativeCount.textContent =
+                    currentNegative + 1;
+
+
+                /*
+                 * Envoi à Make
+                 */
+
+                sendVote(
+                    'negatif'
+                );
+
+
+                /*
+                 * Désactivation
+                 */
+
+                positiveButton.disabled =
+                    true;
+
+                negativeButton.disabled =
+                    true;
+
+
+                feedbackMessage.textContent =
+                    'Merci pour votre retour !';
+
+            }
+        );
+
+    </script>
 
 
 </body>
