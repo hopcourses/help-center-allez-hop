@@ -16,22 +16,29 @@
 
     <meta
         name="description"
-        content="Découvrez quoi faire si vous devez annuler une course sur Allez HOP! et comment signaler rapidement un imprévu."
+        content="Comment annuler une course Allez HOP!, quand utiliser le bouton d'annulation et que faire si l'annulation n'est plus disponible."
     >
 
-    <!-- BREVO CONVERSATIONS -->
+
+    <!-- =========================
+         BREVO CONVERSATIONS
+    ========================= -->
 
     <script>
 
         window.BrevoConversationsSetup = {
 
-            customWidgetButton: '.brevo-chat-button',
+            customWidgetButton:
+                '.brevo-chat-button',
 
-            chatWidth: 400,
+            chatWidth:
+                400,
 
-            chatHeight: 550,
+            chatHeight:
+                550,
 
-            buttonPosition: 'br'
+            buttonPosition:
+                'br'
 
         };
 
@@ -51,14 +58,19 @@
 
             };
 
-            var s = d.createElement('script');
+            var s =
+                d.createElement('script');
 
             s.async = true;
 
             s.src =
                 'https://conversations-widget.brevo.com/brevo-conversations.js';
 
-            if (d.head) d.head.appendChild(s);
+            if (d.head) {
+
+                d.head.appendChild(s);
+
+            }
 
         })(document, window, 'BrevoConversations');
 
@@ -74,8 +86,10 @@
 
         html,
         body {
+
             margin: 0;
             padding: 0;
+
         }
 
 
@@ -87,125 +101,176 @@
                 Helvetica,
                 sans-serif;
 
-            background: #f8f9fa;
+            background:
+                #f8f9fa;
 
-            color: #202124;
+            color:
+                #202124;
+
         }
 
 
+        /* =========================
+           HEADER
+        ========================= */
+
         .header {
 
-            background: #ffffff;
+            background:
+                #ffffff;
 
             border-bottom:
                 1px solid #eeeeee;
 
             padding:
                 25px 20px 35px;
+
         }
 
 
         .header-inner {
 
-            max-width: 1000px;
+            max-width:
+                1000px;
 
-            margin: 0 auto;
+            margin:
+                0 auto;
+
         }
 
 
         .logo {
 
-            display: inline-block;
+            display:
+                inline-block;
 
-            margin-bottom: 25px;
+            margin-bottom:
+                25px;
 
-            font-size: 23px;
+            font-size:
+                23px;
 
-            font-weight: 800;
+            font-weight:
+                800;
 
-            color: #ff9100;
+            color:
+                #ff9100;
+
         }
 
 
         .breadcrumb {
 
-            display: inline-flex;
+            display:
+                inline-flex;
 
-            align-items: center;
+            align-items:
+                center;
 
-            margin-bottom: 24px;
+            margin-bottom:
+                24px;
 
-            color: #73777f;
+            color:
+                #73777f;
 
-            text-decoration: none;
+            text-decoration:
+                none;
 
-            font-size: 14px;
+            font-size:
+                14px;
 
-            font-weight: 600;
+            font-weight:
+                600;
+
         }
 
 
         .breadcrumb:hover {
-            color: #ff9100;
+
+            color:
+                #ff9100;
+
         }
 
 
         .header h1 {
 
-            max-width: 760px;
+            max-width:
+                760px;
 
-            margin: 0;
+            margin:
+                0;
 
-            font-size: 36px;
+            font-size:
+                36px;
 
-            line-height: 1.25;
+            line-height:
+                1.25;
 
-            letter-spacing: -0.8px;
+            letter-spacing:
+                -0.8px;
+
         }
 
 
         .header-subtitle {
 
-            max-width: 700px;
+            max-width:
+                700px;
 
             margin:
                 12px 0 0;
 
-            font-size: 17px;
+            font-size:
+                17px;
 
-            line-height: 1.6;
+            line-height:
+                1.6;
 
-            color: #73777f;
+            color:
+                #73777f;
+
         }
 
 
+        /* =========================
+           CONTENU
+        ========================= */
+
         .content {
 
-            width: 100%;
+            width:
+                100%;
 
-            max-width: 800px;
+            max-width:
+                800px;
 
-            margin: 0 auto;
+            margin:
+                0 auto;
 
             padding:
                 45px 20px 60px;
+
         }
 
 
         .article {
 
-            background: #ffffff;
+            background:
+                #ffffff;
 
             border:
                 1px solid #e8e8e8;
 
-            border-radius: 14px;
+            border-radius:
+                14px;
 
             padding:
                 35px 40px;
 
             box-shadow:
                 0 2px 10px rgba(0,0,0,0.025);
+
         }
 
 
@@ -214,11 +279,15 @@
             margin:
                 0 0 20px;
 
-            font-size: 16px;
+            font-size:
+                16px;
 
-            line-height: 1.75;
+            line-height:
+                1.75;
 
-            color: #44484f;
+            color:
+                #44484f;
+
         }
 
 
@@ -227,84 +296,72 @@
             margin:
                 30px 0 12px;
 
-            font-size: 22px;
+            font-size:
+                22px;
 
-            line-height: 1.35;
+            line-height:
+                1.35;
 
-            color: #202124;
+            color:
+                #202124;
+
         }
 
 
         .article h2:first-child {
-            margin-top: 0;
+
+            margin-top:
+                0;
+
         }
 
 
         .article strong {
-            color: #202124;
+
+            color:
+                #202124;
+
         }
 
 
-        .steps {
+        /* =========================
+           LISTES
+        ========================= */
+
+        .article ul {
 
             margin:
-                25px 0 28px;
+                8px 0 24px;
 
-            padding: 0;
+            padding-left:
+                22px;
 
-            list-style: none;
+            color:
+                #44484f;
+
         }
 
 
-        .step {
+        .article li {
 
-            display: flex;
+            margin-bottom:
+                10px;
 
-            align-items: flex-start;
+            padding-left:
+                4px;
 
-            margin-bottom: 17px;
+            font-size:
+                15px;
+
+            line-height:
+                1.6;
+
         }
 
 
-        .step-number {
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            width: 32px;
-
-            height: 32px;
-
-            flex-shrink: 0;
-
-            margin-right: 14px;
-
-            background: #fff4e6;
-
-            border-radius: 50%;
-
-            color: #ff9100;
-
-            font-size: 14px;
-
-            font-weight: 800;
-        }
-
-
-        .step-text {
-
-            padding-top: 4px;
-
-            font-size: 15px;
-
-            line-height: 1.6;
-
-            color: #44484f;
-        }
-
+        /* =========================
+           ENCADRE
+        ========================= */
 
         .highlight {
 
@@ -320,28 +377,41 @@
             border-left:
                 4px solid #ff9100;
 
-            border-radius: 8px;
+            border-radius:
+                8px;
+
         }
 
 
         .highlight p {
 
-            margin: 0;
+            margin:
+                0;
 
-            font-size: 15px;
+            font-size:
+                15px;
+
         }
 
 
+        /* =========================
+           FEEDBACK
+        ========================= */
+
         .feedback {
 
-            margin-top: 35px;
+            margin-top:
+                35px;
 
-            padding-top: 28px;
+            padding-top:
+                28px;
 
             border-top:
                 1px solid #eeeeee;
 
-            text-align: center;
+            text-align:
+                center;
+
         }
 
 
@@ -350,26 +420,54 @@
             margin:
                 0 0 15px;
 
-            font-size: 16px;
+            font-size:
+                16px;
+
+            color:
+                #202124;
+
         }
 
 
         .feedback-buttons {
 
-            display: flex;
+            display:
+                flex;
 
-            justify-content: center;
+            justify-content:
+                center;
 
-            gap: 10px;
+            align-items:
+                center;
+
+            gap:
+                10px;
+
         }
 
 
         .feedback-button {
 
-            min-width: 90px;
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                7px;
+
+            min-width:
+                76px;
+
+            height:
+                42px;
 
             padding:
-                9px 16px;
+                0 14px;
 
             background:
                 #ffffff;
@@ -377,13 +475,30 @@
             border:
                 1px solid #dddddd;
 
-            border-radius: 8px;
+            border-radius:
+                10px;
 
-            color: #555;
+            color:
+                #202124;
 
-            cursor: pointer;
+            font-family:
+                inherit;
 
-            font-size: 14px;
+            font-size:
+                15px;
+
+            font-weight:
+                700;
+
+            cursor:
+                pointer;
+
+            transition:
+                border-color 0.15s ease,
+                background 0.15s ease,
+                transform 0.15s ease,
+                opacity 0.15s ease;
+
         }
 
 
@@ -392,14 +507,77 @@
             border-color:
                 #ff9100;
 
+            background:
+                #fffaf3;
+
             color:
                 #ff9100;
+
+            transform:
+                translateY(-1px);
+
         }
 
 
+        .feedback-button:disabled {
+
+            cursor:
+                default;
+
+            opacity:
+                0.55;
+
+            transform:
+                none;
+
+        }
+
+
+        .feedback-count {
+
+            display:
+                none;
+
+            font-variant-numeric:
+                tabular-nums;
+
+        }
+
+
+        .feedback-button.show-count
+        .feedback-count {
+
+            display:
+                inline;
+
+        }
+
+
+        .feedback-message {
+
+            min-height:
+                24px;
+
+            margin:
+                15px 0 0;
+
+            font-size:
+                14px;
+
+            color:
+                #73777f;
+
+        }
+
+
+        /* =========================
+           SUPPORT
+        ========================= */
+
         .support {
 
-            margin-top: 25px;
+            margin-top:
+                25px;
 
             padding:
                 28px;
@@ -410,68 +588,95 @@
             border:
                 1px solid #e8e8e8;
 
-            border-radius: 14px;
+            border-radius:
+                14px;
 
-            text-align: center;
+            text-align:
+                center;
+
         }
 
 
         .support h2 {
 
-            margin: 0;
+            margin:
+                0;
 
-            font-size: 19px;
+            font-size:
+                19px;
+
         }
 
 
         .support p {
 
-            max-width: 500px;
+            max-width:
+                500px;
 
             margin:
                 8px auto 18px;
 
-            font-size: 14px;
+            font-size:
+                14px;
 
-            line-height: 1.5;
+            line-height:
+                1.5;
 
-            color: #73777f;
+            color:
+                #73777f;
+
         }
 
 
+        /* =========================
+           BOUTON BREVO
+        ========================= */
+
         .brevo-chat-button {
 
-            display: inline-flex;
+            display:
+                inline-flex;
 
-            align-items: center;
+            align-items:
+                center;
 
-            justify-content: center;
+            justify-content:
+                center;
 
-            min-height: 46px;
+            min-height:
+                46px;
 
             padding:
                 0 24px;
 
-            border: none;
+            border:
+                none;
 
-            border-radius: 9px;
+            border-radius:
+                9px;
 
             background:
                 #ff9100;
 
-            color: #ffffff;
+            color:
+                #ffffff;
 
-            font-family: inherit;
+            font-family:
+                inherit;
 
-            font-size: 14px;
+            font-size:
+                14px;
 
-            font-weight: 700;
+            font-weight:
+                700;
 
-            cursor: pointer;
+            cursor:
+                pointer;
 
             transition:
                 background 0.15s ease,
                 transform 0.15s ease;
+
         }
 
 
@@ -482,21 +687,34 @@
 
             transform:
                 translateY(-1px);
+
         }
 
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
 
             padding:
                 0 20px 30px;
 
-            text-align: center;
+            text-align:
+                center;
 
-            font-size: 12px;
+            font-size:
+                12px;
 
-            color: #9a9da3;
+            color:
+                #9a9da3;
+
         }
 
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 700px) {
 
@@ -504,18 +722,23 @@
 
                 padding:
                     22px 16px 30px;
+
             }
 
 
             .header h1 {
 
-                font-size: 29px;
+                font-size:
+                    29px;
+
             }
 
 
             .header-subtitle {
 
-                font-size: 15px;
+                font-size:
+                    15px;
+
             }
 
 
@@ -523,6 +746,7 @@
 
                 padding:
                     25px 12px 45px;
+
             }
 
 
@@ -530,20 +754,42 @@
 
                 padding:
                     25px 20px;
+
             }
 
 
             .article p {
 
-                font-size: 15px;
+                font-size:
+                    15px;
 
-                line-height: 1.7;
+                line-height:
+                    1.7;
+
             }
 
 
             .article h2 {
 
-                font-size: 20px;
+                font-size:
+                    20px;
+
+            }
+
+
+            .article li {
+
+                font-size:
+                    15px;
+
+            }
+
+
+            .feedback-button {
+
+                min-width:
+                    72px;
+
             }
 
 
@@ -551,12 +797,15 @@
 
                 padding:
                     24px 18px;
+
             }
 
 
             .brevo-chat-button {
 
-                width: 100%;
+                width:
+                    100%;
+
             }
 
         }
@@ -569,6 +818,10 @@
 <body>
 
 
+    <!-- =========================
+         HEADER
+    ========================= -->
+
     <header class="header">
 
         <div class="header-inner">
@@ -580,7 +833,7 @@
 
 
             <a
-                href="../courses.html"
+                href="/courses"
                 class="breadcrumb"
             >
                 ← Courses
@@ -593,14 +846,19 @@
 
 
             <p class="header-subtitle">
-                Que faire si vous ne pouvez plus effectuer
-                une course que vous avez acceptée ?
+                Les situations dans lesquelles vous pouvez
+                annuler une course et la procédure à suivre.
             </p>
+
 
         </div>
 
     </header>
 
+
+    <!-- =========================
+         CONTENU
+    ========================= -->
 
     <main class="content">
 
@@ -609,22 +867,104 @@
 
 
             <h2>
-                Je dois annuler une course : que faire ?
+                Dans quels cas annuler une course ?
             </h2>
 
 
             <p>
-                Si vous ne pouvez finalement pas effectuer une course
-                que vous avez acceptée, il est important de
-                <strong>prévenir rapidement l'équipe Allez HOP!</strong>.
+                Vous pouvez annuler une course lorsque vous ne
+                pouvez plus l'effectuer, notamment en cas :
+            </p>
+
+
+            <ul>
+
+                <li>
+                    d'<strong>empêchement</strong> ;
+                </li>
+
+                <li>
+                    d'<strong>urgence</strong> ;
+                </li>
+
+                <li>
+                    de <strong>panne</strong> ou d'<strong>accident</strong> ;
+                </li>
+
+                <li>
+                    ou plus généralement lorsqu'il existe un
+                    <strong>risque pour votre sécurité ou votre santé</strong>.
+                </li>
+
+            </ul>
+
+
+            <div class="highlight">
+
+                <p>
+                    <strong>Votre sécurité et votre santé passent
+                    avant la course.</strong>
+                    Si vous ne pouvez pas effectuer la course
+                    dans de bonnes conditions, utilisez la
+                    procédure d'annulation adaptée à votre situation.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Annuler une course depuis l'application
+            </h2>
+
+
+            <p>
+                Lorsque l'annulation est disponible dans
+                l'application, utilisez simplement le bouton
+                <strong>« Annuler la course »</strong>.
             </p>
 
 
             <p>
-                Une annulation peut avoir des conséquences sur
-                l'organisation de la livraison. Il est donc préférable
-                de signaler la situation dès que vous savez que vous
-                ne pourrez pas effectuer la course.
+                Aucune raison particulière ne doit être
+                sélectionnée lors de l'annulation.
+            </p>
+
+
+            <h2>
+                Le bouton « Annuler la course » n'apparaît plus
+            </h2>
+
+
+            <p>
+                Si <strong>l'heure de démarrage de la course
+                est passée</strong>, le bouton
+                « Annuler la course » n'apparaît plus.
+            </p>
+
+
+            <p>
+                Dans ce cas, <strong>contactez le support
+                Allez HOP!</strong> afin que l'équipe puisse
+                procéder à l'annulation et vous indiquer
+                la marche à suivre.
+            </p>
+
+
+            <h2>
+                Je ne peux plus continuer une course
+            </h2>
+
+
+            <p>
+                Si vous avez déjà récupéré la commande et que
+                vous ne pouvez plus poursuivre la course,
+                <strong>contactez directement le support</strong>.
+            </p>
+
+
+            <p>
+                Le support vous aidera à trouver une solution
+                adaptée à la situation.
             </p>
 
 
@@ -632,134 +972,103 @@
 
                 <p>
                     <strong>Important :</strong>
-                    n'attendez pas le dernier moment pour signaler
-                    une impossibilité d'effectuer une course.
+                    une fois la commande récupérée, ne tentez
+                    pas d'annuler vous-même la course depuis
+                    l'application. Contactez le support.
                 </p>
 
             </div>
 
 
             <h2>
-                Dans quels cas demander une annulation ?
+                Les annulations ont-elles des conséquences ?
             </h2>
 
 
             <p>
-                Une annulation peut notamment être nécessaire en cas
-                d'<strong>imprévu</strong>, d'indisponibilité soudaine
-                ou de problème empêchant la réalisation de la course.
+                Une annulation ponctuelle n'entraîne pas
+                de conséquence particulière.
+            </p>
+
+
+            <p>
+                En revanche, des
+                <strong>annulations tardives répétées et trop
+                fréquentes</strong> peuvent entraîner une
+                <strong>restriction provisoire du compte
+                cotransporteur</strong>.
             </p>
 
 
             <h2>
-                Comment signaler que je ne peux plus effectuer la course ?
-            </h2>
-
-
-            <div class="steps">
-
-
-                <div class="step">
-
-                    <div class="step-number">
-                        1
-                    </div>
-
-                    <div class="step-text">
-                        <strong>Identifiez la course concernée</strong>
-                        et vérifiez les informations associées.
-                    </div>
-
-                </div>
-
-
-                <div class="step">
-
-                    <div class="step-number">
-                        2
-                    </div>
-
-                    <div class="step-text">
-                        <strong>Contactez rapidement le support</strong>
-                        depuis le chat Allez HOP!.
-                    </div>
-
-                </div>
-
-
-                <div class="step">
-
-                    <div class="step-number">
-                        3
-                    </div>
-
-                    <div class="step-text">
-                        <strong>Expliquez clairement la situation</strong>
-                        et indiquez la course concernée.
-                    </div>
-
-                </div>
-
-
-                <div class="step">
-
-                    <div class="step-number">
-                        4
-                    </div>
-
-                    <div class="step-text">
-                        <strong>Suivez les indications du support</strong>
-                        afin de gérer correctement l'annulation.
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <h2>
-                Puis-je simplement ne pas effectuer la course ?
+                La course peut-elle être proposée à un autre cotransporteur ?
             </h2>
 
 
             <p>
-                Non. Si vous avez accepté une course et que vous
-                ne pouvez plus l'effectuer, vous devez signaler
-                votre situation plutôt que de simplement ne pas
-                vous présenter.
+                Oui.
             </p>
 
 
             <p>
-                Prévenir rapidement l'équipe permet de limiter
-                les difficultés liées à la livraison et de trouver
-                la meilleure solution possible.
+                Une course annulée peut être
+                <strong>réattribuée à un autre cotransporteur</strong>
+                afin qu'elle puisse continuer à être prise en charge.
             </p>
 
 
             <h2>
-                Que faire en cas d'urgence ?
+                Et pour les commerces partenaires ?
             </h2>
 
 
             <p>
-                Si un événement imprévu vous empêche d'effectuer
-                la course, contactez le support Allez HOP!
-                <strong>dès que possible</strong>.
+                Il n'y a pas de procédure particulière :
+                <strong>les mêmes règles d'annulation
+                s'appliquent</strong>.
             </p>
 
 
             <h2>
-                Une annulation peut-elle avoir des conséquences ?
+                En résumé
             </h2>
 
 
-            <p>
-                Une annulation peut perturber l'organisation d'une
-                livraison. C'est pourquoi il est important de
-                limiter les annulations et de ne pas accepter une
-                course si vous n'êtes pas certain de pouvoir l'effectuer.
-            </p>
+            <ul>
+
+                <li>
+                    Vous pouvez annuler en cas d'empêchement,
+                    d'urgence, de panne, d'accident ou de risque
+                    pour votre sécurité ou votre santé.
+                </li>
+
+                <li>
+                    Utilisez <strong>« Annuler la course »</strong>
+                    lorsque le bouton est disponible.
+                </li>
+
+                <li>
+                    Si l'heure de démarrage est passée,
+                    <strong>contactez le support</strong>.
+                </li>
+
+                <li>
+                    Si vous avez déjà récupéré la commande,
+                    <strong>contactez obligatoirement le support</strong>.
+                </li>
+
+                <li>
+                    Des annulations tardives répétées peuvent
+                    entraîner une <strong>restriction provisoire
+                    du compte</strong>.
+                </li>
+
+                <li>
+                    Une course annulée peut être
+                    <strong>réattribuée à un autre cotransporteur</strong>.
+                </li>
+
+            </ul>
 
 
             <h2>
@@ -768,12 +1077,15 @@
 
 
             <p>
-                Vous devez annuler une course ou vous rencontrez
-                un problème avec une course acceptée ?
-                Contactez directement l'équipe Allez HOP! depuis
-                le chat.
+                Si vous ne pouvez plus annuler la course depuis
+                l'application, contactez directement le support
+                Allez HOP!.
             </p>
 
+
+            <!-- =========================
+                 FEEDBACK
+            ========================= -->
 
             <div class="feedback">
 
@@ -784,27 +1096,67 @@
 
                 <div class="feedback-buttons">
 
+
+                    <!-- POUCE HAUT -->
+
                     <button
-                        class="feedback-button"
                         type="button"
+                        class="feedback-button"
+                        id="feedbackPositive"
+                        aria-label="Article utile"
                     >
-                        👍 Oui
+
+                        👍
+
+                        <span
+                            class="feedback-count"
+                            id="positiveCount"
+                        >
+                            0
+                        </span>
+
                     </button>
 
 
+                    <!-- POUCE BAS -->
+
                     <button
-                        class="feedback-button"
                         type="button"
+                        class="feedback-button"
+                        id="feedbackNegative"
+                        aria-label="Article non utile"
                     >
-                        👎 Non
+
+                        👎
+
+                        <span
+                            class="feedback-count"
+                            id="negativeCount"
+                        >
+                            0
+                        </span>
+
                     </button>
+
 
                 </div>
 
+
+                <p
+                    class="feedback-message"
+                    id="feedbackMessage"
+                    aria-live="polite"
+                ></p>
+
             </div>
+
 
         </article>
 
+
+        <!-- =========================
+             SUPPORT
+        ========================= -->
 
         <section class="support">
 
@@ -837,6 +1189,343 @@
         Allez HOP! · Centre d'aide
 
     </footer>
+
+
+    <!-- =========================
+         GESTION DES VOTES
+    ========================= -->
+
+    <script>
+
+        /* =====================================================
+           CONFIGURATION
+        ===================================================== */
+
+        const MAKE_WEBHOOK_URL =
+            'https://hook.eu1.make.com/4nwchtqoc7axhe636zay3e6j1mkcn7bs';
+
+
+        const ARTICLE_ID =
+            'comment-annuler-une-course';
+
+
+        /* =====================================================
+           ELEMENTS
+        ===================================================== */
+
+        const positiveButton =
+            document.getElementById(
+                'feedbackPositive'
+            );
+
+
+        const negativeButton =
+            document.getElementById(
+                'feedbackNegative'
+            );
+
+
+        const positiveCount =
+            document.getElementById(
+                'positiveCount'
+            );
+
+
+        const negativeCount =
+            document.getElementById(
+                'negativeCount'
+            );
+
+
+        const feedbackMessage =
+            document.getElementById(
+                'feedbackMessage'
+            );
+
+
+        /* =====================================================
+           MEMORISATION DU VOTE
+        ===================================================== */
+
+        const voteStorageKey =
+            'helpcenter_vote_' + ARTICLE_ID;
+
+
+        function hasAlreadyVoted() {
+
+            return Boolean(
+                localStorage.getItem(
+                    voteStorageKey
+                )
+            );
+
+        }
+
+
+        /* =====================================================
+           DESACTIVER LES BOUTONS
+        ===================================================== */
+
+        function disableVoting() {
+
+            positiveButton.disabled =
+                true;
+
+            negativeButton.disabled =
+                true;
+
+        }
+
+
+        /* =====================================================
+           AFFICHER LES COMPTEURS
+        ===================================================== */
+
+        function showCounts(data) {
+
+            positiveCount.textContent =
+                Number(
+                    data.positif || 0
+                );
+
+
+            negativeCount.textContent =
+                Number(
+                    data.negatif || 0
+                );
+
+
+            positiveButton.classList.add(
+                'show-count'
+            );
+
+
+            negativeButton.classList.add(
+                'show-count'
+            );
+
+        }
+
+
+        /* =====================================================
+           ENREGISTRER LE VOTE LOCAL
+        ===================================================== */
+
+        function saveVote(voteType) {
+
+            localStorage.setItem(
+                voteStorageKey,
+                voteType
+            );
+
+        }
+
+
+        /* =====================================================
+           ENVOYER LE VOTE À MAKE
+        ===================================================== */
+
+        async function sendVote(
+            voteType
+        ) {
+
+            const url =
+                MAKE_WEBHOOK_URL +
+                '?article=' +
+                encodeURIComponent(
+                    ARTICLE_ID
+                ) +
+                '&vote=' +
+                encodeURIComponent(
+                    voteType
+                );
+
+
+            const response =
+                await fetch(
+                    url,
+                    {
+                        method:
+                            'GET',
+
+                        cache:
+                            'no-store'
+                    }
+                );
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    'Erreur HTTP ' +
+                    response.status
+                );
+
+            }
+
+
+            return await response.json();
+
+        }
+
+
+        /* =====================================================
+           VOTE POSITIF
+        ===================================================== */
+
+        positiveButton.addEventListener(
+            'click',
+            async function() {
+
+                if (
+                    hasAlreadyVoted()
+                ) {
+
+                    return;
+
+                }
+
+
+                disableVoting();
+
+
+                feedbackMessage.textContent =
+                    'Enregistrement de votre vote…';
+
+
+                try {
+
+                    const data =
+                        await sendVote(
+                            'positif'
+                        );
+
+
+                    saveVote(
+                        'positif'
+                    );
+
+
+                    showCounts(
+                        data
+                    );
+
+
+                    feedbackMessage.textContent =
+                        'Merci pour votre retour !';
+
+
+                } catch (error) {
+
+                    console.error(
+                        'Erreur vote positif :',
+                        error
+                    );
+
+
+                    positiveButton.disabled =
+                        false;
+
+                    negativeButton.disabled =
+                        false;
+
+
+                    feedbackMessage.textContent =
+                        'Votre vote n’a pas pu être enregistré. Réessayez.';
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           VOTE NEGATIF
+        ===================================================== */
+
+        negativeButton.addEventListener(
+            'click',
+            async function() {
+
+                if (
+                    hasAlreadyVoted()
+                ) {
+
+                    return;
+
+                }
+
+
+                disableVoting();
+
+
+                feedbackMessage.textContent =
+                    'Enregistrement de votre vote…';
+
+
+                try {
+
+                    const data =
+                        await sendVote(
+                            'negatif'
+                        );
+
+
+                    saveVote(
+                        'negatif'
+                    );
+
+
+                    showCounts(
+                        data
+                    );
+
+
+                    feedbackMessage.textContent =
+                        'Merci pour votre retour !';
+
+
+                } catch (error) {
+
+                    console.error(
+                        'Erreur vote négatif :',
+                        error
+                    );
+
+
+                    positiveButton.disabled =
+                        false;
+
+                    negativeButton.disabled =
+                        false;
+
+
+                    feedbackMessage.textContent =
+                        'Votre vote n’a pas pu être enregistré. Réessayez.';
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           ETAT LOCAL AU CHARGEMENT
+        ===================================================== */
+
+        if (
+            hasAlreadyVoted()
+        ) {
+
+            disableVoting();
+
+
+            feedbackMessage.textContent =
+                'Vous avez déjà donné votre avis sur cet article.';
+
+        }
+
+    </script>
 
 
 </body>
