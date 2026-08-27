@@ -936,7 +936,34 @@
             color: #73777f;
         }
 
-    </style>
+    
+
+/* =========================
+           VOTES ARTICLE
+        ========================= */
+
+        .feedback-count {
+            display: none;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .feedback-button.show-count .feedback-count {
+            display: inline;
+        }
+
+        .feedback-button:disabled {
+            cursor: default;
+            opacity: 0.55;
+            transform: none;
+        }
+
+        .feedback-message {
+            min-height: 24px;
+            margin: 15px 0 0;
+            font-size: 14px;
+            color: #73777f;
+        }
+</style>
 
 </head>
 
@@ -1435,55 +1462,53 @@
 
             <div class="feedback">
 
-                <h3>
-                    Cet article vous a-t-il été utile ?
-                </h3>
+    <h3>
+        Cet article vous a-t-il été utile ?
+    </h3>
 
-                <div class="feedback-buttons">
+    <div class="feedback-buttons">
 
-                    <button
-                        class="feedback-button"
-                        id="feedbackPositive"
-                        type="button"
-                        aria-label="Article utile"
-                    >
-                        👍
+        <button
+            class="feedback-button"
+            id="feedbackPositive"
+            type="button"
+            aria-label="Article utile"
+        >
+            👍
+            <span
+                class="feedback-count"
+                id="positiveCount"
+            >
+                0
+            </span>
+        </button>
 
-                        <span
-                            class="feedback-count"
-                            id="positiveCount"
-                        >
-                            0
-                        </span>
-                    </button>
+        <button
+            class="feedback-button"
+            id="feedbackNegative"
+            type="button"
+            aria-label="Article non utile"
+        >
+            👎
+            <span
+                class="feedback-count"
+                id="negativeCount"
+            >
+                0
+            </span>
+        </button>
 
-                    <button
-                        class="feedback-button"
-                        id="feedbackNegative"
-                        type="button"
-                        aria-label="Article non utile"
-                    >
-                        👎
+    </div>
 
-                        <span
-                            class="feedback-count"
-                            id="negativeCount"
-                        >
-                            0
-                        </span>
-                    </button>
+    <p
+        class="feedback-message"
+        id="feedbackMessage"
+        aria-live="polite"
+    ></p>
 
-                </div>
+</div>
 
-                <p
-                    class="feedback-message"
-                    id="feedbackMessage"
-                    aria-live="polite"
-                ></p>
-
-            </div>
-
-        </article>
+</article>
 
 
         <!-- =========================
@@ -1524,7 +1549,6 @@
 
 
 
-
     <!-- =========================
          VOTES ARTICLE — MAKE
     ========================= -->
@@ -1534,15 +1558,8 @@
         const MAKE_WEBHOOK_URL =
             'https://hook.eu1.make.com/4nwchtqoc7axhe636zay3e6j1mkcn7bs';
 
-        /* Identifiant automatique depuis l'URL de l'article. */
-        const pathParts =
-            window.location.pathname
-                .split('/')
-                .filter(Boolean);
-
         const ARTICLE_ID =
-            (pathParts[pathParts.length - 1] || 'article')
-                .replace(/\.html$/, '');
+            'accident-panne-danger';
 
         const positiveButton =
             document.getElementById('feedbackPositive');
@@ -1562,52 +1579,92 @@
         const voteStorageKey =
             'helpcenter_vote_' + ARTICLE_ID;
 
+
         function hasAlreadyVoted() {
-            return Boolean(localStorage.getItem(voteStorageKey));
+
+            return Boolean(
+                localStorage.getItem(voteStorageKey)
+            );
+
         }
+
 
         function disableVoting() {
+
             positiveButton.disabled = true;
+
             negativeButton.disabled = true;
+
         }
+
 
         function showCounts(data) {
-            positiveCount.textContent = Number(data.positif || 0);
-            negativeCount.textContent = Number(data.negatif || 0);
-            positiveButton.classList.add('show-count');
-            negativeButton.classList.add('show-count');
+
+            positiveCount.textContent =
+                Number(data.positif || 0);
+
+            negativeCount.textContent =
+                Number(data.negatif || 0);
+
+            positiveButton.classList.add(
+                'show-count'
+            );
+
+            negativeButton.classList.add(
+                'show-count'
+            );
+
         }
 
+
         async function sendVote(voteType) {
+
             const url =
                 MAKE_WEBHOOK_URL +
-                '?article=' + encodeURIComponent(ARTICLE_ID) +
-                '&vote=' + encodeURIComponent(voteType);
+                '?article=' +
+                encodeURIComponent(ARTICLE_ID) +
+                '&vote=' +
+                encodeURIComponent(voteType);
 
             const response =
-                await fetch(url, {
-                    method: 'GET',
-                    cache: 'no-store'
-                });
+                await fetch(
+                    url,
+                    {
+                        method: 'GET',
+                        cache: 'no-store'
+                    }
+                );
 
             if (!response.ok) {
-                throw new Error('Erreur HTTP ' + response.status);
+
+                throw new Error(
+                    'Erreur HTTP ' + response.status
+                );
+
             }
 
             return await response.json();
+
         }
 
+
         async function registerVote(voteType) {
+
             if (hasAlreadyVoted()) {
+
                 return;
+
             }
 
             disableVoting();
+
             feedbackMessage.textContent =
                 'Enregistrement de votre vote…';
 
             try {
-                const data = await sendVote(voteType);
+
+                const data =
+                    await sendVote(voteType);
 
                 localStorage.setItem(
                     voteStorageKey,
@@ -1620,38 +1677,55 @@
                     'Merci pour votre retour !';
 
             } catch (error) {
+
                 console.error(
                     'Erreur lors de l’enregistrement du vote :',
                     error
                 );
 
-                positiveButton.disabled = false;
-                negativeButton.disabled = false;
+                positiveButton.disabled =
+                    false;
+
+                negativeButton.disabled =
+                    false;
 
                 feedbackMessage.textContent =
                     'Votre vote n’a pas pu être enregistré. Réessayez.';
+
             }
+
         }
+
 
         positiveButton.addEventListener(
             'click',
             function() {
+
                 registerVote('positif');
+
             }
         );
+
 
         negativeButton.addEventListener(
             'click',
             function() {
+
                 registerVote('negatif');
+
             }
         );
 
+
         /* Aucun appel Make au chargement. */
+
         if (hasAlreadyVoted()) {
+
             disableVoting();
+
             feedbackMessage.textContent =
                 'Vous avez déjà donné votre avis sur cet article.';
+
         }
 
     </script>
